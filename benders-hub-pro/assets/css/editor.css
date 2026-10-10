@@ -1,0 +1,16 @@
+/* Block editor styles — keep editor visually aligned with frontend */
+body.block-editor-page {
+	background: #0b1220;
+	color: #e5e7eb;
+}
+.editor-styles-wrapper {
+	font-family: "Inter", system-ui, sans-serif;
+	color: #e5e7eb;
+}
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4 {
+	font-family: "Rajdhani", "Space Grotesk", system-ui, sans-serif;
+	color: #ffffff;
+}

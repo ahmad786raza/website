@@ -1,0 +1,161 @@
+/*
+ * Benders Hub Pro — Base
+ * Industrial fabrication design system
+ */
+
+:root {
+	--bdh-black:       #111827;
+	--bdh-graphite:    #1f2937;
+	--bdh-steel:       #374151;
+	--bdh-steel-2:     #4b5563;
+	--bdh-aluminum:    #e5e7eb;
+	--bdh-aluminum-2:  #d1d5db;
+	--bdh-white:       #ffffff;
+
+	--bdh-red:         #ef4444;
+	--bdh-red-deep:    #b91c1c;
+	--bdh-amber:       #f59e0b;
+	--bdh-amber-deep:  #b45309;
+	--bdh-emerald:     #10b981;
+
+	--bdh-text:        #e5e7eb;
+	--bdh-text-soft:   #9ca3af;
+	--bdh-text-faint:  #6b7280;
+	--bdh-heading:     #ffffff;
+
+	--bdh-bg:          #0b1220;
+	--bdh-bg-2:        #111827;
+	--bdh-bg-3:        #1f2937;
+	--bdh-panel:       rgba(31, 41, 55, 0.65);
+	--bdh-panel-2:     rgba(17, 24, 39, 0.85);
+	--bdh-border:      rgba(229, 231, 235, 0.08);
+	--bdh-border-soft: rgba(229, 231, 235, 0.04);
+	--bdh-shadow:      0 12px 36px rgba(0, 0, 0, 0.45);
+	--bdh-shadow-md:   0 6px 18px rgba(0, 0, 0, 0.35);
+	--bdh-glow-red:    0 0 24px rgba(239, 68, 68, 0.45);
+	--bdh-glow-amber:  0 0 24px rgba(245, 158, 11, 0.45);
+
+	--bdh-font-display: "Rajdhani", "Space Grotesk", "Inter", system-ui, sans-serif;
+	--bdh-font-body:    "Inter", "IBM Plex Sans", system-ui, sans-serif;
+	--bdh-font-mono:    "IBM Plex Mono", "Space Mono", ui-monospace, monospace;
+
+	--bdh-radius:      14px;
+	--bdh-radius-sm:   8px;
+	--bdh-radius-lg:   22px;
+
+	--bdh-space-1:     4px;
+	--bdh-space-2:     8px;
+	--bdh-space-3:     12px;
+	--bdh-space-4:     16px;
+	--bdh-space-5:     24px;
+	--bdh-space-6:     32px;
+	--bdh-space-7:     48px;
+	--bdh-space-8:     64px;
+	--bdh-space-9:     96px;
+
+	--bdh-container:   1280px;
+
+	--bdh-ease:        cubic-bezier(0.2, 0.7, 0.25, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+	margin: 0;
+	font-family: var(--bdh-font-body);
+	font-size: 16px;
+	line-height: 1.55;
+	color: var(--bdh-text);
+	background: var(--bdh-bg);
+	background-image:
+		radial-gradient(1200px 700px at 70% -20%, rgba(239, 68, 68, 0.12), transparent 70%),
+		radial-gradient(1000px 700px at 0% 110%, rgba(245, 158, 11, 0.06), transparent 70%),
+		linear-gradient(180deg, #0b1220 0%, #0a0f1c 100%);
+	background-attachment: fixed;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+img, svg, video { display: block; max-width: 100%; height: auto; }
+
+a { color: var(--bdh-amber); text-decoration: none; transition: color 0.2s var(--bdh-ease); }
+a:hover, a:focus-visible { color: var(--bdh-red); }
+a:focus-visible { outline: 2px solid var(--bdh-amber); outline-offset: 2px; border-radius: 2px; }
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--bdh-font-display);
+	color: var(--bdh-heading);
+	letter-spacing: -0.01em;
+	font-weight: 700;
+	line-height: 1.15;
+	margin: 0 0 0.5em;
+}
+h1 { font-size: clamp(2rem, 4.2vw, 3.6rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.6rem); }
+h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); }
+h4 { font-size: 1.125rem; }
+
+p { margin: 0 0 1em; }
+
+strong { color: var(--bdh-heading); }
+small  { font-size: 0.875em; color: var(--bdh-text-soft); }
+
+input, textarea, select, button { font: inherit; color: inherit; }
+
+button { cursor: pointer; background: none; border: 0; }
+
+ul, ol { padding-left: 1.4em; }
+
+/* Utility */
+.bdh-container {
+	width: 100%;
+	max-width: var(--bdh-container);
+	margin: 0 auto;
+	padding: 0 var(--bdh-space-5);
+}
+@media (max-width: 768px) {
+	.bdh-container { padding: 0 var(--bdh-space-4); }
+}
+
+.bdh-screen-reader-text {
+	position: absolute !important;
+	clip: rect(1px,1px,1px,1px);
+	width: 1px; height: 1px;
+	overflow: hidden;
+}
+.bdh-skip-link {
+	position: absolute; left: -9999px;
+}
+.bdh-skip-link:focus {
+	left: 12px; top: 12px;
+	background: var(--bdh-amber);
+	color: var(--bdh-black);
+	padding: 8px 14px;
+	border-radius: var(--bdh-radius-sm);
+	z-index: 9999;
+}
+
+.bdh-icon { width: 20px; height: 20px; flex-shrink: 0; }
+
+/* Selection */
+::selection { background: var(--bdh-amber); color: var(--bdh-black); }
+
+/* Print */
+@media print {
+	body { background: #fff; color: #000; }
+	.bdh-mobile-stickycta, .bdh-header, .bdh-footer, .bdh-disclosure-bar, [data-bdh-toggle], .bdh-newsletter { display: none !important; }
+	a { color: #000 !important; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+}

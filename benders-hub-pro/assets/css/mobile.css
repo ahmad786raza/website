@@ -1,0 +1,69 @@
+/* Mobile-first refinements */
+
+@media (max-width: 768px) {
+	.bdh-hero { min-height: 80vh; padding: var(--bdh-space-5) 0; }
+	.bdh-hero-headline { font-size: 2.2rem; }
+	.bdh-hero-sub { font-size: 1rem; }
+	.bdh-hero-cta-row .bdh-btn { width: 100%; }
+
+	.bdh-tool-shell { padding: var(--bdh-space-4); }
+	.bdh-section-head { text-align: left; }
+
+	.bdh-compare-table th, .bdh-compare-table td { padding: 10px 12px; font-size: 0.85rem; }
+
+	/* Make table mobile-friendly with data-label cards */
+	@media (max-width: 600px) {
+		.bdh-table-wrap { overflow-x: visible; border: 0; background: transparent; }
+		.bdh-compare-table, .bdh-compare-table thead, .bdh-compare-table tbody, .bdh-compare-table tr, .bdh-compare-table td { display: block; min-width: 0; }
+		.bdh-compare-table thead { display: none; }
+		.bdh-compare-table tr {
+			background: var(--bdh-panel-2);
+			border: 1px solid var(--bdh-border);
+			border-radius: var(--bdh-radius);
+			padding: var(--bdh-space-3);
+			margin-bottom: var(--bdh-space-3);
+		}
+		.bdh-compare-table td { display: grid; grid-template-columns: 100px 1fr; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--bdh-border-soft); }
+		.bdh-compare-table td:last-child { border-bottom: 0; }
+		.bdh-compare-table td::before {
+			content: attr(data-label);
+			font-family: var(--bdh-font-mono);
+			font-size: 10px;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: var(--bdh-text-soft);
+		}
+	}
+
+	.bdh-hero-spec-panel { padding: var(--bdh-space-4); }
+	.bdh-hero-spec-list { grid-template-columns: 1fr 1fr; }
+
+	.bdh-newsletter-card { padding: var(--bdh-space-5); }
+	.bdh-newsletter-graphic { width: 80px; height: 80px; }
+	.bdh-newsletter-icon { width: 36px; height: 36px; }
+
+	.bdh-footer-grid { gap: var(--bdh-space-5); }
+}
+
+/* Floating action button alternative */
+.bdh-fab {
+	position: fixed; right: 16px; bottom: 88px;
+	width: 56px; height: 56px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, var(--bdh-amber), var(--bdh-red));
+	color: #fff;
+	display: none;
+	place-items: center;
+	box-shadow: var(--bdh-glow-amber);
+	z-index: 90;
+}
+@media (max-width: 768px) {
+	.bdh-fab { display: grid; }
+}
+
+/* Touch targets */
+@media (hover: none) and (pointer: coarse) {
+	.bdh-btn, .bdh-chip, .bdh-icon-btn, .bdh-quiz-opt-box, .bdh-database-cat {
+		min-height: 44px;
+	}
+}
