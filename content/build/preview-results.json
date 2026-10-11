@@ -1,0 +1,40 @@
+{
+ "best-tube-bender-for-home-garage": {
+  "id": 95,
+  "h1": 1,
+  "cat": "Home\nBuying Guides\nBest Tube Bender for a Home Garage (2026 Guide): What to Buy, What to Skip",
+  "php": false,
+  "inlineToc": false,
+  "tocBroken": 0,
+  "amazon": 16,
+  "amazonBad": 0,
+  "disclosure": true,
+  "leftoverLinks": 0,
+  "products": 4,
+  "credits": 10,
+  "overflow": false,
+  "jsErrors": 0,
+  "imgsOk": true,
+  "imgCount": 6,
+  "problems": []
+ },
+ "pipe-bender-vs-tube-bender": {
+  "id": 121,
+  "h1": 1,
+  "cat": "Home\nFabrication Theory\nPipe Bender vs Tube Bender: Which One Do You Actually Need?",
+  "php": false,
+  "inlineToc": false,
+  "tocBroken": 0,
+  "amazon": 5,
+  "amazonBad": 0,
+  "disclosure": true,
+  "leftoverLinks": 0,
+  "products": 1,
+  "credits": 8,
+  "overflow": false,
+  "jsErrors": 0,
+  "imgsOk": true,
+  "imgCount": 5,
+  "problems": []
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "slug": "bend-radius-explained",
+ "title": "Centerline Radius Tube Bending: CLR Explained With Real Math",
+ "excerpt": "Centerline radius tube bending made simple: what CLR is, CLR vs inside radius, 4 ways to measure it, and how to choose the right die CLR.",
+ "category": "fabrication-theory",
+ "featured_slot": "measuring",
+ "primary_keyword": "centerline radius tube bending",
+ "asins": [
+  {"asin": "B000GSLKIW", "product": "NEIKO 01407A Electronic Digital Caliper Measuring Tool, 0-6 Inches Stainless Steel Construction with Large LCD Screen", "evidence": "https://www.amazon.com/Neiko-01407A-Electronic-Digital-Stainless/dp/B000GSLKIW"}
+ ],
+ "sources": [
+  "https://www.thefabricator.com/glossary/centerline-radius",
+  "https://www.stainlessheaders.com/p-35900-tube-cut-length.html",
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/tube-bending-basics-how-to-bend-tubing-and-metal-pipe",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://timetrials.scca.com/pages/full-safety-rules",
+  "https://timetrials.scca.com/pages/safety-level-3",
+  "https://www.roguefab.com/aluminum-pipe-benders/",
+  "https://www.velocityshop.com/products/vibrant-3in-od-t304-ss-90-deg-mandrel-bend-3in-centerline-radius",
+  "https://blog.blmgroup.com/when-is-it-useful-to-bend-a-tube-with-a-small-bending-radius",
+  "ASME B36.10 pipe tables (1-1/2 NPS = 1.900 in OD), per WRITER-KIT fact table",
+  "https://www.amazon.com/Neiko-01407A-Electronic-Digital-Stainless/dp/B000GSLKIW"
+ ],
+ "notes": "REWRITE of draft #32, written fresh. The old draft's sheet-metal K-factor formula, 2x OD minimum, springback percentages and D/T thresholds are NOT used. Direct page fetches were blocked by the network proxy in this session, so every fact comes from search-result text or the kit fact table. Please re-check: (1) the SCCA Time Trials wording ('radius of bends measured at the tube centerline at least 3x tube diameter'), seen on timetrials.scca.com/pages/full-safety-rules in search results; (2) BLM Group's 'ratio under 1 is extreme' wording; (3) The Fabricator's 'harder tube and smaller CLR = more springback and radial growth' line. All worked numbers (inside/outside radius, arcs, 2.414 framing-square factor = 1/(sqrt2-1), cut lengths 39.42 vs 39.00) were checked in Python. One Amazon listing variant for B000GSLKIW shows the title 'NEIKO 01417A' with a plastic body, so the product box says to confirm the model; check the live listing."
+}

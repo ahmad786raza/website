@@ -1,0 +1,22 @@
+{
+ "best-tube-bender-for-home-garage": {
+  "id": 95,
+  "status": "draft",
+  "identical": true,
+  "featured": 82,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:06:20.110Z"
+ },
+ "pipe-bender-vs-tube-bender": {
+  "id": 121,
+  "status": "draft",
+  "identical": true,
+  "featured": 45,
+  "categories": [
+   8
+  ],
+  "at": "2026-10-11T15:06:21.837Z"
+ }
+}

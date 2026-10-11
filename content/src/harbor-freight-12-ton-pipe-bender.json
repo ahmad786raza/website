@@ -1,0 +1,36 @@
+{
+ "slug": "harbor-freight-12-ton-pipe-bender",
+ "title": "Harbor Freight 12 Ton Pipe Bender: What It's For (and What It Isn't)",
+ "excerpt": "An honest guide to the Harbor Freight 12 ton pipe bender: what it bends well, why it kinks tube, and better rotary-draw picks for tube work.",
+ "category": "guides",
+ "featured_slot": "industrial-pipe",
+ "primary_keyword": "Harbor Freight 12 ton pipe bender",
+ "asins": [
+  {"asin": "B01M12Z84P", "product": "Woodward Fab Tube and Pipe Bender, Model# WFB2", "evidence": "https://www.amazon.com/Woodward-Fab-Bender-Model-WFB2/dp/B01M12Z84P (pre-verified in writer kit; also seen in search 2026-10-11)"},
+  {"asin": "B075DJJT85", "product": "Woodward Fab WFB2 stand", "evidence": "Pre-verified in writer kit ASIN table"},
+  {"asin": "B07CZS1XNK", "product": "Woodward Fab (HECWFBDT112X5) 1-1/2\" OD x 5\" CLR tubing die for WFB2 bender", "evidence": "https://www.amazon.com/Woodward-Fab-HECWFBDT112X5-tubing-bender/dp/B07CZS1XNK"},
+  {"asin": "B0BRK4VZS3", "product": "Woodward Fab WFBDT13/4X6 1-3/4 OD X 6 Tubing Die For WFB2 Bender", "evidence": "https://www.amazon.com/Woodward-Fab-WFBDT13-Tubing-Bender/dp/B0BRK4VZS3"},
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity tube bender (#21115)", "evidence": "Pre-verified in writer kit ASIN table"},
+  {"asin": "B07PPJ4WN4", "product": "Eastwood 1.75\" x 6\" CLR 240 degree die", "evidence": "Pre-verified in writer kit ASIN table"},
+  {"asin": "B0DXQB2TVP", "product": "Eastwood air-hydraulic conversion kit for the High Capacity bender", "evidence": "Pre-verified in writer kit ASIN table"},
+  {"asin": "B0DXQCZQSY", "product": "Eastwood electric-hydraulic conversion kit (0.75 HP, 110 V)", "evidence": "Pre-verified in writer kit ASIN table"},
+  {"asin": "B00F6GYB8A", "product": "Baileigh RDB-050 manual rotary-draw bender", "evidence": "Pre-verified in writer kit ASIN table"}
+ ],
+ "sources": [
+  "https://www.harborfreight.com/12-ton-hydraulic-pipe-bender-32888.html",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://go.harborfreight.com/coupons/2024/08/182936-32888/?amp=1",
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/tube-and-pipe-basics-how-to-achieve-the-perfect-bend",
+  "https://www.archtoolbox.com/materials-systems/plumbing/standard-pipe-dimensions.html",
+  "https://www.engineeringtoolbox.com/ansi-steel-pipes-d_305.html",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://timetrials.scca.com/pages/safety-level-3",
+  "https://www.baileigh.com/manual-tube-bender-rdb-050",
+  "https://www.jd2.com/model-32-bender",
+  "https://pro-tools.com/products/manual-tube-and-pipe-bender-105-heavy-duty-package",
+  "https://www.amazon.com/Woodward-Fab-Bender-Model-WFB2/dp/B01M12Z84P",
+  "https://forums.off-road.com/posts/175970",
+  "https://classicbroncos.com/forums/threads/harbor-freight-tool.59068/post-529756"
+ ],
+ "notes": "Direct page fetches were blocked by the sandbox egress policy (harborfreight.com, manuals.harborfreight.com and all maker sites), and the shared web-search budget ran out partway through this article, so facts come from the kit fact table, the fact-check notes (Part 3.6) and earlier search summaries. Please re-check against the HF page/manual: (1) 9-1/2 in ram stroke (from fact-check notes only); (2) support-bar positions 8-1/2, 11-1/4, 12, 16-3/4, 19-1/2, 22-1/4 in (from HF's go.harborfreight.com coupon page summary); (3) manual wording on anchoring, eye protection, keeping hands clear and not heating pipe (from a search summary of the manual); (4) Central Machinery brand / item 32888 (fact-check notes). Owner reports of kinking tube are described qualitatively from forum threads. Left out as unverified: weight, dimensions, warranty, alternate SKUs 62539/86013, availability channel (fact-check notes say in-store only; the FAQ just says sold direct and to check availability), and any price."
+}

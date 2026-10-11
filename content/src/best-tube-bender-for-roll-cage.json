@@ -1,0 +1,43 @@
+{
+ "slug": "best-tube-bender-for-roll-cage",
+ "title": "Best Tube Bender for Roll Cage Builds (2026): Picks by Rule Needs",
+ "excerpt": "The best tube bender for roll cage work bends 180° hoops, takes dies that meet your rulebook's radius rule and is rated for 4130. Spec-based picks.",
+ "category": "guides",
+ "featured_slot": "roll-cage",
+ "primary_keyword": "best tube bender for roll cage",
+ "asins": [
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity Tube Bender (#21115)", "evidence": "Kit pre-verified ASIN list (WRITER-KIT.md section 3)"},
+  {"asin": "B0DXQB2TVP", "product": "Eastwood air-hydraulic conversion kit for the High Capacity bender", "evidence": "Kit pre-verified ASIN list (WRITER-KIT.md section 3)"},
+  {"asin": "B0DXQCZQSY", "product": "Eastwood electric-hydraulic conversion kit (0.75 HP, 110 V)", "evidence": "Kit pre-verified ASIN list (WRITER-KIT.md section 3)"},
+  {"asin": "B07PPJ4WN4", "product": "Eastwood 1.75\" x 6\" CLR 240 degree die", "evidence": "Kit pre-verified ASIN list (WRITER-KIT.md section 3)"},
+  {"asin": "B00F6GYB8A", "product": "Baileigh RDB-050 manual rotary-draw bender", "evidence": "Kit pre-verified ASIN list (WRITER-KIT.md section 3)"},
+  {"asin": "B07PQJZJ37", "product": "Eastwood tube & pipe notcher, 0-60 degrees, up to 2\" round", "evidence": "Kit pre-verified ASIN list (WRITER-KIT.md section 3)"},
+  {"asin": "B0CLT6ZC29", "product": "Woodward Fab WWFSPPIPENOTCH 2\" hole-saw notcher", "evidence": "Kit pre-verified ASIN list (WRITER-KIT.md section 3)"}
+ ],
+ "sources": [
+  "https://timetrials.scca.com/pages/full-safety-rules",
+  "https://www.fia.com/sites/default/files/253_2020_chap_8_wmsc_2020.10.09.pdf",
+  "https://www.fia.com/sites/default/files/regulation/file/253%20(2013).pdf",
+  "https://www.fia.com/regulation/category/123",
+  "https://member.nhra.com/Members/Members/Shop/Item_Detail.aspx?iProductCode=RB2026&Category=RULEBOOKS",
+  "https://www.nhraracer.com/Files/Tech/2026_rulebook_amendments.pdf",
+  "http://promod.nhra.com/userfiles/file/Tech/2017_NHRA_Rulebook_Gen.%20Regs.pdf",
+  "http://promod.nhra.com/userfiles/file/Tech/2019%20General%20Regulations.pdf",
+  "https://www.nhraracer.com/Files/Tech/Exhibition%20Vehicle%20Rulebook%20Supplement%203-19-2024.pdf",
+  "https://www.nasaproracing.com/rules",
+  "https://www.nasaproracing.com/rules/spec3_rules.pdf",
+  "https://www.sfifoundation.com/wp-content/pdfs/SpecList3.pdf",
+  "https://www.roguefab.com/building-roll-cage/",
+  "https://www.roguefab.com/product/metal-tube-bender-m605-1-die/",
+  "https://www.roguefab.com/faqs/",
+  "https://www.roguefab.com/tube-capacity-chart/",
+  "https://www.jd2.com/model-32-bender",
+  "https://www.jd2.com/model-32-die-set-1-12-round-tube-15-od",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://pro-tools.com/products/manual-tube-and-pipe-bender-105-heavy-duty-package",
+  "https://www.baileigh.com/manual-tube-bender-rdb-050",
+  "https://www.eastwood.com/images/library/21115Q.pdf",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate"
+ ],
+ "notes": "SAFETY-CRITICAL. WebFetch had no DNS in the writing environment, so all rule wording was checked through search-index text restricted to the official domains (scca.com, fia.com, nhra.com/nhraracer.com, nasaproracing.com, sfifoundation.com); please open the linked PDFs/pages and confirm before publishing. Verified: SCCA Time Trials 3x tube diameter at centerline (online rules page, no edition number shown); FIA Art. 253 3x centreline radius in 2013/2019/2020 editions (2026 edition listed WMSC 23.06.2026 but not read); NHRA TIG for 4130 in 2017 and 2019 General Regulations and 2024 Exhibition supplement (2026 rulebook is a paid document, not read); NHRA past editions pair .118 mild steel with .083 4130 (OD varies by section/class, deliberately not stated). Eastwood High Capacity lower OD bound conflicts between kit (3/4 in) and fact-check notes (1 in), so the article says 'up to 2 in OD' only. Eastwood 90 deg max with 120 deg dies / 180 with 240 deg dies is from the Eastwood 21115Q PDF as recorded in the fact-check notes. Rogue Fab M605/M625 4130 ratings were not found, article says 'ask Rogue Fab'."
+}
