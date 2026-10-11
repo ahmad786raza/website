@@ -1,0 +1,35 @@
+{
+ "slug": "wall-thinning-in-tube-bending",
+ "title": "Wall Thinning in Tube Bending: Stretch, Geometry and Checks",
+ "excerpt": "Wall thinning in tube bending explained: why the outside wall stretches, a simple geometry estimate, how to check real thinning, and how to limit it.",
+ "category": "fabrication-theory",
+ "featured_slot": "measuring",
+ "primary_keyword": "wall thinning in tube bending",
+ "asins": [
+  {
+   "asin": "B07PRLN2PG",
+   "product": "Eastwood High Capacity tube bender (#21115)",
+   "evidence": "Writer kit pre-verified ASIN table (WRITER-KIT.md section 3)"
+  },
+  {
+   "asin": "B07PPJ4WN4",
+   "product": "Eastwood 1.75\" x 6\" CLR 240 degree die",
+   "evidence": "Writer kit pre-verified ASIN table (WRITER-KIT.md section 3)"
+  }
+ ],
+ "sources": [
+  "https://www.roguefab.com/stainless-steel-tube-bender/",
+  "https://www.roguefab.com/aluminum-pipe-benders/",
+  "https://www.thefabricator.com/thefabricator/article/bending/bending-aluminum-101-how-to-bend-6061-t6-aluminum",
+  "https://vibrantperformance.com/304-stainless-steel-90-brushed-mandrel-bends/",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://timetrials.scca.com/pages/safety-level-3",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://www.eastwood.com/images/library/21115Q.pdf",
+  "https://www.amazon.com/dp/B07PRLN2PG (Eastwood #21115 listing specs, per writer-kit table)",
+  "/home/user/website/docs/research/competitors-keywords-factcheck.md (PART 3, sections 3.1, 3.2, 3.4, 3.5, 3.6)"
+ ],
+ "notes": "The shared WebSearch budget ran out after the first article, so this article relies on the writer-kit known-good table, the repo fact-check notes (PART 3, built from search-index summaries) and two Rogue Fab stainless-page points seen in a WebSearch summary earlier in this session (outside of the bend stretches while the inside is in compression; austenitic 304/316 work-harden quickly; inside wall buckles when wall is thin relative to radius). All stretch numbers are pure geometry: outer-fibre stretch = OD / (2 x CLR) = 1 / (2 x D), computed and double-checked (1.75 on 6 in CLR = 14.58%; 3D = 16.7%; 4D = 12.5%; 2D = 25%; 1.5D = 33.3%; 1D = 50%; 6.5/1.75 = 3.71D -> 13.5%). The worked 90 deg arc example uses 3-decimal rounding (9.425 / 10.799 / 8.050). The .120 -> .108 thinning readings are labelled in the text as made-up numbers to show the arithmetic. Re-verify: Vibrant 1D bends and '1.5D common' (retailer listings per notes), Rogue Fab 6061-T6 3.5-4D / 3D marginal, softer aluminium tempers bend more easily (Rogue Fab + The Fabricator per notes), SCCA Time Trials 3x diameter wording, Eastwood #21115 limits (kit gives 3/4-2 in OD while the notes give a 1-2 in range from the Eastwood PDF, so the article says only 'up to 2 in OD'). Left out as unverifiable or unsourced: the patent example .035 -> ~.028 in (about 20% thinning) and the trade summary 'up to about 33% thinning' from the notes (no URL recorded), any code-based thinning allowance (e.g. pressure-piping bend tables), any rule that cage inspectors measure wall at bends, and any claim that pressure-die assist/boost reduces thinning. An ultrasonic thickness gauge or tube micrometer box would suit this article, but no ASIN could be verified once the search budget ran out; the Eastwood bender + 1.75 x 6 in CLR die box (kit-verified ASINs) is used instead, framed around die/CLR choice."
+}

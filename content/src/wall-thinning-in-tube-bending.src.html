@@ -58,9 +58,9 @@
 
 <p>Let's check it with real lengths for a 90° bend. A 90° bend is π ÷ 2, or about 1.5708 radians.</p>
 
-<ol class="bhg-steps"><li><strong>Centerline arc:</strong> 6 × 1.5708 = <strong>9.42"</strong>.</li><li><strong>Outer radius:</strong> 6 + (1.75 ÷ 2) = 6.875". Outer arc: 6.875 × 1.5708 = <strong>10.80"</strong>.</li><li><strong>Inner radius:</strong> 6 − 0.875 = 5.125". Inner arc: 5.125 × 1.5708 = <strong>8.05"</strong>.</li><li><strong>Outer stretch:</strong> 10.80 − 9.42 = 1.37" longer. Then 1.37 ÷ 9.42 ≈ <strong>14.6%</strong>.</li><li><strong>Shortcut check:</strong> 1.75 ÷ (2 × 6) = 1.75 ÷ 12 ≈ <strong>0.146</strong>, or 14.6%. It matches.</li></ol>
+<ol class="bhg-steps"><li><strong>Centerline arc:</strong> 6 × 1.5708 = <strong>9.425"</strong>.</li><li><strong>Outer radius:</strong> 6 + (1.75 ÷ 2) = 6.875". Outer arc: 6.875 × 1.5708 = <strong>10.799"</strong>.</li><li><strong>Inner radius:</strong> 6 − 0.875 = 5.125". Inner arc: 5.125 × 1.5708 = <strong>8.050"</strong>.</li><li><strong>Outer stretch:</strong> 10.799 − 9.425 = 1.374" longer. Then 1.374 ÷ 9.425 ≈ <strong>14.6%</strong>.</li><li><strong>Shortcut check:</strong> 1.75 ÷ (2 × 6) = 1.75 ÷ 12 ≈ <strong>0.146</strong>, or 14.6%. It matches.</li></ol>
 
-<p>The inside is 9.42 − 8.05 = 1.37" shorter, also about 14.6%. So the outside wall is stretched about 14.6% and the inside squeezed about 14.6%, measured against the centerline.</p>
+<p>The inside is 9.425 − 8.050 ≈ 1.37" shorter, also about 14.6%. So the outside surface is stretched about 14.6% and the inside squeezed about 14.6%, measured against the centerline. We use the outside surface because it's the worst case. The middle of the wall stretches a little less.</p>
 
 <h3>The angle doesn't change the percentage</h3>
 
@@ -108,7 +108,7 @@
 
 <h3>Pressure and fluid lines</h3>
 
-<p>Hydraulic, fuel, brake and coolant lines hold pressure. Pressure pushes hardest where the wall is thinnest. That's why industrial piping works to codes with bend rules. If your line falls under a code or a maker's spec, follow it.</p>
+<p>Hydraulic, fuel, brake and coolant lines hold pressure. Under pressure, the thinnest wall carries the most stress. That's why industrial piping works to codes with bend rules. If your line falls under a code or a maker's spec, follow it.</p>
 
 <h3>Cracking</h3>
 
@@ -136,7 +136,7 @@
 
 <h3>A worked thinning calculation</h3>
 
-<p>Say your straight tube measures .120" and the outside of your test bend measures .108". The readings are made up to show the math. Then (.120 − .108) ÷ .120 = .012 ÷ .120 = 0.10, or <strong>10% thinning</strong>. Notice that's a different number from the geometric stretch for the same die. That's exactly why you measure.</p>
+<p>Say your straight tube measures .120" and the outside of your test bend measures .108". The readings are made up to show the math. Then (.120 − .108) ÷ .120 = .012 ÷ .120 = 0.10, or <strong>10% thinning</strong>. Don't expect your measured thinning to match the stretch percentage for your die. That's exactly why you measure.</p>
 
 <!-- 📷 IMAGE IDEA (owner's photo): a test bend cut in half at mid-bend, with calipers on the outer wall. Suggested alt text: "Sectioned tube bend showing thinner outer wall measured with calipers". -->
 
@@ -172,7 +172,7 @@
 
 <p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads.</p>
 
-<div class="bhg-example"><span class="bhg-example-label">💬 The tighter die</span><p>A builder wants a tighter look on a bumper and swaps a die for one with a much smaller CLR on the same thin-wall tube. The bends look sharp, but the outside of each one has a dull, rough "orange peel" texture and one shows a hairline crack. The stretch had jumped far more than they expected.</p><p><strong>Lesson:</strong> check stretch ≈ OD ÷ (2 × CLR) before you buy a tighter die, and test-bend the tube you'll really use.</p></div>
+<div class="bhg-example"><span class="bhg-example-label">💬 The tighter die</span><p>A builder wants a tighter look on a bumper and swaps a die for one with a much smaller CLR on the same thin-wall tube. The bends look sharp, but the outside of each one looks rough, and one shows a hairline crack. The stretch had jumped far more than they expected.</p><p><strong>Lesson:</strong> check stretch ≈ OD ÷ (2 × CLR) before you buy a tighter die, and test-bend the tube you'll really use.</p></div>
 
 <div class="bhg-example"><span class="bhg-example-label">💬 The cut test piece</span><p>Someone building a roll bar wants to know how much wall is left at the bends. They bend a scrap piece from the same stick, cut it across the middle of the bend, and measure. The outer wall is thinner and the inner wall is thicker, just as the geometry predicts. They take the cut piece to their tech inspector to talk it through.</p><p><strong>Lesson:</strong> a sectioned test bend answers questions no chart can.</p></div>
 
@@ -200,7 +200,7 @@
 
 <p>These habits keep wall thinning predictable and stop it from surprising you on an important part.</p>
 
-<ul><li><strong>Know your D before you buy a die.</strong> Divide CLR by OD. Then halve one over that number to get the stretch. Our <a href="/calculator/">bend calculator</a> does the first part for you.</li><li><strong>Keep a "known good" die per tube size.</strong> Once a die works well for a tube, stick with it for that size.</li><li><strong>Section one bend per new setup.</strong> One cut test piece per new tube, wall or die tells you more than any chart.</li><li><strong>Measure the straight tube too.</strong> Mill wall varies. Your thinning is the change from <em>your</em> tube's starting wall.</li><li><strong>Check ovality at the same time.</strong> Thinning and flattening grow together on tight bends.</li><li><strong>Watch the surface.</strong> A rough, dull texture on the outside of a bend can mean you're near the material's limit.</li><li><strong>Ask before you bend safety parts.</strong> For cages, talk to your inspector about bend radius and wall before you buy tube.</li></ul>
+<ul><li><strong>Know your D before you buy a die.</strong> Divide CLR by OD. Then halve one over that number to get the stretch. Our <a href="/calculator/">bend calculator</a> does the first part for you.</li><li><strong>Keep a "known good" die per tube size.</strong> Once a die works well for a tube, stick with it for that size.</li><li><strong>Section one bend per new setup.</strong> One cut test piece per new tube, wall or die tells you more than any chart.</li><li><strong>Measure the straight tube too.</strong> Mill wall varies. Your thinning is the change from <em>your</em> tube's starting wall.</li><li><strong>Check ovality at the same time.</strong> Thinning and flattening grow together on tight bends.</li><li><strong>Watch the surface.</strong> A rough texture on the outside of a bend shows the metal has been stretched hard. Take a closer look before you bend more.</li><li><strong>Ask before you bend safety parts.</strong> For cages, talk to your inspector about bend radius and wall before you buy tube.</li></ul>
 
 <div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: keep the cut pieces</span><p>Experienced builders often keep sectioned test bends, labelled with tube, wall and die, on a shelf. They're a quick reference, and they're great for showing a customer or inspector what's inside a bend.</p></div>
 
