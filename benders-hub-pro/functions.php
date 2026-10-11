@@ -6,12 +6,12 @@
  * fabrication, exhaust and roll cage work, and workshop equipment guidance.
  *
  * @package BendersHub
- * @version 2.0.4
+ * @version 2.0.5
  */
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'BDH_VERSION', '2.0.4' );
+define( 'BDH_VERSION', '2.0.5' );
 define( 'BDH_THEME_DIR', get_template_directory() );
 define( 'BDH_THEME_URI', get_template_directory_uri() );
 define( 'BDH_AMAZON_TAG', 'rcblogs-20' );
@@ -233,3 +233,20 @@ function bdh_get_homepage_sections() {
 	uasort( $merged, function( $a, $b ) { return $a['order'] - $b['order']; } );
 	return $merged;
 }
+
+/**
+ * Old date-based post URLs (/2026/10/11/post-name/) from before the switch to
+ * /%postname%/ permalinks: send them to the post's current address with a 301
+ * so shared links and search results keep working.
+ */
+function bdh_redirect_dated_post_urls() {
+	if ( ! is_404() ) { return; }
+	$path = trim( (string) wp_parse_url( isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '', PHP_URL_PATH ), '/' );
+	if ( ! preg_match( '#^\d{4}/\d{1,2}/\d{1,2}/([a-z0-9-]+)$#', $path, $m ) ) { return; }
+	$post = get_page_by_path( sanitize_title( $m[1] ), OBJECT, 'post' );
+	if ( $post && 'publish' === $post->post_status ) {
+		wp_safe_redirect( get_permalink( $post ), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'bdh_redirect_dated_post_urls', 1 );

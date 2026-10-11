@@ -171,7 +171,7 @@ No plugins were installed, removed or required. The theme does not depend on any
 ## 11. Install, then finish on your site
 
 1. **Back up.** Take a host snapshot or a full backup (files + database) and confirm it can be restored. Keep your original `benders-hub-pro.zip`.
-2. **Install the theme.** Go to Appearance → Themes → Add New → Upload Theme → `dist/benders-hub-pro-2.0.4.zip` and choose **"Replace current with uploaded"**.
+2. **Install the theme.** Go to Appearance → Themes → Add New → Upload Theme → `dist/benders-hub-pro-2.0.5.zip` and choose **"Replace current with uploaded"**.
    - WordPress offers "Replace" only if your current theme folder is named `benders-hub-pro`.
    - If it installs as a separate theme instead, your Customizer settings (stored per theme folder) won't carry over. In that case, tell me the folder name and I'll rebuild the zip under it.
 3. **Benders Hub → Upgrade to v2:** replace the placeholder trust pages, optionally draft the fictional equipment, and create the Magazine Menu.
@@ -290,8 +290,8 @@ All **43** pending articles from the keyword research are written and saved on b
 - Photo de-duplication and the hero fix.
 
 **Published (owner's request, 11 October 2026):**
-- #95 https://bendershub.com/2026/10/11/best-tube-bender-for-home-garage/
-- #121 https://bendershub.com/2026/10/11/pipe-bender-vs-tube-bender/
+- #95 https://bendershub.com/best-tube-bender-for-home-garage/
+- #121 https://bendershub.com/pipe-bender-vs-tube-bender/
 
 **Checks after publishing:**
 - Both pages return HTTP 200 for logged-out visitors at desktop and mobile widths.
@@ -303,3 +303,11 @@ All **43** pending articles from the keyword research are written and saved on b
 - W3 Total Cache was purged.
 
 **To undo:** set either post back to Draft.
+
+**Permalinks changed to Post name (owner's request, 11 October 2026):**
+- Settings → Permalinks changed from `/%year%/%monthnum%/%day%/%postname%/` to `/%postname%/`.
+- Theme 2.0.5 adds a 301 from old dated post URLs to the new ones. For example, `/2026/10/11/pipe-bender-vs-tube-bender/` → `/pipe-bender-vs-tube-bender/`. Unknown slugs still return 404, and date archives still work.
+- W3 Total Cache's database and object caches had to be emptied before logged-out visitors saw the new structure. When changing site settings, empty the database and object caches first and the page cache last.
+- The cached copy of `wp-sitemap-posts-post-1.xml` refreshes when its cache file expires. Requests with any query string already show the new URLs.
+
+**To undo:** choose "Day and name" again in Settings → Permalinks.
