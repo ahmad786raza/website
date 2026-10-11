@@ -961,3 +961,49 @@ body:not(.single) .progress { display: none; }
 @media (max-width: 1024px) {
 	.hero__inner { grid-template-columns: 1fr; }
 }
+
+/* 27. Internal pages (3.4): imported article blocks (hb-*), product boxes and reading comfort */
+.post-content .hb-quote { margin: 1.8em 0; padding: 18px 22px; border-left: 4px solid var(--accent); background: var(--info-soft); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 17px; line-height: 1.6; color: var(--navy); }
+.post-content .hb-tip, .post-content .hb-highlight, .post-content .hb-pro { margin: 1.6em 0; padding: 14px 18px; background: var(--accent-soft); border: 1px solid #c7d7fe; border-left: 4px solid var(--accent); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 15px; }
+.post-content .hb-warn { margin: 1.6em 0; padding: 14px 18px; background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #f97316; border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 15px; color: var(--ink); }
+.post-content .hb-faq { margin: 0 0 12px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); font-size: 15.5px; }
+.post-content .hb-faq h3 { margin: 0 0 8px; font-size: 17px; }
+.post-content .hb-faq h3::before { display: none; }
+.post-content .hb-checklist { margin: 1.8em 0; padding: 20px 22px; background: var(--success-soft); border: 1px solid #bbf7d0; border-left: 4px solid var(--success); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+.post-content .hb-checklist h3 { margin: 0 0 10px; font-size: 18px; color: var(--navy); }
+.post-content .hb-checklist ul { list-style: none; padding-left: 0; }
+.post-content .hb-checklist li { padding: 7px 0; border-top: 1px solid rgba(21, 128, 61, 0.15); font-size: 15px; }
+.post-content .hb-checklist li:first-child { border-top: 0; padding-top: 0; }
+.post-content .hb-checklist li::marker { content: ""; }
+.post-content a.hb-cta { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; background: var(--accent); color: #fff; font-weight: 700; font-size: 15px; border-radius: var(--radius-sm); text-decoration: none; box-shadow: 0 1px 2px rgba(11, 31, 58, 0.12), 0 4px 12px var(--accent-glow); animation: none; }
+.post-content a.hb-cta:hover { background: var(--accent-hover); color: #fff; }
+.post-content .hb-pulse { animation: none !important; }
+.post-content .hb-table th { white-space: nowrap; }
+/* Imported product boxes (inline-styled): soften corners and spacing now that their palette matches the theme */
+.post-content > div[style*="border-radius:16px"], .post-content .imported-article > div[style*="border-radius:16px"] { border-color: var(--line) !important; box-shadow: var(--shadow-sm); }
+.post-content div[style*="border: 2px solid"], .post-content div[style*="border:2px solid"] { box-shadow: var(--shadow-sm); }
+.post-content a[style*="background:#1d4ed8"], .post-content a[style*="background: #1d4ed8"] { border-radius: var(--radius-sm) !important; box-shadow: 0 1px 2px rgba(11, 31, 58, 0.12), 0 4px 12px var(--accent-glow); transition: background 0.15s; }
+.post-content a[style*="background:#1d4ed8"]:hover, .post-content a[style*="background: #1d4ed8"]:hover { background: var(--accent-hover) !important; }
+/* Reading comfort */
+.post-content { font-size: 17.5px; line-height: 1.78; }
+.post-content > p, .post-content .imported-article > p { max-width: 70ch; }
+.post-content .lede { font-size: 20px; line-height: 1.5; max-width: 60ch; }
+.post-content h2 { margin-top: 2em; }
+.post-content h3 { margin-top: 1.6em; }
+.post-content ul > li::marker { color: var(--accent); }
+.post-content .wp-block-list li + li { margin-top: 0.35em; }
+.single__hero { position: relative; }
+@media (max-width: 640px) {
+	.post-content .hb-quote { font-size: 16px; padding: 14px 16px; }
+	.post-content .hb-faq, .post-content .hb-checklist { padding: 14px 16px; }
+}
+
+/* 3.4.0 — imported product boxes with a dark footer: the grey-remap used for white backgrounds is too dark here. */
+.post-content [style*="background:#0f172a"] p,
+.post-content [style*="background: #0f172a"] p,
+.post-content [style*="background:#0f172a"] span,
+.post-content [style*="background: #0f172a"] span { color: #cbd5e1 !important; }
+.post-content [style*="background:#0f172a"] a,
+.post-content [style*="background: #0f172a"] a { color: #fff !important; }
+.post-content [style*="linear-gradient(135deg,#1d4ed8,#06b6d4)"],
+.post-content [style*="linear-gradient(135deg,#1d4ed8,#06b6d4)"] * { color: #fff !important; }

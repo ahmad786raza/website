@@ -275,6 +275,7 @@ function hbg_normalise_imported_markup( $content ) {
 	if ( ! is_singular() || ! get_theme_mod( 'hbg_clean_imported', true ) ) {
 		return $content;
 	}
+	$content = hbg_normalise_imported_blocks( $content );
 	if ( false === strpos( $content, 'style=' ) ) {
 		return $content;
 	}
@@ -309,6 +310,105 @@ function hbg_normalise_imported_markup( $content ) {
 	}, $content );
 	// 5. Light-grey inline text colours (price notes, footers) fail WCAG AA on white; remap to the theme's muted slate.
 	$content = preg_replace( '/color:\s*#(94a3b8|9ca3af|a1a1aa|a3a3a3|aaa|bbb|cbd5e1|d1d5db)\b/i', 'color:#5b6b7f', $content );
+	// 6. Imported "Rich Product Box" / affiliate boxes carry their own orange-and-purple palette in inline styles
+	//    and SVG fills. Remap those brand colours to the theme palette so the boxes read as part of the site.
+	$content = preg_replace_callback( '/\s(style|fill|stroke)="([^"]*)"/i', function ( $m ) {
+		$v = $m[2];
+		$v = preg_replace( '/linear-gradient\(\s*135deg\s*,\s*#f97316\s*,\s*#(7c3aed|f43f5e)\s*\)/i', 'linear-gradient(135deg,#1d4ed8,#06b6d4)', $v );
+		$v = preg_replace( '/linear-gradient\(\s*135deg\s*,\s*#22c55e\s*0%\s*,\s*#16a34a\s*40%\s*,\s*#15803d\s*100%\s*\)/i', 'linear-gradient(135deg,#1d4ed8,#06b6d4)', $v );
+		$v = str_ireplace( array( '#FF7A1A', '#7c3aed', '#6d28d9', '#fff8f0', '#ffddb3' ), array( '#1d4ed8', '#1d4ed8', '#1d4ed8', '#f8fafc', '#e5e7eb' ), $v );
+		return ' ' . $m[1] . '="' . $v . '"';
+	}, $content );
+	return $content;
+}
+
+/**
+ * Block-level clean-up that does not depend on inline styles: imported contents boxes, authoring notes,
+ * emoji-prefixed headings and fabricated star ratings. Each rule is a Customizer switch under Articles.
+ */
+function hbg_normalise_imported_blocks( $content ) {
+	// a. <div class="hb-toc"> contents box → the theme's contents panel.
+	$content = preg_replace_callback( '/<div class="hb-toc">\s*<h3[^>]*>[^<]*<\/h3>\s*(<ol.*?<\/ol>)\s*<\/div>/is', function ( $m ) {
+		return '<nav class="imported-toc" aria-label="' . esc_attr__( 'Table of contents', 'hoverboards-guide' ) . '"><div class="imported-toc__title">' . esc_html__( 'In this article', 'hoverboards-guide' ) . '</div>' . $m[1] . '</nav>';
+	}, $content, 1 );
+	// b. Authoring notes left in the body ("Internal linking suggestions: …" with placeholder links).
+	$content = preg_replace( '/<p[^>]*>\s*<em>\s*Internal linking suggestions:.*?<\/em>\s*<\/p>/is', '', $content );
+	// c. Star ratings and review counts that no source backs ("★★★★☆ 4.4 (5,120 reviews)", "⭐ 4.4 Stars").
+	if ( get_theme_mod( 'hbg_hide_imported_ratings', true ) ) {
+		$content = preg_replace( '/<div[^>]*>\s*<span[^>]*>(?:[★☆]|&#973[34];|\s)+<\/span>\s*<span[^>]*>[\d.]+<\/span>\s*<span[^>]*>\([\d,.]+\s*reviews?\)<\/span>\s*<\/div>/u', '', $content );
+		$content = preg_replace( '/<span[^>]*>\s*(?:⭐|&#11088;|★|&#9733;)\s*[\d.]+\s*Stars?\s*<\/span>/u', '', $content );
+		$content = preg_replace( '/\s*[·|•]\s*(?:⭐|&#11088;|★|&#9733;)\s*[\d.]+\s*\/\s*\d\b/u', '', $content ); // "… · ⭐ 4.7/5" in meta lines
+		$content = preg_replace( '/\s*\(\s*[\d,.]+\+?\s*(?:customer |verified |amazon )?reviews?\s*\)/iu', '', $content ); // "(2,840+ reviews)" anywhere in prose or tables
+		$content = preg_replace( '/<(span|p|div)[^>]*>\s*(?:(?:[★☆]|&#973[34];)\s*){3,}(?:<span[^>]*>[^<]{0,60}<\/span>)?\s*[\d.]*(?:\s*\/\s*\d)?\s*(?:\([\d,.]+\s*reviews?\))?\s*<\/\1>/u', '', $content );
+		// Availability and shipping promises ("In stock · Ships within 24 hours · Free Prime delivery · 30-day returns")
+		// are retailer claims the site cannot verify at read time; drop the strip, keep the price button.
+		$content = preg_replace_callback( '/<div[^>]*>\s*(?:<span[^>]*>(?:\s*<svg\b[^>]*>.*?<\/svg>)?\s*[^<]{1,60}<\/span>\s*){2,8}<\/div>/is', function ( $m ) {
+			return preg_match( '/\b(in stock|ships? (?:within|in) \d+|free (?:prime )?(?:delivery|shipping)|\d+-day returns?|prime eligible)\b/i', $m[0] ) ? '' : $m[0];
+		}, $content );
+		$content = preg_replace( '/<div[^>]*>\s*(?:<svg\b[^>]*>.*?<\/svg>)?\s*(?:&#\d+;|&\w+;|[^\w<])*\s*(?:free (?:prime )?(?:delivery|shipping)|in stock|ships? (?:within|in) \d+|\d+-day returns?|prime eligible)[^<]{0,40}<\/div>/isu', '', $content );
+	}
+	// c2. A stylesheet pasted into the body without its <style> wrapper renders as a paragraph of CSS rules
+	//     (".hb-hero{…} .hb-toc{…}"); the theme styles those classes itself, so drop the text. This runs
+	//     before wpautop, so the rules are bare lines (optionally ending in <br />) — match those first,
+	//     then any rules an editor already wrapped in <p>.
+	$rule    = '[.#@][^{}<>\n]{0,200}\{(?:[^{}<>]|\{[^{}<>]*\})*\}';
+	$content = preg_replace( '/^[ \t]*(?:' . $rule . '[ \t]*(?:<br\s*\/?>)?[ \t]*(?:\r?\n)*)+/mu', '', $content );
+	// c3. Schema JSON pasted into the body without its <script> wrapper ({"@context":"https://schema.org",…})
+	//     prints as a wall of braces; the theme emits its own schema, so drop the bare JSON.
+	$content = hbg_strip_bare_jsonld( $content );
+	$content = preg_replace_callback( '/<p(?:\s[^>]*)?>(.*?)<\/p>/is', function ( $m ) {
+		$t = trim( html_entity_decode( wp_strip_all_tags( $m[1] ), ENT_QUOTES, 'UTF-8' ) );
+		if ( preg_match( '/^[.#@a-z][^{}]{0,200}\{/i', $t ) && '}' === substr( $t, -1 ) && preg_match( '/\{[^{}]*:[^{}]*\}/', $t ) && substr_count( $t, '{' ) === substr_count( $t, '}' ) ) {
+			return '';
+		}
+		return $m[0];
+	}, $content );
+	// d. Emoji that prefix headings (🎯 Features…, 🛼 Types…) read as decoration in a reference article; drop them.
+	if ( get_theme_mod( 'hbg_strip_heading_emoji', true ) ) {
+		$content = preg_replace_callback( '/<(h[2-4])([^>]*)>(.*?)<\/\1>/is', function ( $m ) {
+			$inner = preg_replace( '/^\s*(?:(?:[\x{1F000}-\x{1FAFF}\x{2600}-\x{27BF}\x{2B00}-\x{2BFF}\x{2300}-\x{23FF}\x{FE0F}\x{200D}]|&#\d{4,6};)\s*)+/u', '', $m[3] );
+			return '<' . $m[1] . $m[2] . '>' . $inner . '</' . $m[1] . '>';
+		}, $content );
+	}
 	return $content;
 }
 add_filter( 'the_content', 'hbg_normalise_imported_markup', 8 );
+
+/** Remove JSON-LD objects that sit in the body as plain text (outside any <script> tag). */
+function hbg_strip_bare_jsonld( $content ) {
+	if ( false === stripos( $content, '@context' ) ) {
+		return $content;
+	}
+	$parts = preg_split( '/(<script\b[^>]*>.*?<\/script>)/is', $content, -1, PREG_SPLIT_DELIM_CAPTURE );
+	foreach ( $parts as $i => $part ) {
+		if ( 0 === stripos( $part, '<script' ) ) {
+			continue;
+		}
+		while ( preg_match( '/\{\s*(?:"|&#8220;|“)@context(?:"|&#8221;|”)/u', $part, $m, PREG_OFFSET_CAPTURE ) ) {
+			$start = $m[0][1];
+			$depth = 0;
+			$end   = null;
+			$len   = strlen( $part );
+			for ( $k = $start; $k < $len; $k++ ) {
+				$ch = $part[ $k ];
+				if ( '{' === $ch ) {
+					$depth++;
+				} elseif ( '}' === $ch ) {
+					$depth--;
+					if ( 0 === $depth ) {
+						$end = $k;
+						break;
+					}
+				}
+			}
+			if ( null === $end ) {
+				break;
+			}
+			$tail = substr( $part, $end + 1 );
+			$tail = preg_replace( '/^[ \t]*(?:<br\s*\/?>)?[ \t]*(?:\r?\n)*/', '', $tail, 1 );
+			$part = substr( $part, 0, $start ) . $tail;
+		}
+		$parts[ $i ] = $part;
+	}
+	return implode( '', $parts );
+}

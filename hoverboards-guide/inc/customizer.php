@@ -152,6 +152,8 @@ function hbg_customizer_register( $wp_customize ) {
 		'hbg_show_post_nav'   => array( __( 'Previous / next in the same category', 'hoverboards-guide' ), true ),
 		'hbg_show_disclosure' => array( __( 'Affiliate disclosure box on articles with affiliate links', 'hoverboards-guide' ), true ),
 		'hbg_show_views'      => array( __( 'Show view counts on cards', 'hoverboards-guide' ), false ),
+		'hbg_hide_imported_ratings' => array( __( 'Hide star ratings, review counts and stock/shipping promises baked into imported product boxes (no source backs them)', 'hoverboards-guide' ), true ),
+		'hbg_strip_heading_emoji'   => array( __( 'Remove emoji that prefix headings in imported articles', 'hoverboards-guide' ), true ),
 		'hbg_clean_imported'  => array( __( 'Normalise imported article styling (purple header blocks, inline fonts, duplicate “#ad” strips)', 'hoverboards-guide' ), true ),
 		'hbg_skip_title_cards' => array( __( 'Use the topic photo instead of generated “title card” featured images (files named *-featured.png)', 'hoverboards-guide' ), true ),
 	) as $id => $t ) {

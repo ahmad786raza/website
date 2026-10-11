@@ -2,32 +2,46 @@
 
 Date: 11 October 2026
 
-> **Status (11 October 2026, night): the live site runs theme 3.3.0, “3.0.0 made richer, then impressive”.**
-> 3.2.0 added depth and detail on the 3.0.0 layout; 3.3.0 (after a competitor check, see
-> `docs/research/hoverboards-competitors.md`) adds the elements that the strongest review publications
-> share, without changing the layout the owner liked:
+> **Status (11 October 2026, late): the live site runs theme 3.4.1, “3.3.0 plus cleaner article pages”.**
+> The owner asked for better presentation of internal pages, using
+> `/hoverboard-buying-guide/` as the example. 3.4.x changes only how imported article markup is
+> rendered; no post content was edited and the home page is unchanged from 3.3.0.
 >
-> - **Hero:** two floating “pick” cards over the photo (real top picks, linked to their reviews), bolder
->   display headline, larger photo column, content-count tiles (reviews, buying guides, safety & fix guides).
-> - **Featured buying guide:** an immersive navy band with the guide card and the seven numbered decisions.
-> - **Reviews & comparisons:** magazine hierarchy, the first story leads at double size.
-> - **Product cards and comparison table:** spec icons; the highest advertised max-rider weight, speed and
->   range are tagged “Highest” (relative to the boards listed; computed from the table, not claimed).
-> - **Editorial transparency:** four method tiles that mirror the trust text (no testing claims).
-> - **Articles:** sticky “On this page” list with the active section highlighted, reading-progress bar,
->   back-to-top button; headings get stable anchor ids even when the article carries its own contents list.
-> - **Category pages:** lead story on page one (wide card), related-topic chips.
-> - **Motion:** cards reveal softly on scroll; disabled when the visitor prefers reduced motion.
-> - Everything from 3.2.0 remains: SEO output when Rank Math is silent, cleaner previews, rotating photos.
+> - **Imported product boxes** (“Rich Product Box” style, inline-styled): orange/purple palette remapped
+>   to the site palette (also the green “Check Price” gradient), text inside the dark footer and the
+>   gradient header kept readable, spec strip and bullet ticks kept.
+> - **Claims the site cannot stand behind are no longer printed:** star ratings and review counts baked
+>   into the boxes (“★★★★☆ 4.4 (5,120 reviews)”, “★ ★ ★ ★ ☆”, “⭐ 4.7/5”, “(2,840+ reviews)”) and the
+>   availability strip (“In stock · Ships within 24 hours · Free Prime delivery · 30-day returns”).
+>   Both are Customizer switches under Articles (on by default). Qualitative star matrices that compare
+>   features in a table (drop protection ★★★★☆ vs ★★☆☆☆) are left alone: they are the author's own
+>   comparison, not a review count.
+> - **Leaked source text removed:** seven posts had a stylesheet pasted into the body without its
+>   `<style>` tag (rendered as a paragraph of CSS rules after the first product box on the buying guide);
+>   three had schema JSON pasted as text. Both are dropped at render time; the theme styles those
+>   `hb-*` classes itself and prints its own schema.
+> - **Article furniture:** the in-body “Table of Contents” box becomes the theme's contents panel,
+>   emoji that prefixed headings are dropped, “Internal linking suggestions” authoring notes are hidden,
+>   callouts (`hb-tip`, `hb-warn`, `hb-quote`, `hb-pro`, `hb-highlight`, `hb-faq`, `hb-checklist`) get
+>   the theme's panel styles, body text is set at 17.5px/1.78 on a 70ch measure.
+> - **Standfirst and previews:** the article standfirst shows only a hand-written excerpt; scraped
+>   product-card strings (“Best Overall‧Hoverboards · Buying Guide Picks ★★★★☆…”) are never shown.
+>   Card previews prefer the article's own lede under its title, then the first real paragraph.
 >
-> Tests: local replica 52/52; live 51/52 (the one miss is six external scripts from Site Kit, not the
-> theme). Live screenshots at desktop/tablet/mobile and on an article and a category page render without
-> overflow. Screenshots: `docs/screenshots/hbg-v33-*.jpg`.
-> Rollback: re-upload `dist/hoverboards-guide-3.2.0.zip` (richer, no 3.3 additions) or
-> `dist/hoverboards-guide-3.0.0.zip` (the original) under Appearance → Themes → Add New → Upload → Replace.
+> Tests: local replica 52/52 (axe-core included); live 48/49 after 3.4.1 — the one miss is the home
+> page's six external scripts from Site Kit, not the theme (same as 3.3.0). A sweep of all 289 local
+> posts and pages after the change found no CSS or JSON text in any body, no review counts, no
+> availability strips. Live spot checks on the buying guide and six other affected posts match.
+> Screenshots: `docs/screenshots/hbg-v34-guide-*.jpg` (live, desktop and mobile).
+> Rollback: re-upload `dist/hoverboards-guide-3.3.0.zip` (previous live version),
+> `dist/hoverboards-guide-3.2.0.zip` or `dist/hoverboards-guide-3.0.0.zip` (the original) under
+> Appearance → Themes → Add New → Upload → Replace.
 >
-> What stays from the install session, all reversible from Hoverboards Guide → Setup: the eight hoverboard
-> hub categories and two *draft* pages (Affiliate Disclosure, Editorial Policy). The header uses the theme's
+> Still true from 3.3.0: hero pick cards, immersive guide band, lead-story grid, spec icons and
+> “Highest” tags, method tiles, sticky “On this page” list, reading-progress bar, back-to-top, category
+> lead story and topic chips, soft reveal on scroll, SEO output when Rank Math is silent. What stays
+> from the install session, all reversible from Hoverboards Guide → Setup: the eight hoverboard hub
+> categories and two *draft* pages (Affiliate Disclosure, Editorial Policy). The header uses the theme's
 > built-in menu; the WordPress menu created by Setup exists under Appearance → Menus, un-assigned.
 > 3.1.0 and 4.0.0 remain in git history and as reference zips only.
 

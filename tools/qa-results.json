@@ -71,8 +71,8 @@
  },
  {
   "name": "home: ≤ 4 external scripts",
-  "ok": false,
-  "info": "scripts=6 styles=2"
+  "ok": true,
+  "info": "scripts=1 styles=2"
  },
  {
   "name": "home: sections A–I present",
@@ -137,7 +137,7 @@
  {
   "name": "article: JSON-LD parses with one Article and one BreadcrumbList",
   "ok": true,
-  "info": "Organization,ImageObject,WebSite,SearchAction,EntryPoint,BlogPosting,WebPage,BreadcrumbList,ListItem,ListItem,ListItem,ListItem,FAQPage,Question,Answer,Question,Answer,Question,Answer,Question,Answer,Question,Answer,Question,Answer"
+  "info": "Organization,ImageObject,WebSite,SearchAction,EntryPoint,BlogPosting,WebPage,BreadcrumbList,ListItem,ListItem,ListItem,ListItem"
  },
  {
   "name": "article: breadcrumbs Home › Category [› Child] › Title",
@@ -172,7 +172,7 @@
  {
   "name": "article: tables wrapped for scrolling",
   "ok": true,
-  "info": "tables=3"
+  "info": "tables=6"
  },
  {
   "name": "article: no horizontal overflow",
@@ -192,7 +192,7 @@
  {
   "name": "search: noindex + results",
   "ok": true,
-  "info": "noindex, follow cards=10"
+  "info": "noindex, nofollow, follow cards=10"
  },
  {
   "name": "404: status 404 with search and topic links",
@@ -217,7 +217,7 @@
  {
   "name": "mobile article: no overflow, tables scroll inside, body ≥16px",
   "ok": true,
-  "info": "{\"overflow\":false,\"tableScroll\":true,\"contentFont\":18.5}"
+  "info": "{\"overflow\":false,\"tableScroll\":true,\"contentFont\":20}"
  },
  {
   "name": "keyboard: first Tab lands on skip link",
@@ -227,12 +227,12 @@
  {
   "name": "perf /: LCP ≤ 2500ms and CLS ≤ 0.1 (mobile, 4x CPU, ~1.6 Mbps)",
   "ok": true,
-  "info": "{\"lcp\":1572,\"cls\":0.001,\"req\":12,\"dom\":1532}"
+  "info": "{\"lcp\":1996,\"cls\":0,\"req\":6,\"dom\":1502}"
  },
  {
   "name": "perf /hover-1-titan-hoverboard/: LCP ≤ 2500ms and CLS ≤ 0.1 (mobile, 4x CPU, ~1.6 Mbps)",
   "ok": true,
-  "info": "{\"lcp\":1356,\"cls\":0,\"req\":17,\"dom\":883}"
+  "info": "{\"lcp\":1668,\"cls\":0,\"req\":8,\"dom\":893}"
  },
  {
   "name": "no JS errors across pages",

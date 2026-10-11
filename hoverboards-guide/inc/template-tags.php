@@ -424,13 +424,21 @@ function hbg_excerpt( $words = 24, $post = null ) {
 	if ( $post->post_excerpt && ! preg_match( $junk, trim( wp_strip_all_tags( $post->post_excerpt ) ) ) ) {
 		$text = $post->post_excerpt;
 	} else {
-		// No hand-written excerpt: use the first real paragraph of the body, skipping imported
-		// header blocks (date stamps, repeated titles, product-card rating snippets).
+		// No hand-written excerpt: prefer the article's own lede (the sentence under the title in an
+		// imported hero block), then the first real paragraph of the body, skipping imported header
+		// blocks (date stamps, repeated titles, product-card rating snippets).
 		$content = strip_shortcodes( $post->post_content );
-		if ( preg_match_all( '/<p\b[^>]*>(.*?)<\/p>/is', $content, $m ) ) {
+		if ( preg_match( '/<div class="hb-hero">(.*?)<\/div>/is', $content, $hero ) || preg_match( '/<div style="[^"]*linear-gradient[^"]*"[^>]*>\s*<div[^>]*>\s*UPDATED[^<]*<\/div>\s*<h1[^>]*>.*?<\/h1>(.*?)<\/div>/is', $content, $hero ) ) {
+			$lede = preg_replace( '/<h1\b[^>]*>.*?<\/h1>/is', '', $hero[1] );
+			$lede = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( $lede ) ) );
+			if ( mb_strlen( $lede ) >= 40 && false === strpos( $lede, '★' ) ) {
+				$text = $lede;
+			}
+		}
+		if ( ! $text && preg_match_all( '/<p\b[^>]*>(.*?)<\/p>/is', $content, $m ) ) {
 			foreach ( $m[1] as $para ) {
 				$t = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( $para ) ) );
-				if ( mb_strlen( $t ) < 80 || false !== strpos( $t, '★' ) || preg_match( '/^(UPDATED|Updated)\b/', $t ) || ( $title && 0 === stripos( $t, $title ) ) || preg_match( '/\(\s*[\d,.]+\s*reviews?\s*\)/i', $t ) || preg_match( $junk, $t ) ) {
+				if ( mb_strlen( $t ) < 80 || false !== strpos( $t, '★' ) || preg_match( '/^(UPDATED|Updated)\b/', $t ) || ( $title && 0 === stripos( $t, $title ) ) || preg_match( '/\(\s*[\d,.]+\+?\s*reviews?\s*\)/i', $t ) || preg_match( $junk, $t ) || preg_match( '/^[.#@a-z][^{}]{0,200}\{/i', $t ) ) {
 					continue;
 				}
 				$text = $t;
@@ -451,6 +459,23 @@ function hbg_excerpt( $words = 24, $post = null ) {
 		$text = trim( substr( $text, strlen( $title ) ) );
 	}
 	return wp_trim_words( $text, $words, '…' );
+}
+
+/**
+ * Standfirst for the article header: the hand-written excerpt, or nothing. Imported posts often carry a
+ * scraped product-card string as their excerpt ("Best Overall‧Hoverboards · ★★★★☆ 4.4 (5,120 reviews) …");
+ * that is never shown — a missing standfirst reads better than a wrong one.
+ */
+function hbg_standfirst( $post = null ) {
+	$post = get_post( $post );
+	if ( ! $post || ! $post->post_excerpt ) {
+		return '';
+	}
+	$raw = trim( preg_replace( '/\s+/u', ' ', html_entity_decode( wp_strip_all_tags( $post->post_excerpt ), ENT_QUOTES | ENT_HTML5, 'UTF-8' ) ) );
+	if ( preg_match( '/^.{1,40}[·‧•]/u', $raw ) || false !== strpos( $raw, '★' ) || preg_match( '/\(\s*[\d,.]+\+?\s*reviews?\s*\)/i', $raw ) ) {
+		return '';
+	}
+	return $raw;
 }
 
 // -------------------------------------------------------------------------

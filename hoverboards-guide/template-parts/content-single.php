@@ -14,7 +14,7 @@ if ( $show_toc && hbg_content_has_toc( $content ) ) {
 // Always give headings stable ids: the sidebar "On this page" list and anchor links rely on them.
 list( $content, $toc_items ) = hbg_toc_prepare( $content );
 $GLOBALS['hbg_toc_items'] = $toc_items;
-$standfirst = has_excerpt() ? get_the_excerpt() : '';
+$standfirst = hbg_standfirst(); // hand-written excerpt only; scraped product-card excerpts are never shown
 $affiliate  = hbg_content_has_affiliate_links( $content );
 $cat        = hbg_primary_category();
 ?>
