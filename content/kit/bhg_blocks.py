@@ -124,7 +124,12 @@ def convert(src, catalog=None, featured_id=None, seed=0):
             slot = _attr(attrs, 'data-slot')
             cap_m = re.search(r'<figcaption>(.*)</figcaption>', c, re.S)
             cap = cap_m.group(1).strip() if cap_m else ''
-            img = pick_image(catalog, slot, used, seed) if slot else None
+            prefer = _attr(attrs, 'data-prefer')
+            img = None
+            if prefer:
+                img = next((x for x in catalog if x['id'] == int(prefer) and x['id'] not in used), None)
+            if img is None:
+                img = pick_image(catalog, slot, used, seed) if slot else None
             if not img:
                 warnings.append('No unused photo for slot "%s": figure skipped.' % slot)
                 continue

@@ -1,0 +1,370 @@
+[
+  {
+    "file": "File:Buigmachine en buigblok voor unionbuis.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Buigmachine_en_buigblok_voor_unionbuis.JPG",
+    "title": "Hand pipe-bending machine with bending block",
+    "slots": [
+      "manual-bender",
+      "workshop"
+    ],
+    "alt": "A small hand-operated pipe-bending machine shown together with its grooved bending block (former) for steel 'Union' gas/water pipe.",
+    "filename": "hand-pipe-bending-machine-and-bending-block.jpg",
+    "notes": "From Commons Category:Tube benders, 3450 x 2301 px per category listing. Same Dutch series as the already-imported 'Buigmachine voor Unionbuis 01.jpg' but a different file (machine + block together). Licence not shown in snippet; the series is presumably own-work by the same uploader, so likely CC BY-SA, but the importer must confirm. Extension seen as upper-case .JPG. Closest thing to a manual rotary/former bender found; not a modern ratchet rotary-draw bender.",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'pipe bender File jpg' and 'Buigmachine en buigblok voor unionbuis' -> Category:Tube benders listing"
+  },
+  {
+    "file": "File:Buigijzer uit elkaar.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Buigijzer_uit_elkaar.jpg",
+    "title": "Pipe bending iron, disassembled",
+    "slots": [
+      "manual-bender"
+    ],
+    "alt": "A plumber's pipe bending iron (hand bender) taken apart to show its components.",
+    "filename": "pipe-bending-iron-disassembled.jpg",
+    "notes": "Listed in Commons Category:Tube benders next to the already-imported 'Buigijzer.jpg'; this is the 'taken apart' companion shot. Size and licence not shown in snippets; importer must check. Medium confidence on content (from the Dutch title 'bending iron, apart').",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'Category:Tube benders Wikimedia Commons files' (category summary listed 'Buigijzer uit elkaar.jpg')"
+  },
+  {
+    "file": "File:Buigveer1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Buigveer1.jpg",
+    "title": "Bending spring for plastic conduit",
+    "slots": [
+      "manual-bender",
+      "conduit-bender"
+    ],
+    "alt": "A steel coil bending spring of the kind pushed inside PVC conduit or soft pipe to stop it kinking when bent by hand.",
+    "filename": "pipe-bending-spring.jpg",
+    "notes": "In Commons Category:Tube benders; described as a bending spring for PVC pipe. Size and licence not shown; low priority, but useful to illustrate internal support / anti-kink (a poor man's mandrel).",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'Category:Tube benders Wikimedia Commons files' and 'kinked crushed bent pipe deformed tube File jpg'"
+  },
+  {
+    "file": "File:Three roll push bending process.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Three_roll_push_bending_process.jpg",
+    "title": "Three-roll push bending tooling",
+    "slots": [
+      "industrial-pipe",
+      "cnc-bender"
+    ],
+    "alt": "Complete tooling set-up for the three-roll push bending process, a machine method for bending tube to large radii.",
+    "filename": "three-roll-push-bending-tooling.jpg",
+    "notes": "Own work by Strano.m, dated 2 July 2012; description 'Complete tooling for the three roll push bending process'. Dual licensed GFDL 1.2+ and CC BY-SA 3.0 Unported (use the CC BY-SA option). Used on the Wikipedia 'Tube bending' article. Size not shown; may be modest. Shows machine tooling, no people.",
+    "research_license": "CC BY-SA 3.0 (dual with GFDL)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): '\"Three roll push bending process\" jpg license'"
+  },
+  {
+    "file": "File:Full tooling for rotary draw bending.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Full_tooling_for_rotary_draw_bending.jpg",
+    "title": "Rotary draw bending tooling set",
+    "slots": [
+      "mandrel",
+      "cnc-bender"
+    ],
+    "alt": "The full die set used for rotary draw bending: bend die, clamp die, pressure die and, likely, wiper die and mandrel.",
+    "filename": "rotary-draw-bending-tooling.jpg",
+    "notes": "Listed in Commons Category:Manufacturing processes at only 557 x 613 px (small). Caption matches the 'Full tooling for rotary draw bending' image on the Wikipedia 'Tube bending' article; probably by the same uploader as the three-roll push file (Strano.m) but not confirmed. Licence not seen; importer must check. Include only if nothing better turns up for mandrel/die tooling; content not visually verified.",
+    "research_license": "unknown (probably CC BY-SA 3.0 like its sibling, unconfirmed)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'Strano.m rotary draw bending tooling jpg' and '\"Full tooling for rotary draw bending\"'"
+  },
+  {
+    "file": "File:Wafios-rohrbiegemaschine.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Wafios-rohrbiegemaschine.png",
+    "title": "Wafios CNC tube bending machine",
+    "slots": [
+      "cnc-bender",
+      "industrial-pipe"
+    ],
+    "alt": "An industrial tube bending machine (Rohrbiegemaschine) made by Wafios of Reutlingen, Germany.",
+    "filename": "wafios-cnc-tube-bending-machine.png",
+    "notes": "PNG, 982 x 655 px, 410 KB per category listing (Category:Wafios and Category:Bending machines). Licence and whether it is a photo or a rendering not seen. Likely a manufacturer-supplied image, so it may carry the Wafios name or logo. The only industrial CNC tube bender file I could find; low-to-medium confidence.",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'Rohrbiegemaschine File jpg' and '\"Wafios-rohrbiegemaschine.png\"'"
+  },
+  {
+    "file": "File:Doug's headers!.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Doug's_headers!.jpg",
+    "title": "Tubular exhaust headers",
+    "slots": [
+      "exhaust"
+    ],
+    "alt": "A set of tubular exhaust headers: several bent primary pipes joining into a collector.",
+    "filename": "tubular-exhaust-headers.jpg",
+    "notes": "Listed in Commons Category:Exhaust manifolds at 2320 x 1740 px, 2.45 MB. Licence, author and exact framing not seen. Title includes an apostrophe and exclamation mark, so check URL-encoding. Content inferred from title and category only; medium confidence.",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'Category:Exhaust manifolds headers jpg' and '\"Doug's headers\" jpg'"
+  },
+  {
+    "file": "File:Headers.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Headers.jpg",
+    "title": "Aftermarket exhaust headers",
+    "slots": [
+      "exhaust"
+    ],
+    "alt": "Aftermarket tubular exhaust headers (bent steel primary tubes and collector).",
+    "filename": "aftermarket-exhaust-headers.jpg",
+    "notes": "Listed in Commons Category:Exhaust manifolds at 1632 x 1224 px, 374 KB. Licence and author not seen. Content inferred from title and category; medium confidence.",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'Category:Exhaust manifolds headers jpg'"
+  },
+  {
+    "file": "File:Header.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Header.JPG",
+    "title": "Exhaust header",
+    "slots": [
+      "exhaust"
+    ],
+    "alt": "Probably a tubular exhaust header (manifold made of bent pipes).",
+    "filename": "exhaust-header-bent-tubes.jpg",
+    "notes": "The search engine reported it as public domain, author 'Handige harry'. It surfaced in an exhaust-manifold query, but the snippet did not describe the content; 'header' could also mean something else. Low-to-medium confidence on subject, so check visually before use.",
+    "research_license": "Public domain (per search summary)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): '\"Headers.jpg\" exhaust manifold Commons license author'"
+  },
+  {
+    "file": "File:Chassis with suspension and exhaust system.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chassis_with_suspension_and_exhaust_system.jpg",
+    "title": "Vehicle chassis with exhaust system",
+    "slots": [
+      "exhaust",
+      "chassis"
+    ],
+    "alt": "A bare motor-vehicle ladder chassis with suspension, tyres, steering box and part of the bent-pipe exhaust system.",
+    "filename": "vehicle-chassis-with-exhaust-system.jpg",
+    "notes": "By Christopher Ziemnowicz (CZmarlin), uploaded 2007, 1600 x 1200 px. Author asks for a photo credit outside Wikipedia. Ladder chassis, not a tube frame; exhaust only part of the frame. Good secondary image for exhaust routing or chassis topics.",
+    "research_license": "CC BY-SA 2.5",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): '\"Chassis with suspension and exhaust system\" jpg license'"
+  },
+  {
+    "file": "File:Blue line industries dune buggy sand rail.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Blue_line_industries_dune_buggy_sand_rail.jpg",
+    "title": "Tube-frame sand rail buggy",
+    "slots": [
+      "chassis",
+      "roll-cage"
+    ],
+    "alt": "A dune buggy / sand rail built from a fully triangulated bent-tube chassis and cage.",
+    "filename": "tube-frame-sand-rail-dune-buggy.jpg",
+    "notes": "Dated 18 April 2015, uploader listed as author (account appears linked to Blue Line Industries, so it may be promotional and could show a company name on the vehicle). A different file from the already-imported 'Sand rail at Blue line industries.jpg'. Size not seen. High confidence on subject.",
+    "research_license": "CC BY-SA 4.0",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'Blue line industries dune buggy sand rail jpg license'"
+  },
+  {
+    "file": "File:Go kart frame.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Go_kart_frame.jpg",
+    "title": "Prototype go-kart frame",
+    "slots": [
+      "chassis",
+      "welding"
+    ],
+    "alt": "A bare prototype go-kart frame made of bent and welded steel tube, before axles and wheels are fitted.",
+    "filename": "go-kart-tube-frame-prototype.jpg",
+    "notes": "Own work by Criveros0248, 30 October 2011; described as a prototype frame that still needs additional welding. Size not seen (likely a student project photo). High confidence on subject.",
+    "research_license": "CC BY-SA 3.0",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'go-kart frame chassis tube File jpg' and '\"Go kart frame.jpg\" prototype frame license'"
+  },
+  {
+    "file": "File:MODIFIED GO KART FRAME.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:MODIFIED_GO_KART_FRAME.jpg",
+    "title": "Modified electric go-kart frame",
+    "slots": [
+      "chassis",
+      "welding"
+    ],
+    "alt": "A tubular steel e-kart rolling chassis modified with a shortened steering column, relocated seat and welded battery boxes.",
+    "filename": "modified-go-kart-tube-frame.jpg",
+    "notes": "Same project as 'Go kart frame.jpg' (week-3 workshop modification). Size not seen. High confidence on subject.",
+    "research_license": "CC BY-SA 3.0",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): '\"MODIFIED GO KART FRAME\" rolling chassis license'"
+  },
+  {
+    "file": "File:1990 Longline MKII Loght Strike Vehicle Chassis -L40007.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:1990_Longline_MKII_Loght_Strike_Vehicle_Chassis_-L40007.jpg",
+    "title": "Longline light strike vehicle tube chassis",
+    "slots": [
+      "chassis",
+      "roll-cage"
+    ],
+    "alt": "The bare tubular space-frame chassis of a 1990 Longline Mk II Light Strike Vehicle, a VW-based military buggy.",
+    "filename": "longline-light-strike-vehicle-tube-chassis.jpg",
+    "notes": "Seen only in a Category:1990 automobiles listing at 3339 x 2558 px, 2.06 MB. EXACT TITLE UNCERTAIN: the snippet showed 'Loght' (typo in the real filename?) and ' -L40007' (spacing unclear). Licence not seen; may be a museum photo. Verify the title via the Commons API before importing.",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'dune buggy tube frame chassis File jpg' and 'Longline MKII Light Strike Vehicle Chassis jpg'"
+  },
+  {
+    "file": "File:Bull bar roo bar on b double.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Bull_bar_roo_bar_on_b_double.JPG",
+    "title": "Tubular bull bar on a B-double truck",
+    "slots": [
+      "chassis",
+      "roll-cage"
+    ],
+    "alt": "A heavy tubular steel bull bar (roo bar) on the front of a B-double semi-trailer truck at a highway truck stop.",
+    "filename": "tubular-bull-bar-on-truck.jpg",
+    "notes": "By John Hewat (Johnscotaus), own work, 15 November 2015, Yass truck stop, Hume Highway, Australia. Heavy-truck bull bar, not a Jeep tube bumper, but it shows large-diameter bent tube. The truck's maker badge may be visible.",
+    "research_license": "CC BY-SA 4.0",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'bullbar pickup truck tubular steel bumper File jpg' and '\"Bull bar roo bar on b double\" license author'"
+  },
+  {
+    "file": "File:ARB Bullbar JeepLiberty 2005.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:ARB_Bullbar_JeepLiberty_2005.JPG",
+    "title": "Bull bar on a Jeep Liberty",
+    "slots": [
+      "chassis"
+    ],
+    "alt": "An aftermarket steel bull bar fitted to a 2005-2007 Jeep Liberty.",
+    "filename": "jeep-liberty-steel-bull-bar.jpg",
+    "notes": "Uploaded by Unixxx. Licence and size not seen. The ARB brand is in the title and probably visible on the bar, and ARB bars are partly plate rather than pure tube, so low priority. Check the logo before use.",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'bullbar pickup truck tubular steel bumper File jpg'"
+  },
+  {
+    "file": "File:Stainless steel railing.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Stainless_steel_railing.jpg",
+    "title": "Stainless steel stair railing",
+    "slots": [
+      "tube-stock",
+      "industrial-pipe"
+    ],
+    "alt": "An outdoor stainless steel tube handrail beside steps in Japan.",
+    "filename": "stainless-steel-tube-handrail.jpg",
+    "notes": "Listed in Commons Category:Outside stairs in Japan at 4032 x 3024 px, 3.55 MB. Licence and author not seen; whether the rail has visible bends is not known. Medium confidence.",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'stainless steel handrail bent tube stairs File jpg' and '\"Stainless steel railing.jpg\" Japan stairs license'"
+  },
+  {
+    "file": "File:Reynolds 531SL Fork Blades.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Reynolds_531SL_Fork_Blades.jpg",
+    "title": "Reynolds 531SL bicycle fork blades",
+    "slots": [
+      "tube-stock",
+      "manual-bender"
+    ],
+    "alt": "Tapered, raked (bent) Reynolds 531SL steel bicycle fork blades: thin-wall alloy tube bent to a curve.",
+    "filename": "reynolds-531-steel-fork-blades.jpg",
+    "notes": "Listed in Category:Reynolds Technology and Category:Bicycle forks at 2816 x 2112 px, 2.49 MB. Licence not seen. Probably a product-on-bench photo; the Reynolds decal may be visible. Good for bicycle frame tubing and thin-wall bends.",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'bicycle frame tubes Reynolds 531 chromoly steel tubing File jpg' and '\"Reynolds 531SL Fork Blades\" jpg license'"
+  },
+  {
+    "file": "File:Metal tubing at the Consolidated Aircraft Corp1a34940v.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Metal_tubing_at_the_Consolidated_Aircraft_Corp1a34940v.jpg",
+    "title": "Metal tubing at an aircraft plant, 1940s",
+    "slots": [
+      "tube-stock",
+      "industrial-pipe"
+    ],
+    "alt": "Historic colour photo of metal tubing at the Consolidated Aircraft Corp. plant during World War II.",
+    "filename": "wwii-aircraft-metal-tubing-consolidated.jpg",
+    "notes": "US Office of War Information photo by Howard R. Hollem (LOC 1a34940v); US-government work, so public domain. Only 1024 x 823 px in the listing (a larger LOC TIFF may exist), and Commons also has a cropped version. Note there is no space before '1a34940v' in the title as listed. A worker may appear in the shot.",
+    "research_license": "Public domain (US government / OWI)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'aluminium tubes stack metal tubing stock File jpg' and '\"Metal tubing at the Consolidated Aircraft Corp1a34940v.jpg\"'"
+  },
+  {
+    "file": "File:Kinked pipe.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kinked_pipe.jpg",
+    "title": "Kinked metal pipe",
+    "slots": [
+      "tube-stock",
+      "safety"
+    ],
+    "alt": "A metal pipe with a sharp kink where it collapsed during bending, a classic bending defect.",
+    "filename": "kinked-metal-pipe-bending-defect.jpg",
+    "notes": "Own work by Swpb, uploaded 26 July 2022, 3000 x 4000 px (portrait). High confidence: the description is 'Photo of kinked metal pipe'. Best match found for wrinkled/kinked/flattened defects.",
+    "research_license": "CC BY-SA 4.0",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'kinked crushed bent pipe deformed tube File jpg' and '\"Kinked pipe.jpg\" Swpb license'"
+  },
+  {
+    "file": "File:Universal bevel protractor.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Universal_bevel_protractor.jpg",
+    "title": "Universal bevel protractor",
+    "slots": [
+      "measuring"
+    ],
+    "alt": "A steel universal bevel protractor with a vernier scale, used to measure and set angles precisely.",
+    "filename": "universal-bevel-protractor.jpg",
+    "notes": "3456 x 2298 px. Not a digital angle finder (none found on Commons via search), but a good stand-in for bend-angle measurement.",
+    "research_license": "CC BY 2.0",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'digital angle finder protractor level File jpg'"
+  },
+  {
+    "file": "File:Mata Bor Hidroponik Hole Saw.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Mata_Bor_Hidroponik_Hole_Saw.jpg",
+    "title": "Hole saws for cutting pipe",
+    "slots": [
+      "cutting"
+    ],
+    "alt": "Hole saw cutters used for boring round holes in plastic pipe for hydroponics.",
+    "filename": "hole-saw-cutters.jpg",
+    "notes": "3000 x 2000 px; from a Wikimedia Indonesia photo contest (WikiKaleidoskop), uploader is the copyright holder. Shows hole saws, not a tube notcher. Use to illustrate the hole-saw principle behind notchers.",
+    "research_license": "CC BY-SA 4.0",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'hole saw bi-metal File jpg' and '\"Mata Bor Hidroponik Hole Saw\" license'"
+  },
+  {
+    "file": "File:Hydraulic press brake's cylinder.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hydraulic_press_brake's_cylinder.jpg",
+    "title": "Hydraulic press-brake cylinder",
+    "slots": [
+      "hydraulic-bender",
+      "workshop"
+    ],
+    "alt": "A large hydraulic cylinder on a 200-ton press brake, with a piston rod over 200 mm in diameter.",
+    "filename": "hydraulic-press-brake-cylinder.jpg",
+    "notes": "Self-made by Márton Kiss-Albert, 24 March 2008. Dual licensed GFDL 1.2+ and CC BY-SA 3.0 (use the CC option). It is a press brake, not a tube bender; use as a generic heavy-hydraulic-cylinder image.",
+    "research_license": "CC BY-SA 3.0 (dual with GFDL)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'hydraulic cylinder workshop photo File jpg' and '\"Hydraulic press brake's cylinder\" license self-made'"
+  },
+  {
+    "file": "File:Hydraulic press brake's cylinder 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hydraulic_press_brake's_cylinder_1.jpg",
+    "title": "Hydraulic press-brake cylinder (alt view)",
+    "slots": [
+      "hydraulic-bender",
+      "workshop"
+    ],
+    "alt": "Another view of the hydraulic cylinder on a 200-ton press brake.",
+    "filename": "hydraulic-press-brake-cylinder-alt.jpg",
+    "notes": "Same author and licence as the previous entry; one of the pair is 3488 x 2616 px according to the snippet.",
+    "research_license": "CC BY-SA 3.0 (dual with GFDL)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): '\"Hydraulic press brake's cylinder\" license self-made'"
+  },
+  {
+    "file": "File:Telescopic Hydraulic Cylinder.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Telescopic_Hydraulic_Cylinder.JPG",
+    "title": "Telescopic hydraulic ram",
+    "slots": [
+      "hydraulic-bender"
+    ],
+    "alt": "A telescopic hydraulic ram (a Lukas rescue ram, HP50/T400R type) photographed close up.",
+    "filename": "telescopic-hydraulic-ram.jpg",
+    "notes": "Own work, 3264 x 4352 px (portrait). The Lukas brand name is probably printed on the ram. It is a rescue tool, not a bender ram, but it shows the hydraulic-ram principle used in ram-type pipe benders.",
+    "research_license": "CC BY-SA 4.0",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'hydraulic cylinder workshop photo File jpg'"
+  },
+  {
+    "file": "File:Old belt driven Air compressor.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Old_belt_driven_Air_compressor.jpg",
+    "title": "Old belt-driven air compressor",
+    "slots": [
+      "workshop"
+    ],
+    "alt": "An older belt-driven piston air compressor on a receiver tank.",
+    "filename": "belt-driven-workshop-air-compressor.jpg",
+    "notes": "From Flickr, by Chris Bartle; licence confirmed by Flickr review in 2015. 3267 x 2178 px.",
+    "research_license": "CC BY 2.0",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'air compressor garage workshop File jpg' and '\"Old belt driven Air compressor\" OR \"Air Compressor.JPG\" license Commons'"
+  },
+  {
+    "file": "File:Air Compressor.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Air_Compressor.JPG",
+    "title": "Air compressor",
+    "slots": [
+      "workshop"
+    ],
+    "alt": "A workshop air compressor.",
+    "filename": "workshop-air-compressor.jpg",
+    "notes": "Listed in Category:Air compressors at 5184 x 3456 px, 6.07 MB. Licence and content not seen (not to be confused with lower-case 'Air compressor.jpg', a small 400 px GFDL/CC BY-SA image). Low confidence; check visually and for brand logos.",
+    "research_license": "unknown (not shown in search snippet)",
+    "evidence": "WebSearch (allowed_domains=commons.wikimedia.org): 'air compressor garage workshop File jpg' (category listing)"
+  }
+]
