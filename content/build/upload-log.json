@@ -408,5 +408,35 @@
    18
   ],
   "at": "2026-10-11T15:23:47.422Z"
+ },
+ "mandrel-vs-rotary": {
+  "id": 33,
+  "status": "draft",
+  "identical": true,
+  "featured": 102,
+  "categories": [
+   8
+  ],
+  "at": "2026-10-11T15:25:13.598Z"
+ },
+ "exhaust-bend-radius-1d-vs-1-5d-vs-2d": {
+  "id": 163,
+  "status": "draft",
+  "identical": true,
+  "featured": 104,
+  "categories": [
+   8
+  ],
+  "at": "2026-10-11T15:25:15.350Z"
+ },
+ "exhaust-tube-cut-length": {
+  "id": 164,
+  "status": "draft",
+  "identical": true,
+  "featured": 76,
+  "categories": [
+   18
+  ],
+  "at": "2026-10-11T15:25:17.199Z"
  }
 }

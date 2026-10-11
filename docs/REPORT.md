@@ -253,3 +253,38 @@ After `bendershub.com` was added to this environment's allowed domains, the live
 - About 5,000 words in core Gutenberg blocks plus Custom HTML components: 3 comparison tables, 4 Amazon product boxes and 16 Amazon links tagged `polyfreeplanet-20`.
 - Specs come from manufacturer and retailer listings checked on 11 October 2026. The article says it is research-based, not hands-on tested.
 - Editor-only notes (HTML comments) mark where to link the starter drafts once they are published, and where your own photos would help.
+
+## 17. Keyword-plan articles (11 October 2026)
+
+All **43** pending articles from the keyword research are written and saved on bendershub.com as **drafts**, along with the earlier home-garage guide (44 in total). Nothing was published. The full list, with post IDs and the facts to check before publishing, is in [`docs/DRAFT-ARTICLES.md`](DRAFT-ARTICLES.md).
+
+**How they were made:**
+- Writers followed `content/kit/WRITER-KIT.md`, which covers the user's article brief, the honesty and Amazon rules, the safety rules and the component markup.
+- Each article had to pass `content/kit/validate.py`. The checks include:
+  - 3,000+ words, with every section at least 200 words
+  - TOC links that resolve
+  - 2+ tables, callouts, examples, mistakes, pro tips, a 4–6 item FAQ and a checklist
+  - Amazon links in the form `/dp/ASIN?tag=polyfreeplanet-20` with sponsored rel, placed after the disclosure
+  - no prices, star ratings or claims of hands-on testing
+- After upload, `content/kit/preview-check.js` opened every draft preview on the live site and checked for one H1, no PHP notices, working images, valid links, the disclosure and no overflow.
+
+**Rewrites and new drafts:**
+- 10 starter drafts were rewritten in place, keeping their IDs and slugs. Their old versions are in WordPress revisions: #31, #32, #33, #34, #35, #36, #38, #39, #40, #41.
+- 33 new drafts were created.
+- Untouched: "DIY Garage Workshop" (#37) and "Conduit Bending for Electricians" (#42).
+
+**Size and products:** about 188,000 words across the 44 drafts, using 53 Amazon products. Every product page was matched in an amazon.com search, and the evidence is recorded in the manifests and `content/build/asin-audit.json`.
+
+**Photos:** 45 licensed photos are in the library after a second import of Commons files (17 kept). The converter adds credits automatically.
+
+**Limits:**
+- The build environment could not open most manufacturer, rule-body or Amazon pages directly.
+- The session's shared web-search allowance ran out partway through.
+- Facts therefore come from search-result summaries, the earlier fact-check notes and the kit's fact table. Unverifiable numbers were left out, and conflicts between sources are stated in the text.
+- Each draft's "check before publishing" list is in `docs/DRAFT-ARTICLES.md`.
+
+**Theme 2.0.4:**
+- `data-bhg-link` article links resolve to real permalinks only once the target is published.
+- Article components stylesheet.
+- New photo slots.
+- Photo de-duplication and the hero fix.
