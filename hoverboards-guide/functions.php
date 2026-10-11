@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'HBG_VERSION', '3.4.1' );
+define( 'HBG_VERSION', '3.5.0' );
 define( 'HBG_DIR', get_template_directory() );
 define( 'HBG_URI', get_template_directory_uri() );
 

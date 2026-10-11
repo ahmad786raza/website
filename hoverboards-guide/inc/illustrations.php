@@ -81,3 +81,58 @@ function hbg_illustration( $name, $args = array() ) {
 	$attrs = $a['alt'] ? ' role="img" aria-label="' . esc_attr( $a['alt'] ) . '"' : ' aria-hidden="true"';
 	return '<svg class="illus' . ( $a['class'] ? ' ' . esc_attr( $a['class'] ) : '' ) . '" viewBox="0 0 400 300" width="400" height="300" xmlns="http://www.w3.org/2000/svg"' . $attrs . ' focusable="false">' . $body . '</svg>';
 }
+
+/**
+ * Product tile: a side-view board drawn from the product's own data (wheel size, tyre type, role),
+ * used as the comparison-table thumbnail until the owner uploads a photo for that product.
+ * It is an illustration and is labelled as such in the table note.
+ */
+function hbg_product_tile( $p, $args = array() ) {
+	$a      = wp_parse_args( $args, array( 'class' => '', 'alt' => '' ) );
+	$ink    = '#0b1f3a';
+	$white  = '#ffffff';
+	$colors = array(
+		'overall'     => '#1d4ed8',
+		'budget'      => '#0e7490',
+		'kids'        => '#d97706',
+		'adults'      => '#0f172a',
+		'all-terrain' => '#15803d',
+		'beginners'   => '#0284c7',
+		'premium'     => '#6d28d9',
+	);
+	$role   = isset( $p['role'] ) ? $p['role'] : '';
+	$deck   = isset( $colors[ $role ] ) ? $colors[ $role ] : '#1d4ed8';
+	$wheel  = isset( $p['wheel'] ) ? (string) $p['wheel'] : '';
+	$size   = (float) preg_replace( '/^[^\d.]*([\d.]+).*$/s', '$1', $wheel );
+	$size   = $size > 0 ? min( 12, max( 6, $size ) ) : 6.5;
+	$r      = round( 10 + $size * 2.5 ); // 6.5" → 26, 8.5" → 31, 10" → 35
+	$knobby = (bool) preg_match( '/pneumatic|off-road|all-terrain|air/i', $wheel );
+	$id     = 'tile-' . sanitize_html_class( isset( $p['id'] ) ? $p['id'] : wp_rand() );
+	$y      = 118;
+	$lx     = 56;
+	$rx     = 144;
+	$wheel_svg = function ( $cx ) use ( $y, $r, $ink, $white, $knobby ) {
+		$out  = '<circle cx="' . $cx . '" cy="' . $y . '" r="' . $r . '" fill="' . $ink . '"/>';
+		if ( $knobby ) {
+			$out .= '<circle cx="' . $cx . '" cy="' . $y . '" r="' . ( $r - 3 ) . '" fill="none" stroke="' . $white . '" stroke-opacity="0.35" stroke-width="4" stroke-dasharray="4 4"/>';
+		} else {
+			$out .= '<circle cx="' . $cx . '" cy="' . $y . '" r="' . ( $r - 5 ) . '" fill="none" stroke="' . $white . '" stroke-opacity="0.18" stroke-width="2"/>';
+		}
+		$out .= '<circle cx="' . $cx . '" cy="' . $y . '" r="' . round( $r * 0.42 ) . '" fill="#c7d0dd"/><circle cx="' . $cx . '" cy="' . $y . '" r="' . round( $r * 0.16 ) . '" fill="' . $white . '"/>';
+		return $out;
+	};
+	$fender = function ( $cx ) use ( $y, $r, $deck ) {
+		$rr = $r + 7;
+		return '<path d="M' . ( $cx - $rr ) . ' ' . $y . 'a' . $rr . ' ' . $rr . ' 0 0 1 ' . ( 2 * $rr ) . ' 0" fill="none" stroke="' . $deck . '" stroke-width="9" stroke-linecap="round"/>';
+	};
+	$body  = '<defs><linearGradient id="' . $id . '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' . $deck . '" stop-opacity="0.16"/><stop offset="1" stop-color="' . $deck . '" stop-opacity="0.04"/></linearGradient></defs>';
+	$body .= '<rect width="200" height="200" rx="24" fill="#f3f6fb"/><rect width="200" height="200" rx="24" fill="url(#' . $id . ')"/>';
+	$body .= '<ellipse cx="100" cy="' . ( $y + $r + 12 ) . '" rx="78" ry="7" fill="' . $ink . '" opacity="0.08"/>';
+	$body .= $fender( $lx ) . $fender( $rx );
+	$body .= '<rect x="' . ( $lx + 4 ) . '" y="' . ( $y - 14 ) . '" width="' . ( $rx - $lx - 8 ) . '" height="24" rx="11" fill="' . $deck . '"/>';
+	$body .= '<rect x="' . ( $lx + 16 ) . '" y="' . ( $y - 22 ) . '" width="26" height="12" rx="5" fill="' . $ink . '" opacity="0.85"/><rect x="' . ( $rx - 42 ) . '" y="' . ( $y - 22 ) . '" width="26" height="12" rx="5" fill="' . $ink . '" opacity="0.85"/>';
+	$body .= '<circle cx="' . ( $lx + 9 ) . '" cy="' . ( $y - 2 ) . '" r="3" fill="' . $white . '" opacity="0.9"/><circle cx="' . ( $rx - 9 ) . '" cy="' . ( $y - 2 ) . '" r="3" fill="' . $white . '" opacity="0.9"/>';
+	$body .= $wheel_svg( $lx ) . $wheel_svg( $rx );
+	$attrs = $a['alt'] ? ' role="img" aria-label="' . esc_attr( $a['alt'] ) . '"' : ' aria-hidden="true"';
+	return '<svg class="illus product-tile' . ( $a['class'] ? ' ' . esc_attr( $a['class'] ) : '' ) . '" viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg"' . $attrs . ' focusable="false">' . $body . '</svg>';
+}

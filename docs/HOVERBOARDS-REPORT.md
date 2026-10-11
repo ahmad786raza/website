@@ -2,7 +2,27 @@
 
 Date: 11 October 2026
 
-> **Status (11 October 2026, late): the live site runs theme 3.4.1, “3.3.0 plus cleaner article pages”.**
+> **Status (12 October 2026): the live site runs theme 3.5.0 — 3.4.1 plus a rebuilt comparison table.**
+> The owner's screenshot showed the home-page table clipping its “Check price” buttons on a wide
+> monitor and asked for pictures and a more attractive section. 3.5.0:
+>
+> - **Fits without clipping** at 1100px and above (one column of width was recovered by moving the
+>   “Review” button under the product name and giving the price button its own column); between 901
+>   and 1099px it scrolls sideways with the hint shown; at 900px and below each board becomes a card
+>   with a three-column spec grid (two columns on phones) and a full-width price button.
+> - **Pictures:** every row gets a 68px product tile. There are no licensed product photos in the
+>   media library (260 attachments, none of a product), and review featured images are rider stock
+>   photos or title cards, so the tile is an original illustration drawn from the board's own data:
+>   wheel diameter to scale, knobby ring for pneumatic/off-road tyres, deck colour by role. The table
+>   note says they are illustrations. Upload a real photo for a product under Hoverboards Guide →
+>   Products and the tile is replaced by it automatically.
+> - **Row detail:** “Verified specs” tick only on verified rows (the per-row “Advertised specs” line is
+>   gone; the heading and note already say figures are manufacturer claims), “Read review →” link,
+>   “Highest” tags sit under their figure instead of widening the column, pick row keeps its accent.
+> - Tests: local 52/52 (two runs), live 48/49 (Site Kit scripts, as before). Live screenshots at
+>   1920, 1366 and 390px: `docs/screenshots/hbg-v35-compare-*.jpg`. Rollback: `dist/hoverboards-guide-3.4.1.zip`.
+>
+> **Previous (11 October 2026, late): 3.4.1, “3.3.0 plus cleaner article pages”.**
 > The owner asked for better presentation of internal pages, using
 > `/hoverboard-buying-guide/` as the example. 3.4.x changes only how imported article markup is
 > rendered; no post content was edited and the home page is unchanged from 3.3.0.

@@ -64,20 +64,31 @@ if ( ! $products ) {
 				?>
 					<tr class="<?php echo 'overall' === $p['role'] ? 'is-pick' : ''; ?>" data-role="<?php echo esc_attr( $p['role'] ); ?>" data-id="<?php echo esc_attr( $p['id'] ); ?>" data-order="<?php echo (int) $i; ?>" data-tags="<?php echo esc_attr( implode( ' ', $tags ) ); ?>" data-weight="<?php echo esc_attr( $weight ); ?>" data-wheel="<?php echo esc_attr( $wheel ); ?>" data-speed="<?php echo esc_attr( hbg_num( $p['speed'] ) ); ?>" data-range="<?php echo esc_attr( hbg_num( $p['range'] ) ); ?>">
 						<th scope="row">
-							<span class="compare-table__name"><?php if ( $review ) : ?><a href="<?php echo esc_url( $review ); ?>"><?php echo esc_html( $p['name'] ); ?></a><?php else : ?><?php echo esc_html( $p['name'] ); ?><?php endif; ?></span>
-							<?php if ( ! empty( $p['badge'] ) ) : ?><span class="compare-table__badge"><?php echo esc_html( $p['badge'] ); ?></span><?php endif; ?>
-							<span class="compare-table__src"><?php echo ! empty( $p['verified'] ) ? esc_html__( 'Verified specs', 'hoverboards-guide' ) : esc_html__( 'Advertised specs', 'hoverboards-guide' ); ?></span>
+							<div class="compare-table__product">
+								<div class="compare-table__thumb">
+									<?php if ( ! empty( $p['image_id'] ) ) : ?>
+										<?php echo wp_get_attachment_image( (int) $p['image_id'], 'thumbnail', false, array( 'alt' => $p['name'], 'loading' => 'lazy', 'decoding' => 'async' ) ); ?>
+									<?php else : ?>
+										<?php echo hbg_product_tile( $p ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+									<?php endif; ?>
+								</div>
+								<div class="compare-table__id">
+									<span class="compare-table__name"><?php if ( $review ) : ?><a href="<?php echo esc_url( $review ); ?>"><?php echo esc_html( $p['name'] ); ?></a><?php else : ?><?php echo esc_html( $p['name'] ); ?><?php endif; ?></span>
+									<?php if ( ! empty( $p['badge'] ) ) : ?><span class="compare-table__badge"><?php echo esc_html( $p['badge'] ); ?></span><?php endif; ?>
+									<?php if ( ! empty( $p['verified'] ) ) : ?><span class="compare-table__verified"><?php echo hbg_svg_icon( 'check', 12 ); // phpcs:ignore ?> <?php esc_html_e( 'Verified specs', 'hoverboards-guide' ); ?></span><?php endif; ?>
+									<?php if ( $review ) : ?><a href="<?php echo esc_url( $review ); ?>" class="compare-table__review"><?php esc_html_e( 'Read review', 'hoverboards-guide' ); ?> <?php echo hbg_svg_icon( 'arrow-right', 12 ); // phpcs:ignore ?></a><?php endif; ?>
+								</div>
+							</div>
 						</th>
-						<td><?php echo esc_html( $p['best_for'] ); ?></td>
-						<td><?php echo esc_html( $p['wheel'] ); ?></td>
-						<td><?php echo esc_html( $p['weight_cap'] ); ?></td>
-						<td><?php echo esc_html( $p['speed'] ); ?></td>
-						<td><?php echo esc_html( $p['range'] ); ?></td>
-						<td><?php if ( $p['certification'] ) : ?><span class="compare-table__cert"><?php echo hbg_svg_icon( 'shield', 14 ); // phpcs:ignore ?> <?php echo esc_html( $p['certification'] ); ?></span><?php else : ?><span class="compare-table__nocert"><?php esc_html_e( 'Not verified', 'hoverboards-guide' ); ?></span><?php endif; ?></td>
-						<td><?php if ( ! empty( $p['bluetooth'] ) ) : ?><span class="compare-table__yes"><?php echo hbg_svg_icon( 'check', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Yes', 'hoverboards-guide' ); ?></span><?php else : ?><span class="compare-table__no"><?php esc_html_e( 'No', 'hoverboards-guide' ); ?></span><?php endif; ?></td>
+						<td class="compare-table__for" data-label="<?php esc_attr_e( 'Best for', 'hoverboards-guide' ); ?>"><?php echo esc_html( $p['best_for'] ); ?></td>
+						<td data-label="<?php esc_attr_e( 'Wheels', 'hoverboards-guide' ); ?>"><?php echo esc_html( $p['wheel'] ); ?></td>
+						<td data-label="<?php esc_attr_e( 'Max rider', 'hoverboards-guide' ); ?>"><?php echo esc_html( $p['weight_cap'] ); ?></td>
+						<td data-label="<?php esc_attr_e( 'Top speed', 'hoverboards-guide' ); ?>"><?php echo esc_html( $p['speed'] ); ?></td>
+						<td data-label="<?php esc_attr_e( 'Range', 'hoverboards-guide' ); ?>"><?php echo esc_html( $p['range'] ); ?></td>
+						<td data-label="<?php esc_attr_e( 'Certification', 'hoverboards-guide' ); ?>"><?php if ( $p['certification'] ) : ?><span class="compare-table__cert"><?php echo hbg_svg_icon( 'shield', 14 ); // phpcs:ignore ?> <?php echo esc_html( $p['certification'] ); ?></span><?php else : ?><span class="compare-table__nocert"><?php esc_html_e( 'Not verified', 'hoverboards-guide' ); ?></span><?php endif; ?></td>
+						<td data-label="<?php esc_attr_e( 'Bluetooth', 'hoverboards-guide' ); ?>"><?php if ( ! empty( $p['bluetooth'] ) ) : ?><span class="compare-table__yes"><?php echo hbg_svg_icon( 'check', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Yes', 'hoverboards-guide' ); ?></span><?php else : ?><span class="compare-table__no"><?php esc_html_e( 'No', 'hoverboards-guide' ); ?></span><?php endif; ?></td>
 						<td class="compare-table__links">
-							<?php if ( $review ) : ?><a href="<?php echo esc_url( $review ); ?>" class="btn btn--ghost btn--sm"><?php esc_html_e( 'Review', 'hoverboards-guide' ); ?></a><?php endif; ?>
-							<?php hbg_amazon_cta( $p, __( 'Check price', 'hoverboards-guide' ), 'sm', false, 'compare' ); ?>
+							<?php hbg_amazon_cta( $p, __( 'Check price', 'hoverboards-guide' ), 'sm', true, 'compare' ); ?>
 						</td>
 					</tr>
 				<?php endforeach; ?>
@@ -85,6 +96,6 @@ if ( ! $products ) {
 			</table>
 		</div>
 		<p class="compare__empty" hidden><?php esc_html_e( 'No products match this filter.', 'hoverboards-guide' ); ?></p>
-		<p class="compare__note"><?php echo hbg_svg_icon( 'info', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Speed and range are manufacturer figures as quoted in our reviews; expect less in real riding, especially for heavier riders, hills and cold weather. “UL 2272” means the listing states certification of the whole board; confirm the mark on the box before you buy.', 'hoverboards-guide' ); ?></p>
+		<p class="compare__note"><?php echo hbg_svg_icon( 'info', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Speed and range are manufacturer figures as quoted in our reviews; expect less in real riding, especially for heavier riders, hills and cold weather. “Highest” marks the top advertised figure among the boards listed here. “UL 2272” means the listing states certification of the whole board; confirm the mark on the box before you buy. Board tiles are illustrations drawn from each model’s wheel size and tyre type, not product photos.', 'hoverboards-guide' ); ?></p>
 	</div>
 </section>
