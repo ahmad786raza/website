@@ -2,6 +2,23 @@
 
 Date: 11 October 2026
 
+> **Status (11 October 2026, evening): the live site runs theme 3.0.0 again.**
+> Two later versions were built, tested and briefly installed, then withdrawn at the owner's request:
+> 3.1.0 (brand-colour pass: navy masthead, gradient hero, tinted section bands) and 4.0.0 (editorial
+> magazine rebuild: story mosaic, topic zones, archive layouts). Both remain in git history and as
+> `dist/hoverboards-guide-3.1.0.zip` / `dist/hoverboards-guide-4.0.0.zip` for reference only.
+> The exact original `dist/hoverboards-guide-3.0.0.zip` was re-uploaded; the header uses the theme's
+> built-in menu again (the WordPress menu created by the Setup page was un-assigned, not deleted).
+>
+> What stays from the install session, all reversible from Hoverboards Guide → Setup:
+> the eight hoverboard hub categories (child categories of Hoverboards, articles assigned, no slugs or
+> content changed) and two *draft* pages (Affiliate Disclosure, Editorial Policy) awaiting review.
+>
+> One known limitation of 3.0.0 on this site: Rank Math SEO is active but prints nothing on the front
+> end (its admin pages also return "not allowed"), and 3.0.0 defers to it, so pages currently carry no
+> meta description, canonical or JSON-LD from the theme. A one-line detection fix exists (it shipped in
+> 3.1.0) and can be applied to 3.0.0 without touching the design, on request.
+
 ## 1. What was and was not possible
 
 | Item | Status |
