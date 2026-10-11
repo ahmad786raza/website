@@ -1,0 +1,36 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1200px;height:675px;overflow:hidden}
+body{font-family:Inter,Manrope,"DejaVu Sans","Liberation Sans",Arial,sans-serif;background:#f3f6fb;color:#0f172a;position:relative}
+.frame{position:absolute;inset:0;padding:44px 56px;background:radial-gradient(900px 500px at 100% 0%,rgba(6,182,212,.14),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(29,78,216,.12),transparent 60%),#f3f6fb}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#1d4ed8}
+.kicker::before{content:"";width:26px;height:4px;border-radius:2px;background:linear-gradient(90deg,#1d4ed8,#06b6d4)}
+h1{font-size:42px;line-height:1.1;letter-spacing:-.02em;color:#0b1f3a;margin-top:10px;font-weight:800}
+.sub{font-size:18px;color:#475569;margin-top:8px;line-height:1.4}
+.foot{position:absolute;left:56px;right:56px;bottom:26px;display:flex;justify-content:space-between;font-size:14px;color:#64748b;font-weight:600}
+.foot b{color:#0b1f3a}
+.cols{display:grid;gap:18px;margin-top:26px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:22px 22px 20px;box-shadow:0 10px 30px rgba(11,31,58,.06);position:relative}
+.card h3{font-size:20px;color:#0b1f3a;letter-spacing:-.01em;line-height:1.2}
+.card p{font-size:15px;color:#475569;line-height:1.45;margin-top:8px}
+.num{position:absolute;top:-15px;left:20px;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#1d4ed8,#06b6d4);color:#fff;font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(29,78,216,.35)}
+.led{width:58px;height:58px;border-radius:50%;margin-bottom:14px;position:relative;border:6px solid #fff;box-shadow:0 0 0 2px #e2e8f0}
+.led.red{background:#ef4444;box-shadow:0 0 0 2px #fecaca,0 0 26px rgba(239,68,68,.65)}
+.led.green{background:#22c55e;box-shadow:0 0 0 2px #bbf7d0,0 0 26px rgba(34,197,94,.6)}
+.led.amber{background:#f59e0b;box-shadow:0 0 0 2px #fde68a,0 0 26px rgba(245,158,11,.6)}
+.led.blue{background:#3b82f6;box-shadow:0 0 0 2px #bfdbfe,0 0 26px rgba(59,130,246,.6)}
+.led.off{background:#cbd5e1;box-shadow:0 0 0 2px #e2e8f0}
+.led.blink::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:3px dashed currentColor;opacity:.55}
+.led.red.blink{color:#ef4444}.led.green.blink{color:#22c55e}.led.blue.blink{color:#3b82f6}
+.led.split{background:linear-gradient(90deg,#ef4444 50%,#22c55e 50%);box-shadow:0 0 0 2px #e2e8f0,0 0 22px rgba(245,158,11,.5)}
+.tag{display:inline-block;padding:5px 11px;border-radius:999px;font-size:12.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-top:12px}
+.tag.ok{background:#dcfce7;color:#15803d}.tag.warn{background:#fef3c7;color:#b45309}.tag.stop{background:#fee2e2;color:#b91c1c}.tag.info{background:#dbeafe;color:#1d4ed8}
+.ico{width:46px;height:46px;border-radius:14px;background:#eef3ff;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.ico svg{width:26px;height:26px;stroke:#1d4ed8;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+</style></head><body><div class="frame">
+<div class="kicker">The battery indicator</div>
+<h1>What the indicator colours mean</h1>
+<div class="sub">The light next to the power button. Thresholds differ by brand, so treat the colours as bands, not percentages.</div>
+<div class="cols" style="grid-template-columns:repeat(4,1fr)"><div class="card"><div class="led green "></div><h3>Solid green</h3><p>Charge is healthy, usually above the halfway mark on most brands. Ride.</p><span class="tag ok">Ride</span></div><div class="card"><div class="led amber "></div><h3>Amber or yellow</h3><p>Mid charge. Plan to charge after this ride; range and hill power drop as the pack empties.</p><span class="tag warn">Charge soon</span></div><div class="card"><div class="led red "></div><h3>Solid red</h3><p>Low battery. The board protects itself by cutting power and speed. Charge now, usually 2 to 4 hours.</p><span class="tag warn">Charge now</span></div><div class="card"><div class="led red blink"></div><h3>Flashing red</h3><p>Critically low or a fault code. Step off, charge fully, then recalibrate. Still flashing? Count the flashes.</p><span class="tag stop">Stop and check</span></div></div>
+<div class="foot"><span>Some boards show a bar of three or four LEDs instead; the same bands apply</span><b>hoverboardsguide.com</b></div>
+</div></body></html>

@@ -1,0 +1,74 @@
+[
+ {
+  "file": "hoverboard-lights-map.png",
+  "title": "Where the lights are on a hoverboard",
+  "alt": "Diagram of a hoverboard from above showing the battery indicator, Bluetooth light, front LED headlights, wheel ring LEDs and charging port",
+  "caption": "Illustration: Hoverboards Guide"
+ },
+ {
+  "file": "battery-indicator-colours.png",
+  "title": "Hoverboard battery indicator colours",
+  "alt": "Four cards showing solid green, amber, solid red and flashing red battery indicator lights and what each means",
+  "caption": "Illustration: Hoverboards Guide"
+ },
+ {
+  "file": "red-light-flashing-causes.png",
+  "title": "Six causes of a flashing red hoverboard light",
+  "alt": "Six numbered causes of a flashing red hoverboard light: battery too low, not level at start-up, gyro out of sync, loose connector, overheating, and a tip to count the flashes",
+  "caption": "Illustration: Hoverboards Guide"
+ },
+ {
+  "file": "charger-light-meanings.png",
+  "title": "Hoverboard charger light meanings",
+  "alt": "Four cards explaining charger light meanings: red while plugged in, green after a few hours, green the moment you plug in, and alternating red and green",
+  "caption": "Illustration: Hoverboards Guide"
+ },
+ {
+  "file": "recalibrate-five-steps.png",
+  "title": "Recalibrate a hoverboard in five steps",
+  "alt": "Five-step recalibration graphic: flat hard floor, power fully off, hold the power button, wait for the flash, leave it thirty seconds",
+  "caption": "Illustration: Hoverboards Guide"
+ },
+ {
+  "file": "stop-riding-signs.png",
+  "title": "Five signs to stop using a hoverboard",
+  "alt": "Five signs to stop using a hoverboard: hot shell, burning smell, bulging case, red flash with continuous beep, charger alternating red and green",
+  "caption": "Illustration: Hoverboards Guide"
+ },
+ {
+  "file": "blue-white-lights.png",
+  "title": "Hoverboard blue and white lights explained",
+  "alt": "Four cards covering flashing blue, solid blue, white headlights and colour-changing wheel LEDs, none of which are warnings",
+  "caption": "Illustration: Hoverboards Guide"
+ },
+ {
+  "file": "hoverboard-led-wheels-closeup.jpg",
+  "title": "Hoverboard with blue LED wheels",
+  "alt": "Close-up of a black hoverboard with blue LED wheel lights on a city street",
+  "caption": "Photo: Sch\u00e4ferle, Pixabay (Pixabay Content License)"
+ },
+ {
+  "file": "hoverboard-rider-standing-park.jpg",
+  "title": "Young rider standing on a hoverboard",
+  "alt": "A young rider standing on a hoverboard on a paved park path",
+  "caption": "Photo: Borishamer, Pexels (Pexels License)"
+ },
+ {
+  "file": "kids-with-hoverboard-kart.jpg",
+  "title": "Children with a hoverboard kart attachment",
+  "alt": "Two children with a hoverboard fitted to a go-kart attachment under a bridge",
+  "caption": "Photo: Laibun, Pexels (Pexels License)"
+ },
+ {
+  "file": "girl-kneeling-with-hoverboard.jpg",
+  "title": "Girl kneeling beside a hoverboard",
+  "alt": "A girl kneeling beside a hoverboard on a waterfront path",
+  "caption": "Photo: Borishamer, Pexels (Pexels License)"
+ },
+ {
+  "file": "self-balancing-scooter-city.jpg",
+  "title": "Self-balancing scooter with steering bar",
+  "alt": "A rider on a self-balancing scooter with a steering bar on a city street",
+  "caption": "Photo: Geoyul, Pexels (Pexels License)"
+ }
+]

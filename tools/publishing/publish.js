@@ -42,6 +42,9 @@ const [cmd, a1, a2, a3, a4] = process.argv.slice(2);
     const url = SITE + '/wp-json/wp/v2/posts' + (cmd === 'update' ? '/' + a1 : '');
     const r = await p.request.post(url, { headers: Object.assign({ 'Content-Type': 'application/json' }, H), data: body });
     const j = await out(r); console.log(r.status(), JSON.stringify({ id: j.id, status: j.status, link: j.link, raw: j.raw, code: j.code, message: j.message }));
+  } else if (cmd === 'delete') {
+    const r = await p.request.delete(SITE + '/wp-json/wp/v2/media/' + a1 + '?force=true', { headers: H });
+    console.log('delete', a1, r.status());
   } else if (cmd === 'get') {
     const r = await p.request.get(SITE + '/wp-json/wp/v2/posts/' + a1 + '?context=edit', { headers: H });
     const j = await out(r); console.log(r.status(), JSON.stringify({ id: j.id, status: j.status, link: j.link, title: j.title && j.title.raw, featured_media: j.featured_media, categories: j.categories }));

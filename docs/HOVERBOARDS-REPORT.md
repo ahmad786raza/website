@@ -2,7 +2,36 @@
 
 Date: 11 October 2026
 
-> **Status (12 October 2026, night): first new article published — “Best Hoverboards for Teenagers (2026)”.**
+> **Status (12 October 2026, late night): second new article published — “Hoverboard Lights Meaning”.**
+> Live at https://hoverboardsguide.com/hoverboard-lights-meaning/ (post 1553; Troubleshooting & Maintenance,
+> Hoverboards, How To). An informational piece chosen by keyword gap:
+>
+> - **Gap method.** With Ahrefs and Semrush unavailable (plan / API units) and competitor sitemaps
+>   unreachable from this environment, the gap was found by probing live search results for candidate
+>   queries and diffing against the site's 285 posts. The site has 18 troubleshooting articles that
+>   mention lights in passing but no page about what the lights mean, while the pages ranking for
+>   “hoverboard red light flashing”, “hoverboard charger light green” and “what do hoverboard lights
+>   mean” are one manufacturer's blog (localised duplicates) and forum threads. Evergreen intent, low
+>   competition, and the site's troubleshooting hub gives it topical authority. Alternatives weighed:
+>   charging time (already answered inside two existing posts) and winter storage (seasonal, narrower).
+> - **Content.** ~2,600 words: where the lights are, battery indicator colours, six causes of a flashing
+>   red (with the honest caveat that flash-code tables differ by brand, citing iFixit's Hover-1 Liberty
+>   codes as the example), red plus beeping, charger light meanings, blue and white lights, five-step
+>   recalibration, no lights at all, five stop-riding signs, a quick-reference table, six FAQs.
+>   15 internal links to existing troubleshooting and battery articles, all verified. No affiliate links.
+> - **Pictures (12).** Seven original graphics (a labelled top-view light map used as the featured image,
+>   indicator colours, flashing-red causes, charger lights, recalibration steps, stop signs, blue/white
+>   lights) rendered from HTML, plus five photos already bundled with the theme under Pexels and Pixabay
+>   licences (free for commercial use), credited in captions. Every external photo source tested from
+>   this environment (Pexels, Unsplash, Pixabay, Openverse, Wikimedia, Flickr and others) is blocked, so
+>   “copyright-free” here means those two sources: the site's own graphics and the already-licensed
+>   bundle. Sources: `docs/articles/hoverboard-lights-meaning/`.
+> - **Publishing.** Same REST pipeline as the first article; draft previewed, one duplicated figure
+>   removed, then published. Public checks: one H1, meta description, canonical, og:image, BlogPosting +
+>   BreadcrumbList schema, 11 body images plus hero all served, listed on the troubleshooting hub.
+>   Screenshots: `docs/screenshots/hbg-article-lights-*`.
+>
+> **Previous (12 October 2026, night): first new article published — “Best Hoverboards for Teenagers (2026)”.**
 > Live at https://hoverboardsguide.com/best-hoverboards-for-teenagers/ (post 1538, categories Buying Guide,
 > Hoverboards, Hoverboards for Kids). How it was researched and built:
 >
