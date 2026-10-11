@@ -38,5 +38,35 @@
    3
   ],
   "at": "2026-10-11T15:11:05.749Z"
+ },
+ "bend-radius-explained": {
+  "id": 32,
+  "status": "draft",
+  "identical": true,
+  "featured": 83,
+  "categories": [
+   8
+  ],
+  "at": "2026-10-11T15:13:06.065Z"
+ },
+ "tube-bend-length-formula": {
+  "id": 126,
+  "status": "draft",
+  "identical": true,
+  "featured": 87,
+  "categories": [
+   8
+  ],
+  "at": "2026-10-11T15:13:08.171Z"
+ },
+ "wall-factor-and-d-of-bend": {
+  "id": 127,
+  "status": "draft",
+  "identical": true,
+  "featured": 114,
+  "categories": [
+   8
+  ],
+  "at": "2026-10-11T15:13:09.813Z"
  }
 }

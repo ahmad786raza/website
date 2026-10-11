@@ -1,0 +1,35 @@
+{
+ "slug": "springback-in-tube-bending",
+ "title": "Springback in Tube Bending: How to Measure and Correct It",
+ "excerpt": "Springback in tube bending, explained simply: why tube relaxes after a bend, how to find your number with a test bend, and how to overbend and log it.",
+ "category": "fabrication-theory",
+ "featured_slot": "measuring",
+ "primary_keyword": "springback in tube bending",
+ "asins": [
+  {
+   "asin": "B0054RJ7VC",
+   "product": "Wixey WR365 Digital Angle Gauge w/Flip-Out Display, Magnetic Digital Angle Finder",
+   "evidence": "https://www.amazon.com/Wixey-WR365-Digital-Angle-Gauge/dp/B0054RJ7VC"
+  },
+  {
+   "asin": "B00563TM32",
+   "product": "General Tools Digital Angle Finder Ruler #822 - 5\" Stainless Steel Protractor with Large LCD Display",
+   "evidence": "https://www.amazon.com/General-Tools-822-Digital-Finder/dp/B00563TM32"
+  }
+ ],
+ "sources": [
+  "https://www.roguefab.com/bending-101/",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.kitplanes.com/home-shop-machinist-45/",
+  "https://wiki.artisansasylum.com/wiki/JD_Squared_Air_Assisted_Bender",
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/tube-and-pipe-basics-how-to-achieve-the-perfect-bend",
+  "https://www.roguefab.com/stainless-steel-tube-bender/",
+  "https://advancedtubular.helpsite.com/articles/112558-overbend-calculator",
+  "https://advancedtubular.helpsite.com/articles/121083-springback-calculation-process-tutorial-using-measured-tube-data",
+  "https://pure.nwpu.edu.cn/en/publications/springback-rules-of-ta18-titanium-tube-upon-rotary-draw-bending-u/",
+  "https://www.matec-conferences.org/articles/matecconf/pdf/2025/02/matecconf_iddrg2025_01077.pdf",
+  "https://www.thefabricator.com/article/bending/bending-basics-the-hows-and-whys-of-springback-and-springforward",
+  "https://www.baileigh.com/manual-tube-bender-rdb-050"
+ ],
+ "notes": "Direct page fetches were blocked in this environment (DNS/proxy), so every fact except the two writer-kit known-good facts (Rogue Fab 90 -> 86.5 deg; JD2 4130 ~2x mild steel) came from WebSearch result summaries, not a direct read. Re-check before publishing: (1) Kitplanes 'Home Shop Machinist' column: 7/8 x .049 4130 needed 98 deg to get 90 deg, and it repeats JD's 2x claim (search summary). (2) Artisan's Asylum makerspace wiki for its JD2 bender: springback 2-8 deg, found by trial and error, depends on bend angle and wall (secondary source, search summary). (3) The Fabricator 'Tube and pipe basics': harder tubes and smaller CLRs produce more springback and radial growth; stainless springs back more than steel (search summary). (4) Rogue Fab stainless page: stainless springs back more than mild steel and significantly more than aluminium; plan to overbend (search summary). (5) Advanced Tubular overbend calculator: two test bends, typically 20 and 120 deg (search summary). (6) NWPU TA18 titanium study: angular springback increases linearly with bend angle; angle and radius springback decrease with smaller radii; material property variation matters more than process parameters (abstract via search summary). (7) MATEC 2025 rotary-draw paper: larger die radius -> more radius recovery, less angle recovery (search summary). Items 3, 6 and 7 conflict on the effect of die radius; the article says so and does not pick a side. Left out as unverifiable: the Baileigh RDB-175 manual's '105 deg' calibration example from the fact-check notes (could not re-confirm), the Pro-Tools springback blog's 7 deg / 2 deg illustrations and its heat-number advice (page not reachable or surfaced), forum springback figures (anecdotal), and all sheet-metal springback figures. Amazon spec details for the Wixey WR365 (0.1 deg resolution, +/-0.2 deg accuracy, +/-180 deg range, flip-out backlit display, magnetic base) are from the Amazon listing as summarised by search; listings disagree on whether a battery is included, so the article says so. The two-point interpolation formula is plain linear interpolation, shown with letters only (no invented numbers)."
+}

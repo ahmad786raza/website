@@ -1,0 +1,34 @@
+{
+ "slug": "best-exhaust-pipe-bender",
+ "title": "Best Exhaust Pipe Bender for Home Garage Builds (2026)",
+ "excerpt": "Looking for the best exhaust pipe bender for home garage builds? Compare crush benders, mandrel benders and pre-bent mandrel bends, with sourced specs.",
+ "category": "guides",
+ "featured_slot": "exhaust",
+ "primary_keyword": "best exhaust pipe bender for home garage",
+ "asins": [
+  {"asin": "B079P687YJ", "product": "2.5\" Stainless 90° Mandrel Bend - 1.5D/3.75\" CLR Loose Radius - 16GA/.065\" Wall - 5\" Leg/8\" Leg - SS304", "evidence": "https://amazon.com/2-5-Stainless-90%C2%B0-Mandrel-Bend/dp/B079P687YJ"},
+  {"asin": "B079QD58WT", "product": "2.5\" Stainless 180° Mandrel Bend - 1.5D/3.75\" Radius - 16GA/.065\" Wall - 6\" Leg/6\" Leg - SS304 - Exhaust Fabrication", "evidence": "https://www.amazon.com/2-5-Stainless-180%C2%B0-Mandrel-Bend/dp/B079QD58WT"},
+  {"asin": "B07F8ZZP2L", "product": "2.5\" Stainless 45° Mandrel Bend - 1.5D/3.75\" CLR Loose Radius - 16GA/.065\" - SS304 - Stainless Bros.", "evidence": "https://www.amazon.com/2-5-Stainless-45%C2%B0-Mandrel-Bend/dp/B07F8ZZP2L"},
+  {"asin": "B001806Y06", "product": "Vibrant Performance 12609 2.5\" Aluminized Mild Steel U-J Mandrel Bent Tubing", "evidence": "https://www.amazon.com/Vibrant-12609-Aluminized-Mandrel-Tubing/dp/B001806Y06"},
+  {"asin": "B09GPHYVCQ", "product": "KAKA INDUSTRIAL EPB-3 Hydraulic Exhaust Pipe Tube Bender, 4.0kW Motor 10-Ton Pressure, Heavy Duty Swager & Expander, Hydraulic Tubing Expander 220V Single phase", "evidence": "https://www.amazon.com/KAKA-INDUSTRIAL-EPB-3-Hydraulic-Pressure/dp/B09GPHYVCQ"}
+ ],
+ "sources": [
+  "https://www.roguefab.com/exhaust-pipe-benders/",
+  "https://www.roguefab.com/mandrel-bending/",
+  "https://www.roguefab.com/product/mandrel/",
+  "https://www.roguefab.com/product/mandrelbender/",
+  "https://www.roguefab.com/",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://www.harborfreight.com/12-ton-hydraulic-pipe-bender-32888.html",
+  "https://amazon.com/2-5-Stainless-90%C2%B0-Mandrel-Bend/dp/B079P687YJ",
+  "https://www.amazon.com/2-5-Stainless-180%C2%B0-Mandrel-Bend/dp/B079QD58WT",
+  "https://www.amazon.com/Vibrant-12609-Aluminized-Mandrel-Tubing/dp/B001806Y06",
+  "https://www.verociousmotorsports.com/vibrant-u-j-combination-mandrel-bends-aluminized-mild-steel",
+  "https://www.jegs.com/i/jegs-555-319145-mandrel-u-bend-16-gauge-aluminized-steel",
+  "https://www.amazon.com/KAKA-INDUSTRIAL-EPB-3-Hydraulic-Pressure/dp/B09GPHYVCQ",
+  "https://www.amazon.com/clp/B09GPHYVCQ",
+  "https://www.stainlessheaders.com/p-35900-tube-cut-length.html",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate"
+ ],
+ "notes": "Research-based; no hands-on claims. WebFetch could not reach any site this session, so specs come from search-result summaries of the listed pages; please spot-check. (1) Rogue Fab wall-ratio mandrel trigger: 20 on the exhaust-benders page vs 15 on the mandrel-bending page; both stated. Rogue Fab deformation figures (5.5-11% rotary draw, 1.8-2.5% mandrel, 0.9% on a 2.75 in 1D bend) are labelled as the maker's own. (2) Vibrant 12609 radius (4.25 in) and legs (5/8/12 in) come from a dealer table (Verocious) and a matching JEGS listing, not Vibrant's own page; the box says so. (3) KAKA EPB-3: listings disagree on 220 V vs 240 V (flagged). A used-equipment listing claimed 0-180 deg and a 12-gauge wall rating; left out because no current spec sheet confirmed them. (4) Stainless Headers' 1/4 in trim allowance is from the research fact-check notes (J-bend optimiser), not re-checked this session. (5) The 2.5 in x .065 in wall-ratio figure (about 38) and the 3.75 in CLR / 5.89 in arc example are plain geometry."
+}

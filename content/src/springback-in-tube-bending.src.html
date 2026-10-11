@@ -1,0 +1,223 @@
+<p class="bhg-lead">You set the bender for 90°. You pull the handle until the degree ring says 90. You release, pull the tube out, and check it. It reads a few degrees short. Nothing broke and you did nothing wrong. You just met <strong>springback in tube bending</strong>, and every fabricator deals with it on every bend.</p>
+
+<p>The good news is that springback is predictable once you measure it. The bad news is that nobody can hand you one magic number for it. It changes with the material, the wall, the die, the bend angle and even the batch of tube. So this guide won't give you a fake chart. Instead, it shows you the simple <strong>test-bend method</strong> that shops and garage builders use to find their own number.</p>
+
+<p>You'll learn what springback is, why it happens, and what makes it bigger or smaller. You'll see the few real examples that makers have published. Then we'll walk through measuring it, correcting for it, and logging it so your second part comes out right.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p><strong>Springback</strong> is the tube relaxing a little when you release the bender, so the finished bend ends up short of what the bender showed.</p><ul><li><strong>No universal table exists.</strong> Published examples include a mild-steel 90° bend that read 86.5° after release (Rogue Fabrication), and JD2's note that 4130 springs back about twice as much as mild steel.</li><li><strong>Find your own number</strong> with a test bend on scrap from the same tube. Measure the real angle with a <a href="#wixey-angle-gauge">digital angle gauge</a>.</li><li><strong>Overbend by the difference</strong>, check again, and write it in a springback log for that tube, wall, material and die.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#what-is-springback">What is springback in tube bending?</a></li><li><a href="#why-it-happens">Why tube springs back</a></li><li><a href="#what-changes-springback">What changes the amount</a></li><li><a href="#published-examples">Real numbers from published sources</a></li><li><a href="#test-bend-method">The test-bend method, step by step</a></li><li><a href="#measuring-the-angle">How to measure the real angle</a></li><li><a href="#compensating">How to compensate: overbend the smart way</a></li><li><a href="#springback-log">Build a springback log</a></li><li><a href="#real-life">Real-life lessons</a></li><li><a href="#mistakes">Common mistakes and fixes</a></li><li><a href="#pro-tips">Pro tips</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Your springback checklist</a></li></ol></div>
+
+<h2 id="what-is-springback">What is springback in tube bending?</h2>
+
+<p><strong>Springback</strong> is the amount a bend "opens up" after you take the bending force away. You bend the tube past a certain point, and it stays bent. But part of that bend was only elastic, like a spring. When you let go, that elastic part comes back.</p>
+
+<p>In practice you see it as a smaller angle than you asked for. You pull to 90° on the degree ring, and the tube settles at something less. The gap between the two is your springback, measured in degrees.</p>
+
+<p>Springback has a second, quieter effect. The finished bend can also have a slightly bigger radius than the die. Trade magazine <a href="https://www.thefabricator.com/thefabricator/article/tubepipefabrication/tube-and-pipe-basics-how-to-achieve-the-perfect-bend" target="_blank" rel="noopener">The Fabricator</a> calls this <strong>radial growth</strong>. For most garage parts the angle matters far more, so that's where this guide focuses. But it helps to know the radius can grow too, because it nudges your lengths a little.</p>
+
+<figure class="bhg-figure" data-slot="angle"><figcaption>An angle tool tells you what the tube really did, not what the bender thinks it did.</figcaption></figure>
+
+<p>Here's why springback matters so much:</p>
+
+<ul><li><strong>Fit-up:</strong> a bumper or hoop with short bends won't meet its mounting points.</li><li><strong>Stacking errors:</strong> on a multi-bend part, a few degrees on each bend adds up fast.</li><li><strong>Wasted tube:</strong> you can add a little more bend later, but taking bend out is hard and rarely looks clean.</li><li><strong>Rules:</strong> on cage and chassis work, a part that doesn't fit tends to get forced, and forced parts are bad news.</li></ul>
+
+<p>The fix isn't a stronger bender. It's knowing your number before you bend the real part.</p>
+
+<!-- 📷 IMAGE IDEA (owner's photo): a test-bend offcut with the springback number written on it in paint pen, next to the die it was bent in. Suggested alt text: "Tube test bend labelled with its measured springback beside the bender die". -->
+
+<h2 id="why-it-happens">Why tube springs back (the simple version)</h2>
+
+<p>Every metal behaves in two ways when you load it. Up to a point it acts like a spring. Bend it a little and it comes straight back. That's the <strong>elastic</strong> zone. Push past that point and the metal changes shape for good. That's the <strong>plastic</strong> zone.</p>
+
+<p>A tube bend is a mix of both. The outside of the bend is stretched. The inside is squeezed. Those outer and inner layers go well into the plastic zone, so the tube stays bent. But the metal near the middle of the wall, close to the tube's centerline, sees much less strain. Part of it is still acting like a spring. When you release the handle, that springy part pushes back, and the bend relaxes a few degrees.</p>
+
+<p>Think of bending a coat hanger. Bend it gently and it snaps back. Bend it hard and it stays, but it still eases back a touch when you let go. A tube does the same thing, just with more force.</p>
+
+<h3>Why harder metal springs back more</h3>
+
+<p>A stronger, harder metal can store more "spring" before it yields. So more of the bend is elastic, and more comes back when you let go. That's why sources agree that chromoly and stainless spring back more than plain mild steel. The Fabricator puts it simply: harder tubes produce more springback.</p>
+
+<h3>Why it isn't a fixed number</h3>
+
+<p>Springback depends on how much of the wall stayed elastic. That depends on the material's strength, the wall thickness, the die radius and how far you bent. Change any one of those and the number moves. A makerspace guide for its JD2 bender says springback depends on the bend angle and the tube's thickness, and can only be found by trial and error (<a href="https://wiki.artisansasylum.com/wiki/JD_Squared_Air_Assisted_Bender" target="_blank" rel="noopener">Artisan's Asylum wiki</a>). That's the honest answer, and it's why the test bend exists.</p>
+
+<h2 id="what-changes-springback">What changes how much a tube springs back</h2>
+
+<p>You can't control springback by wishing it away. But you can understand what pushes it up or down. Then you'll know when you need a fresh test bend.</p>
+
+<h3>Material and grade</h3>
+
+<p>This is the big one. <strong>JD2</strong> says 4130 chromoly springs back about twice as much as welded mild steel of the same size and wall (<a href="https://support.jd2.com/MiscDown/dl/M32BDirections.pdf" target="_blank" rel="noopener">JD2 Model 32 manual</a>). <strong>Rogue Fabrication</strong> says stainless springs back more than mild steel and much more than aluminum, and tells you to plan to overbend (<a href="https://www.roguefab.com/stainless-steel-tube-bender/" target="_blank" rel="noopener">Rogue Fab stainless guide</a>).</p>
+
+<h3>Batch and supplier</h3>
+
+<p>Two sticks with the same label can behave differently. Mill runs vary in strength. One study on titanium tube found that changes in material properties affected springback far more than changes in the bending settings (<a href="https://pure.nwpu.edu.cn/en/publications/springback-rules-of-ta18-titanium-tube-upon-rotary-draw-bending-u/" target="_blank" rel="noopener">Northwestern Polytechnical University</a>). That's titanium, not mild steel, but the lesson carries: a new batch deserves a new test.</p>
+
+<h3>Bend angle</h3>
+
+<p>Bigger bends usually spring back more degrees than small ones. The same titanium study found angular springback grew in a straight line with bend angle. Software maker Advanced Tubular builds on that idea. Its overbend calculator asks for two test bends, typically around 20° and 120°, then works out the springback for angles in between (<a href="https://advancedtubular.helpsite.com/articles/112558-overbend-calculator" target="_blank" rel="noopener">Advanced Tubular</a>).</p>
+
+<h3>Die radius (sources disagree)</h3>
+
+<p>Here the published sources pull in different directions. The Fabricator says smaller centerline radii produce more springback. But the titanium study found that both angle and radius springback got <em>smaller</em> on tighter radii, and a <a href="https://www.matec-conferences.org/articles/matecconf/pdf/2025/02/matecconf_iddrg2025_01077.pdf" target="_blank" rel="noopener">2025 rotary-draw study</a> reported less angle springback on bigger dies but more radius growth. So we won't pick a side. Treat every die as its own setup and test it.</p>
+
+<table><thead><tr><th>Factor</th><th>What published sources say</th><th>What it means for you</th></tr></thead><tbody><tr><td><strong>Material</strong></td><td>4130 about 2× mild steel (JD2). Stainless more than mild steel (Rogue Fab).</td><td>New material = new test bend</td></tr><tr><td><strong>Batch</strong></td><td>Material property changes can matter more than settings (titanium study)</td><td>Test each new batch or supplier</td></tr><tr><td><strong>Bend angle</strong></td><td>Springback grows with angle (titanium study; Advanced Tubular two-bend method)</td><td>Test small and large angles</td></tr><tr><td><strong>Wall thickness</strong></td><td>Affects the springback angle (Artisan's Asylum JD2 guide)</td><td>Each wall gets its own log line</td></tr><tr><td><strong>Die radius</strong></td><td>Sources disagree on direction</td><td>Test every die separately</td></tr></tbody></table>
+
+<div class="bhg-callout bhg-callout--warn"><span class="bhg-callout-icon">⚠️</span><span class="bhg-callout-title">Don't borrow sheet-metal numbers</span><p>You'll find springback figures for sheet metal and press brakes online. They're measured on flat sheet at specific radius-to-thickness ratios. They don't transfer to tube, so leave them out of your tube log.</p></div>
+
+<h2 id="published-examples">Springback in tube bending: real numbers from published sources</h2>
+
+<p>We looked hard for a trustworthy table of springback by material for tube. We didn't find one. What exists are examples: one tube, one bender, one result. They're useful as a sense of scale. They're not a setting for your bender.</p>
+
+<p>Here are the examples we could trace to a source:</p>
+
+<table><thead><tr><th>Source</th><th>Tube</th><th>What happened</th><th>Springback</th></tr></thead><tbody><tr><td><a href="https://www.roguefab.com/bending-101/" target="_blank" rel="noopener">Rogue Fabrication, Bending 101</a></td><td>Mild steel</td><td>Bent to 90°, read 86.5° after release</td><td>3.5°</td></tr><tr><td><a href="https://www.kitplanes.com/home-shop-machinist-45/" target="_blank" rel="noopener">Kitplanes, Home Shop Machinist</a></td><td>7/8" × .049" 4130</td><td>Had to go to 98° to get 90°</td><td>8°</td></tr><tr><td><a href="https://support.jd2.com/MiscDown/dl/M32BDirections.pdf" target="_blank" rel="noopener">JD2 Model 32 manual</a></td><td>4130 vs mild steel, same size and wall</td><td>4130 springs back about twice as much</td><td>About 2× mild steel</td></tr><tr><td><a href="https://wiki.artisansasylum.com/wiki/JD_Squared_Air_Assisted_Bender" target="_blank" rel="noopener">Artisan's Asylum JD2 guide</a></td><td>Various</td><td>Gives a range and says to find it by trial and error</td><td>2° to 8°</td></tr></tbody></table>
+
+<h3>How to read these numbers</h3>
+
+<p>Let's do the math on the Rogue Fab example. The target was 90°. The tube read 86.5°. So 90 − 86.5 = <strong>3.5° of springback</strong>. As a share of the bend, that's 3.5 ÷ 90 ≈ 0.039, or about <strong>3.9%</strong>.</p>
+
+<p>The Kitplanes example is a different tube on a different bender. There, 98 − 90 = <strong>8°</strong>. That's 8 ÷ 90 ≈ 8.9% of the target angle. The article also repeats JD2's point that 4130 springs back about twice as much as mild steel of the same thickness.</p>
+
+<p>Notice what we're <em>not</em> saying. We're not saying "mild steel is 3.9%" or "4130 is 8°." Those are single results. Your tube, die and bender will give your own numbers. Use these as a gut check. If your first test shows 20° on mild steel, something is off: check your measuring method or your setup.</p>
+
+<blockquote class="bhg-quote"><p>A published springback number is a clue, not a setting. The only number you can trust is the one you measured on your tube, in your die, on your bender.</p></blockquote>
+
+<h2 id="test-bend-method">The test-bend method, step by step</h2>
+
+<p>This is the heart of the guide. It takes a short offcut, a marker and a good angle gauge. Do it once per tube, wall, material and die combination, and repeat it when you change batches.</p>
+
+<p>Use scrap from the <strong>same stick or batch</strong> as your real part if you can. Leave enough length for the clamp and for two straight legs long enough to measure on. Then follow these steps:</p>
+
+<ol class="bhg-steps"><li><strong>Check the tube.</strong> Measure OD and wall with calipers. Note the material, the supplier and any heat number on the tag.</li><li><strong>Draw a reference line.</strong> Run a straight line down the tube. It shows if the tube rotates in the die.</li><li><strong>Load and clamp.</strong> Set up exactly as you will for the real part: same die, same clamp, same lube if you use any.</li><li><strong>Bend to your target on the ring.</strong> Pull smoothly to the angle you actually need, for example 90°. Note the ring reading.</li><li><strong>Release fully.</strong> Back the handle or cylinder off so the tube is free. Springback happens here.</li><li><strong>Measure the real angle.</strong> Take the tube out and measure it with a digital angle gauge. Write the number down.</li><li><strong>Do the math.</strong> Springback = ring reading − measured angle.</li><li><strong>Bend a second test.</strong> On a fresh piece, bend to the target plus your springback. Release and measure again.</li><li><strong>Log it.</strong> Record the tube, die, ring setting and result in your springback log.</li></ol>
+
+<p>Why a second test? Because springback can change a little with angle. If you overbend by the measured amount, the bend is now slightly larger, and it may spring back a hair more. The second piece confirms the setting. If it's still short, nudge the ring setting up by the shortfall and test again.</p>
+
+<div class="bhg-callout bhg-callout--tip"><span class="bhg-callout-icon">💡</span><span class="bhg-callout-title">Short test pieces save tube</span><p>You don't need a full-length stick for a test bend. A piece long enough to clamp, bend and measure is enough. Cut several from the same stick and label them so you know they came from the same batch.</p></div>
+
+<p>If your bender has a degree ring that can be zeroed or adjusted, some builders set it so the ring reads the <em>finished</em> angle for that tube. That works, but only for that one setup. Write the offset on a tag on the die, too.</p>
+
+<h2 id="measuring-the-angle">How to measure the real angle (without fooling yourself)</h2>
+
+<p>A test bend is only as good as the measurement. A lot of confusing springback numbers come from the measuring, not the bender. Here's a simple way to get a clean reading.</p>
+
+<h3>Bend angle vs included angle</h3>
+
+<p>First, know what you're measuring. The <strong>bend angle</strong> is how far the tube turned. The <strong>included angle</strong> is the inside angle between the two legs. For a 90° bend, both are 90°. For anything else they differ: bend angle = 180° − included angle.</p>
+
+<table><thead><tr><th>Bend angle</th><th>Included angle between legs</th><th>Common use</th></tr></thead><tbody><tr><td>30°</td><td>150°</td><td>Gentle kick in a bar</td></tr><tr><td>45°</td><td>135°</td><td>Bumper wings, braces</td></tr><tr><td>60°</td><td>120°</td><td>Steeper corners</td></tr><tr><td>90°</td><td>90°</td><td>Square corners, hoops</td></tr></tbody></table>
+
+<p>Mix these up and your "springback" can come out huge, or even backwards.</p>
+
+<h3>The two-leg gauge method</h3>
+
+<ol class="bhg-steps"><li><strong>Lay one leg flat</strong> on a flat bench, with the bend rising off the bench so the other leg points up into the air.</li><li><strong>Check the bent leg isn't leaning</strong> sideways. A square against it helps.</li><li><strong>Zero the gauge</strong> on the flat leg, close to the bend.</li><li><strong>Move the gauge</strong> to the raised leg, on the same side of the tube. The reading is your bend angle.</li></ol>
+
+<p>For bends up to 90° this is easy. Past 90°, the raised leg leans back over the flat one, so watch which way the gauge is facing, or double-check with a protractor. A magnetic base helps on steel tube. On aluminum or stainless you'll need to hold the gauge steady.</p>
+
+<figure class="bhg-figure" data-slot="measuring"><figcaption>Measure before you bend: OD and wall go in the log next to the springback number.</figcaption></figure>
+
+<p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+
+<h3 id="wixey-angle-gauge">Wixey WR365 digital angle gauge: a simple tool for springback checks</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">🔧 Useful tool</span><p class="bhg-product-title">Wixey WR365 Digital Angle Gauge with Flip-Out Display</p><p class="bhg-product-sub">A small magnetic angle gauge with a zero button and a display you can tilt to read.</p></div><div class="bhg-product-body"><div><p>A digital angle gauge is the easiest way to read a bend angle to a fraction of a degree. You zero it on one leg and read it on the other. The WR365's flip-out display helps when the gauge is sitting on a tube and the screen would otherwise face away from you.</p><p><strong>Who it's for:</strong> anyone dialing in springback, setting the angle between bends, or checking a part against a drawing. It's a woodworking tool at heart, so treat it gently around a welding bench.</p><p><strong>Why it's useful here:</strong> the listing gives 0.1° resolution and ±0.2° accuracy, which is fine for finding a few degrees of springback. The zero function lets you measure relative to the first leg instead of the bench.</p></div><dl class="bhg-specs"><div><dt>Resolution</dt><dd>0.1° (listing)</dd></div><div><dt>Accuracy</dt><dd>±0.2° (listing)</dd></div><div><dt>Range</dt><dd>±180° (listing)</dd></div><div><dt>Display</dt><dd>Flip-out, backlit</dd></div><div><dt>Base</dt><dd>Magnetic</dd></div><div><dt>Battery</dt><dd>Listings disagree on whether it's included</dd></div></dl></div><div class="bhg-product-lists"><div class="bhg-pros"><h4>Why we like it</h4><ul><li>Zero-and-read workflow suits the two-leg method</li><li>Display flips up so you can read it on a tube</li><li>Magnet holds it on steel tube</li></ul></div><div class="bhg-cons"><h4>Know before you buy</h4><ul><li>Flat base sits on a line of contact on round tube</li><li>Magnet won't help on aluminum or most stainless</li><li>Short legs are easier with a protractor-style tool</li></ul></div></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B0054RJ7VC?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">For short legs: <a href="https://www.amazon.com/dp/B00563TM32?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">General Tools 822 digital angle finder rule</a>. Affiliate links. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<!-- 📷 IMAGE IDEA (owner's photo): a digital angle gauge zeroed on the flat leg of a bent tube, then on the raised leg. Suggested alt text: "Digital angle gauge measuring the bend angle on a test piece of tube". -->
+
+<h2 id="compensating">How to compensate for springback: overbend the smart way</h2>
+
+<p>Once you know your springback, the fix is simple. You <strong>overbend</strong>: you pull the bend past your target by the amount the tube will give back. Here's how to do that well.</p>
+
+<h3>The single-point method</h3>
+
+<p>This is the everyday approach. Measure springback at your most common angle, then add it to every bend near that angle. Using the Rogue Fab example, a 90° target that read 86.5° means you'd set the ring to 90 + 3.5 = <strong>93.5°</strong> for the next piece. Then you measure again to confirm.</p>
+
+<p>It works well when most of your bends are close to the angle you tested. A bumper with three 30° bends? Test at 30°, not 90°.</p>
+
+<h3>The two-point method</h3>
+
+<p>If your part mixes small and big angles, test two angles that bracket them. Advanced Tubular's software uses about 20° and 120°. Measure the springback at each. For angles in between, the springback falls between those two numbers.</p>
+
+<p>Here's a simple straight-line estimate. Call the small-angle springback <strong>S1</strong> at angle <strong>A1</strong>, and the big-angle springback <strong>S2</strong> at <strong>A2</strong>. For a target angle A:</p>
+
+<p><strong>Springback at A ≈ S1 + (S2 − S1) × (A − A1) ÷ (A2 − A1)</strong></p>
+
+<p>Halfway between the two test angles, you get roughly halfway between the two springback numbers. It's an estimate, so confirm on scrap the first time. Or let a bend program do the math. Our <a href="/calculator/">bend calculator</a> handles lengths, and our guide to <a data-bhg-link="how-to-lay-out-tube-bends" href="/how-to-lay-out-tube-bends/">laying out tube bends</a> shows where the marks go.</p>
+
+<h3>Switching materials</h3>
+
+<p>Say you've logged 3.5° on mild steel and you're moving to 4130 of the same size and wall. JD2's rule of thumb suggests about twice as much, so roughly 7°. That's a <em>starting guess</em> for your first test bend, not a setting. Bend the test, measure, and log the real number. Our <a data-bhg-link="chromoly-fabrication" href="/chromoly-fabrication/">DOM vs 4130 guide</a> covers the other differences.</p>
+
+<h3>Creep up on it</h3>
+
+<p>Remember the one-way rule: adding bend is easy, removing it is not. On the real part, stop a degree or two short, release, measure, then finish the bend. A ratchet bender makes small top-ups easy. Some benders, like the Baileigh RDB-050, also have an anti-springback mechanism that holds the bend while you reset the handle.</p>
+
+<h2 id="springback-log">Build a springback log you'll actually use</h2>
+
+<p>A springback log turns one afternoon of test bends into years of good parts. It's just a list of setups and results. Keep it in a notebook by the bender, on your phone, or on a tag hung on each die.</p>
+
+<p>Each line should describe one exact setup. If anything changes, start a new line. Here's a simple layout:</p>
+
+<table><thead><tr><th>Column</th><th>What to write</th><th>Why it matters</th></tr></thead><tbody><tr><td><strong>Date</strong></td><td>When you tested</td><td>Helps spot batch changes over time</td></tr><tr><td><strong>Material</strong></td><td>Mild steel DOM, ERW, 4130, 304…</td><td>The biggest single factor</td></tr><tr><td><strong>OD × wall</strong></td><td>Measured with calipers</td><td>Wall affects the result</td></tr><tr><td><strong>Supplier / heat no.</strong></td><td>From the tag or paperwork</td><td>Batches vary</td></tr><tr><td><strong>Die and CLR</strong></td><td>Die maker and centerline radius</td><td>Each die is its own setup</td></tr><tr><td><strong>Ring setting</strong></td><td>What the bender read under load</td><td>Your input</td></tr><tr><td><strong>Measured angle</strong></td><td>Angle after release</td><td>Your output</td></tr><tr><td><strong>Springback</strong></td><td>Ring − measured</td><td>The number you'll reuse</td></tr></tbody></table>
+
+<p>Two small habits make the log far more useful. First, log <em>every</em> test, including the ones that went wrong. A note like "tube slipped in clamp" explains odd numbers later. Second, note the bender itself if you use more than one. Different frames can flex differently.</p>
+
+<p>Over time you'll see patterns. Maybe your 4130 always needs about twice your mild-steel number, like JD2 says. Maybe one supplier's tube is always a touch springier. That's knowledge no chart can give you. For the related numbers, like <a data-bhg-link="bend-radius-explained" href="/bend-radius-explained/">centerline radius</a> and D of bend, keep them in the same log.</p>
+
+<div class="bhg-callout bhg-callout--info"><span class="bhg-callout-icon">🧮</span><span class="bhg-callout-title">Keep springback and length separate</span><p>Springback is about angle. Cut length is about arc and tangent lengths. Log them separately, and use the <a href="/calculator/">bend calculator</a> for the length side.</p></div>
+
+<h2 id="real-life">Real-life lessons from the bender</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads. Each one is a cheap lesson if you learn it here instead of on your own tube.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The chromoly hoop that came up short</span><p>A builder dials in springback on mild steel for a set of bumper bends. Weeks later they bend a 4130 hoop with the same ring settings. Every bend lands short, and the hoop won't sit flat on its mounting plates. They cut a test piece, measure, and find the springback is roughly double their mild-steel number. That matches JD2's guidance.</p><p><strong>Lesson:</strong> a new material gets a new test bend, every time.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 Same size, new supplier</span><p>Someone has a reliable springback setting for their usual tube. Their regular supplier runs out, so they buy the same OD and wall elsewhere. The new tube springs back more, and a two-bend part comes out with both legs open. Nothing changed except the batch.</p><p><strong>Lesson:</strong> label sticks by supplier and test each new batch on an offcut.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The springback that went backwards</span><p>A first-timer bends a 45° test and measures it with a protractor across the inside of the legs. The tool reads about 135°, so they decide the bender is wildly off. In fact, they measured the included angle. Their bend angle was close to right.</p><p><strong>Lesson:</strong> bend angle = 180° − included angle. Know which one your tool shows.</p></div>
+
+<figure class="bhg-figure" data-slot="manual-bender"><figcaption>Whatever bender you use, the degree mark shows die travel under load, not the finished angle.</figcaption></figure>
+
+<h2 id="mistakes">Common springback mistakes (and how to fix them)</h2>
+
+<p>Most springback trouble comes from a handful of habits. Here they are with the fix for each.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Treating someone else's number as your setting.</strong> A forum post says "add 3°," so you add 3° on a different tube and die.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> use published numbers only as a first guess. Run your own test bend and log the result.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Measuring while the tube is still loaded.</strong> The handle or cylinder is still pushing, so the reading looks perfect.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> release fully before you measure. Take the tube out if you can.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Trusting the degree ring as the finished angle.</strong> The ring shows how far the die turned, not where the tube settled.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> measure the tube itself with an angle gauge. The ring is for repeating a setting, not for checking it.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Using one offset for every angle.</strong> A number from a 90° test gets used on 20° kicks.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> test near the angles you'll bend, or use two test angles and estimate between them.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Testing on the wrong tube.</strong> The test piece is from an old stick, a different wall or a different material.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> cut test pieces from the same stick or batch as the real part, and label them.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Overbending the real part in one big pull.</strong> You go straight to the full overbend and overshoot.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> stop a little short, release, measure, then finish. You can always add bend.</p></div>
+
+<h2 id="pro-tips">Pro tips for dialing in springback</h2>
+
+<p>These habits come up again and again among builders whose parts fit the first time. None of them cost much.</p>
+
+<ul><li><strong>Test at your real angles.</strong> If a part has 30° and 60° bends, test those, not just 90°.</li><li><strong>Tag your dies.</strong> A paint-pen note or a tag on each die with its springback for your usual tube saves digging through the log.</li><li><strong>Keep the setup identical.</strong> Same clamp pressure, same lube, same speed. Changes in setup can change the result.</li><li><strong>Record the heat number.</strong> If your supplier gives mill paperwork, note the heat or batch. It explains odd results later.</li><li><strong>Check the second bend on the part.</strong> On multi-bend parts, measure after each bend, not just at the end. Errors stack up.</li><li><strong>Think about radius growth too.</strong> If a tight-fitting part is a hair long or short even with good angles, the finished radius may be a touch larger than the die.</li><li><strong>Watch the special metals.</strong> Stainless and titanium need their own tests. See our guides to <a data-bhg-link="stainless-bending" href="/stainless-bending/">bending stainless tube</a> and the right bender for your shop in <a data-bhg-link="best-tube-bender-for-home-garage" href="/best-tube-bender-for-home-garage/">best tube bender for a home garage</a>.</li></ul>
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: one house tube</span><p>Many experienced builders stick to one or two "house" tube sizes from one supplier. Fewer combinations means fewer springback numbers to learn, and the log fills in fast.</p></div>
+
+<p>One last tip: if you're new to the vocabulary, our <a href="/glossary/">glossary</a> explains terms like CLR, D of bend and wall factor in plain English. And our <a href="/visualizer/">geometry visualizer</a> shows how a few degrees of error moves the end of a long leg.</p>
+
+<blockquote class="bhg-quote"><p>Springback isn't a flaw in your bender. It's a property of your tube. Measure it once, write it down, and it stops being a surprise.</p></blockquote>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is springback in tube bending?</h3><p>It's the amount a bend relaxes when you release the bending force. Part of the bend was elastic, so it comes back. The finished angle ends up a little smaller than what the bender showed, and the radius can grow slightly too.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How much springback should I expect on mild steel?</h3><p>There's no universal figure. One published example from Rogue Fabrication shows a mild-steel bend that read 86.5° after a 90° pull, which is 3.5°. Your tube, wall and die will differ, so run a test bend.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Does chromoly spring back more than mild steel?</h3><p>Yes. JD2 says 4130 springs back about twice as much as welded mild steel of the same size and wall. Use that as a starting guess, then confirm with your own test bend.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How do I compensate for springback?</h3><p>Overbend by the amount you measured. Bend a test piece, release, measure the real angle, and subtract it from the ring reading. Add that difference to future bends of the same setup, then check the first part.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Does springback change with bend angle?</h3><p>Usually, yes. Bigger bends tend to spring back more degrees. That's why some software uses two test bends, around 20° and 120°, and estimates the angles in between.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Is there a springback chart by material?</h3><p>We couldn't find a trustworthy one for tube. Published figures are single examples, and sheet-metal charts don't apply to tube. Build your own chart from test bends.</p></div></div>
+
+<h2 id="checklist">Your springback checklist</h2>
+
+<p>Run through this list before you bend a real part. It takes a few minutes and saves whole sticks of tube.</p>
+
+<div class="bhg-checklist"><ul><li>I've measured the OD and wall with calipers</li><li>I know the material and where the tube came from</li><li>I've cut test pieces from the same stick or batch</li><li>My test setup matches the real one: die, clamp and lube</li><li>I released the tube fully before measuring</li><li>I measured the bend angle, not the included angle</li><li>I worked out springback as ring reading − measured angle</li><li>I tested near the angles this part actually uses</li><li>I confirmed the overbend on a second test piece</li><li>I logged the result with tube, wall, material, die and date</li></ul></div>
+
+<p>Springback stops being scary the moment you measure it. One test piece, one gauge and one line in a notebook, and your bends start landing where you want them. Happy bending. ✅</p>
+
+<div class="bhg-cta"><h3>Ready to plan your next part?</h3><p>Work out arc length, tangent length and cut length in seconds. Or see how a few degrees changes a part's shape.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/calculator/">Open the bend calculator</a><a class="bhg-btn bhg-btn--ghost" href="/visualizer/">Try the geometry visualizer</a></div></div>

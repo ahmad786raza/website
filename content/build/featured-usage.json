@@ -4,9 +4,15 @@
   "82": 1,
   "45": 1,
   "46": 1,
-  "54": 1
+  "54": 1,
+  "83": 1,
+  "87": 1,
+  "114": 1
  },
  "pipe-bender-vs-tube-bender": 45,
  "harbor-freight-12-ton-pipe-bender": 46,
- "manual-vs-hydraulic-tube-bender": 54
+ "manual-vs-hydraulic-tube-bender": 54,
+ "bend-radius-explained": 83,
+ "tube-bend-length-formula": 87,
+ "wall-factor-and-d-of-bend": 114
 }

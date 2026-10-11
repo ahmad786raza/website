@@ -1,0 +1,29 @@
+{
+ "slug": "wall-factor-and-d-of-bend",
+ "title": "Wall Factor and D of Bend: How to Read Any Mandrel Chart",
+ "excerpt": "Wall factor and D of bend explained: two simple ratios that predict wrinkles and flattening, how to read a mandrel chart, and worked examples.",
+ "category": "fabrication-theory",
+ "featured_slot": "measuring",
+ "primary_keyword": "wall factor and D of bend",
+ "asins": [
+  {"asin": "B000GSLKIW", "product": "NEIKO 01407A Electronic Digital Caliper Measuring Tool, 0-6 Inches Stainless Steel Construction with Large LCD Screen", "evidence": "https://www.amazon.com/Neiko-01407A-Electronic-Digital-Stainless/dp/B000GSLKIW"},
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity tube bender (#21115)", "evidence": "Pre-verified in WRITER-KIT ASIN table"}
+ ],
+ "sources": [
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/using-mandrels-for-bending-tube",
+  "https://advancedtubular.helpjuice.com/en_US/bending-terminology/what-is-d-of-bend-in-tube-fabrication",
+  "https://blog.blmgroup.com/what-is-the-best-cnc-tube-bending-machine-for-aerospace-work",
+  "https://tubeformsolutions.com/blog/mandrel-pipe-bending",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://www.roguefab.com/aluminum-pipe-benders/",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.jd2.com/model-32-bender",
+  "https://www.amazon.com/dp/B07PRLN2PG (Eastwood High Capacity listing: 2 x .120 mild steel, 4130 limited to .090 wall, per WRITER-KIT fact table)",
+  "ASME B36.10 pipe tables (1-1/2 NPS = 1.900 in OD), per WRITER-KIT fact table",
+  "https://www.amazon.com/Neiko-01407A-Electronic-Digital-Stainless/dp/B000GSLKIW"
+ ],
+ "notes": "Educational explainer. All ratios were computed in Python (including the check that BLM's D^2/(t x R) equals wall factor / D of bend). Direct page fetches were blocked by the network proxy in this session, and the shared web-search budget ran out before this article's research was complete, so facts come from earlier search-result text and the kit fact table. Please re-check: (1) the M3W example (2 in x .065 in on 2.5 in CLR, WF ~30.8, D 1.25 = standard-pitch 3-ball mandrel + wiper): search results placed it in 'Selecting the right mandrel and wiper', but one summary suggested it may be in 'Using mandrels for bending tube'; also note the research file describes a different example (4 in CLR, two-ball) for the 'Selecting' article. (2) Mandrel-type wall-factor ranges (ball 15-70, thin-wall 70+) from 'Using mandrels for bending tube'; the ultrathin range was not confirmed and is described qualitatively. (3) Advanced Tubular's D-of-bend difficulty bands. (4) That the Tube Form Solutions page is the one saying the chart shows mandrel yes/no, pitch and ball count, and wiper yes/no. Left out (unverified): tube gauge equivalents (e.g. 11 ga = .120), Schedule 40 wall thicknesses, any wall-factor or combined-ratio pass/fail thresholds, Rogue Fab thin-wall roller percentages."
+}
