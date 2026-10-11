@@ -288,3 +288,18 @@ All **43** pending articles from the keyword research are written and saved on b
 - Article components stylesheet.
 - New photo slots.
 - Photo de-duplication and the hero fix.
+
+**Published (owner's request, 11 October 2026):**
+- #95 https://bendershub.com/2026/10/11/best-tube-bender-for-home-garage/
+- #121 https://bendershub.com/2026/10/11/pipe-bender-vs-tube-bender/
+
+**Checks after publishing:**
+- Both pages return HTTP 200 for logged-out visitors at desktop and mobile widths.
+- Each has one H1, a canonical URL, a meta description, an OG image, and Organization / WebSite / BlogPosting / BreadcrumbList JSON-LD.
+- All Amazon links use `polyfreeplanet-20`, and the disclosure is present.
+- There are no PHP or JS errors and no horizontal overflow. Both posts are in the WordPress sitemap.
+- The homepage now shows them as the lead story and the "Also on Benders Hub" item.
+- The internal link from #121 to #95 is now a live link.
+- W3 Total Cache was purged.
+
+**To undo:** set either post back to Draft.

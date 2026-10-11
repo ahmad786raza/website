@@ -1,6 +1,6 @@
 # Draft articles: editor checklist
 
-All drafts below are saved on bendershub.com as **drafts** (nothing is published). Edit: `https://bendershub.com/wp-admin/post.php?post=ID&action=edit`.
+All articles below were saved on bendershub.com as **drafts**. **Published on 11 October 2026:** #95 (Best Tube Bender for a Home Garage) and #121 (Pipe Bender vs Tube Bender). Everything else is still a draft. Edit: `https://bendershub.com/wp-admin/post.php?post=ID&action=edit`.
 
 **Before you publish each one:**
 
