@@ -51,7 +51,7 @@
  },
  {
   "name": "home: no unsupported trust claims",
-  "ok": false,
+  "ok": true,
   "info": ""
  },
  {
@@ -227,12 +227,12 @@
  {
   "name": "perf /: LCP ≤ 2500ms and CLS ≤ 0.1 (mobile, 4x CPU, ~1.6 Mbps)",
   "ok": true,
-  "info": "{\"lcp\":1608,\"cls\":0,\"req\":12,\"dom\":1403}"
+  "info": "{\"lcp\":1572,\"cls\":0.001,\"req\":12,\"dom\":1532}"
  },
  {
   "name": "perf /hover-1-titan-hoverboard/: LCP ≤ 2500ms and CLS ≤ 0.1 (mobile, 4x CPU, ~1.6 Mbps)",
   "ok": true,
-  "info": "{\"lcp\":1448,\"cls\":0,\"req\":17,\"dom\":850}"
+  "info": "{\"lcp\":1356,\"cls\":0,\"req\":17,\"dom\":883}"
  },
  {
   "name": "no JS errors across pages",

@@ -10,7 +10,7 @@ $decisions = hbg_guide_decisions();
 $GLOBALS['post'] = $post; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 setup_postdata( $post );
 ?>
-<section class="section guide" id="guide" aria-labelledby="guide-title">
+<section class="section guide guide--immersive" id="guide" aria-labelledby="guide-title">
 	<div class="container">
 		<?php hbg_section_heading( array( 'id' => 'guide-title', 'kicker' => __( 'Featured buying guide', 'hoverboards-guide' ), 'title' => __( 'Seven decisions, one guide', 'hoverboards-guide' ), 'sub' => __( 'The hoverboard buying guide walks through every choice that changes what you should buy, in plain English.', 'hoverboards-guide' ) ) ); ?>
 		<div class="guide__grid">

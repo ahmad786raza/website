@@ -33,3 +33,39 @@ Method: web search summaries only. Competitor pages could not be fetched directl
 ## Keyword data
 
 Semrush returned "no API units" and no Ahrefs call was made against the plan, so **no search volumes or difficulty scores are claimed**. The hub topics mirror the queries that surfaced repeatedly in search results: best hoverboard, best hoverboard for kids, best hoverboard for adults, off-road / all-terrain hoverboard, hoverboard under $200, Bluetooth hoverboard, UL 2272, hoverboard troubleshooting (beeping, shaking, won't charge).
+
+## October 2026 check (before theme 3.3 "impress" pass)
+
+Method and limits, stated plainly: Ahrefs returned "insufficient plan" for organic-competitor data and
+Semrush had no API units, so no traffic or keyword figures are claimed. Competitor homepages could not be
+fetched from this build environment (DNS is restricted to a few hosts), so composition notes come from
+search-result snippets and from the publicly known layouts of the established review publications.
+
+**Who ranks now for the commercial queries** ("best hoverboards 2026", "best hoverboard for kids"):
+BestReviews and its syndicated copies (KTLA, NewsNation), FindingDulcinea, and a long tail of
+month-stamped affiliate listicles hosted on unrelated domains. The same models recur (Gyroor G13, Gyroor
+Warrior G2, Gotrax Edge, SISIGAD/LIEAGLE 6.5, SIMATE K1). None documents independent lab testing; several
+claim "tested" without method. UL 2272 is the one safety point every page repeats.
+
+**Patterns the strongest consumer-review publications share** (BestReviews, Wirecutter, Tom's Guide,
+RTINGS, eRideHero, Electric Scooter Guide):
+1. A labelled picks module near the top (best overall / budget / for kids…) with one-line rationale, a
+   product image on a clean surface and a clear "check price" action.
+2. A side-by-side comparison limited to a handful of products, with sortable buyer-relevant columns.
+3. A "how we choose / how we test" trust block with named criteria, and author or editor attribution.
+4. Magazine hierarchy in editorial modules: one lead story, then supporting cards, then compact lists.
+5. Reading aids on long articles: table of contents, progress indicator, related reads, product boxes.
+6. Supporting tools: finders, calculators, decision checklists.
+
+**What 3.3 adopts, in our own way:** floating pick cards on the hero photo (real picks, no ratings);
+an immersive featured-guide band with the seven buying decisions; a lead-story reviews grid; a four-tile
+"how this guide is put together" method block mirroring our transparency text (no testing claims);
+a sticky "On this page" sidebar, reading progress bar and back-to-top on articles; lead story + related
+topics on category pages; reveal-on-scroll motion that respects reduced-motion settings.
+
+Sources: https://bestreviews.com/sports-fitness/recreational/best-hoverboards ,
+https://products.ktla.com/sports-and-fitness/recreational/best-hoverboards ,
+https://products.newsnationnow.com/sports-and-fitness/recreational/best-hoverboards ,
+https://findingdulcinea.com/best-hoverboards-for-kids/ ,
+https://www.levyelectric.com/reviews/ride-the-future-top-electric-scooter-websites-reviewed ,
+https://innercityscooters.com/blogs/news/compare-wishlist-two-new-features-to-make-choosing-easier-at-inner-city-scooters

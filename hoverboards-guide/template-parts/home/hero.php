@@ -50,6 +50,16 @@ if ( ! $image_id ) {
 				<?php hbg_image( 'cat-hoverboards', array( 'alt' => __( 'A rider’s feet on a hoverboard with lit wheels', 'hoverboards-guide' ), 'class' => 'hero__img', 'loading' => 'eager', 'fetchpriority' => 'high', 'sizes' => '(max-width: 900px) 100vw, 560px' ) ); ?>
 				<?php if ( $credit ) : ?><figcaption class="hero__credit"><?php echo esc_html( $credit ); ?></figcaption><?php endif; ?>
 			<?php endif; ?>
+			<?php $floats = array_slice( hbg_get_top_picks( 2 ), 0, 2 ); if ( $floats ) : ?>
+			<div class="hero__floats">
+				<?php foreach ( $floats as $fi => $fp ) : $fr = hbg_product_review_url( $fp ); $fu = $fr ? $fr : hbg_key_url( 'best' ); if ( ! $fu ) { continue; } ?>
+				<a class="hero__float hero__float--<?php echo $fi ? 'b' : 'a'; ?>" href="<?php echo esc_url( $fu ); ?>">
+					<?php hbg_product_image( $fp, array( 'class' => 'product-image hero__float-img', 'ratio' => '1/1', 'note' => false, 'sizes' => '56px' ) ); ?>
+					<span class="hero__float-body"><span class="hero__float-label"><?php echo esc_html( $fp['badge'] ); ?></span><span class="hero__float-name"><?php echo esc_html( $fp['name'] ); ?></span></span>
+				</a>
+				<?php endforeach; ?>
+			</div>
+			<?php endif; ?>
 		</figure>
 	</div>
 </section>

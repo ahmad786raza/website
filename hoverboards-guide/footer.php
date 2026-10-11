@@ -86,6 +86,7 @@ $legal     = array(
 </footer>
 
 </div><!-- .site -->
+<button type="button" class="back-top" aria-label="<?php esc_attr_e( 'Back to top', 'hoverboards-guide' ); ?>"><?php echo hbg_svg_icon( 'arrow-up', 18 ); // phpcs:ignore ?></button>
 
 <?php wp_footer(); ?>
 </body>

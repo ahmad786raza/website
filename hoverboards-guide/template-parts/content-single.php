@@ -9,11 +9,11 @@ $content    = apply_filters( 'the_content', get_the_content() );
 $content    = str_replace( ']]>', ']]&gt;', $content );
 $toc_items  = array();
 if ( $show_toc && hbg_content_has_toc( $content ) ) {
-	$show_toc = false;
+	$show_toc = false; // the article carries its own contents list; the theme's inline one would duplicate it
 }
-if ( $show_toc ) {
-	list( $content, $toc_items ) = hbg_toc_prepare( $content );
-}
+// Always give headings stable ids: the sidebar "On this page" list and anchor links rely on them.
+list( $content, $toc_items ) = hbg_toc_prepare( $content );
+$GLOBALS['hbg_toc_items'] = $toc_items;
 $standfirst = has_excerpt() ? get_the_excerpt() : '';
 $affiliate  = hbg_content_has_affiliate_links( $content );
 $cat        = hbg_primary_category();

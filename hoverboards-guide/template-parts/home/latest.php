@@ -14,10 +14,10 @@ $all_url = hbg_all_articles_url();
 <section class="section section--alt reviews" id="reviews" aria-labelledby="reviews-title">
 	<div class="container">
 		<?php hbg_section_heading( array( 'id' => 'reviews-title', 'kicker' => __( 'Reviews & comparisons', 'hoverboards-guide' ), 'title' => __( 'The hoverboard reviews and comparisons readers use most', 'hoverboards-guide' ), 'link' => $all_url, 'link_label' => __( 'All hoverboard articles', 'hoverboards-guide' ) ) ); ?>
-		<div class="grid grid--3" id="latest-grid" data-load-more-grid>
-			<?php foreach ( $posts as $p ) : ?>
+		<div class="grid grid--3 grid--feature" id="latest-grid" data-load-more-grid>
+			<?php foreach ( $posts as $i => $p ) : ?>
 				<?php $GLOBALS['post'] = $p; setup_postdata( $p ); // phpcs:ignore ?>
-				<?php get_template_part( 'template-parts/content', 'card', array( 'heading' => 'h3' ) ); ?>
+				<?php get_template_part( 'template-parts/content', 'card', array( 'heading' => 'h3', 'feature' => 0 === $i ) ); ?>
 			<?php endforeach; wp_reset_postdata(); ?>
 		</div>
 		<?php if ( $term && $term->count > count( $posts ) ) : ?>

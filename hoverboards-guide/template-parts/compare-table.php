@@ -37,12 +37,12 @@ if ( ! $products ) {
 					<tr>
 						<th scope="col"><?php esc_html_e( 'Product', 'hoverboards-guide' ); ?></th>
 						<th scope="col"><?php esc_html_e( 'Best for', 'hoverboards-guide' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Wheels', 'hoverboards-guide' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Max rider', 'hoverboards-guide' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Top speed', 'hoverboards-guide' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Range', 'hoverboards-guide' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Certification', 'hoverboards-guide' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Bluetooth', 'hoverboards-guide' ); ?></th>
+						<th scope="col"><?php echo hbg_svg_icon( 'ruler', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Wheels', 'hoverboards-guide' ); ?></th>
+						<th scope="col"><?php echo hbg_svg_icon( 'weight', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Max rider', 'hoverboards-guide' ); ?></th>
+						<th scope="col"><?php echo hbg_svg_icon( 'speed', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Top speed', 'hoverboards-guide' ); ?></th>
+						<th scope="col"><?php echo hbg_svg_icon( 'battery', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Range', 'hoverboards-guide' ); ?></th>
+						<th scope="col"><?php echo hbg_svg_icon( 'shield', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Certification', 'hoverboards-guide' ); ?></th>
+						<th scope="col"><?php echo hbg_svg_icon( 'bluetooth', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Bluetooth', 'hoverboards-guide' ); ?></th>
 						<th scope="col"><?php esc_html_e( 'Links', 'hoverboards-guide' ); ?></th>
 					</tr>
 				</thead>

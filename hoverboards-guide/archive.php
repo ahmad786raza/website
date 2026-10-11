@@ -14,7 +14,22 @@ if ( ! $desc && is_category() ) {
 	$desc = hbg_category_preset( $term )['blurb'];
 }
 $children = is_category() ? get_terms( array( 'taxonomy' => 'category', 'parent' => $term->term_id, 'hide_empty' => true ) ) : array();
-$total    = (int) $GLOBALS['wp_query']->found_posts;
+$related  = array();
+if ( is_category() ) {
+	if ( $term->parent ) {
+		$parent = get_term( $term->parent, 'category' );
+		if ( $parent && ! is_wp_error( $parent ) ) {
+			$related[] = $parent;
+		}
+		$siblings = get_terms( array( 'taxonomy' => 'category', 'parent' => $term->parent, 'hide_empty' => true, 'exclude' => array( $term->term_id ) ) );
+		if ( $siblings && ! is_wp_error( $siblings ) ) {
+			$related = array_merge( $related, $siblings );
+		}
+	} elseif ( $children && ! is_wp_error( $children ) ) {
+		$related = $children;
+	}
+}
+$total = (int) $GLOBALS['wp_query']->found_posts;
 ?>
 <main id="main" class="site-main site-main--archive">
 	<div class="container">
@@ -48,9 +63,10 @@ $total    = (int) $GLOBALS['wp_query']->found_posts;
 			</h1>
 			<?php if ( $desc ) : ?><p class="archive-header__desc"><?php echo esc_html( $desc ); ?></p><?php endif; ?>
 			<p class="archive-header__count"><?php printf( esc_html( _n( '%s article', '%s articles', $total, 'hoverboards-guide' ) ), esc_html( number_format_i18n( $total ) ) ); ?></p>
-			<?php if ( $children && ! is_wp_error( $children ) ) : ?>
+			<?php if ( $related ) : ?>
 				<div class="archive-header__chips">
-					<?php foreach ( $children as $c ) : ?><a class="chip" href="<?php echo esc_url( get_category_link( $c ) ); ?>"><?php echo esc_html( $c->name ); ?> <span class="count"><?php echo esc_html( number_format_i18n( $c->count ) ); ?></span></a><?php endforeach; ?>
+					<span class="archive-header__chips-label"><?php echo $term->parent ? esc_html__( 'Related topics:', 'hoverboards-guide' ) : esc_html__( 'Browse by topic:', 'hoverboards-guide' ); ?></span>
+					<?php foreach ( $related as $c ) : ?><a class="chip" href="<?php echo esc_url( get_category_link( $c ) ); ?>"><?php echo esc_html( $c->name ); ?> <span class="count"><?php echo esc_html( number_format_i18n( $c->count ) ); ?></span></a><?php endforeach; ?>
 				</div>
 			<?php endif; ?>
 		</header>
@@ -58,6 +74,11 @@ $total    = (int) $GLOBALS['wp_query']->found_posts;
 		<div class="layout<?php echo $has_sidebar ? ' layout--sidebar' : ''; ?>">
 			<div class="layout__main">
 				<?php if ( have_posts() ) : ?>
+					<?php if ( is_category() && ! is_paged() ) : the_post(); ?>
+						<div class="archive-lead">
+							<?php get_template_part( 'template-parts/content', 'card', array( 'heading' => 'h2', 'feature' => true ) ); ?>
+						</div>
+					<?php endif; ?>
 					<div class="grid <?php echo $has_sidebar ? 'grid--2' : 'grid--3'; ?>">
 						<?php while ( have_posts() ) : the_post(); ?>
 							<?php get_template_part( 'template-parts/content', 'card', array( 'heading' => 'h2' ) ); ?>

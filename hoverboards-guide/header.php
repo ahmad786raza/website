@@ -48,6 +48,7 @@
 		</div>
 	</div>
 </header>
+<div class="progress" id="reading-progress" aria-hidden="true"><span></span></div>
 
 <div class="search-overlay" id="search-overlay" aria-hidden="true">
 	<div class="container search-overlay__inner" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e( 'Search the site', 'hoverboards-guide' ); ?>">

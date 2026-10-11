@@ -216,10 +216,11 @@ function hbg_spec_list( $p, $keys = array( 'wheel', 'weight_cap', 'speed', 'rang
 		'range'         => __( 'Range', 'hoverboards-guide' ),
 		'certification' => __( 'Certification', 'hoverboards-guide' ),
 	);
+	$icons = array( 'wheel' => 'ruler', 'weight_cap' => 'weight', 'speed' => 'speed', 'range' => 'battery', 'certification' => 'shield' );
 	$items = array();
 	foreach ( $keys as $k ) {
 		if ( ! empty( $p[ $k ] ) && isset( $labels[ $k ] ) ) {
-			$items[] = '<div><dt>' . esc_html( $labels[ $k ] ) . '</dt><dd>' . esc_html( $p[ $k ] ) . '</dd></div>';
+			$items[] = '<div><dt>' . hbg_svg_icon( $icons[ $k ], 13 ) . esc_html( $labels[ $k ] ) . '</dt><dd>' . esc_html( $p[ $k ] ) . '</dd></div>';
 		}
 	}
 	if ( ! $items ) {

@@ -19,6 +19,12 @@ $links    = array(
 			<div class="section-heading__kicker"><?php esc_html_e( 'Editorial transparency', 'hoverboards-guide' ); ?></div>
 			<h2 class="trust__title" id="trust-title"><?php echo esc_html( $headline ); ?></h2>
 			<p class="trust__p"><?php echo esc_html( $text ); ?></p>
+			<ul class="trust__method">
+				<li><?php echo hbg_svg_icon( 'list', 20 ); // phpcs:ignore ?><span><strong><?php esc_html_e( 'Specifications compared', 'hoverboards-guide' ); ?></strong><?php esc_html_e( 'Manufacturer figures, line by line, labelled advertised or verified.', 'hoverboards-guide' ); ?></span></li>
+				<li><?php echo hbg_svg_icon( 'shield', 20 ); // phpcs:ignore ?><span><strong><?php esc_html_e( 'Safety checked', 'hoverboards-guide' ); ?></strong><?php esc_html_e( 'UL 2272 status and published recalls, before any pick.', 'hoverboards-guide' ); ?></span></li>
+				<li><?php echo hbg_svg_icon( 'refresh', 20 ); // phpcs:ignore ?><span><strong><?php esc_html_e( 'Kept current', 'hoverboards-guide' ); ?></strong><?php esc_html_e( 'Guides are updated when models change.', 'hoverboards-guide' ); ?></span></li>
+				<li><?php echo hbg_svg_icon( 'info', 20 ); // phpcs:ignore ?><span><strong><?php esc_html_e( 'Honest limits', 'hoverboards-guide' ); ?></strong><?php esc_html_e( 'No test lab; we say when we have not ridden a board.', 'hoverboards-guide' ); ?></span></li>
+			</ul>
 		</div>
 		<ul class="trust__links">
 			<?php

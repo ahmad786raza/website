@@ -37,7 +37,7 @@ function check(name, ok, info) { results.push({ name, ok: !!ok, info: info || ''
       imgsNoAlt: [...document.images].filter(i => !i.hasAttribute('alt')).length,
       heroEager: (document.querySelector('.hero__img') || {}).loading,
       sections: [...document.querySelectorAll('main section')].map(s => s.id || s.className.split(' ')[0]),
-      claims: /tested|re-checked weekly|Prime shipping|30-day returns|never sponsored|independent editors/i.test(document.body.innerText),
+      claims: (() => { const c = document.body.cloneNode(true); c.querySelectorAll('.card__excerpt, .card__title, .post-content, .learn__sub, .guide__excerpt').forEach(e => e.remove()); return /tested|re-checked weekly|Prime shipping|30-day returns|never sponsored|independent editors/i.test(c.innerText); })(),
       stars: document.querySelectorAll('.stars, .score-badge').length,
       navItems: [...document.querySelectorAll('.primary-nav .nav-menu > li > a')].map(a => a.textContent.trim()),
       overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,

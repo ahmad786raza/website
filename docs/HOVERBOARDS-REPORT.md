@@ -2,40 +2,33 @@
 
 Date: 11 October 2026
 
-> **Status (11 October 2026, late evening): the live site runs theme 3.2.0, “3.0.0 made richer”.**
-> After 3.1.0 (colour pass) and 4.0.0 (editorial rebuild) were withdrawn at the owner's request and
-> 3.0.0 restored, the owner asked for the current theme to be upgraded and made richer. 3.2.0 keeps the
-> 3.0.0 layout, colours, sections and header exactly, and adds depth and detail on top:
+> **Status (11 October 2026, night): the live site runs theme 3.3.0, “3.0.0 made richer, then impressive”.**
+> 3.2.0 added depth and detail on the 3.0.0 layout; 3.3.0 (after a competitor check, see
+> `docs/research/hoverboards-competitors.md`) adds the elements that the strongest review publications
+> share, without changing the layout the owner liked:
 >
-> - **Hero:** pill eyebrow, layered photo frame with a pale-blue offset card and soft glow, and three
->   content-count tiles (reviews, buying guides, safety & fix guides) drawn from real category counts and
->   linked to those categories.
-> - **Header and footer:** 3 px blue→cyan accent line, animated underline on the active/hovered menu item,
->   framed search button.
-> - **Cards everywhere:** soft elevation, hover lift and gentle image zoom (product, topic, article, learn,
->   FAQ cards); product cards get a blue top rule and framed spec panel; category labels become pills.
-> - **Buttons:** subtle gradient, glow and lift on the primary and Amazon buttons.
-> - **Comparison table:** navy header, zebra rows, highlighted “Best overall” row, check marks for
->   Bluetooth and certification text.
-> - **Articles:** headings with a short gradient bar, navy table headers with zebra rows, framed featured
->   image, tinted contents panel, left-rule callouts, gradient author avatar; archive headers framed.
-> - **Invisible fixes ported from 3.1.0:** theme prints meta description, canonical and JSON-LD when Rank
->   Math is installed but silent (Customizer → SEO → “SEO output”); homepage anchor menu items no longer
->   mark their parent as current; tighter desktop navigation spacing; low-contrast inline greys in imported
->   content remapped.
-> - **Previews:** card excerpts now come from the first real paragraph, skipping imported “Category ·
->   Updated …” stamps, product-card label chains and star-rating snippets; fallback photos rotate through a
->   subject-matched pool instead of repeating one picture.
+> - **Hero:** two floating “pick” cards over the photo (real top picks, linked to their reviews), bolder
+>   display headline, larger photo column, content-count tiles (reviews, buying guides, safety & fix guides).
+> - **Featured buying guide:** an immersive navy band with the guide card and the seven numbered decisions.
+> - **Reviews & comparisons:** magazine hierarchy, the first story leads at double size.
+> - **Product cards and comparison table:** spec icons; the highest advertised max-rider weight, speed and
+>   range are tagged “Highest” (relative to the boards listed; computed from the table, not claimed).
+> - **Editorial transparency:** four method tiles that mirror the trust text (no testing claims).
+> - **Articles:** sticky “On this page” list with the active section highlighted, reading-progress bar,
+>   back-to-top button; headings get stable anchor ids even when the article carries its own contents list.
+> - **Category pages:** lead story on page one (wide card), related-topic chips.
+> - **Motion:** cards reveal softly on scroll; disabled when the visitor prefers reduced motion.
+> - Everything from 3.2.0 remains: SEO output when Rank Math is silent, cleaner previews, rotating photos.
 >
-> Tests: local replica 52/52 (functional, SEO, axe WCAG AA, performance LCP 1.9 s / CLS 0); live 50/52,
-> the two misses being pre-existing non-theme items (a post excerpt that claims testing, and six external
-> scripts from Site Kit). Screenshots: `docs/screenshots/hbg-v32-*.jpg`.
-> Rollback: re-upload `dist/hoverboards-guide-3.0.0.zip` (Appearance → Themes → Add New → Upload → replace).
+> Tests: local replica 52/52; live 51/52 (the one miss is six external scripts from Site Kit, not the
+> theme). Live screenshots at desktop/tablet/mobile and on an article and a category page render without
+> overflow. Screenshots: `docs/screenshots/hbg-v33-*.jpg`.
+> Rollback: re-upload `dist/hoverboards-guide-3.2.0.zip` (richer, no 3.3 additions) or
+> `dist/hoverboards-guide-3.0.0.zip` (the original) under Appearance → Themes → Add New → Upload → Replace.
 >
 > What stays from the install session, all reversible from Hoverboards Guide → Setup: the eight hoverboard
-> hub categories (child categories of Hoverboards, articles assigned, no slugs or content changed) and two
-> *draft* pages (Affiliate Disclosure, Editorial Policy) awaiting review. The header uses the theme's
-> built-in menu; the WordPress menu created by Setup still exists under Appearance → Menus, un-assigned.
+> hub categories and two *draft* pages (Affiliate Disclosure, Editorial Policy). The header uses the theme's
+> built-in menu; the WordPress menu created by Setup exists under Appearance → Menus, un-assigned.
 > 3.1.0 and 4.0.0 remain in git history and as reference zips only.
 
 ## 1. What was and was not possible

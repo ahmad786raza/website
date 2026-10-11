@@ -8,6 +8,24 @@
 		<?php if ( 'widgets' === get_theme_mod( 'hbg_sidebar_mode', 'curated' ) && is_active_sidebar( 'sidebar-1' ) ) : ?>
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		<?php else : ?>
+			<?php
+			$hbg_side_toc = array();
+			if ( is_singular( 'post' ) && ! empty( $GLOBALS['hbg_toc_items'] ) ) {
+				foreach ( $GLOBALS['hbg_toc_items'] as $hbg_it ) {
+					if ( 2 === (int) $hbg_it['level'] ) {
+						$hbg_side_toc[] = $hbg_it;
+					}
+				}
+			}
+			if ( count( $hbg_side_toc ) >= 3 ) :
+			?>
+			<section class="widget widget_hbg_sidetoc" data-side-toc>
+				<h3 class="widget-title"><span><?php esc_html_e( 'On this page', 'hoverboards-guide' ); ?></span></h3>
+				<ol class="side-toc">
+					<?php foreach ( $hbg_side_toc as $hbg_it ) : ?><li><a href="#<?php echo esc_attr( $hbg_it['id'] ); ?>"><?php echo esc_html( $hbg_it['text'] ); ?></a></li><?php endforeach; ?>
+				</ol>
+			</section>
+			<?php endif; ?>
 			<section class="widget widget_search"><h3 class="widget-title"><span><?php esc_html_e( 'Search', 'hoverboards-guide' ); ?></span></h3><?php get_search_form(); ?></section>
 			<section class="widget widget_hbg_topics">
 				<h3 class="widget-title"><span><?php esc_html_e( 'Hoverboards by topic', 'hoverboards-guide' ); ?></span></h3>
