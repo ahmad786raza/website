@@ -1,0 +1,30 @@
+/* Block editor styles so posts look like the front end while writing. */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Geist:wght@400;500;600;700&display=swap');
+
+:root { --accent: #FF7A1A; }
+
+.editor-styles-wrapper {
+	font-family: 'Geist', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-size: 17.5px;
+	line-height: 1.75;
+	color: #334155;
+	background: #fffdfa;
+}
+.editor-styles-wrapper .wp-block { max-width: 780px; }
+.editor-styles-wrapper .wp-block[data-align="wide"] { max-width: 1000px; }
+.editor-styles-wrapper h1, .editor-styles-wrapper h2, .editor-styles-wrapper h3, .editor-styles-wrapper h4 {
+	font-family: 'Bricolage Grotesque', 'Geist', system-ui, sans-serif;
+	font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; color: #0f172a;
+}
+.editor-styles-wrapper h1 { font-size: 40px; }
+.editor-styles-wrapper h2 { font-size: 30px; margin-top: 1.8em; }
+.editor-styles-wrapper h2::before { content: ""; display: block; width: 44px; height: 4px; border-radius: 2px; background: var(--accent); margin-bottom: 14px; }
+.editor-styles-wrapper h3 { font-size: 23px; }
+.editor-styles-wrapper a { color: var(--accent); }
+.editor-styles-wrapper blockquote { border-left: 4px solid var(--accent); background: #fbf7f0; padding: 18px 24px; border-radius: 0 14px 14px 0; font-style: italic; }
+.editor-styles-wrapper img { border-radius: 14px; }
+.editor-styles-wrapper table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.editor-styles-wrapper th, .editor-styles-wrapper td { padding: 12px 14px; border-bottom: 1px solid #f1ece3; text-align: left; }
+.editor-styles-wrapper th { background: #fbf7f0; font-weight: 700; color: #0f172a; }
+.editor-styles-wrapper li::marker { color: var(--accent); font-weight: 700; }
+.editor-styles-wrapper .wp-block-button__link { border-radius: 999px; background: var(--accent); color: #0f172a; font-weight: 700; }
