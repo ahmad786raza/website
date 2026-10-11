@@ -83,18 +83,30 @@ add_filter( 'the_content', 'hbg_fix_duplicate_h1', 9 );
 
 /**
  * Affiliate link hygiene: every Amazon link gets rel="sponsored nofollow noopener" and a new tab.
- * Links that have no Associates tag receive the site's existing tag; an existing tag is never changed.
+ * Links that have no Associates tag receive the site's tag; links carrying a retired tag (Customizer →
+ * Affiliate → "Retired tags to replace") are shown with the current tag; any other tag is left alone.
  */
 function hbg_affiliate_link_hygiene( $content ) {
 	if ( false === stripos( $content, 'amazon.' ) && false === stripos( $content, 'amzn.to' ) ) {
 		return $content;
 	}
-	$tag = get_theme_mod( 'hbg_affiliate_tag', 'rcblogs-20' );
-	return preg_replace_callback( '/<a\s+([^>]*href=["\']([^"\']*(?:amazon\.|amzn\.to)[^"\']*)["\'][^>]*)>/i', function ( $m ) use ( $tag ) {
+	$tag     = get_theme_mod( 'hbg_affiliate_tag', 'hoverboardsgu-20' );
+	$retired = array_filter( array_map( 'trim', explode( ',', (string) get_theme_mod( 'hbg_affiliate_tag_retired', 'rcblogs-20' ) ) ) );
+	if ( $tag && $retired ) {
+		// Retired tags anywhere in the body: link hrefs, schema JSON an article carries, plain-text URLs.
+		$alts    = implode( '|', array_map( function ( $t ) { return preg_quote( $t, '/' ); }, $retired ) );
+		$content = preg_replace( '/([?&](?:amp;|#038;)?tag=)(?:' . $alts . ')(?=[&"\'\s<#]|$)/i', '${1}' . rawurlencode( $tag ), $content );
+		// …and in disclosure sentences that name the tag ("As an Amazon Associate (tag: rcblogs-20) …").
+		$content = preg_replace( '/(?<![\w-])(?:' . $alts . ')(?![\w-])/i', $tag, $content );
+	}
+	return preg_replace_callback( '/<a\s+([^>]*href=["\']([^"\']*(?:amazon\.|amzn\.to)[^"\']*)["\'][^>]*)>/i', function ( $m ) use ( $tag, $retired ) {
 		$attrs = $m[1];
 		$href  = $m[2];
-		if ( $tag && false !== stripos( $href, 'amazon.' ) && ! preg_match( '/[?&]tag=/i', $href ) ) {
+		if ( $tag && false !== stripos( $href, 'amazon.' ) && ! preg_match( '/[?&](?:amp;|#038;)?tag=/i', $href ) ) {
 			$new   = $href . ( false === strpos( $href, '?' ) ? '?' : '&amp;' ) . 'tag=' . rawurlencode( $tag );
+			$attrs = str_replace( $href, $new, $attrs );
+		} elseif ( $tag && $retired && preg_match( '/([?&](?:amp;|#038;)?tag=)([^&"\']+)/i', $href, $t ) && in_array( rawurldecode( $t[2] ), $retired, true ) ) {
+			$new   = str_replace( $t[0], $t[1] . rawurlencode( $tag ), $href );
 			$attrs = str_replace( $href, $new, $attrs );
 		}
 		if ( ! preg_match( '/\brel=/i', $attrs ) ) {

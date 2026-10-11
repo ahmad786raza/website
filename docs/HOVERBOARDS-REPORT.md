@@ -2,7 +2,24 @@
 
 Date: 11 October 2026
 
-> **Status (12 October 2026): the live site runs theme 3.5.0 — 3.4.1 plus a rebuilt comparison table.**
+> **Status (12 October 2026, later): the live site runs theme 3.5.3 — the Amazon Associates tag is now `hoverboardsgu-20`.**
+> The owner asked to replace `rcblogs-20` with `hoverboardsgu-20`. Done in three layers, none of which
+> edits stored post content:
+>
+> - **Customizer:** Hoverboards Guide → Affiliate → “Amazon Associates tag” saved as `hoverboardsgu-20`
+>   on the live site (it had been saved as `rcblogs-20`); the theme default is the new tag too. All
+>   theme-generated links (picks, comparison table, finder, cards) follow it.
+> - **Article links:** a new Customizer field “Retired tags to replace” (default `rcblogs-20`). At display
+>   time any Amazon link carrying a retired tag is shown with the current tag, including links written
+>   with `&amp;` or `&#038;`, Amazon URLs inside schema JSON an article carries, and disclosure sentences
+>   that name the tag (“As an Amazon Associate (tag: …)”). Links with no tag get the current tag, as
+>   before; a link with any other tag is left alone. The 544 old-tag links in 106 posts therefore switch
+>   without a database edit, and reverting is a Customizer change.
+> - **Checks:** home page and 15 posts fetched live after the deploy — 384 Amazon links, all
+>   `hoverboardsgu-20`, no doubled tags, no remaining mention of the old tag. Local 52/52; live 48/49
+>   (Site Kit scripts). Rollback: `dist/hoverboards-guide-3.5.0.zip` plus setting the Customizer tag back.
+>
+> **Previous (12 October 2026): 3.5.0 — 3.4.1 plus a rebuilt comparison table.**
 > The owner's screenshot showed the home-page table clipping its “Check price” buttons on a wide
 > monitor and asked for pictures and a more attractive section. 3.5.0:
 >
@@ -144,7 +161,7 @@ See `docs/research/hoverboards-competitors.md`. In short: ERideHero is the only 
 - **Customize → Hoverboards Guide**: 12 sections (brand, header, hero, homepage sections, topic images, affiliate, newsletter, articles, editorial transparency, SEO, social, footer).
 
 ### Affiliate conversion
-- Tag `rcblogs-20` preserved everywhere; theme links use tagged ASIN links where your own articles already use that ASIN (Gyroor Warrior `B07T63VSMC`, Hover-1 Helix `B0BXCVL6KD`, Swagtron T6 `B01N6NQOA6`) and tagged model-name searches otherwise (they never 404).
+- Tag `rcblogs-20` preserved everywhere at the time of 3.0.0 (replaced by `hoverboardsgu-20` in 3.5.1+, see the status note); theme links use tagged ASIN links where your own articles already use that ASIN (Gyroor Warrior `B07T63VSMC`, Hover-1 Helix `B0BXCVL6KD`, Swagtron T6 `B01N6NQOA6`) and tagged model-name searches otherwise (they never 404).
 - Affiliate actions in the natural places: quick recommendations, comparison table, finder result, product boxes, verdict boxes, sidebar picks, and the article's own links. Wording: "Check price on Amazon", "View full review", "Compare specifications", "Read the buying guide".
 - No fake urgency, prices, ratings, review counts, Prime claims or stock claims; Amazon trademark notice in the footer; disclosure in the footer, above the recommendations grid, and on every article with affiliate links.
 - Measurement: when Site Kit's `gtag` is present, the theme sends GA4 events `affiliate_click` (product, placement, page), `finder_complete`, `compare_filter`, `compare_sort` and `finder_guide` clicks. No new tags, no duplicate analytics.

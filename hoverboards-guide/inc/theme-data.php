@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function hbg_amazon_url( $asin_or_keywords, $tag = '' ) {
 	if ( empty( $tag ) ) {
-		$tag = get_theme_mod( 'hbg_affiliate_tag', 'rcblogs-20' );
+		$tag = get_theme_mod( 'hbg_affiliate_tag', 'hoverboardsgu-20' );
 	}
 	$q = trim( (string) $asin_or_keywords );
 	if ( preg_match( '/^B0[A-Z0-9]{8}$/i', $q ) ) {
