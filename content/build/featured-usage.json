@@ -12,7 +12,10 @@
   "86": 2,
   "55": 1,
   "47": 1,
-  "63": 1
+  "63": 1,
+  "57": 1,
+  "70": 1,
+  "44": 1
  },
  "pipe-bender-vs-tube-bender": 45,
  "harbor-freight-12-ton-pipe-bender": 46,
@@ -26,5 +29,8 @@
  "best-tube-bender": 86,
  "best-hydraulic-tube-bender": 55,
  "best-exhaust-pipe-bender": 47,
- "cnc-tube-bending": 63
+ "cnc-tube-bending": 63,
+ "tube-bender-comparison": 57,
+ "tube-bender-capacity-chart": 70,
+ "tube-bender-die-compatibility": 44
 }

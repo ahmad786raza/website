@@ -1,0 +1,221 @@
+<p class="bhg-lead">Your bend looks great from across the garage. Then you run a finger around it and feel it: the tube isn't quite round anymore. It's a little flat on the outside of the bend and a little wide at the sides. That change in shape has a name. It's <strong>ovality in tube bending</strong>, and every bent tube has some of it.</p>
+
+<p>A little ovality is normal. Too much can weaken a part, choke flow in an exhaust, stop a clamp from fitting, or fail an inspection. The tricky part is that there's no single "safe" number. The limit comes from your drawing, your customer, your code or your rulebook.</p>
+
+<p>This guide keeps it simple. You'll learn what ovality is, why tube goes oval in a bend, and the formula everyone uses. Then we'll measure it with plain calipers, work a real example step by step, and cover the fixes that keep your tube round.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p><strong>Ovality</strong> is how far a bent tube's cross-section has gone out of round.</p><ul><li><strong>Formula:</strong> ovality % = (Dmax − Dmin) ÷ Dnominal × 100. Dmax and Dmin are the largest and smallest outside diameters you measure at one spot in the bend.</li><li><strong>Measure it</strong> with calipers at the middle of the bend, turning the jaws to find the biggest and smallest readings.</li><li><strong>There's no universal limit.</strong> Your spec, customer or rulebook sets it. Tighter radii, thinner wall, loose dies and ram benders all make it worse. A <a href="#woodward-fab-wfb2">rotary-draw bender</a> with a matched die is the usual garage fix.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#what-is-ovality">What is ovality in tube bending?</a></li><li><a href="#why-it-matters">Why ovality matters</a></li><li><a href="#why-tube-goes-oval">Why tube goes oval in a bend</a></li><li><a href="#ovality-formula">The ovality formula</a></li><li><a href="#how-to-measure">How to measure ovality with calipers</a></li><li><a href="#worked-example">A worked example</a></li><li><a href="#ovality-limits">What's an acceptable limit?</a></li><li><a href="#reducing-ovality">How to reduce ovality</a></li><li><a href="#real-life">Real-life lessons</a></li><li><a href="#mistakes">Common mistakes and fixes</a></li><li><a href="#pro-tips">Pro tips</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Your ovality checklist</a></li></ol></div>
+
+<h2 id="what-is-ovality">What is ovality in tube bending?</h2>
+
+<p><strong>Ovality</strong> is a measure of how far a tube's cross-section has drifted from a perfect circle. Before bending, round tube is close to round. After bending, the section at the bend is usually a bit oval, like an egg seen end-on.</p>
+
+<p>You'll hear a few names for the same thing:</p>
+
+<ul><li><strong>Ovality</strong> or <strong>ovalization</strong>: the most common terms in shops and specs.</li><li><strong>Out-of-round</strong>: plain-English version, often used on drawings.</li><li><strong>Flattening</strong> or <strong>tube flattening percentage</strong>: used when the tube has clearly squashed in one direction.</li><li><strong>Deformation</strong>: some bender makers use this word for the same idea.</li></ul>
+
+<p>Ovality is different from two other bend defects. <strong>Wrinkles</strong> are ripples on the inside of the bend. A <strong>kink</strong> is a sharp collapse where the tube folds. Ovality is a smoother change in shape. You often can't see small amounts by eye, which is why you measure it.</p>
+
+<p>Here's the key idea: ovality is always measured at one cross-section. You pick a spot along the bend, find the biggest and smallest outside diameters at that spot, and compare them. It's a number for that location, not for the whole part.</p>
+
+<figure class="bhg-figure" data-slot="measuring"><figcaption>Calipers are all you need to put a number on ovality. Measure the straight tube first, then the bend.</figcaption></figure>
+
+<p>If you want the background terms, like centerline radius (CLR) and D of bend, our <a href="/glossary/">glossary</a> and our <a data-bhg-link="bend-radius-explained" href="/bend-radius-explained/">centerline radius guide</a> explain them in plain English.</p>
+
+<h2 id="why-it-matters">Why ovality matters</h2>
+
+<p>A little ovality rarely hurts a garage part. But it's worth understanding why specs care, so you know when to pay attention.</p>
+
+<h3>Strength and stiffness</h3>
+
+<p>A round tube resists bending equally in every direction. Once it goes oval, the flattened direction gets weaker. In structural work, like frames and cages, you want the tube to keep the shape the designer assumed. That's one reason rulebooks and engineers care about bend quality, not just tube size.</p>
+
+<h3>Flow</h3>
+
+<p>In exhaust, intake and fluid lines, an oval section changes the flow area and shape. The tube is no longer the clean round passage you paid for. That's a big reason exhaust builders favor mandrel bends.</p>
+
+<h3>Fit-up</h3>
+
+<p>Clamps, couplers, slip joints and V-band flanges expect round tube. An oval section near the end of a bend may not slide into a coupler, and a clamp may not seal. Notching is harder too, because a hole saw expects a round tube to saddle onto.</p>
+
+<h3>Looks and inspection</h3>
+
+<p>Flattened bends just look worse. On a show part or a customer job, that matters. And on spec work, ovality is often a line item on the inspection sheet. If it's over the limit, the part fails, however good it looks.</p>
+
+<table><thead><tr><th>Where it shows up</th><th>What ovality can do</th><th>Who cares most</th></tr></thead><tbody><tr><td><strong>Cages and chassis</strong></td><td>Changes the tube's section in the bend</td><td>Racers, tech inspectors, engineers</td></tr><tr><td><strong>Exhaust and intake</strong></td><td>Changes flow area and shape</td><td>Performance builders</td></tr><tr><td><strong>Joints and clamps</strong></td><td>Couplers and clamps don't fit or seal</td><td>Anyone joining tube near a bend</td></tr><tr><td><strong>Show and customer parts</strong></td><td>Visible flat spots</td><td>Customers, you</td></tr><tr><td><strong>Spec work</strong></td><td>Fails inspection if over the limit</td><td>Shops working to drawings</td></tr></tbody></table>
+
+<h2 id="why-tube-goes-oval">Why tube goes oval in a bend</h2>
+
+<p>When you bend a tube, the outside wall is stretched and the inside wall is squeezed. Both walls try to take the easiest path. The stretched outer wall pulls in toward the tube's center. The squeezed inner wall pushes in toward the center too. The result is a section that flattens in the plane of the bend and widens at the sides.</p>
+
+<p>So in most bends, the <strong>smallest diameter</strong> runs from the inside of the bend to the outside. The <strong>largest diameter</strong> runs across, side to side. That's a handy starting point when you measure. But always check by turning the calipers, because the real max and min can sit at a slight angle.</p>
+
+<h3>What makes it worse</h3>
+
+<ul><li><strong>Tight bends.</strong> A low <strong>D of bend</strong> (CLR ÷ OD) means more stretch and squeeze. Pro-Tools puts the practical minimum CLR without a mandrel at about <a href="https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate" target="_blank" rel="noopener">3 × OD</a>.</li><li><strong>Thin wall.</strong> A high <strong>wall factor</strong> (OD ÷ wall) means less wall to hold the shape.</li><li><strong>Loose die fit.</strong> If the die groove is bigger than the tube, nothing supports the sides. This happens when pipe dies meet tube. A 1-1/2" pipe die is made for 1.900" OD, not 1.5" tube.</li><li><strong>The wrong bender.</strong> Ram-style "pipe benders" push the middle of the tube with little side support. Harbor Freight's own manual for its 12-ton bender says it isn't meant for thin-wall pipe such as conduit or exhaust (<a href="https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf" target="_blank" rel="noopener">manual</a>).</li><li><strong>No inside support.</strong> Without a mandrel, thin-wall tube on a tight radius has nothing inside to stop it collapsing.</li></ul>
+
+<figure class="bhg-figure" data-slot="defects"><figcaption>Push ovality far enough and the tube collapses into a kink. Measuring catches the trend before it gets there.</figcaption></figure>
+
+<p>Our guide to <a data-bhg-link="wall-factor-and-d-of-bend" href="/wall-factor-and-d-of-bend/">wall factor and D of bend</a> goes deeper on those two numbers. And our <a data-bhg-link="tube-wrinkling-prevention" href="/tube-wrinkling-prevention/">wrinkles, kinks and flattening guide</a> covers the other defects that often travel with ovality.</p>
+
+<h2 id="ovality-formula">The ovality formula, explained</h2>
+
+<p>The formula most bending references use is short:</p>
+
+<p><strong>Ovality % = (Dmax − Dmin) ÷ Dnominal × 100</strong></p>
+
+<p>Here's what each part means:</p>
+
+<ul><li><strong>Dmax</strong> is the largest outside diameter you measure at one spot in the bend.</li><li><strong>Dmin</strong> is the smallest outside diameter at that same spot.</li><li><strong>Dnominal</strong> is the tube's nominal size: the OD it's sold as, like 1.750".</li></ul>
+
+<p>This form appears in trade and academic sources, including a measurement paper presented at an <a href="https://imeko.org/publications/tc14-2007/IMEKO-TC14-2007-51.pdf" target="_blank" rel="noopener">IMEKO TC14 conference (2007)</a>. In words: take the difference between the widest and narrowest readings, divide by the size the tube is supposed to be, and turn it into a percentage.</p>
+
+<h3>Watch out for other versions</h3>
+
+<p>Not every source divides by the nominal OD. Engineers Edge, for example, also lists a version that divides by the sum of the two readings, (Dmax + Dmin). That gives a smaller percentage from the same measurements. Some specs divide by the average diameter instead. None of these is "wrong." They're just different definitions.</p>
+
+<table><thead><tr><th>Version</th><th>Divide the difference by</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Nominal OD</strong> (most common in bending)</td><td>Dnominal</td><td>The formula this guide uses</td></tr><tr><td><strong>Sum of readings</strong></td><td>Dmax + Dmin</td><td>Listed by Engineers Edge; gives roughly half the number</td></tr><tr><td><strong>Average diameter</strong></td><td>(Dmax + Dmin) ÷ 2</td><td>Close to the nominal version when the tube is near size</td></tr></tbody></table>
+
+<div class="bhg-callout bhg-callout--warn"><span class="bhg-callout-icon">⚠️</span><span class="bhg-callout-title">Use your spec's formula</span><p>If a drawing or customer gives an ovality limit, check which formula they mean. A part can pass under one definition and fail under another. When in doubt, ask, and write the formula on your inspection sheet.</p></div>
+
+<h2 id="how-to-measure">How to measure ovality with calipers</h2>
+
+<p>You don't need special gauges for garage work. A decent pair of dial or digital calipers does the job. Here's a simple routine that gives repeatable numbers.</p>
+
+<ol class="bhg-steps"><li><strong>Check your calipers.</strong> Close the jaws, wipe them clean, and zero them.</li><li><strong>Measure the straight tube first.</strong> Take the max and min OD on a straight section. That's your starting ovality. Tube isn't perfectly round from the mill.</li><li><strong>Mark the bend.</strong> Find the middle of the bend and mark it with a paint pen. Add marks at the start and end of the bend if you want a fuller picture.</li><li><strong>Measure in the plane of the bend.</strong> Place the jaws across the tube from the inside of the bend to the outside. This is usually your Dmin.</li><li><strong>Measure across the bend.</strong> Turn the calipers 90° and measure side to side. This is usually your Dmax.</li><li><strong>Hunt for the true max and min.</strong> Rock and rotate the calipers a little around the tube at the same spot. Keep the biggest and smallest readings.</li><li><strong>Do the math.</strong> Ovality % = (Dmax − Dmin) ÷ Dnominal × 100.</li><li><strong>Write it down.</strong> Record the spot, both readings, the result and the setup.</li></ol>
+
+<h3>Tips for good readings</h3>
+
+<p>Keep the jaws square to the tube's axis. On a bend, the axis curves, so it's easy to tilt the calipers and read long. Use light, even pressure. Squeezing hard can flex thin wall and give you a false low reading.</p>
+
+<p>Make sure the jaws are long enough to reach past the tube's widest point. If they only catch the edges, you'll read short. On big tube, a larger caliper or a pair of outside calipers and a ruler may be easier.</p>
+
+<p>Finally, measure more than one spot. Ovality isn't always worst at the exact middle. Taking readings at the start, middle and end of the bend shows you where your setup is struggling.</p>
+
+<div class="bhg-callout bhg-callout--tip"><span class="bhg-callout-icon">💡</span><span class="bhg-callout-title">Subtract the starting ovality</span><p>If the straight tube already measures a little out of round, note it. It helps you see how much ovality the bend itself added, which is what your bender setup controls.</p></div>
+
+<h2 id="worked-example">A worked example, step by step</h2>
+
+<p>Let's run the numbers on a 1.75" OD tube. The readings below are made up to show the math. They aren't a typical or target result.</p>
+
+<p><strong>Step 1: collect the readings at mid-bend.</strong></p>
+
+<ul><li>Nominal OD: <strong>1.750"</strong></li><li>Largest reading (across the bend): <strong>1.790"</strong></li><li>Smallest reading (inside to outside of the bend): <strong>1.700"</strong></li></ul>
+
+<p><strong>Step 2: find the difference.</strong> 1.790 − 1.700 = <strong>0.090"</strong>.</p>
+
+<p><strong>Step 3: divide by the nominal OD.</strong> 0.090 ÷ 1.750 = <strong>0.0514</strong>.</p>
+
+<p><strong>Step 4: turn it into a percentage.</strong> 0.0514 × 100 = <strong>about 5.1% ovality</strong>.</p>
+
+<p>Now try the alternate version that divides by the sum of the readings. 1.790 + 1.700 = 3.490. Then 0.090 ÷ 3.490 = 0.0258, or <strong>about 2.6%</strong>. Same tube, same calipers, half the number. That's why the formula matters.</p>
+
+<h3>Turn a limit into a caliper number</h3>
+
+<p>It's often easier to work backwards. Take the allowed percentage, multiply by the nominal OD, and divide by 100. That gives the biggest allowed gap between Dmax and Dmin.</p>
+
+<table><thead><tr><th>Limit (nominal formula)</th><th>Math on 1.750" tube</th><th>Max allowed Dmax − Dmin</th></tr></thead><tbody><tr><td>1.5%</td><td>1.5 × 1.750 ÷ 100</td><td>About 0.026"</td></tr><tr><td>3%</td><td>3 × 1.750 ÷ 100</td><td>About 0.053"</td></tr><tr><td>5%</td><td>5 × 1.750 ÷ 100</td><td>About 0.088"</td></tr><tr><td>8%</td><td>8 × 1.750 ÷ 100</td><td>0.140"</td></tr></tbody></table>
+
+<p>These percentages are just examples to show the math. Your limit comes from your spec. But notice how our made-up 0.090" gap would pass an 8% limit and narrowly miss a 5% one. Writing the allowed gap on your bench sheet means you can check parts without a calculator.</p>
+
+<blockquote class="bhg-quote"><p>Ovality is just two caliper readings and one division. The hard part isn't the math. It's knowing whose limit you're working to.</p></blockquote>
+
+<h2 id="ovality-limits">What's an acceptable ovality limit?</h2>
+
+<p>This is the question everyone asks, and the honest answer is: <strong>it depends on who's setting the rules</strong>. We couldn't find a universal ovality limit for bent tube, and we don't think one exists. Different jobs need different limits.</p>
+
+<p>According to our research notes, trade magazine <strong>The Fabricator</strong> has cited ovality tolerances from roughly 1.5% to 8%, depending on the end use. That range alone shows why one number can't fit every job. A precision hydraulic line and a garden gate have very different needs.</p>
+
+<h3>Who sets the limit?</h3>
+
+<ul><li><strong>The drawing or customer spec.</strong> On contract work, the drawing or purchase order is the boss. If it lists an ovality limit, that's your number.</li><li><strong>A code or standard.</strong> Pressure piping and some industries work to codes that set bend quality rules. If your work falls under one, read the current edition.</li><li><strong>A rulebook.</strong> For cages and chassis, your sanctioning body's current rulebook decides tube, wall and bend rules. SCCA Time Trials, for example, sets a minimum bend radius of three times the tube diameter at the centerline (<a href="https://timetrials.scca.com/pages/safety-level-3" target="_blank" rel="noopener">SCCA Time Trials</a>). Read your own rulebook for anything it says about bend quality.</li><li><strong>The bender or die maker.</strong> Some makers publish what their tooling achieves. That's a capability, not a limit, but it helps you plan.</li></ul>
+
+<h3>What if nobody gives you a number?</h3>
+
+<p>For your own projects, decide what matters. Does the part need to fit a clamp? Does it carry load? Is it for looks? Then measure your first parts and set a sensible house limit for that job. Write it down so you're consistent.</p>
+
+<div class="bhg-callout bhg-callout--danger"><span class="bhg-callout-icon">🛑</span><span class="bhg-callout-title">Safety parts: ask before you bend</span><p>Benders Hub is not a tech inspector or an engineer. For roll cages, roll bars and chassis, confirm tube, wall, radius and any bend-quality rules with your current rulebook and your inspector before you buy tube. See our <a href="/safety/">safety notes</a>.</p></div>
+
+<h2 id="reducing-ovality">How to reduce ovality in tube bending</h2>
+
+<p>The good news is that most ovality problems have simple causes. Fix the cause and the tube stays rounder.</p>
+
+<h3>Use a matched die</h3>
+
+<p>The die groove should fit your tube's real OD. A snug groove supports the sides of the tube as it bends. Measure your tube with calipers and buy dies for that size. Don't put tube in a pipe die or the other way round.</p>
+
+<h3>Choose a gentler radius</h3>
+
+<p>A bigger CLR means less stretch and squeeze, so less flattening. Baileigh suggests starting around <a href="https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/" target="_blank" rel="noopener">4 × OD</a>. For 1.75" tube, that's a 7" CLR. Popular off-road dies sit a bit tighter, around 3.4D on a 6" CLR, so check your design and rulebook.</p>
+
+<h3>Use more wall, or more support</h3>
+
+<p>Thicker wall holds its shape better. If you're bending thin wall on a tight radius, you may need inside support. That means a <strong>mandrel</strong>. In one example from The Fabricator's mandrel chart, 2" × .065" tube on a 4" CLR works out to a wall factor of about 30.8 and a D of bend of 2.0. The chart calls for a two-ball mandrel with a wiper.</p>
+
+<h3>Add outside support</h3>
+
+<p>Some benders offer extra support on the outside of the bend. Rogue Fabrication says its thin-wall roller cuts deformation to about 5–7%, versus about 10% without it (<a href="https://www.roguefab.com/tube-capacity-chart/" target="_blank" rel="noopener">Rogue Fab capacity chart</a>). That's one maker's figure for its own tooling, but it shows how much support matters.</p>
+
+<table><thead><tr><th>Cause</th><th>Fix</th><th>Cost</th></tr></thead><tbody><tr><td>Ram "pipe bender"</td><td>Switch to rotary draw for tube</td><td>A new bender</td></tr><tr><td>Loose die groove</td><td>Die matched to real OD</td><td>One die</td></tr><tr><td>Tight CLR</td><td>Larger CLR die</td><td>One die</td></tr><tr><td>Thin wall</td><td>Thicker wall, if the design allows</td><td>Heavier tube</td></tr><tr><td>Thin wall on tight radius</td><td>Mandrel bending or bought mandrel bends</td><td>A bigger investment</td></tr></tbody></table>
+
+<p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+
+<h3 id="woodward-fab-wfb2">Woodward Fab WFB2: a simple step up from a ram bender</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">🔧 Rotary-draw starter</span><p class="bhg-product-title">Woodward Fab WFB2 Manual Tube &amp; Pipe Bender</p><p class="bhg-product-sub">A manual rotary-draw frame that supports tube in a matched die, for round and square tube up to 2".</p></div><div class="bhg-product-body"><div><p>If you're fighting flattened bends on a bottle-jack bender, the biggest single fix is usually a rotary-draw bender with a die that fits your tube. The WFB2 is a common, simple way in. The tube is clamped to a round die and drawn around it, with the groove supporting its sides.</p><p><strong>Who it's for:</strong> garage builders bending mild-steel bumpers, sliders, racks and frames who want rounder bends than a ram bender gives.</p><p><strong>Keep in mind:</strong> it's not a mandrel bender. Thin-wall tube on tight radii, like exhaust, can still flatten. Dies and the stand are sold separately.</p></div><dl class="bhg-specs"><div><dt>Type</dt><dd>Manual rotary draw</dd></div><div><dt>Tube size</dt><dd>Round and square, up to 2" with the matching die</dd></div><div><dt>Max wall</dt><dd>Retail listing for the 2" die: .134" mild steel</dd></div><div><dt>Bend angle</dt><dd>Die listings show about 110°–120°</dd></div><div><dt>Sold separately</dt><dd>Dies and stand</dd></div></dl></div><div class="bhg-product-lists"><div class="bhg-pros"><h4>Why we like it</h4><ul><li>Matched dies support the tube's sides</li><li>Round and square dies available</li><li>Simple to learn on</li></ul></div><div class="bhg-cons"><h4>Know before you buy</h4><ul><li>No mandrel, so thin wall on tight radii still flattens</li><li>Manual only: thick wall takes muscle</li><li>Dies add to the total cost</li></ul></div></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B01M12Z84P?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Add-ons: <a href="https://www.amazon.com/dp/B07B7MFPCZ?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">2" OD × 6" CLR die</a> · <a href="https://www.amazon.com/dp/B075DJJT85?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">WFB2 stand</a>. Affiliate links. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<p>For tight, thin-wall work, read <a data-bhg-link="mandrel-vs-rotary" href="/mandrel-vs-rotary/">mandrel vs crush bending</a> before you buy anything. And if you're unsure which bender type suits your tube, our <a href="/compare/">bender type comparison</a> lays them out side by side.</p>
+
+<h2 id="real-life">Real-life lessons</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The coupler that wouldn't go on</span><p>A builder bends a set of exhaust tubes on a press-style bender and cuts them right at the end of the bend. The slip couplers won't slide on. A quick check with calipers shows the tube is clearly wider one way than the other near the bend. They switch to bought mandrel bends for the tight sections and keep their own bends for gentle sweeps.</p><p><strong>Lesson:</strong> leave a straight section at the ends for joints, and measure before you cut.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The pipe die mix-up</span><p>Someone buys a used bender with a "1-1/2 inch" die and bends 1.5" tube in it. Every bend comes out flat on the sides. The die was for 1-1/2" pipe, which measures 1.900" OD, so the tube had room to spread.</p><p><strong>Lesson:</strong> match the die to the tube's real OD, not the size stamped on a pipe die.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 Two formulas, one argument</span><p>A small shop bends parts for a customer whose drawing says to keep ovality under a set percentage. The shop's numbers pass. The customer's inspector fails them. It turns out the shop divided by Dmax + Dmin, and the customer divides by the nominal OD.</p><p><strong>Lesson:</strong> agree on the formula before the first part ships.</p></div>
+
+<figure class="bhg-figure" data-slot="mandrel"><figcaption>Tight, thin-wall bends like these stay round because a mandrel supports the tube from inside.</figcaption></figure>
+
+<h2 id="mistakes">Common ovality mistakes (and how to fix them)</h2>
+
+<p>Most ovality trouble comes from a short list of habits. Here's each one with its fix.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Measuring only one direction.</strong> One reading looks fine, so you call it good.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> measure at least two directions at the same spot, then rotate to find the true max and min.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Assuming there's a universal limit.</strong> A number from a forum becomes your pass/fail line.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> get the limit from your drawing, customer, code or rulebook. If none exists, set a house limit and write it down.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Mixing formulas.</strong> You divide by one thing, your customer divides by another.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> agree the formula up front and put it on your inspection sheet.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Bending tube in a pipe die.</strong> The groove is the wrong size and doesn't support the sides.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> measure your tube and buy dies for its real OD.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Squeezing the calipers.</strong> Hard pressure flexes thin wall and changes the reading.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> use light, even pressure and keep the jaws square to the tube.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Using a ram bender for thin-wall tube.</strong> The tube flattens or kinks.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> use a rotary-draw bender for tube, and a mandrel or bought mandrel bends for thin wall on tight radii.</p></div>
+
+<h2 id="pro-tips">Pro tips for rounder bends</h2>
+
+<p>These habits help you get consistent, round bends and catch problems early.</p>
+
+<ul><li><strong>Baseline every batch.</strong> Measure the straight tube's max and min OD when a new batch arrives. You'll know what's the tube and what's the bend.</li><li><strong>Check your first part properly.</strong> Measure the start, middle and end of the first bend on a new setup. If it's good, spot-check later parts at mid-bend.</li><li><strong>Keep the die clean.</strong> Grit or weld spatter in the groove marks the tube and can affect how it seats.</li><li><strong>Watch the D of bend.</strong> If you're below about 3 × OD without a mandrel, expect trouble. Use our <a href="/calculator/">bend calculator</a> to work out D of bend and wall factor.</li><li><strong>Leave straight ends for joints.</strong> Couplers and clamps seat best on straight tube, away from the bend.</li><li><strong>Log ovality with springback.</strong> The same log you use for <a data-bhg-link="springback-in-tube-bending" href="/springback-in-tube-bending/">springback</a> can hold your ovality readings. One line per setup.</li><li><strong>Look at the wall too.</strong> Ovality and <a data-bhg-link="wall-thinning-in-tube-bending" href="/wall-thinning-in-tube-bending/">wall thinning</a> both grow on tight bends. If one is high, check the other.</li></ul>
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: a bench card</span><p>Experienced fabricators often tape a small card to the bender with the tube size, die, allowed Dmax − Dmin gap and formula. Anyone in the shop can check a part in seconds.</p></div>
+
+<!-- 📷 IMAGE IDEA (owner's photo): calipers measuring across the middle of a bent tube, one shot in the plane of the bend and one across it. Suggested alt text: "Digital calipers measuring the oval cross-section at the middle of a tube bend". -->
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is ovality in tube bending?</h3><p>It's how far a bent tube's cross-section has moved from a perfect circle. The tube usually flattens in the plane of the bend and widens across it. You express it as a percentage of the tube's nominal OD.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How do you calculate ovality?</h3><p>Measure the largest and smallest outside diameters at one spot. Subtract, divide by the nominal OD, and multiply by 100. For example, 1.790" and 1.700" on 1.750" tube gives about 5.1%.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is an acceptable ovality percentage?</h3><p>There's no universal number. Your drawing, customer, code or rulebook sets it. The Fabricator has cited tolerances from about 1.5% to 8% depending on the end use.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How do I measure ovality without special tools?</h3><p>Use calipers. Measure the tube inside-to-outside of the bend and then side to side at the same spot. Rotate the calipers to find the true largest and smallest readings.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How can I reduce ovality?</h3><p>Use a rotary-draw bender with a die matched to your tube's real OD. Choose a larger CLR, use thicker wall if the design allows, and use mandrel support for thin wall on tight radii.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Is ovality the same as flattening?</h3><p>Mostly, yes. Flattening usually describes a tube that has clearly squashed in one direction. Ovality is the measured percentage of that out-of-roundness.</p></div></div>
+
+<h2 id="checklist">Your ovality checklist</h2>
+
+<p>Use this list on your next bend. It takes a few minutes and keeps surprises off the inspection sheet.</p>
+
+<div class="bhg-checklist"><ul><li>I know who sets my ovality limit: drawing, customer, code or rulebook</li><li>I know which formula that limit uses</li><li>I've turned the limit into an allowed Dmax − Dmin gap for my tube</li><li>My die matches the tube's real OD, not a pipe size</li><li>My CLR suits the tube, wall and any rulebook minimum</li><li>I measured the straight tube's starting ovality</li><li>I measured at the start, middle and end of the first bend</li><li>I rotated the calipers to find the true max and min</li><li>I used light, square caliper pressure</li><li>I logged the readings with the tube, die and date</li></ul></div>
+
+<p>Ovality sounds technical, but it's really two caliper readings and a little math. Measure it on your first few bends, and you'll know exactly how round your setup keeps your tube. ✅</p>
+
+<div class="bhg-cta"><h3>Check your bend before you make it</h3><p>Work out D of bend and wall factor for your tube and die in seconds. Or compare bender types to find one that keeps your tube round.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/calculator/">Open the bend calculator</a><a class="bhg-btn bhg-btn--ghost" href="/compare/">Compare bender types</a></div></div>

@@ -1,0 +1,36 @@
+{
+ "slug": "woodward-fab-wfb2-review",
+ "title": "Woodward Fab WFB2 Review: Specs, Dies and Upgrade Path",
+ "excerpt": "Woodward Fab WFB2 review from published specs: capacity, dies, listing conflicts on handle and weight, who it suits and the upgrade path.",
+ "category": "guides",
+ "featured_slot": "manual-bender",
+ "primary_keyword": "Woodward Fab WFB2 review",
+ "asins": [
+  {"asin": "B01M12Z84P", "product": "Woodward Fab WFB2 manual tube & pipe bender", "evidence": "kit-verified ASIN table (WRITER-KIT.md section 3)"},
+  {"asin": "B075DJJT85", "product": "Woodward Fab WFB2 stand", "evidence": "kit-verified ASIN table"},
+  {"asin": "B07B7MFPCZ", "product": "Woodward Fab WFBDT2X6 die (2\" OD x 6\" CLR) for WFB2", "evidence": "kit-verified ASIN table"},
+  {"asin": "B07PQJZJ37", "product": "Eastwood tube & pipe notcher, 0-60°, up to 2\" round", "evidence": "kit-verified ASIN table"},
+  {"asin": "B0CLT6ZC29", "product": "Woodward Fab WWFSPPIPENOTCH 2\" hole-saw notcher, 60° adjustment", "evidence": "kit-verified ASIN table"},
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity tube bender (#21115)", "evidence": "kit-verified ASIN table"},
+  {"asin": "B0DXQB2TVP", "product": "Eastwood air-hydraulic conversion kit for the High Capacity bender", "evidence": "kit-verified ASIN table"},
+  {"asin": "B0DXQCZQSY", "product": "Eastwood electric-hydraulic conversion kit (0.75 HP, 110 V)", "evidence": "kit-verified ASIN table"},
+  {"asin": "B00F6GYB8A", "product": "Baileigh RDB-050 manual rotary-draw bender", "evidence": "kit-verified ASIN table; re-seen at https://www.amazon.com/Baileigh-RDB-050-Manual-Rotary-Capacity/dp/B00F6GYB8A"}
+ ],
+ "sources": [
+  "https://www.amazon.com/dp/B01M12Z84P",
+  "https://www.amazon.com/dp/B07B7MFPCZ",
+  "https://elitemetaltools.com (WFB2 listing: handle length 36 in, per kit/topics notes)",
+  "https://www.woodwardfab.com/product/manual-tube-and-pipe-bender/",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.roguefab.com/bending-101/",
+  "https://www.jd2.com/model-32-bender",
+  "https://pro-tools.com/products/manual-tube-and-pipe-bender-105-heavy-duty-package",
+  "https://www.baileigh.com/manual-tube-bender-rdb-050",
+  "https://www.eastwood.com/images/library/21115Q.pdf"
+ ],
+ "notes": "Research review, not hands-on. The session's shared WebSearch budget ran out before this article, and direct fetches of woodwardfab.com (and baileigh.com) failed with DNS errors, so no new WFB2 research could be done. WFB2 facts are limited to the kit's verified fact table and topics.json notes: round and square up to 2 in with matching die; 2 x 6 in CLR die listed to .134 in wall; die listings about 110-120 deg; handle 29 in (Amazon) vs 36 in (Elite Metal Tools) and weight 56 vs 61 lb are both shown as conflicts, not resolved. The weight figures are not attributed to a specific retailer because the kit does not say which listing gives which. 'Degree ring' comes from the reference article. The WFB2-AHP air-over-hydraulic version comes from the fact-check notes (search-summary sourced, woodwardfab.com) and is worded as 'listed', with conversion-kit availability explicitly unconfirmed. Please re-verify these on woodwardfab.com before publishing. Left out (not verifiable this session): price, chromoly rating, handle included or not, full die catalogue sizes/CLRs, frame dimensions, warranty, mounting pattern."
+}

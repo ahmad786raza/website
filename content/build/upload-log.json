@@ -138,5 +138,35 @@
    3
   ],
   "at": "2026-10-11T15:15:00.372Z"
+ },
+ "tube-bender-comparison": {
+  "id": 135,
+  "status": "draft",
+  "identical": true,
+  "featured": 57,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:15:54.252Z"
+ },
+ "tube-bender-capacity-chart": {
+  "id": 136,
+  "status": "draft",
+  "identical": true,
+  "featured": 70,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:15:56.296Z"
+ },
+ "tube-bender-die-compatibility": {
+  "id": 137,
+  "status": "draft",
+  "identical": true,
+  "featured": 44,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:15:58.068Z"
  }
 }

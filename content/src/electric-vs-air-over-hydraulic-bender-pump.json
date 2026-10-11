@@ -1,0 +1,25 @@
+{
+ "slug": "electric-vs-air-over-hydraulic-bender-pump",
+ "title": "Electric vs Air Over Hydraulic Tube Bender Pump: Which Fits?",
+ "excerpt": "Electric vs air over hydraulic tube bender pump? See what each needs from your shop, with a power table from maker specs and a simple checklist.",
+ "category": "workshop",
+ "featured_slot": "workshop",
+ "primary_keyword": "electric vs air over hydraulic tube bender pump",
+ "asins": [
+  {"asin": "B0DXQB2TVP", "product": "Eastwood air-hydraulic conversion kit for the High Capacity tube bender", "evidence": "Pre-verified in WRITER-KIT.md ASIN table (90 psi working pressure per kit fact table)"},
+  {"asin": "B0DXQCZQSY", "product": "Eastwood electric-hydraulic conversion kit for the High Capacity tube bender (0.75 HP, 110 V)", "evidence": "Pre-verified in WRITER-KIT.md ASIN table (0.75 HP / 110 V per kit fact table)"},
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity tube bender (#21115)", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"},
+  {"asin": "B07PPJ4WN4", "product": "Eastwood 1.75\" x 6\" CLR 240 degree die", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"}
+ ],
+ "sources": [
+  "https://www.amazon.com/dp/B0DXQB2TVP",
+  "https://www.amazon.com/dp/B0DXQCZQSY",
+  "https://www.jd2.com/model-32-bender",
+  "https://www.roguefab.com/product/metal-tube-bender-m605-1-die/",
+  "https://www.roguefab.com/product-category/tubing-benders/",
+  "https://www.roguefab.com/product/m600-elechydro/",
+  "https://pro-tools.com/products/hydraulic-tube-and-pipe-bender-105-heavy-duty",
+  "https://www.eastwood.com/images/library/21115Q.pdf"
+ ],
+ "notes": "The WebSearch budget for this session ran out before research on this article began, and the egress proxy blocks jd2.com, support.jd2.com and roguefab.com, so I could not open any page directly. Every number therefore comes from the WRITER-KIT known-good fact table or from docs/research/competitors-keywords-factcheck.md (which was itself compiled from search summaries). Eastwood air kit 90 psi and electric kit 0.75 HP / 110 V: kit fact table, from the Amazon listings. Eastwood High Capacity 2\" x .120\" mild / .090\" 4130: kit fact table. JD2 Model 32 (manual limit 2\" x .120\", 2\" x .250\" DOM with hydraulics, 10-ton cylinder recommended): kit fact table. Fact-check notes only, so please re-verify: Rogue Fab M605 offered with manual hydraulic, air-over-hydraulic or 1.5 / 2.0 HP electric-hydraulic power; M625 'as M605'; about 94 degrees per ram stroke (also in the kit table). Pro-Tools 105HD hydraulic package with a 10-ton cylinder. Left out as unverifiable: air consumption (CFM) for any pump, amp draw, duty cycle, voltage of Rogue Fab's electric units, pump speed in degrees per second, Woodward Fab WFB2-AHP air specs, and any 220 V requirement for a specific product. The power table marks these as 'confirm with the maker' instead of guessing. Statements that 110 V is the usual US household voltage, and the general advice on extension cords and circuits, are qualitative general knowledge."
+}
