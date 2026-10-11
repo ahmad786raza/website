@@ -7,7 +7,7 @@ const results = []; let pass = 0, fail = 0;
 function check(name, ok, info) { results.push({ name, ok: !!ok, info: info || '' }); if (ok) pass++; else fail++; console.log((ok ? 'PASS ' : 'FAIL ') + name + (info ? ' — ' + info : '')); }
 
 (async () => {
-  const b = await chromium.launch();
+  const b = await chromium.launch(process.env.QA_PROXY ? { proxy: { server: process.env.QA_PROXY } } : {});
   const ctx = await b.newContext({ viewport: { width: 1366, height: 900 } });
   const page = await ctx.newPage();
   const errors = [];

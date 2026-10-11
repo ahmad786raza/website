@@ -19,7 +19,7 @@ $total    = (int) $GLOBALS['wp_query']->found_posts;
 <main id="main" class="site-main site-main--archive">
 	<div class="container">
 		<?php hbg_breadcrumbs(); ?>
-		<header class="archive-header">
+		<header class="archive-header"<?php if ( is_category() ) { $ap = hbg_category_preset( $term ); echo ' style="--cat:' . esc_attr( $ap['color'] ) . '"'; } ?>>
 			<div class="section-heading__kicker">
 				<?php
 				if ( is_category() ) {

@@ -12,7 +12,7 @@
 
 <div class="site" id="top">
 
-<header class="site-header<?php echo get_theme_mod( 'hbg_sticky_header', true ) ? ' site-header--sticky' : ''; ?>" id="site-header">
+<header class="site-header<?php echo get_theme_mod( 'hbg_sticky_header', true ) ? ' site-header--sticky' : ''; ?><?php echo 'light' === get_theme_mod( 'hbg_header_style', 'navy' ) ? ' site-header--light' : ''; ?>" id="site-header">
 	<div class="container header__inner">
 
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand" rel="home">
@@ -40,7 +40,7 @@
 			$cta_url  = $cta_url ? $cta_url : hbg_key_url( 'best' );
 			if ( $cta_text && $cta_url ) :
 			?>
-			<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--primary btn--sm header__cta"><?php echo esc_html( $cta_text ); ?></a>
+			<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--accent btn--sm header__cta"><?php echo esc_html( $cta_text ); ?></a>
 			<?php endif; ?>
 			<button type="button" class="icon-btn nav-toggle" aria-controls="mobile-drawer" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open menu', 'hoverboards-guide' ); ?>">
 				<?php echo hbg_svg_icon( 'menu', 22 ); // phpcs:ignore ?>
@@ -83,7 +83,7 @@
 			<?php hbg_primary_menu( 'primary', 'nav-menu nav-menu--mobile' ); ?>
 		</nav>
 		<?php if ( $cta_text && $cta_url ) : ?>
-			<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--primary btn--full drawer__cta"><?php echo esc_html( $cta_text ); ?></a>
+			<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--accent btn--full drawer__cta"><?php echo esc_html( $cta_text ); ?></a>
 		<?php endif; ?>
 		<?php hbg_social_icons( 'social social--drawer' ); ?>
 	</div>

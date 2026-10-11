@@ -13,7 +13,7 @@ $links    = array(
 	'terms'                => __( 'Terms', 'hoverboards-guide' ),
 );
 ?>
-<section class="section section--alt trust" id="about" aria-labelledby="trust-title">
+<section class="section trust" id="about" aria-labelledby="trust-title">
 	<div class="container trust__inner">
 		<div class="trust__text">
 			<div class="section-heading__kicker"><?php esc_html_e( 'Editorial transparency', 'hoverboards-guide' ); ?></div>

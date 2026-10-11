@@ -634,37 +634,62 @@ function hbg_more_rides() {
 // -------------------------------------------------------------------------
 // Category presets: image + colour accent + blurb keyed by slug
 // -------------------------------------------------------------------------
+/**
+ * Accent colours per topic hub: 'color' is text-safe (WCAG AA on white and pale tints), 'vivid' is decorative.
+ * Kids = cyan, adults = navy, all-terrain = orange, budget = lime, Bluetooth = blue, reviews = violet,
+ * safety = teal, troubleshooting = yellow. These distinguish design categories, nothing more.
+ */
+function hbg_hub_colors() {
+	return apply_filters( 'hbg_hub_colors', array(
+		'hoverboards-for-kids'       => array( 'color' => '#0e7490', 'vivid' => '#06b6d4' ),
+		'hoverboards-for-adults'     => array( 'color' => '#14213d', 'vivid' => '#14213d' ),
+		'all-terrain-hoverboards'    => array( 'color' => '#c2410c', 'vivid' => '#f97316' ),
+		'budget-hoverboards'         => array( 'color' => '#4d7c0f', 'vivid' => '#84cc16' ),
+		'bluetooth-hoverboards'      => array( 'color' => '#2563eb', 'vivid' => '#2563eb' ),
+		'hoverboard-reviews'         => array( 'color' => '#6d28d9', 'vivid' => '#7c3aed' ),
+		'hoverboard-safety'          => array( 'color' => '#0f766e', 'vivid' => '#14b8a6' ),
+		'hoverboard-troubleshooting' => array( 'color' => '#a16207', 'vivid' => '#facc15' ),
+	) );
+}
+
+function hbg_hub_color( $slug ) {
+	$colors = hbg_hub_colors();
+	return isset( $colors[ $slug ] ) ? $colors[ $slug ] : array( 'color' => '#2563eb', 'vivid' => '#2563eb' );
+}
+
 function hbg_category_presets() {
 	$hubs    = hbg_topic_hubs();
+	// 'color' is a text-safe shade (passes WCAG AA on white and on the pale tints); 'vivid' is the decorative version.
 	$presets = array(
-		'hoverboards'    => array( 'image' => 'cat-hoverboards',       'color' => '#1d4ed8', 'blurb' => __( 'Reviews, buying advice and safety guides for every age and terrain.', 'hoverboards-guide' ) ),
-		'e-scooters'     => array( 'image' => 'cat-escooters',         'color' => '#0f766e', 'blurb' => __( 'Commuter, budget and performance electric scooters.', 'hoverboards-guide' ) ),
-		'scooters'       => array( 'image' => 'cat-escooters-commute', 'color' => '#0f766e', 'blurb' => __( 'Scooters for commuting, kids and weekend rides.', 'hoverboards-guide' ) ),
-		'ebikes'         => array( 'image' => 'cat-ebikes',            'color' => '#15803d', 'blurb' => __( 'Electric bikes and the questions buyers ask first.', 'hoverboards-guide' ) ),
-		'buying-guide'   => array( 'image' => 'cat-guides',            'color' => '#1d4ed8', 'blurb' => __( 'Plain-English buying advice before you click “buy”.', 'hoverboards-guide' ) ),
-		'guide'          => array( 'image' => 'cat-guides',            'color' => '#1d4ed8', 'blurb' => __( 'Longer guides on riding, rules and maintenance.', 'hoverboards-guide' ) ),
-		'how-to'         => array( 'image' => 'svg:maintenance',       'color' => '#b45309', 'blurb' => __( 'Step-by-step fixes, upgrades and tutorials.', 'hoverboards-guide' ) ),
-		'reviews'        => array( 'image' => 'cat-self-balancing',    'color' => '#0b1f3a', 'blurb' => __( 'Model reviews with specifications, pros and cons.', 'hoverboards-guide' ) ),
-		'top-picks'      => array( 'image' => 'cat-hoverboards',       'color' => '#1d4ed8', 'blurb' => __( 'Our current recommendations by category.', 'hoverboards-guide' ) ),
-		'skateboards'    => array( 'image' => 'cat-skateboards',       'color' => '#be185d', 'blurb' => __( 'Electric skateboards and longboards.', 'hoverboards-guide' ) ),
-		'longboards'     => array( 'image' => 'cat-skateboards',       'color' => '#be185d', 'blurb' => __( 'Cruisers, carvers and electric longboards.', 'hoverboards-guide' ) ),
-		'unicycles'      => array( 'image' => 'cat-unicycles',         'color' => '#6d28d9', 'blurb' => __( 'Electric unicycles for confident riders.', 'hoverboards-guide' ) ),
-		'bumper-cars'    => array( 'image' => 'cat-hoverkart',         'color' => '#b45309', 'blurb' => __( 'Hoverboard karts and bumper cars for kids.', 'hoverboards-guide' ) ),
-		'charger'        => array( 'image' => 'svg:charging',          'color' => '#b45309', 'blurb' => __( 'Chargers, batteries and charging safety.', 'hoverboards-guide' ) ),
-		'chargers'       => array( 'image' => 'svg:charging',          'color' => '#b45309', 'blurb' => __( 'Chargers, batteries and charging safety.', 'hoverboards-guide' ) ),
-		'electric-cars'  => array( 'image' => 'cat-hoverkart',         'color' => '#475569', 'blurb' => __( 'Electric ride-ons and cars for kids.', 'hoverboards-guide' ) ),
-		'safety'         => array( 'image' => 'svg:safety',            'color' => '#b91c1c', 'blurb' => __( 'Helmets, pads and riding safely.', 'hoverboards-guide' ) ),
-		'kids'           => array( 'image' => 'cat-hoverboards-kids',  'color' => '#be185d', 'blurb' => __( 'Rides for kids and teens.', 'hoverboards-guide' ) ),
-		'self-balancing' => array( 'image' => 'cat-self-balancing',    'color' => '#0b1f3a', 'blurb' => __( 'Self-balancing scooters with knee bars and handles.', 'hoverboards-guide' ) ),
+		'hoverboards'    => array( 'image' => 'cat-hoverboards',       'color' => '#2563eb', 'vivid' => '#2563eb', 'blurb' => __( 'Reviews, buying advice and safety guides for every age and terrain.', 'hoverboards-guide' ) ),
+		'e-scooters'     => array( 'image' => 'cat-escooters',         'color' => '#0f766e', 'vivid' => '#14b8a6', 'blurb' => __( 'Commuter, budget and performance electric scooters.', 'hoverboards-guide' ) ),
+		'scooters'       => array( 'image' => 'cat-escooters-commute', 'color' => '#0f766e', 'vivid' => '#14b8a6', 'blurb' => __( 'Scooters for commuting, kids and weekend rides.', 'hoverboards-guide' ) ),
+		'ebikes'         => array( 'image' => 'cat-ebikes',            'color' => '#4d7c0f', 'vivid' => '#84cc16', 'blurb' => __( 'Electric bikes and the questions buyers ask first.', 'hoverboards-guide' ) ),
+		'buying-guide'   => array( 'image' => 'cat-guides',            'color' => '#4d7c0f', 'vivid' => '#84cc16', 'blurb' => __( 'Plain-English buying advice before you click “buy”.', 'hoverboards-guide' ) ),
+		'guide'          => array( 'image' => 'cat-guides',            'color' => '#4d7c0f', 'vivid' => '#84cc16', 'blurb' => __( 'Longer guides on riding, rules and maintenance.', 'hoverboards-guide' ) ),
+		'how-to'         => array( 'image' => 'svg:maintenance',       'color' => '#a16207', 'vivid' => '#facc15', 'blurb' => __( 'Step-by-step fixes, upgrades and tutorials.', 'hoverboards-guide' ) ),
+		'reviews'        => array( 'image' => 'cat-self-balancing',    'color' => '#6d28d9', 'vivid' => '#7c3aed', 'blurb' => __( 'Model reviews with specifications, pros and cons.', 'hoverboards-guide' ) ),
+		'top-picks'      => array( 'image' => 'cat-hoverboards',       'color' => '#2563eb', 'vivid' => '#2563eb', 'blurb' => __( 'Our current recommendations by category.', 'hoverboards-guide' ) ),
+		'skateboards'    => array( 'image' => 'cat-skateboards',       'color' => '#be185d', 'vivid' => '#ec4899', 'blurb' => __( 'Electric skateboards and longboards.', 'hoverboards-guide' ) ),
+		'longboards'     => array( 'image' => 'cat-skateboards',       'color' => '#be185d', 'vivid' => '#ec4899', 'blurb' => __( 'Cruisers, carvers and electric longboards.', 'hoverboards-guide' ) ),
+		'unicycles'      => array( 'image' => 'cat-unicycles',         'color' => '#6d28d9', 'vivid' => '#7c3aed', 'blurb' => __( 'Electric unicycles for confident riders.', 'hoverboards-guide' ) ),
+		'bumper-cars'    => array( 'image' => 'cat-hoverkart',         'color' => '#c2410c', 'vivid' => '#f97316', 'blurb' => __( 'Hoverboard karts and bumper cars for kids.', 'hoverboards-guide' ) ),
+		'charger'        => array( 'image' => 'svg:charging',          'color' => '#a16207', 'vivid' => '#facc15', 'blurb' => __( 'Chargers, batteries and charging safety.', 'hoverboards-guide' ) ),
+		'chargers'       => array( 'image' => 'svg:charging',          'color' => '#a16207', 'vivid' => '#facc15', 'blurb' => __( 'Chargers, batteries and charging safety.', 'hoverboards-guide' ) ),
+		'electric-cars'  => array( 'image' => 'cat-hoverkart',         'color' => '#475569', 'vivid' => '#64748b', 'blurb' => __( 'Electric ride-ons and cars for kids.', 'hoverboards-guide' ) ),
+		'safety'         => array( 'image' => 'svg:safety',            'color' => '#0f766e', 'vivid' => '#14b8a6', 'blurb' => __( 'Helmets, pads and riding safely.', 'hoverboards-guide' ) ),
+		'kids'           => array( 'image' => 'cat-hoverboards-kids',  'color' => '#0e7490', 'vivid' => '#06b6d4', 'blurb' => __( 'Rides for kids and teens.', 'hoverboards-guide' ) ),
+		'self-balancing' => array( 'image' => 'cat-self-balancing',    'color' => '#14213d', 'vivid' => '#14213d', 'blurb' => __( 'Self-balancing scooters with knee bars and handles.', 'hoverboards-guide' ) ),
 	);
 	foreach ( $hubs as $slug => $hub ) {
-		$presets[ $slug ] = array( 'image' => $hub['image'], 'color' => '#1d4ed8', 'blurb' => $hub['blurb'] );
+		$c                = hbg_hub_color( $slug );
+		$presets[ $slug ] = array( 'image' => $hub['image'], 'color' => $c['color'], 'vivid' => $c['vivid'], 'blurb' => $hub['blurb'] );
 	}
 	return apply_filters( 'hbg_category_presets', $presets );
 }
 
 function hbg_category_preset( $term ) {
-	$default = array( 'image' => 'cat-hoverboards', 'color' => '#1d4ed8', 'blurb' => '' );
+	$default = array( 'image' => 'cat-hoverboards', 'color' => '#2563eb', 'vivid' => '#2563eb', 'blurb' => '' );
 	if ( ! $term instanceof WP_Term ) {
 		return $default;
 	}

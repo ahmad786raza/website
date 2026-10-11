@@ -10,7 +10,7 @@ if ( ! $rides ) {
 	return;
 }
 ?>
-<section class="section section--sm more-rides" aria-labelledby="more-rides-title">
+<section class="section section--sm section--neutral more-rides" aria-labelledby="more-rides-title">
 	<div class="container">
 		<h2 class="more-rides__title" id="more-rides-title"><?php esc_html_e( 'Also on Hoverboards Guide', 'hoverboards-guide' ); ?></h2>
 		<ul class="more-rides__list">

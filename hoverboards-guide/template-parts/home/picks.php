@@ -9,7 +9,7 @@ if ( ! $picks ) {
 }
 $best = hbg_key_url( 'best' );
 ?>
-<section class="section picks<?php echo $embedded ? ' picks--embedded' : ''; ?>" id="picks" aria-labelledby="picks-title">
+<section class="section<?php echo $embedded ? ' picks--embedded' : ' section--tint-blue'; ?> picks" id="picks" aria-labelledby="picks-title">
 	<div class="<?php echo $embedded ? '' : 'container'; ?>">
 		<?php if ( ! $embedded ) : ?>
 			<?php hbg_section_heading( array( 'id' => 'picks-title', 'kicker' => __( 'Quick recommendations', 'hoverboards-guide' ), 'title' => __( 'The hoverboards we point readers to first', 'hoverboards-guide' ), 'sub' => __( 'One pick per need, drawn from our roundups. Each card links to the full review and to the Amazon listing.', 'hoverboards-guide' ), 'link' => $best, 'link_label' => __( 'Read the full roundup', 'hoverboards-guide' ) ) ); ?>

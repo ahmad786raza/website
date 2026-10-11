@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'HBG_VERSION', '3.0.0' );
+define( 'HBG_VERSION', '3.1.0' );
 define( 'HBG_DIR', get_template_directory() );
 define( 'HBG_URI', get_template_directory_uri() );
 
@@ -167,7 +167,8 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 /** Accent colour variable and a preload for the homepage hero image. */
 function hbg_head_inline() {
-	$accent = get_theme_mod( 'hbg_accent_color', '#1d4ed8' );
+	$accent = get_theme_mod( 'hbg_accent_color', '#2563eb' );
+	echo '<meta name="theme-color" content="#14213d">' . "\n";
 	echo '<style id="hbg-accent">:root{--accent:' . esc_attr( $accent ) . ';}</style>' . "\n";
 	echo '<script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>' . "\n";
 	if ( is_front_page() ) {

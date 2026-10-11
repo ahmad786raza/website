@@ -247,7 +247,7 @@ function hbg_product_card( $p, $args = array() ) {
 	$h      = in_array( $a['heading'], array( 'h2', 'h3', 'h4' ), true ) ? $a['heading'] : 'h3';
 	$review = hbg_product_review_url( $p );
 	?>
-	<article class="pcard<?php echo $a['compact'] ? ' pcard--compact' : ''; ?>" data-product="<?php echo esc_attr( $p['id'] ); ?>">
+	<article class="pcard<?php echo $a['compact'] ? ' pcard--compact' : ''; ?><?php echo ! empty( $p['role'] ) ? ' pcard--role-' . sanitize_html_class( $p['role'] ) : ''; ?>" data-product="<?php echo esc_attr( $p['id'] ); ?>">
 		<div class="pcard__media">
 			<?php hbg_product_image( $p, array( 'class' => 'product-image pcard__img', 'ratio' => '4/3', 'sizes' => '(max-width: 640px) 100vw, 360px' ) ); ?>
 			<?php if ( ! empty( $p['badge'] ) ) : ?><span class="pcard__badge"><?php echo esc_html( $p['badge'] ); ?></span><?php endif; ?>
@@ -260,7 +260,7 @@ function hbg_product_card( $p, $args = array() ) {
 			<div class="pcard__actions">
 				<?php hbg_amazon_cta( $p, __( 'Check price on Amazon', 'hoverboards-guide' ), 'md', false, $a['placement'] ); ?>
 				<?php if ( $review ) : ?>
-					<a href="<?php echo esc_url( $review ); ?>" class="btn btn--ghost btn--md"><?php esc_html_e( 'View full review', 'hoverboards-guide' ); ?></a>
+					<a href="<?php echo esc_url( $review ); ?>" class="link-arrow pcard__review"><?php esc_html_e( 'View full review', 'hoverboards-guide' ); ?> <?php echo hbg_svg_icon( 'arrow-right', 14 ); // phpcs:ignore ?></a>
 				<?php endif; ?>
 			</div>
 			<p class="pcard__note"><?php echo esc_html( empty( $p['verified'] ) ? __( 'Specs as advertised by the manufacturer.', 'hoverboards-guide' ) : __( 'Specs checked against the manufacturer listing.', 'hoverboards-guide' ) ); ?></p>
@@ -333,7 +333,7 @@ function hbg_cat_badge( $post_id = null, $link = true, $class = '' ) {
 		return;
 	}
 	$preset = hbg_category_preset( $cat );
-	$style  = ' style="--cat:' . esc_attr( $preset['color'] ) . '"';
+	$style  = ' style="--cat:' . esc_attr( $preset['color'] ) . ';--cat-vivid:' . esc_attr( $preset['vivid'] ) . '"';
 	if ( $link ) {
 		echo '<a href="' . esc_url( get_category_link( $cat ) ) . '" class="cat-badge' . ( $class ? ' ' . esc_attr( $class ) : '' ) . '"' . $style . '>' . esc_html( $cat->name ) . '</a>'; // phpcs:ignore
 	} else {
@@ -890,8 +890,9 @@ function hbg_topic_tile( $slug, $hub ) {
 	}
 	$image = get_theme_mod( 'hbg_img_' . str_replace( '-', '_', $slug ), '' );
 	$image = $image ? $image : $hub['image'];
+	$color = hbg_hub_color( $slug );
 	?>
-	<a href="<?php echo esc_url( $link['url'] ); ?>" class="topic-tile">
+	<a href="<?php echo esc_url( $link['url'] ); ?>" class="topic-tile" style="--cat:<?php echo esc_attr( $color['color'] ); ?>;--cat-vivid:<?php echo esc_attr( $color['vivid'] ); ?>">
 		<span class="topic-tile__media"><?php hbg_topic_image( $image, array( 'alt' => '', 'class' => 'topic-tile__img', 'sizes' => '(max-width: 640px) 50vw, 300px' ) ); ?></span>
 		<span class="topic-tile__body">
 			<span class="topic-tile__name"><?php echo esc_html( $hub['name'] ); ?></span>
@@ -907,7 +908,7 @@ function hbg_topic_tile( $slug, $hub ) {
 function hbg_category_tile( $term ) {
 	$preset = hbg_category_preset( $term );
 	?>
-	<a href="<?php echo esc_url( get_category_link( $term ) ); ?>" class="topic-tile topic-tile--cat" style="--cat:<?php echo esc_attr( $preset['color'] ); ?>">
+	<a href="<?php echo esc_url( get_category_link( $term ) ); ?>" class="topic-tile topic-tile--cat" style="--cat:<?php echo esc_attr( $preset['color'] ); ?>;--cat-vivid:<?php echo esc_attr( $preset['vivid'] ); ?>">
 		<span class="topic-tile__media"><?php hbg_topic_image( $preset['image'], array( 'alt' => '', 'class' => 'topic-tile__img', 'sizes' => '(max-width: 640px) 50vw, 300px' ) ); ?></span>
 		<span class="topic-tile__body">
 			<span class="topic-tile__name"><?php echo esc_html( $term->name ); ?></span>

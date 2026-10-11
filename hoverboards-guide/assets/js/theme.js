@@ -242,6 +242,13 @@
 					if (!key) return parseInt(a.getAttribute('data-order'), 10) - parseInt(b.getAttribute('data-order'), 10);
 					return (parseFloat(b.getAttribute('data-' + key)) || 0) - (parseFloat(a.getAttribute('data-' + key)) || 0);
 				}).forEach(function (r) { tbody.appendChild(r); });
+				var n = 0;
+				qsa('tr', tbody).forEach(function (r) {
+					r.classList.remove('is-even', 'is-odd');
+					if (r.hidden) return;
+					n++;
+					r.classList.add(n % 2 === 0 ? 'is-even' : 'is-odd');
+				});
 				if (empty) empty.hidden = visible > 0;
 			}
 			filterBtns.forEach(function (btn) {

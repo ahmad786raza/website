@@ -4,7 +4,7 @@ if ( ! $faqs ) {
 	return;
 }
 ?>
-<section class="section faq" id="faq" aria-labelledby="faq-title">
+<section class="section section--tint-orange faq" id="faq" aria-labelledby="faq-title">
 	<div class="container faq__inner">
 		<div class="faq__intro">
 			<?php hbg_section_heading( array( 'id' => 'faq-title', 'kicker' => __( 'Common questions', 'hoverboards-guide' ), 'title' => __( 'Before you buy', 'hoverboards-guide' ), 'sub' => __( 'Short answers; each links to the longer guides elsewhere on the site.', 'hoverboards-guide' ) ) ); ?>
