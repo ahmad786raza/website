@@ -1,0 +1,51 @@
+{
+ "slug": "chromoly-fabrication",
+ "title": "DOM vs 4130 Chromoly Roll Cage: Which Tube Should You Use?",
+ "excerpt": "DOM vs 4130 chromoly roll cage tube compared: strength, weight, bending, welding and what the NHRA, SCCA and FIA rules say before you buy.",
+ "category": "safety",
+ "featured_slot": "roll-cage",
+ "primary_keyword": "DOM vs 4130 chromoly roll cage",
+ "asins": [
+  {
+   "asin": "B00F6GYB8A",
+   "product": "Baileigh RDB-050 manual rotary-draw bender",
+   "evidence": "Pre-verified in WRITER-KIT.md ASIN table (kit-verified)"
+  },
+  {
+   "asin": "B07PRLN2PG",
+   "product": "Eastwood High Capacity tube bender (#21115)",
+   "evidence": "Pre-verified in WRITER-KIT.md ASIN table (kit-verified)"
+  }
+ ],
+ "sources": [
+  "https://www.speedymetals.com/information/material17.html",
+  "https://ryerson.com/resource/the-gauge/round-steel-tube",
+  "https://www.aircraftspruce.com/catalog/mepages/4130tubing_un1.php",
+  "https://www.industrialtube.com/blog/2020/07/08/difference-between-dom-and-cds-tubing/",
+  "https://www.metalsupermarkets.com/product/mild-steel-round-tube-1020-dom/",
+  "https://www.onlinemetals.com/en/product-guide/alloy/4130",
+  "http://promod.nhra.com/userfiles/file/Tech/2017_NHRA_Rulebook_Gen.%20Regs.pdf",
+  "http://promod.nhra.com/userfiles/file/Tech/2019%20General%20Regulations.pdf",
+  "https://www.nhraracer.com/rules",
+  "https://www.nhraracer.com/post/nhra-updates-the-digital-version-of-the-2026-nhra-rulebook-2",
+  "https://www.nhraracer.com/post/nhra-technical-department-releases-the-2026-2027-nhra-rulebook-amendments",
+  "https://timetrials.scca.com/pages/full-safety-rules",
+  "https://www.fia.com/system/files/documents/253_2026_wmsc_2025.12.10_pj-mr.pdf",
+  "https://members.drivenasa.com/rules",
+  "https://sfifoundation.com/drag-racing-chassis/",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.roguefab.com/bending-101/",
+  "https://pro-tools.com/blogs/protoolsusa/19923715-springback-to-basics-defining-springback-and-how-to-compensate-for-it",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://pro-tools.com/products/manual-tube-and-pipe-bender-105-heavy-duty-package",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://www.baileigh.com/manual-tube-bender-rdb-050",
+  "https://www.eastwood.com/images/library/21115Q.pdf",
+  "https://www.harborfreight.com/12-ton-hydraulic-pipe-bender-32888.html",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://www.lincolnelectric.com/en/welding-and-cutting-resource-center/welding-how-tos/tig-welding-chrome-moly-tubing",
+  "https://esab.com/us/nam_en/esab-university/blogs/tig-welding-chromoly-tube-best-practices-ami/"
+ ],
+ "notes": "REWRITE of draft #34, written fresh; none of the old draft's numbers reused (no 5-6x OD CLR, no 40% springback, no tonnage, no SFI weld/preheat claims, no 97k/70k psi pairing without sources). SAFETY-CRITICAL. Direct page fetches were blocked (DNS) in this environment, so every rule and material fact came from WebSearch result summaries of the named official/manufacturer/supplier pages, plus the kit fact table and fact-check notes. Please re-verify before publishing: (1) NHRA TIG-for-4130 / MIG-or-TIG-for-mild-steel wording is from the 2017 and 2019 General Regulations on promod.nhra.com; we could not open the 2026 rulebook (digital version with amendments through July 14, 2026; 2026-2027 amendments effective Jan 1, 2027), so the article says 'has required' and points to nhraracer.com/rules. (2) The 1-3/4 x .118 mild / .083 4130 pair is from one entry in the 2019 NHRA General Regulations (via the fact-check notes); it is used only as a labelled weight-math illustration, not as a rule; section context was not fully visible. (3) SCCA Time Trials full-safety-rules page (undated web page, seen Oct 2026 via search summary): seamless or DOM mild steel (1020/1025 recommended), 4130 or T45, or Docol R8; no mixing alloy and mild; no ERW; centerline bend radius >= 3x tube diameter; alloy welding per accepted industry practice; AWS D1.1 welder recommended, not required. (4) FIA Art. 253: 'cold-drawn seamless carbon steel, min tensile 350 N/mm2' seen in the 2026 text (dated 10 Dec 2025) for the transverse reinforcement and in older editions' material table (unalloyed, max 0.3% C); exact 2026 main-table wording not confirmed, so no FIA dimensions are given. (5) Material properties are supplier typical values and conflict (Online Metals 97.2 ksi vs Aircraft Spruce 90,000 psi tensile for normalized 4130); the article says so. (6) Preheat conflict (Lincoln: thin wall <.120 typically no 300-400F preheat; ESAB table: 400-500F for 4130) is stated as a conflict. Left out as unverifiable: NASA CCR tube tables (forum-only), SCCA weight-table sizes, SFI weld rules, any tonnage figures. No new ASINs (search budget exhausted); only kit-verified ASINs used."
+}

@@ -1,0 +1,50 @@
+{
+ "slug": "cnc-tube-bending",
+ "title": "CNC Tube Bender for Small Shop Work: When NC or CNC Pays Off",
+ "excerpt": "Shopping for a CNC tube bender for small shop work? Learn when NC or CNC pays off, plus software, training, power and what to ask dealers.",
+ "category": "guides",
+ "featured_slot": "industrial-pipe",
+ "primary_keyword": "CNC tube bender for small shop",
+ "asins": [
+  {
+   "asin": "B07ZWW3BW5",
+   "product": "Klein Tools 935DAG Digital Electronic Level and Angle Gauge, Measures 0 - 90 and 0 - 180 Degree Ranges, Measures and Sets Angles",
+   "evidence": "https://www.amazon.com/Klein-Tools-935DAG-Electronic-Measures/dp/B07ZWW3BW5"
+  },
+  {
+   "asin": "B00T6YZ0K6",
+   "product": "Wixey WR300 Type 2 Digital Angle Gauge",
+   "evidence": "https://www.amazon.com/Wixey-WR300-Type-Digital-Backlight/dp/B00T6YZ0K6"
+  }
+ ],
+ "sources": [
+  "https://www.baileigh.com/tube-bender-rdb-175",
+  "https://www.baileigh.com/media/akeneo_connector/asset_files/R/D/RDB_175_08_2020_b9b5.pdf",
+  "https://www.baileigh.com/baileigh-tube-bender-rdb-250",
+  "https://www.baileigh.com/metalworking/tube-pipe-benders/computer-programmable-rotary-draw-benders",
+  "https://www.baileigh.com/media/akeneo_connector/asset_files/R/D/RDB_325_3_2015_451e.pdf",
+  "https://www.baileigh.com/programmable-tube-bender-rdb-350-ts",
+  "https://www.baileigh.com/economical-tube-bending-software-bt-pro",
+  "https://blog.baileigh.com/tube-bender-to-next-level/",
+  "https://blog.baileigh.com/an-american-made-workhorse/",
+  "https://ercolina-usa.com/ercolina-machines/tube-and-pipe-benders/tb60-tc-top-bender/",
+  "https://www.bend-tech.com/benders/",
+  "https://www.bend-tech.com/bend-tech-se-software/",
+  "https://www.bend-tech.com/pro-software/",
+  "https://www.bend-tech.com/software/",
+  "https://www.bend-tech.com/product/bend-tech-ez-software/",
+  "https://www.bend-tech.com/files/die_calibration_and_springback_library_guide.pdf",
+  "https://www.roguefab.com/product/m600-elechydro/",
+  "https://www.roguefab.com/faqs/",
+  "https://www.roguefab.com/product/tubing-bender-tradesman-set/",
+  "https://pro-tools.com/products/degree-ring-with-stop-and-pointer-105-acc",
+  "https://pro-tools.com/blogs/protoolsusa/19923715-springback-to-basics-defining-springback-and-how-to-compensate-for-it",
+  "https://www.thefabricator.com/tubepipejournal/article/bending/decoding-all-the-tube-bender-options",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/how-to-choose-the-right-tube-bending-machine-for-your-shop",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/ready-to-automate-your-tube-bending",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/xyz-ybc-and-lra-understanding-coordinate-systems-for-cnc-tube-bending",
+  "https://www.amazon.com/Klein-Tools-935DAG-Electronic-Measures/dp/B07ZWW3BW5",
+  "https://www.amazon.com/Wixey-WR300-Type-Digital-Backlight/dp/B00T6YZ0K6"
+ ],
+ "notes": "REWRITE of draft #36 (slug kept). Written fresh; none of the old draft's price ranges, payback maths, cycle times or floor/power figures were reused. Direct page fetches to baileigh.com and thefabricator.com failed (DNS blocked), so EVERY machine spec, manual detail and trade-press point came from WebSearch result summaries of the maker's own domain (baileigh.com, bend-tech.com, ercolina-usa.com, roguefab.com, pro-tools.com) or thefabricator.com. Please re-verify before publishing: (1) Baileigh bend-angle conflicts are stated in the table as found: RDB-175 spec table 205 deg vs copy ~180 deg; RDB-250 spec table 205 deg vs copy 180 deg vs a Baileigh blog post saying 360 deg; RDB-350-TS copy '360 deg one-shot' vs spec table 205 deg. (2) RDB-175 power: manual says 115 V / 2 HP / 18 A single-phase, product page says 110 V (both stated). (3) RDB-325 specs (2.5in OD, 2in Sch 80 pipe, 16.5in CLR, 170 programs x 10 bends, 208-240 V 20 A 1-ph with 3-ph option, 1,200 lb shipping weight, lift truck 1.5-2x gross weight, level so all feet bear weight) come from a 2015 manual edition; RDB-325 wall rating was not seen, so the table gives OD only. (4) The '170 programs x 10 bends' figure is from the RDB-325 manual, not confirmed for the RDB-250. (5) RDB-175 manual springback example (105 deg reading for a true 90 deg) is from the existing fact-check notes (PART 3.2) plus search summary. (6) Ercolina TB60-TC wall capacity for 2-1/2in round tube not seen, so table says 'check wall chart'; 'unlimited program storage' is the vendor's claim; the sibling TB60 page lists 8 programs (not used). (7) Bend-Tech PB 2000 DC specs (4 servo axes, 2x.125in, 9in CLR, 144in bed, 10,000 programs, ~1,850 lb, 208-230 VAC 3-ph 50 A, BOSS by subscription, included dies 'None') from bend-tech.com/benders via search summary; Bend-Tech also publishes a 90-deg cycle-time claim and a 3-10 min changeover claim, which were deliberately left out. (8) Bend-Tech training (wiki, videos, on-site, Osceola WI HQ) from search summaries of bend-tech.com. (9) The Fabricator 'at least three servo axes: bend, feed, rotate' and NC description: the search summaries cited several Fabricator articles; attribution to 'Decoding all the tube bender options' is best-effort, so check the exact article. The 80% part-size rule, TCO list, training points and 5-10 year planning are from 'How to choose the right tube bending machine for your shop' via search summary. (10) Prices were seen on Baileigh/Rogue/Pro-Tools pages but are omitted per the no-prices rule. Baileigh blog customer timing claims (e.g. production run times, 9-second bends) were left out. (11) Amazon: low relevance topic, so only a digital angle gauge box (Klein 935DAG) plus an inline Wixey WR300 Type 2 alternative; Klein specs (ranges, modes, magnetic V-groove base, IP42, case + 2 AAA) are from the Amazon listing summary; no accuracy spec was seen for the Klein. Figure slot cnc-bender may be empty; industrial-pipe, tube-stock and workshop are filled. (12) Dealer-questions intro: 'get thorough specs; make and model alone don't show true capability' and 'how long does a tool change take' came from a Fabricator search summary describing a tooling engineer's article (likely 'Optimizing tube bender tooling to improve results'); not linked because the exact article could not be confirmed. 'Consistent output across shifts needs consistent training' is attributed only to 'another trade-press piece' for the same reason."
+}

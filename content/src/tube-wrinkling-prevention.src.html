@@ -1,0 +1,201 @@
+<p class="bhg-lead">You pull the handle, slide the tube out of the die, and your stomach drops. There's a row of ripples on the inside of the bend. Or a sharp crease. Or the tube looks like somebody stepped on it. Maybe you typed "tube bending wrinkles kinks and flattening" into a search bar with the ruined stick still on the floor. You're in the right place.</p>
+
+<p>Here's the good news. These three defects aren't random bad luck. Each one leaves clues. Where the wrinkles sit, where the kink formed and which side went flat all point to a short list of causes. Most of those causes are cheap to fix: a dirty clamp, a pressure die in the wrong spot, a die that doesn't match the tube, or a radius that's too tight for the wall.</p>
+
+<p>This guide works like a repair manual for your bends. You'll learn what each defect looks like, what causes it and how to fix it. You'll get <strong>symptom → cause → fix</strong> tables you can print and hang by the bender. We'll stick to what die makers and trade sources actually publish. Where the answer depends on your exact tube, we'll show you how to read your die maker's chart instead of trusting a forum rule of thumb.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p>Wrinkles, kinks and flattening nearly always trace back to four things: a radius too tight for the tube, a wall too thin for the radius, a clamp that slips, or a setup error. Rule out the free fixes first.</p><ul><li><strong>Wrinkles</strong> (ripples on the inside): check for clamp slip, then the pressure-die setup, then the die maker's chart. See <a href="#fix-wrinkles">how to fix wrinkles</a>.</li><li><strong>Kinks</strong> (one sharp collapse): usually the wrong bender type, a radius that's far too tight, or a loose die. See <a href="#fix-kinks">how to fix kinks</a>.</li><li><strong>Flattening</strong> (an oval tube): often too much pressure-die force, thin wall or a tight radius. See <a href="#fix-flattening">how to fix flattening</a>.</li><li><strong>Thin wall plus a tight radius?</strong> No adjustment beats physics. You need a bigger CLR, a thicker wall, a mandrel or pre-bent sections.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#three-defects">How to tell the three defects apart</a></li><li><a href="#why-tube-fails">Why tube wrinkles, kinks or flattens</a></li><li><a href="#symptom-table">The symptom → cause → fix table</a></li><li><a href="#fix-wrinkles">How to fix wrinkles</a></li><li><a href="#fix-kinks">How to fix kinks</a></li><li><a href="#fix-flattening">How to fix and measure flattening</a></li><li><a href="#die-charts">Read the die maker's chart</a></li><li><a href="#real-life">Real-life lessons</a></li><li><a href="#mistakes">Common mistakes and fixes</a></li><li><a href="#pro-tips">Pro tips</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Troubleshooting checklist</a></li></ol></div>
+
+<h2 id="three-defects">Wrinkles, kinks and flattening: how to tell them apart</h2>
+
+<p>Before you fix anything, name the problem correctly. The three defects look different, and they have different causes. Take the bad bend to good light and look at it from every side.</p>
+
+<h3>Wrinkles</h3>
+
+<p><strong>Wrinkles</strong> are a row of small waves or ripples on the <em>inside</em> of the bend. That's the side that sits against the die. Rogue Fabrication describes them as repeated waves or ripples on the inside of the bend. They can run the full length of the bend, or bunch up near one end. That detail matters a lot, and we'll use it in the tables below.</p>
+
+<h3>Kinks</h3>
+
+<p>A <strong>kink</strong> is one sharp crease where the tube folded instead of curving. Think of a drinking straw bent too hard. A kink usually forms when nothing supports the tube at the point of bending, or when the tube is pushed in the middle rather than drawn around a die.</p>
+
+<figure class="bhg-figure" data-slot="defects"><figcaption>A kink is a sharp collapse at one point in the bend. Once it forms, that part of the tube is scrap.</figcaption></figure>
+
+<h3>Flattening (ovality)</h3>
+
+<p><strong>Flattening</strong> means the round tube turned oval through the bend. Most often the outside of the bend goes flat. A little of this is normal. Pro-Tools notes that a bent section always flattens slightly and calls that acceptable. The real question is <em>how much</em>. Engineers call it <strong>ovality</strong>, and you can measure it with calipers in about a minute.</p>
+
+<p>Use this quick sort when you look at a bad part:</p>
+
+<ul><li>✅ Ripples or waves on the inside of the bend → <strong>wrinkles</strong></li><li>✅ One sharp fold or crease → <strong>kink</strong></li><li>✅ Smooth surface but an oval shape, often flat on the outside → <strong>flattening</strong></li></ul>
+
+<p>Sometimes you get two at once. A tube can wrinkle on the inside and flatten on the outside in the same bend. When that happens, fix the wrinkles first. They usually point to the bigger setup problem.</p>
+
+<h2 id="why-tube-fails">Why tube wrinkles, kinks or flattens</h2>
+
+<p>Every bend fights itself. As the tube wraps around the die, the <strong>outside wall stretches</strong> and the <strong>inside wall gets squeezed</strong>. The squeezed metal has to go somewhere. With a thick wall and a gentle radius, it simply thickens a little. With a thin wall or a tight radius, the inside wall buckles into waves. Rogue Fabrication's stainless guide puts it plainly: the inside wall runs out of compressive capacity and buckles inward.</p>
+
+<p>Meanwhile, the stretched outside wall pulls toward the center of the bend. That's what squashes the tube into an oval. And if nothing supports the wall right where it bends, the whole cross-section can fold over. That's a kink.</p>
+
+<h3>The two numbers that predict trouble</h3>
+
+<p>Two simple ratios tell you how hard a bend will be. Both come straight from the <a href="https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate" target="_blank" rel="noopener">Pro-Tools wall factor guide</a>:</p>
+
+<ul><li><strong>D of bend</strong> = CLR ÷ OD. A 6" CLR die on 1.75" tube is about 3.4D. Lower numbers mean a tighter, harder bend.</li><li><strong>Wall factor</strong> = OD ÷ wall. 1.75" × .120" wall gives about 14.6. Higher numbers mean a thinner wall and more wrinkle risk.</li></ul>
+
+<p>Pro-Tools explains that a lower wall factor makes the bend easier. If the wall factor is too high, the bend may need special tooling, or it may not be possible at all. Our guide to <a data-bhg-link="wall-factor-and-d-of-bend" href="/wall-factor-and-d-of-bend/">wall factor and D of bend</a> goes deeper.</p>
+
+<h3>Rogue Fab's four causes</h3>
+
+<p>Rogue Fabrication's <a href="https://www.roguefab.com/bend-quality/" target="_blank" rel="noopener">bend quality page</a> boils it down to four causes. It lists the same four for wrinkles and for excess deformation:</p>
+
+<ol><li>D ratio too low (the radius is too tight for the OD)</li><li>Wall ratio too high (the wall is too thin for the OD)</li><li>Clamp block slipping</li><li>Machine set up wrong</li></ol>
+
+<p>The first two are about <em>geometry</em>. You fix them with a different die, a different tube or extra tooling. The last two are about <em>setup</em>. You fix them with a rag, a wrench and the manual. Always rule out setup first. It costs nothing.</p>
+
+<h2 id="symptom-table">Tube bending wrinkles, kinks and flattening: the symptom table</h2>
+
+<p>This is the heart of the guide. Find the row that matches your bad bend. Then work through the fixes from left to right, cheapest first. The causes come from Rogue Fabrication, Tube Form Solutions and a series of troubleshooting articles in <em>The Fabricator</em>.</p>
+
+<table><thead><tr><th>What you see</th><th>Most likely cause</th><th>Try this first</th><th>If that fails</th></tr></thead><tbody><tr><td><strong>Wrinkles that change from bend to bend</strong></td><td>Tube slipping in the clamp</td><td>Clean the clamp and the tube. Tighten the clamp evenly.</td><td>Check that the clamp cavity matches the tube OD</td></tr><tr><td><strong>Wrinkles along the whole inside of the bend</strong></td><td>Too little pressure-die support, or a radius too tight for the wall</td><td>Check the pressure-die setup against the manual</td><td>Bigger CLR, thicker wall or a mandrel</td></tr><tr><td><strong>Wrinkles only near the end of the bend</strong> (mandrel setups)</td><td>Worn or badly adjusted wiper die</td><td>Re-seat and adjust the wiper per the maker</td><td>Replace or re-cut the wiper</td></tr><tr><td><strong>Wrinkles even with a mandrel in place</strong></td><td>Mandrel too far back, loose mandrel fit, or too much oil at the wiper</td><td>Set mandrel position per the manual; wipe off excess lube</td><td>Check mandrel size against the tube ID</td></tr><tr><td><strong>One sharp kink</strong></td><td>Ram-style bender on thin wall, or a radius far too tight</td><td>Switch to a rotary-draw bender and a proper die</td><td>Bigger CLR, thicker wall or a mandrel</td></tr><tr><td><strong>Kink or buckle right after the clamp</strong></td><td>Clamp slip moved the bend into an unsupported zone</td><td>Fix the slip (see above)</td><td>Longer clamp area or more straight tube to clamp</td></tr><tr><td><strong>Flat outside of the bend</strong></td><td>Too much pressure-die force, or the pressure die in a heavy-duty position on thin wall</td><td>Move the pressure die to the right position; back off force</td><td>Roller-type pressure die</td></tr><tr><td><strong>Smooth but oval everywhere</strong></td><td>Thin wall for the radius with no extra support</td><td>Bigger CLR or thicker wall</td><td>Thin-wall roller or a mandrel</td></tr><tr><td><strong>Scratched or galled aluminum</strong></td><td>Friction pressure die dragging on soft metal</td><td>Roller pressure die</td><td>Ask the die maker about non-marring options</td></tr></tbody></table>
+
+<p><strong>How to read the table:</strong> the "where" of a defect is a big clue. <em>The Fabricator</em>'s troubleshooting series points out that clamp slip is the usual cause of inconsistent wrinkles. Wrinkling along the whole inside radius points to pressure-die force that's too low. Wrinkles only at the end of the bend point to the wiper die. And flattening on the outside of the bend is commonly caused by <em>too much</em> pressure-die force (<a href="https://www.thefabricator.com/thefabricator/article/bending/steps-to-troubleshooting-draw-bending-of-tube" target="_blank" rel="noopener">The Fabricator</a>).</p>
+
+<div class="bhg-callout bhg-callout--tip"><span class="bhg-callout-icon">💡</span><span class="bhg-callout-title">Change one thing at a time</span><p>Make one change, bend one scrap piece, and look. If you change the clamp, the pressure die and the lube all at once, you'll never know which one fixed it. Next time, you'll be guessing again.</p></div>
+
+<h2 id="fix-wrinkles">How to fix wrinkles, step by step</h2>
+
+<p>Wrinkles are the most common complaint, and the most fixable. Work through these steps in order. The early ones are free. The later ones cost money, so only go there once setup is ruled out.</p>
+
+<ol class="bhg-steps"><li><strong>Check for clamp slip.</strong> Before the next bend, draw a pencil line across the clamp block and onto the tube. If the two halves of the line don't meet after the bend, the tube slipped. Rogue Fab notes that slipping can cause wrinkles, and wrinkling can also cause slipping. So it's both a cause and a symptom.</li><li><strong>Clean the clamp and the tube.</strong> Rogue Fab says clamp blocks usually slip on dirty or oily material. Its fix: smooth any slip grooves on the clamp block with 220-grit sandpaper or emery cloth, clean it with lacquer thinner or acetone, clean the tube where it's clamped, and keep bolt torque even (<a href="https://www.roguefab.com/bend-quality/" target="_blank" rel="noopener">Rogue Fab</a>).</li><li><strong>Check the die fits the tube.</strong> A die for the wrong OD lets the tube move. <em>The Fabricator</em> notes that if the clamp cavity is too large, the tube slips. Pipe and tube sizes also don't match: 1-1/2" pipe is really 1.900" OD.</li><li><strong>Check the pressure-die setup.</strong> Read the manual. On Rogue Fab benders, the most common setup mistake is using the rear pressure-die hole, which is marked "HD" and labeled never to be used on .120" wall or thinner.</li><li><strong>Compare your tube to the die maker's chart.</strong> If your OD, wall and CLR sit outside what the maker rates, setup can't save it. Change the die, the tube or the tooling.</li><li><strong>On mandrel setups, check mandrel, wiper and lube.</strong> Tube Form Solutions lists a mandrel set too far back, a wiper not seated in the bend die, a worn wiper, a loose mandrel and the wrong amount of lube among its causes of wrinkling.</li></ol>
+
+<h3>What a wiper die does, and what it can't do</h3>
+
+<p>On mandrel benders, a <strong>wiper die</strong> sits against the inside of the bend, right behind the point where the tube starts to curve. It works with the mandrel to stop the inside wall from rippling. <em>The Fabricator</em> explains that you need a wiper once the mandrel alone can no longer control the inside radius (<a href="https://www.thefabricator.com/thefabricator/article/tubepipefabrication/wipe-out-the-wrinkles-of-tube-bending" target="_blank" rel="noopener">The Fabricator</a>).</p>
+
+<p>Two warnings from the trade sources. First, Tube Form Solutions says a wiper can only <em>prevent</em> wrinkles. It can't flatten wrinkles once they've formed. Second, <em>The Fabricator</em> warns never to set the wiper tip at or past the tangent point, because that breaks the tip. Follow your tooling maker's setup sheet.</p>
+
+<div class="bhg-callout bhg-callout--warn"><span class="bhg-callout-icon">⚠️</span><span class="bhg-callout-title">Don't just crank the pressure die</span><p>More pressure-die force can stop wrinkles, but too much flattens the outside of the bend and adds drag that makes the tube slip. <em>The Fabricator</em> advises using the lowest pressure that stops buckling. Small steps, one scrap bend each.</p></div>
+
+<h2 id="fix-kinks">How to fix kinks</h2>
+
+<p>A kink is the most dramatic failure, and usually the clearest. The tube didn't get the support it needed at the bend, so it folded. Here are the usual reasons, from most to least common in garage shops.</p>
+
+<h3>1. The wrong kind of bender</h3>
+
+<p>Bottle-jack "pipe benders" push the middle of the pipe while two shoes hold the ends. Nothing draws the tube around a die, so thin wall has no support. Harbor Freight's own manual for its 12-ton pipe bender says it isn't intended for thin-wall pipe such as conduit or exhaust (<a href="https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf" target="_blank" rel="noopener">Harbor Freight manual</a>). For structural tube, use a rotary-draw bender. Our guide to <a data-bhg-link="pipe-bender-vs-tube-bender" href="/pipe-bender-vs-tube-bender/">pipe benders vs tube benders</a> explains the difference.</p>
+
+<h3>2. A radius far too tight</h3>
+
+<p>Without a mandrel, there's a limit to how tight you can go. Pro-Tools gives about <strong>3 × OD</strong> as the practical minimum CLR without a mandrel. Baileigh suggests <strong>4 × OD</strong> as a starting estimate (<a href="https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/" target="_blank" rel="noopener">Baileigh</a>). Those are starting points, not guarantees. Thin wall needs more room.</p>
+
+<h3>3. A loose die or a slipping clamp</h3>
+
+<p>If the tube moves in the clamp mid-bend, <em>The Fabricator</em> explains that the forming zone shifts forward to a spot with no tool support. The result can be buckling on the inside of the bend. Fix the slip and the kink often goes away.</p>
+
+<figure class="bhg-figure" data-slot="manual-bender"><figcaption>Hand benders do great work on small, soft tubing. Push any bender past its size range and kinks follow.</figcaption></figure>
+
+<h3>4. Thin-wall exhaust on a non-mandrel die</h3>
+
+<p>Exhaust tubing has a very high wall factor. On a regular rotary-draw die it tends to wrinkle or kink at any sporty radius. For most home builders, pre-bent <strong>mandrel U-bends and J-bends</strong> are the smarter path. Our article on <a data-bhg-link="mandrel-tube-bender-for-home-shop" href="/mandrel-tube-bender-for-home-shop/">mandrel benders for the home shop</a> covers when owning one makes sense.</p>
+
+<p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+
+<p>If you just need a few clean exhaust bends, a pre-bent section such as the <a href="https://www.amazon.com/dp/B00AKFE6TQ?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">Patriot Exhaust 2-1/2" 304 stainless U-bend</a> lets you cut the curve you need and weld it in. Check the radius and leg length on the listing before you order.</p>
+
+<div class="bhg-callout bhg-callout--danger"><span class="bhg-callout-icon">🛑</span><span class="bhg-callout-title">Never use kinked tube in a structural part</span><p>A kink is a collapsed, weakened section. Don't hammer it out, heat it straight or hide it under a weld. Cut it out and start again, especially on bumpers, frames, roll bars and cages. Read our <a href="/safety/">safety notes</a>.</p></div>
+
+<h2 id="fix-flattening">How to fix flattening (and measure it)</h2>
+
+<p>Flattening is sneaky. The bend looks smooth, so it's easy to miss. But an oval tube doesn't fit a round notch, and it can be weaker than you expect. Start by measuring it.</p>
+
+<h3>How to measure ovality</h3>
+
+<p><strong>Ovality</strong> is the difference between the widest and narrowest diameter in the bend, as a percentage of the tube's nominal OD:</p>
+
+<p><strong>Ovality % = (max OD − min OD) ÷ nominal OD × 100</strong></p>
+
+<p>Measure in the middle of the bend. Take the widest reading, then turn the calipers 90° and take the narrowest. Say a 1.75" tube reads 1.80" one way and 1.68" the other. That's 0.12 ÷ 1.75 × 100, or about <strong>6.9%</strong>. How much is too much? That depends on the job. Limits come from the drawing, the customer or the rulebook, not from one universal number. Our guide to <a data-bhg-link="ovality-in-tube-bending" href="/ovality-in-tube-bending/">ovality in tube bending</a> has more examples.</p>
+
+<figure class="bhg-figure" data-slot="measuring"><figcaption>Calipers tell you how oval a bend really is. Measure the widest and narrowest points in the middle of the bend.</figcaption></figure>
+
+<h3>What causes it and how to fix it</h3>
+
+<ul><li><strong>Too much pressure-die force.</strong> <em>The Fabricator</em> names this as a common cause of a flat outside radius. Back off first.</li><li><strong>Pressure die in the wrong position.</strong> Check the manual. On Rogue Fab benders, the heavy-duty hole isn't for .120" wall or thinner.</li><li><strong>Thin wall for the radius.</strong> Go up a wall thickness or use a bigger CLR.</li><li><strong>No extra support.</strong> A roller-style pressure die can help. Rogue Fab reports 10.0% deformation with its regular dies and 6.4% with its Thin Wall Roller upgrade, in its own testing on M600-series benders (<a href="https://www.roguefab.com/product/twr-assembly/" target="_blank" rel="noopener">Rogue Fab</a>). It also says the roller is for jobs the machine is already rated for. Thinner walls or tighter radii need its mandrel attachment.</li></ul>
+
+<h3 id="digital-caliper">A tool worth owning: a digital caliper</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">📏 Measuring essential</span><p class="bhg-product-title">NEIKO 01407A Electronic Digital Caliper (0–6")</p><p class="bhg-product-sub">A simple stainless digital caliper for checking OD, wall and ovality.</p></div><div class="bhg-product-body"><div><p>You can't fix flattening you haven't measured. A 0–6" digital caliper covers common tube sizes and lets you check OD before you buy dies, wall thickness before you bend, and ovality after.</p><p><strong>Who it's for:</strong> anyone with a bender. It's a budget tool, fine for the garage. If you need certified accuracy for paid work, step up to a calibrated brand.</p><p><strong>How to use it here:</strong> measure the straight tube first, then the middle of the bend at two angles 90° apart.</p></div><dl class="bhg-specs"><div><dt>Range</dt><dd>0–6"</dd></div><div><dt>Body</dt><dd>Stainless steel</dd></div><div><dt>Use</dt><dd>OD, ID, depth and step</dd></div><div><dt>Check</dt><dd>Pack quantity on the listing</dd></div></dl></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B000GSLKIW?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Affiliate link. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<h2 id="die-charts">Read the die maker's chart, not a forum rule</h2>
+
+<p>You'll see neat rules online: "below this wall factor it never wrinkles, above that you need a mandrel." They're tempting. But we couldn't find a manufacturer or standard that backs those cutoffs as universal facts. Real limits depend on the material, the die design, the machine and the tooling. So the honest answer is: <strong>use your die maker's chart</strong>.</p>
+
+<h3>Capacity and minimum-wall charts</h3>
+
+<p>Good die makers publish the minimum and maximum wall they rate for each OD and CLR, and often by material. Rogue Fab has a <a href="https://www.roguefab.com/tube-capacity-chart/" target="_blank" rel="noopener">tube capacity chart</a>. Pro-Tools lists minimum wall on its die pages. Pro-Tools also warns that welded ERW tube can have thin spots. For some of its dies it recommends going up one wall thickness with ERW. Its example: a 1" OD × 3" CLR die rated to .065" minimum wall in DOM, with at least .083" recommended for ERW (<a href="https://pro-tools.com/pages/round-tube-dies-for-302-one-shot-tube-and-pipe-bender" target="_blank" rel="noopener">Pro-Tools</a>).</p>
+
+<h3>Mandrel and wiper selection charts</h3>
+
+<p>Mandrel tooling makers use a chart with wall factor on one axis and D of bend on the other. Where your bend lands tells you what tooling you need. <em>The Fabricator</em> walks through one example: 2" OD × .065" wall on a 4" CLR gives a wall factor of about 30.8 and a D of 2.0. The chart calls for a regular-pitch two-ball mandrel with a wiper (<a href="https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper" target="_blank" rel="noopener">The Fabricator</a>). These charts typically assume mild steel bent to 180°, so ask the maker about other materials.</p>
+
+<table><thead><tr><th>Example tube and die</th><th>D of bend (CLR ÷ OD)</th><th>Wall factor (OD ÷ wall)</th><th>What to do</th></tr></thead><tbody><tr><td>1.75" × .120" on 6" CLR</td><td>3.4</td><td>14.6</td><td>Check the bender and die maker's capacity chart</td></tr><tr><td>1.75" × .095" on 6" CLR</td><td>3.4</td><td>18.4</td><td>Same D, thinner wall: confirm the minimum wall for that die</td></tr><tr><td>1.5" × .065" on 4.5" CLR</td><td>3.0</td><td>23.1</td><td>Thin wall at a tighter D: check the minimum-wall chart first</td></tr><tr><td>2" × .065" on 4" CLR</td><td>2.0</td><td>30.8</td><td><em>The Fabricator</em>'s chart example: two-ball mandrel with wiper</td></tr></tbody></table>
+
+<div class="bhg-callout bhg-callout--info"><span class="bhg-callout-icon">🧮</span><span class="bhg-callout-title">Get the ratios in seconds</span><p>Our free <a href="/calculator/">bend calculator</a> works out D of bend and wall factor from your OD, wall and CLR. Take those two numbers to your die maker's chart, or call their tech line.</p></div>
+
+<figure class="bhg-figure" data-slot="mandrel"><figcaption>Tight, thin-wall bends like these need mandrel tooling that a standard rotary-draw die can't provide.</figcaption></figure>
+
+<h2 id="real-life">Real-life lessons from the garage</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads. Each one has a clear lesson, and each would have cost less if the builder had started at the top of the symptom table.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The wrinkle that kept moving</span><p>A builder gets wrinkles on some bends but not others. Sometimes they're at the start, sometimes in the middle. They try a new die. No change. Finally they draw a pencil line across the clamp and the tube. After the next bend, the line is split by a quarter inch. The tube had a film of mill oil, and the clamp face was polished smooth. Cleaning both stops the wrinkles.</p><p><strong>Lesson:</strong> wrinkles that change from bend to bend usually mean clamp slip. Check the clamp before you buy anything.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The exhaust experiment</span><p>Someone wants a tight turn-down for a 2.5" exhaust. Their rotary-draw bender handles bumper tube beautifully, so they try thin-wall exhaust tube in it. Every bend comes out rippled on the inside. More pressure just flattens the outside too.</p><p><strong>Lesson:</strong> thin wall on a tight radius is a tooling problem, not a setup problem. Pre-bent mandrel sections are usually the answer.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The flat bumper bend</span><p>A builder's bumper bends look smooth, but the notches won't sit tight. Calipers show the bends are clearly oval. Reading the manual, they find the pressure die is in the heavy-duty position meant for thick wall. Moving it to the standard position brings the bends back to round.</p><p><strong>Lesson:</strong> measure your bends, and read the pressure-die section of your manual.</p></div>
+
+<blockquote class="bhg-quote"><p>A bad bend is a message. Wrinkles that move point to the clamp. Wrinkles that run the whole bend point to support. Flattening points to too much force or too little wall.</p></blockquote>
+
+<h2 id="mistakes">Common mistakes (and how to fix them)</h2>
+
+<p>These mistakes turn a simple fix into a pile of scrap. Most of them come from rushing, or from treating every bad bend the same way.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Cranking the pressure die to kill every wrinkle.</strong> Too much force flattens the outside of the bend and adds drag that makes the tube slip.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> use the lowest pressure that stops buckling. Adjust in small steps, with one scrap bend per step.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Bending oily or dirty tube.</strong> Mill oil and grime let the clamp slip.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> wipe the clamp area of the tube and the clamp block with a solvent your bender maker approves, then tighten evenly.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Using a die for the wrong size.</strong> "1-1/2 inch" pipe and 1-1/2" tube aren't the same OD.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> measure the real OD with calipers and match the die to it.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Trying to rescue a wrinkled or kinked bend.</strong> Re-bending, heating or hammering doesn't restore the wall.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> cut the bad section out. Fix the cause before you bend the next piece.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Using a ram-style pipe bender on thin wall.</strong> It pushes instead of drawing, so thin wall kinks.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> keep ram benders for heavy pipe. Use a rotary-draw bender for tube.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Trusting a forum wall-factor rule.</strong> Neat cutoffs online aren't backed by the die makers.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> work out D of bend and wall factor, then check the die maker's chart or call them.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Changing three things at once.</strong> The problem goes away, but you don't know why.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> one change per test bend. Write each result in your bend log.</p></div>
+
+<h2 id="pro-tips">Pro tips for clean, round bends</h2>
+
+<p>These habits come from the same trade sources and from patterns builders share online. None of them costs much. Together, they stop most defects before they start.</p>
+
+<ul><li><strong>Keep a bend log.</strong> Record tube OD, wall, material, supplier, die, pressure-die position and the result. Patterns jump out after a few projects.</li><li><strong>Mark the clamp line every time.</strong> A pencil line across clamp and tube costs nothing and catches slip instantly.</li><li><strong>Buy one extra stick.</strong> Test every new tube batch on scrap before you cut project pieces.</li><li><strong>Inspect the dies.</strong> Worn or damaged grooves can cause wrinkles and marks. Clean dies before each session.</li><li><strong>Use the right pressure die for the metal.</strong> Rogue Fab says its standard friction pressure die needs lube and can't run aluminum because it galls. Its roller pressure die needs no lube and works on all materials (<a href="https://www.roguefab.com/faqs/" target="_blank" rel="noopener">Rogue Fab FAQ</a>).</li><li><strong>Lube where the maker says, and only there.</strong> On mandrel setups, Tube Form Solutions warns that too much oil, or oil that's too heavy, in the wiper area causes wrinkles.</li><li><strong>Pick DOM over ERW for tight work.</strong> Pro-Tools notes ERW can have thin spots. If you must use ERW, consider a heavier wall.</li><li><strong>Know when to stop.</strong> If the tube is outside your die's rating, no tweak will fix it. Change the plan.</li></ul>
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: fix the process, not the part</span><p>Experienced fabricators rarely save a bad bend. They scrap it, find the cause, and make sure the next fifty bends are good. That mindset saves more tube than any trick.</p></div>
+
+<p>Bending stainless? It has its own quirks. See our guide to <a data-bhg-link="stainless-bending" href="/stainless-bending/">bending stainless exhaust tubing</a>. Not sure which bender type suits your work? Our <a href="/compare/">bender type comparison</a> lays them side by side.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">What causes wrinkles on the inside of a tube bend?</h3><p>The inside wall gets squeezed and buckles. Rogue Fab lists four causes: a radius too tight for the OD, a wall too thin for the OD, a slipping clamp, or a setup error. Check clamp slip and setup first, because those fixes are free.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Can you fix a wrinkled or kinked bend?</h3><p>Not reliably. Tube Form Solutions notes that even a wiper die can only prevent wrinkles, not flatten them once formed. For anything structural, cut the bad section out and fix the cause before the next bend.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Why does my tube flatten when I bend it?</h3><p>Some flattening is normal. Too much comes from excess pressure-die force, a pressure die in the wrong position, thin wall or a tight radius. Measure ovality with calipers, then work through those causes in order.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Do I need a mandrel to stop wrinkles?</h3><p>Only when the wall is too thin for the radius you want. Many bumper and cage bends work fine without one. Work out your D of bend and wall factor, then check the die maker's chart. If you're outside it, use a bigger CLR, a thicker wall, a mandrel or pre-bent sections.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Can I fill the tube with sand to stop kinks?</h3><p>Packing tube with dry sand is an old workshop trick for hand bending, and builders report mixed results. It isn't a substitute for the right die or a mandrel. Never heat a sealed, filled tube. Trapped moisture can turn to steam.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What wall thickness can I bend without wrinkles?</h3><p>There's no universal number. It depends on OD, CLR, material, die and machine. Your die maker's minimum-wall chart is the answer. Pro-Tools, for example, lists minimum wall per die and suggests a heavier wall for ERW tube.</p></div></div>
+
+<h2 id="checklist">Your troubleshooting checklist</h2>
+
+<p>Print this and tape it next to your bender. Work down it in order the next time a bend goes wrong.</p>
+
+<div class="bhg-checklist"><ul><li>I've named the defect: wrinkles, kink or flattening</li><li>I've noted <em>where</em> it appears: whole bend, start, end or one spot</li><li>I've drawn a line across the clamp and tube to check for slip</li><li>The clamp block and the tube's clamp area are clean and dry</li><li>The die matches the tube's real OD, measured with calipers</li><li>The pressure die is in the position the manual specifies for my wall</li><li>I've worked out D of bend and wall factor for this bend</li><li>My tube, wall and CLR fall inside the die maker's chart</li><li>On mandrel setups, I've checked mandrel position, wiper seating and lube</li><li>I'm changing only one thing per test bend, and logging the result</li><li>I've measured ovality on the test bend before cutting project tube</li></ul></div>
+
+<p>Wrinkles, kinks and flattening feel like a mystery the first time. They aren't. Read the clues, start with the free fixes, and lean on your die maker's chart for the rest. Your next stick of tube will thank you. 🔧</p>
+
+<div class="bhg-cta"><h3>Check your bend before you make it</h3><p>Enter your OD, wall and CLR to get D of bend and wall factor in seconds. Or compare bender types to see which one fits thin-wall work.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/calculator/">Open the bend calculator</a><a class="bhg-btn bhg-btn--ghost" href="/compare/">Compare bender types</a></div></div>
