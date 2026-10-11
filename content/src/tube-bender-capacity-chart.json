@@ -1,0 +1,40 @@
+{
+ "slug": "tube-bender-capacity-chart",
+ "title": "Tube Bender Capacity Chart: Published Limits for 9 Benders",
+ "excerpt": "A tube bender capacity chart built only from maker-published specs: OD, wall and 4130 limits for 9 benders, one source per row, with conflicts flagged.",
+ "category": "guides",
+ "featured_slot": "tube-stock",
+ "primary_keyword": "tube bender capacity chart",
+ "asins": [
+  {"asin": "B00F6GYB8A", "product": "Baileigh RDB-050 manual rotary-draw bender", "evidence": "Kit pre-verified ASIN (WRITER-KIT.md section 3)"},
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity tube bender (#21115)", "evidence": "https://www.amazon.com/Eastwood-Tubing-Plumbing-Capacity-Machine/dp/B07PRLN2PG"},
+  {"asin": "B01M12Z84P", "product": "Woodward Fab WFB2 manual tube & pipe bender", "evidence": "Kit pre-verified ASIN (WRITER-KIT.md section 3)"}
+ ],
+ "sources": [
+  "https://www.jd2.com/model-32-bender",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.kmstools.com/jd-squared-model-32-bender-manual-bender.html",
+  "https://www.roguefab.com/product-category/tubing-benders/",
+  "https://www.roguefab.com/faqs/",
+  "https://www.roguefab.com/product/metal-tube-bender-m625-1-die/",
+  "https://www.roguefab.com/tube-capacity-chart/",
+  "https://www.roguefab.com/wp-content/uploads/2025/04/2025-Product-Catalog.pdf",
+  "https://www.roguefab.com/aluminum-pipe-benders/",
+  "https://www.baileigh.com/manual-tube-bender-rdb-050",
+  "https://www.baileigh.com/accessories-parts/tooling-accessories/tube-pipe-bender-accessories/manual-rotary-draw-tooling/rdb-050-tooling",
+  "https://pro-tools.com/products/manual-tube-and-pipe-bender-105-heavy-duty-package",
+  "https://pro-tools.com/products/105-bender-extension-handle",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://www.woodwardfab.com/product/manual-tube-and-pipe-bender/",
+  "https://www.woodwardfab.com/product-category/product/pipe-and-tube-fabrication/woodward-fab-pipe-and-tube-benders/180-degree-die-sets/",
+  "https://www.woodwardfab.com/product/1-1-2-schedule-40-pipe-die-x-6-clr-180-degree-die/",
+  "https://www.eastwood.com/eastwood-high-capacity-tubing-bender.html",
+  "https://www.eastwood.com/images/library/21115Q.pdf",
+  "https://www.amazon.com/Eastwood-Tubing-Plumbing-Capacity-Machine/dp/B07PRLN2PG",
+  "https://www.harborfreight.com/12-ton-hydraulic-pipe-bender-32888.html",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "ASME B36.10 pipe tables (NPS 1-1/2 = 1.900 in OD, NPS 1-1/4 = 1.660 in OD), per WRITER-KIT fact table",
+  "/home/user/website/docs/research/competitors-keywords-factcheck.md (Part 3.6 spec sheet)"
+ ],
+ "notes": "Reference table uses only maker-published numbers (plus the Amazon listing for the Eastwood OD conflict). Research was via web-search result summaries; maker sites could not be opened directly from this environment, so please spot-check key cells. Conflicts flagged: Rogue M605 wall .188 (catalogue/comparison table) vs .250 DOM (FAQ); Eastwood HC OD 1-2 in (Eastwood) vs 3/4 in (one Amazon bullet); JD2 manual limit (JD2) vs KMS Tools retail copy. Baileigh RDB-050 die wall figures (.095/.109/.120) are presented as the wall each set's CLR is 'based on', not as max-wall limits. JD2 manual example pressures (900/1,400/3,100 psi) came from a search summary of the M32 manual: please verify. Rogue chart: 1.25x4.5 max wall and 1.5/1.75 die aluminium/stainless minimums were not visible, so cells say 'Check with maker'. Pro-Tools square tube range (1/2-1-1/2 in) and JD2 manual square/solid limits come from the fact-check notes (Part 3.6)."
+}

@@ -1,0 +1,24 @@
+{
+ "slug": "tube-bend-length-formula",
+ "title": "Tube Bend Length Formula: Arc, Tangent and Cut Length Math",
+ "excerpt": "The tube bend length formula made easy: arc length, tangent length and cut length, with worked examples for one bend, hoops and bumpers.",
+ "category": "fabrication-theory",
+ "featured_slot": "measuring",
+ "primary_keyword": "tube bend length formula",
+ "asins": [
+  {"asin": "B00T6YZ0K6", "product": "Wixey WR300 Type 2 Digital Angle Gauge with backlight", "evidence": "https://www.amazon.com/Wixey-WR300-Type-Digital-Backlight/dp/B00T6YZ0K6"},
+  {"asin": "B000GSLKIW", "product": "NEIKO 01407A Electronic Digital Caliper Measuring Tool, 0-6 Inches Stainless Steel Construction with Large LCD Screen", "evidence": "https://www.amazon.com/Neiko-01407A-Electronic-Digital-Stainless/dp/B000GSLKIW"}
+ ],
+ "sources": [
+  "https://www.stainlessheaders.com/p-35900-tube-cut-length.html",
+  "https://www.stainlessheaders.com/p-35901-j-bend-optimizer.html",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.roguefab.com/bending-101/",
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/tube-bending-basics-how-to-bend-tubing-and-metal-pipe",
+  "Tangent length = CLR x tan(angle/2): standard circular geometry (WRITER-KIT fact table)",
+  "https://everycalculators.com/tube-bending-calculations.html (only for the note that 'setback' and related terms are used inconsistently)",
+  "https://www.amazon.com/Wixey-WR300-Type-Digital-Backlight/dp/B00T6YZ0K6",
+  "https://www.amazon.com/Neiko-01407A-Electronic-Digital-Stainless/dp/B000GSLKIW"
+ ],
+ "notes": "Educational formula guide. All arithmetic (tangent/arc/deduction table for 15-135 degrees, constants comparison, Examples 1-5 and the marking table) was computed in Python and rounded at the end; fractions are nearest 1/16. Direct page fetches were blocked by the network proxy in this session, so facts come from search-result text and the kit fact table. Please re-check: (1) Stainless Headers' 0.01745 constant and the ~1/4 in trim suggestion on the J-bend optimizer page; (2) Rogue Fab Bending 101 'bend offset' definition and the note that its offset tables are being updated (the page said so in search results); (3) The Fabricator line on springback/radial growth. Not used because unverified: Baileigh RDB-480 manual 9.45 in example, Rogue Fab '0.105 in per degree' figure (search attributed it to a third-party page). The Wixey listing gave 0.1 degree resolution; accuracy figures were not stated in the article because search summaries were unclear. The 'gain'/'take-up' terms are mentioned only as inconsistently used."
+}

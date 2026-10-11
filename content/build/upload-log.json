@@ -17,6 +17,26 @@
   "categories": [
    8
   ],
-  "at": "2026-10-11T15:06:21.837Z"
+  "at": "2026-10-11T15:11:02.448Z"
+ },
+ "harbor-freight-12-ton-pipe-bender": {
+  "id": 123,
+  "status": "draft",
+  "identical": true,
+  "featured": 46,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:11:04.033Z"
+ },
+ "manual-vs-hydraulic-tube-bender": {
+  "id": 124,
+  "status": "draft",
+  "identical": true,
+  "featured": 54,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:11:05.749Z"
  }
 }

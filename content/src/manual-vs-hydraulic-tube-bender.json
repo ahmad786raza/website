@@ -1,0 +1,27 @@
+{
+ "slug": "manual-vs-hydraulic-tube-bender",
+ "title": "Manual vs Hydraulic Tube Bender: Drives, Upgrade Kits and Pumps",
+ "excerpt": "Manual vs hydraulic tube bender: how ratchet, air-over and electric-over-hydraulic drives compare, when to upgrade, and how to choose.",
+ "category": "guides",
+ "featured_slot": "workshop",
+ "primary_keyword": "manual vs hydraulic tube bender",
+ "asins": [
+  {"asin": "B0DXQB2TVP", "product": "Eastwood air-hydraulic conversion kit for the High Capacity bender", "evidence": "Pre-verified in writer kit ASIN table"},
+  {"asin": "B0DXQCZQSY", "product": "Eastwood electric-hydraulic conversion kit (0.75 HP, 110 V)", "evidence": "Pre-verified in writer kit ASIN table"},
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity tube bender (#21115)", "evidence": "Pre-verified in writer kit ASIN table"},
+  {"asin": "B00F6GYB8A", "product": "Baileigh RDB-050 manual rotary-draw bender", "evidence": "Pre-verified in writer kit ASIN table"}
+ ],
+ "sources": [
+  "https://www.jd2.com/model-32-bender",
+  "https://www.jd2.com/model-32-tube-bender-hydraulic-adapter-kit",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://pro-tools.com/products/manual-tube-and-pipe-bender-105-heavy-duty-package",
+  "https://pro-tools.com/products/hydraulic-tube-and-pipe-bender-105-heavy-duty",
+  "https://www.roguefab.com/product/metal-tube-bender-m605-1-die/",
+  "https://www.roguefab.com/faqs/",
+  "https://www.baileigh.com/manual-tube-bender-rdb-050",
+  "https://www.eastwood.com/images/library/21115Q.pdf",
+  "https://www.woodwardfab.com/product/manual-tube-and-pipe-bender/"
+ ],
+ "notes": "Written after the shared web-search budget ran out, and direct page fetches were blocked by the sandbox egress policy, so every number comes from the writer kit fact table and the fact-check notes (Part 3.6); no new ASINs were used. Please re-check: (1) JD2 Model 32 handle about 36 in, 10-ton cylinder with 14 in stroke, and the 'square over 1-1/2 in / solid over 1 in needs hydraulics' limits (fact-check notes); (2) JD2 manual pressure figures (usually below 1,300 psi; 1-3/4 x .095 mild steel about 900 psi) - the notes label these 'Manual:' and I read that as the JD2 manual; confirm the context in M32BDirections.pdf; (3) JD2 hydraulic adapter kit listings conflict on whether the cylinder is included (stated in article as a conflict); (4) Rogue Fab M605 drive options (manual hydraulic, air-over-hydraulic, 1.5/2.0 HP electric-hydraulic) and about 94 deg per stroke; M605 wall conflict (.188 vs .250) stated as a conflict; (5) Woodward Fab WFB2-AHP air/hydraulic version (fact-check notes, not confirmed on Woodward's page by me); (6) Baileigh RDB-050 net weight 310 lb. Decision-table OD and volume bands are labelled in the article as rules of thumb. Left out: any comparative cost between air and electric kits, compressor CFM figures, cylinder-included status for Eastwood kits. Does not duplicate the home-garage roundup's picks; links to it via data-bhg-link."
+}

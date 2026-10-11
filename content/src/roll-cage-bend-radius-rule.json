@@ -1,0 +1,32 @@
+{
+ "slug": "roll-cage-bend-radius-rule",
+ "title": "Roll Cage Bend Radius Rule: Is Your Die Legal? (3× Check)",
+ "excerpt": "The roll cage bend radius rule in SCCA Time Trials and FIA books is 3× tube diameter at the centerline. Here's how to check your die, step by step.",
+ "category": "safety",
+ "featured_slot": "roll-cage",
+ "primary_keyword": "roll cage bend radius rule",
+ "asins": [
+  {"asin": "B07PPJ4WN4", "product": "Eastwood 1.75\" x 6\" CLR 240 degree die", "evidence": "Kit pre-verified ASIN list (WRITER-KIT.md section 3)"},
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity Tube Bender (#21115)", "evidence": "Kit pre-verified ASIN list (WRITER-KIT.md section 3)"},
+  {"asin": "B000GSLKIW", "product": "NEIKO 01407A Electronic Digital Caliper Measuring Tool, 0-6 Inches Stainless Steel Construction with Large LCD Screen", "evidence": "https://www.amazon.com/Neiko-01407A-Electronic-Digital-Stainless/dp/B000GSLKIW (WebSearch, allowed_domains amazon.com, Oct 2026)"}
+ ],
+ "sources": [
+  "https://timetrials.scca.com/pages/full-safety-rules",
+  "https://www.fia.com/sites/default/files/253_2020_chap_8_wmsc_2020.10.09.pdf",
+  "https://www.fia.com/sites/default/files/regulation/file/253%20(2013).pdf",
+  "https://www.fia.com/sites/default/files/253_2021_wmsc_2021.10.15.pdf",
+  "https://www.fia.com/regulation/category/123",
+  "https://www.nasaproracing.com/rules",
+  "https://www.nhraracer.com/Files/Tech/2026_rulebook_amendments.pdf",
+  "https://www.sfifoundation.com/wp-content/pdfs/SpecList3.pdf",
+  "https://www.roguefab.com/building-roll-cage/",
+  "https://www.jd2.com/frequently-asked-questions",
+  "https://www.jd2.com/model-32-die-set-1-12-round-tube-15-od",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.amazon.com/Neiko-01407A-Electronic-Digital-Stainless/dp/B000GSLKIW"
+ ],
+ "notes": "SAFETY-CRITICAL. WebFetch had no DNS in the writing environment, so rule wording was checked through search-index text restricted to official domains; the article paraphrases rather than quotes verbatim. Please open the SCCA Time Trials full safety rules page and FIA Art. 253 (2020 PDF, and the 2026 edition listed WMSC 23.06.2026, which was not read) to confirm the 3x centreline wording and the 0.9 ovalisation ratio before publishing. FIA 45 x 2.5 / 50 x 2.0 mm main/lateral rollbar sizes are from the 2016-2021 editions (labelled as such). NHRA, NASA CCR 15.6, SCCA GCR and SFI bend radius rules were NOT confirmed and are shown as 'check'. All D-of-bend, minimum CLR, arc (CLR x radians) and tangent (CLR x tan(angle/2)) figures are computed. The 180-degree test-bend CLR formula is pure geometry; the 13.75 in / 10.75 in widths are illustrative. Caliper listing: Amazon page title was seen as a pack-of-10 on one listing, so the box says to check pack quantity."
+}

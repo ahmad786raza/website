@@ -1,0 +1,205 @@
+<p class="bhg-lead">You've drawn the part. You know the leg lengths. Now you're holding a 20-foot stick of tube and a saw, wondering how long to cut it. Add up the legs and the part comes out too long. Guess and you waste tube. The fix is the <strong>tube bend length formula</strong>: a short bit of math that tells you exactly how much tube each bend uses.</p>
+
+<p>The good news? It's not hard. You need three numbers: the die's centerline radius, the bend angle and your leg lengths. From those you get the arc length, the tangent length and the cut length. Once you've done it twice, it takes about a minute per part.</p>
+
+<p>This guide walks you through it step by step, the way a friend in the next garage bay would. Every example uses real numbers, and the arithmetic is shown so you can check it. We'll cover single bends, multi-bend hoops and bumpers, U-bends, marking the tube and the real-world fudge factors that textbooks skip.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p>Work along the tube's centerline, and keep three formulas handy:</p><ul><li><strong>Arc length</strong> = CLR × angle in radians (degrees × 0.017453). A 90° bend on a 6" CLR uses 6 × 1.5708 = <strong>9.42"</strong>.</li><li><strong>Tangent length</strong> = CLR × tan(angle ÷ 2). For any 90° bend, the tangent length equals the CLR.</li><li><strong>Cut length</strong> = sum of leg lengths (to the corner points) − 2 tangents per bend + 1 arc per bend, plus trim.</li><li>Check your result with a test bend and an <a href="#angle-gauge">angle gauge</a> before cutting a whole batch.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#the-formula">The formula and the terms</a></li><li><a href="#arc-length">Step 1: arc length</a></li><li><a href="#tangent-length">Step 2: tangent length</a></li><li><a href="#single-bend">Step 3: cut length for one bend</a></li><li><a href="#multi-bend">Multi-bend parts, worked in full</a></li><li><a href="#real-world">Real-world adjustments</a></li><li><a href="#marking">Marking the tube</a></li><li><a href="#real-life">Real-life lessons</a></li><li><a href="#mistakes">Common mistakes</a></li><li><a href="#pro-tips">Pro tips</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Your cut-length checklist</a></li></ol></div>
+
+<h2 id="the-formula">The tube bend length formula, explained simply</h2>
+
+<p>Here's the whole idea in one sentence. A bend cuts a corner off your part, so the tube follows a curve instead of a sharp corner. The curve is shorter than the two sides of the corner it replaces. So the cut length is the sum of your legs, minus what the curve saves.</p>
+
+<p>Written as a formula, for legs measured to the corner points:</p>
+
+<ul><li><strong>Cut length</strong> = (sum of all leg lengths) − (2 × tangent length for each bend) + (arc length for each bend)</li></ul>
+
+<p>Stainless Headers' <a href="https://www.stainlessheaders.com/p-35900-tube-cut-length.html" target="_blank" rel="noopener">tube cut length calculator</a> describes the same thing from the other direction: add up the straight sections between bends, then add every bend length. Both ways give the same answer. They just start from different measurements.</p>
+
+<h3>The terms you need</h3>
+
+<p>Everything is measured along the tube's <strong>centerline</strong>, the imaginary line down the middle of the tube. Here are the five terms we'll use. The example column is a 90° bend on a 6" centerline radius die.</p>
+
+<table><thead><tr><th>Term</th><th>What it means</th><th>Formula</th><th>90° on 6" CLR</th></tr></thead><tbody><tr><td><strong>CLR</strong></td><td>Radius of the bend to the tube's centerline. Set by the die.</td><td>From the die</td><td>6.000"</td></tr><tr><td><strong>Arc length</strong></td><td>Tube used inside the bend. Also called developed length or bend length.</td><td>CLR × angle in radians</td><td>9.425"</td></tr><tr><td><strong>Tangent length</strong></td><td>From where the bend starts to the imaginary sharp corner</td><td>CLR × tan(angle ÷ 2)</td><td>6.000"</td></tr><tr><td><strong>Corner point</strong></td><td>Where the centerlines of two legs would meet if there were no bend</td><td>From your drawing</td><td>—</td></tr><tr><td><strong>Bend deduction</strong></td><td>How much shorter the tube is than the two legs added up</td><td>2 × tangent − arc</td><td>2.575"</td></tr></tbody></table>
+
+<p>A note on "setback." Some calculators use it to mean the tangent length. Others use it for a different distance. You'll also hear "gain" and "take-up," and trades use those words differently too. To keep things clear, this guide sticks to <strong>tangent length</strong> and <strong>bend deduction</strong>. If you're new to CLR itself, start with our guide to <a data-bhg-link="bend-radius-explained" href="/bend-radius-explained/">centerline radius</a>.</p>
+
+<h2 id="arc-length">Step 1: arc length (and why radians)</h2>
+
+<p>The arc length is the amount of tube that ends up inside the bend. It's a slice of a circle's circumference, measured at the centerline. The formula is simple: <strong>arc length = CLR × angle in radians</strong>.</p>
+
+<h3>Converting degrees to radians</h3>
+
+<p>Radians are just another way to measure angles. A full circle is 360°, or 2π radians. So to convert, multiply degrees by π ÷ 180, which is about <strong>0.017453</strong>. A 90° bend is 90 × 0.017453 = 1.5708 radians. A 45° bend is 0.7854 radians.</p>
+
+<p>Example: 90° on a 6" CLR die. 6 × 1.5708 = <strong>9.42"</strong>. On a 4.5" CLR die, it's 4.5 × 1.5708 = 7.07". On a 7" die, it's 7 × 1.5708 = 11.00".</p>
+
+<h3>The rounded constants you'll see</h3>
+
+<p>Tool makers often round the constant. Stainless Headers uses 0.01745. JD2's <a href="https://support.jd2.com/MiscDown/dl/M32BDirections.pdf" target="_blank" rel="noopener">Model 32 manual</a> writes bend length as CLR × degrees × .0175. That's rounded up about 0.27%, so it reads slightly long. Over one bend, it doesn't matter. Over 20 bends of 90° on a 6" die, it adds up to about half an inch.</p>
+
+<table><thead><tr><th>Constant used</th><th>Where you'll see it</th><th>90° on 6" CLR</th><th>Verdict</th></tr></thead><tbody><tr><td><strong>π ÷ 180 = 0.0174533</strong></td><td>Exact value</td><td>9.4248"</td><td>✅ Use this in spreadsheets</td></tr><tr><td><strong>0.01745</strong></td><td>Stainless Headers calculator</td><td>9.4230"</td><td>✅ Fine for shop work</td></tr><tr><td><strong>0.0175</strong></td><td>JD2 manual</td><td>9.4500"</td><td>Fine for single bends, reads slightly long</td></tr><tr><td><strong>0.001745</strong></td><td>A typo seen on some web pages</td><td>0.9423"</td><td>❌ Off by 10×. Never use</td></tr></tbody></table>
+
+<p>Here's a handy shortcut. Work out your die's <strong>inches per degree</strong> once: CLR × 0.017453. A 6" CLR die uses 0.1047" per degree. A 5.5" die uses 0.0960". A 6.5" die uses 0.1134". Write it on the die. Then any bend's arc length is just degrees × that number.</p>
+
+<blockquote class="bhg-quote"><p>Every bend uses tube. The arc length tells you how much, and it only takes one multiplication.</p></blockquote>
+
+<h2 id="tangent-length">Step 2: tangent length</h2>
+
+<p>The tangent length tells you where a bend starts and stops. Picture the two straight legs of a bend. Extend them until they meet in a sharp corner. The tangent length is the distance from that corner back to the point where the tube starts curving.</p>
+
+<p>The formula is <strong>tangent length = CLR × tan(angle ÷ 2)</strong>. "tan" is the tangent button on any scientific calculator or phone calculator. Make sure it's set to degrees.</p>
+
+<h3>The 90° shortcut</h3>
+
+<p>For a 90° bend, angle ÷ 2 is 45°, and tan(45°) = 1. So the tangent length equals the CLR. On a 6" die, a 90° bend starts 6" before the corner point and ends 6" after it. That's worth memorizing.</p>
+
+<h3>Tangent and arc for common angles</h3>
+
+<p>Here are the numbers for a 6" CLR die. For other dies, scale them: multiply by your CLR, then divide by 6.</p>
+
+<table><thead><tr><th>Bend angle</th><th>Radians</th><th>Tangent length</th><th>Arc length</th><th>Bend deduction</th></tr></thead><tbody><tr><td><strong>15°</strong></td><td>0.2618</td><td>0.790"</td><td>1.571"</td><td>0.009"</td></tr><tr><td><strong>30°</strong></td><td>0.5236</td><td>1.608"</td><td>3.142"</td><td>0.074"</td></tr><tr><td><strong>45°</strong></td><td>0.7854</td><td>2.485"</td><td>4.712"</td><td>0.258"</td></tr><tr><td><strong>60°</strong></td><td>1.0472</td><td>3.464"</td><td>6.283"</td><td>0.645"</td></tr><tr><td><strong>90°</strong></td><td>1.5708</td><td>6.000"</td><td>9.425"</td><td>2.575"</td></tr><tr><td><strong>120°</strong></td><td>2.0944</td><td>10.392"</td><td>12.566"</td><td>8.218"</td></tr><tr><td><strong>135°</strong></td><td>2.3562</td><td>14.485"</td><td>14.137"</td><td>14.833"</td></tr></tbody></table>
+
+<p>Notice two things. Small bends barely change the length. A 15° bend saves less than a hundredth of an inch. And past 90°, the tangent length grows fast. At 180° it would be infinite, because the legs never meet. We'll handle U-bends differently below.</p>
+
+<div class="bhg-callout bhg-callout--info"><span class="bhg-callout-icon">🧮</span><span class="bhg-callout-title">Skip the trig</span><p>Our free <a href="/calculator/">bend calculator</a> works out arc length, tangent length and cut length from your OD, wall, CLR and angles. Use it to check your hand math.</p></div>
+
+<h2 id="single-bend">Step 3: cut length for a single bend</h2>
+
+<p>Now let's put it together. For one bend, the cut length is leg A + leg B − (2 × tangent) + arc. Both legs are measured along the centerline, from the tube end to the corner point.</p>
+
+<h3>Example 1: a 90° bend</h3>
+
+<p>You need a 90° bend in 1.75" tube on a 6" CLR die. One leg is 24" and the other is 18", both measured to the corner point.</p>
+
+<ol class="bhg-steps"><li><strong>Tangent length:</strong> 6 × tan(45°) = 6 × 1 = 6.000".</li><li><strong>Arc length:</strong> 6 × 1.5708 = 9.425".</li><li><strong>Add the legs:</strong> 24 + 18 = 42.000".</li><li><strong>Subtract two tangents:</strong> 42 − 12 = 30.000".</li><li><strong>Add the arc:</strong> 30 + 9.425 = <strong>39.425"</strong>, or about 39-7/16".</li></ol>
+
+<p>Check it another way. The straight part of the 24" leg is 24 − 6 = 18". The straight part of the 18" leg is 18 − 6 = 12". Add the arc: 18 + 9.425 + 12 = 39.425". Same answer. ✅</p>
+
+<h3>Example 2: a 45° bend</h3>
+
+<p>Same die, but a 45° bend with two 20" legs to the corner point.</p>
+
+<ul><li><strong>Tangent:</strong> 6 × tan(22.5°) = 6 × 0.41421 = 2.485"</li><li><strong>Arc:</strong> 6 × 0.7854 = 4.712"</li><li><strong>Cut length:</strong> 40 − (2 × 2.485) + 4.712 = 40 − 4.971 + 4.712 = <strong>39.742"</strong>, or about 39-3/4"</li></ul>
+
+<p>See how the 45° bend only shortens the part by about a quarter inch? The 90° bend shortened it by more than two and a half. Bigger angles save more length.</p>
+
+<figure class="bhg-figure" data-slot="cutting"><figcaption>Do the math before the saw comes out. A cut that's too short can't be fixed.</figcaption></figure>
+
+<h2 id="multi-bend">Multi-bend parts, worked in full</h2>
+
+<p>Most real parts have more than one bend. The method doesn't change. Add every leg, subtract two tangents per bend and add one arc per bend. The only new skill is getting your leg lengths right.</p>
+
+<h3>Example 3: a hoop with two 90° bends</h3>
+
+<p>Say you're building a bed bar or a handrail hoop from 1.75" tube on a 6" CLR die. The drawing says it's 42" wide outside-to-outside and 30.875" tall from the cut ends to the top of the tube.</p>
+
+<p>First, convert to <strong>centerline</strong> dimensions. The width is measured on the outside of both legs, so subtract one full OD: 42 − 1.75 = 40.25". The height goes to the top of the tube, so subtract half an OD: 30.875 − 0.875 = 30". Your legs are 30", 40.25" and 30".</p>
+
+<ul><li><strong>Sum of legs:</strong> 30 + 40.25 + 30 = 100.25"</li><li><strong>Tangents:</strong> 2 bends × 2 tangents × 6" = 24"</li><li><strong>Arcs:</strong> 2 × 9.425" = 18.850"</li><li><strong>Cut length:</strong> 100.25 − 24 + 18.85 = <strong>95.10"</strong>, or about 95-1/8"</li></ul>
+
+<div class="bhg-callout bhg-callout--warn"><span class="bhg-callout-icon">⚠️</span><span class="bhg-callout-title">Outside dimensions are not leg lengths</span><p>Drawings and tape measures usually give outside dimensions. The formula needs centerline lengths. Subtract one OD from an outside-to-outside width, and half an OD from a height measured to the top of the tube.</p></div>
+
+<p>Here's where each mark goes, measured from one end of the tube:</p>
+
+<table><thead><tr><th>Mark</th><th>How it's figured</th><th>Distance from end</th></tr></thead><tbody><tr><td><strong>Start of bend 1</strong></td><td>30 − 6</td><td>24.000"</td></tr><tr><td><strong>End of bend 1</strong></td><td>24 + 9.425</td><td>33.425"</td></tr><tr><td><strong>Start of bend 2</strong></td><td>33.425 + (40.25 − 12)</td><td>61.675"</td></tr><tr><td><strong>End of bend 2</strong></td><td>61.675 + 9.425</td><td>71.100"</td></tr><tr><td><strong>End of tube</strong></td><td>71.100 + (30 − 6)</td><td>95.100"</td></tr></tbody></table>
+
+<h3>Example 4: a bumper with two 30° bends</h3>
+
+<p>A simple front bumper has a 40" center section and two 16" wings, angled back 30° at each end. All three lengths are to the corner points. Same 6" die.</p>
+
+<ul><li><strong>Tangent per bend:</strong> 6 × tan(15°) = 6 × 0.26795 = 1.608"</li><li><strong>Arc per bend:</strong> 6 × 0.5236 = 3.142"</li><li><strong>Cut length:</strong> 72 − (4 × 1.608) + (2 × 3.142) = 72 − 6.431 + 6.283 = <strong>71.852"</strong>, or about 71-7/8"</li></ul>
+
+<figure class="bhg-figure" data-slot="chassis"><figcaption>A tube chassis is dozens of bent parts, and every one starts with a cut length.</figcaption></figure>
+
+<h3>U-bends and bends past 90°</h3>
+
+<p>For a 180° U-bend, the legs never meet, so there's no corner point. Measure each leg to where the bend starts instead. Then cut length = leg A + leg B + arc. Two 20" legs on a 6" die: 20 + 20 + (6 × 3.1416) = <strong>58.85"</strong>. The legs will sit 2 × CLR = 12" apart, center to center. For bends between 90° and 180°, either method works, but the tangent lengths get long. Double-check the corner points on your drawing.</p>
+
+<h2 id="real-world">Real-world adjustments the formula skips</h2>
+
+<p>The formula gives you a perfect, textbook tube. Real tube and real benders add a few wrinkles. None of them are hard to handle once you know they're there.</p>
+
+<h3>Trim allowance</h3>
+
+<p>Most fabricators cut a little long and trim to fit. Stainless Headers' <a href="https://www.stainlessheaders.com/p-35901-j-bend-optimizer.html" target="_blank" rel="noopener">J-bend optimizer</a> suggests roughly 1/4" of extra length for fit-up trimming. It's cheap insurance against a short part.</p>
+
+<h3>Clamp room</h3>
+
+<p>A rotary-draw bender needs straight tube to clamp onto. If a bend sits close to the end of the tube, there may not be enough straight left to grip. The fix is to cut extra length, bend, then trim the excess. Your bender's manual tells you how much straight its clamp block needs.</p>
+
+<h3>Springback and stretch</h3>
+
+<p>Tube springs back a little when you release the handle, so you over-bend to hit your angle. The Fabricator notes that harder tube and a tighter CLR mean more springback and more "radial growth." Bending software can also account for elongation. In plain terms, the real tube may not follow the die perfectly. The fix is a test bend. Bend a scrap piece, measure the real angle and leg lengths, then adjust. Our <a data-bhg-link="springback-in-tube-bending" href="/springback-in-tube-bending/">springback guide</a> walks through it.</p>
+
+<p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+
+<h3 id="angle-gauge">A tool that makes test bends easy: a digital angle gauge</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">🔧 Test-bend essential</span><p class="bhg-product-title">Wixey WR300 Type 2 Digital Angle Gauge</p><p class="bhg-product-sub">A magnetic digital angle gauge with a backlit display, for checking bend angles and springback.</p></div><div class="bhg-product-body"><div><p>Your cut length only works if the angle is right. A digital angle gauge sits on the tube, zeroes on one leg and reads the other. That gives you the real angle after springback, not what the degree ring said.</p><p><strong>Who it's for:</strong> anyone dialing in springback, checking test bends or setting the angle between bends on a multi-bend part.</p><p><strong>Why we picked it:</strong> it's a widely sold gauge with a magnetic base, which holds onto steel tube. Our pick is based on the published listing, not hands-on testing. See <a href="/methodology/">how we evaluate equipment</a>.</p></div><dl class="bhg-specs"><div><dt>Type</dt><dd>Digital angle gauge</dd></div><div><dt>Base</dt><dd>Magnetic</dd></div><div><dt>Display</dt><dd>Backlit</dd></div><div><dt>Resolution</dt><dd>0.1°, per the listing</dd></div><div><dt>Model</dt><dd>WR300 Type 2 (the Bluetooth WR300BT is a different product)</dd></div></dl></div><div class="bhg-product-lists"><div class="bhg-pros"><h4>Why we like it</h4><ul><li>Magnet grips steel tube and die faces</li><li>Zero on one leg, read the next</li><li>Small enough for an apron pocket</li></ul></div><div class="bhg-cons"><h4>Know before you buy</h4><ul><li>Magnet won't grip aluminum or most stainless tube</li><li>Needs a flat spot, so it reads best on a straight leg</li><li>Battery-powered</li></ul></div></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B00T6YZ0K6?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Also handy: <a href="https://www.amazon.com/dp/B000GSLKIW?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">NEIKO 01407A digital caliper</a> for checking the true tube OD. Affiliate links. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<h2 id="marking">Marking the tube and bending in order</h2>
+
+<p>Good math only helps if the marks land in the right place. Here's a simple routine that works on any rotary-draw bender.</p>
+
+<ol class="bhg-steps"><li><strong>Measure the real OD.</strong> Use calipers. Convert any outside dimensions on your drawing to centerline dimensions.</li><li><strong>Do the math on paper.</strong> Write down every leg, tangent, arc and the cut length. Add your trim allowance.</li><li><strong>Cut and deburr.</strong> Square cuts make your measurements honest.</li><li><strong>Draw a reference line.</strong> Run a straight line along the whole tube. It shows if the tube rotates in the die.</li><li><strong>Mark from one end only.</strong> Measure every mark from the same end, like the table in Example 3. Measuring mark-to-mark adds up small errors.</li><li><strong>Line up with the die.</strong> Each bender has its own rule for where the start-of-bend mark sits on the die. Follow your bender's manual.</li><li><strong>Bend in order.</strong> Work from one end. Check each angle with a gauge before moving to the next bend.</li></ol>
+
+<p>Step 6 trips up a lot of people. Rogue Fab's <a href="https://www.roguefab.com/bending-101/" target="_blank" rel="noopener">Bending 101</a> calls it the <strong>bend offset</strong>: the distance between the start of the bend and where you line the tube up in the machine. Rogue Fab lists offsets by machine and die, and notes that its tables are being updated. Other makers explain it in their own manuals. Find yours, and confirm it with a test bend.</p>
+
+<p>For parts with bends in more than one plane, you'll also need to rotate the tube between bends. That's a topic of its own. See our guide to <a data-bhg-link="tube-bend-rotation-twist" href="/tube-bend-rotation-twist/">tube bend rotation</a>, and our step-by-step guide to <a data-bhg-link="how-to-lay-out-tube-bends" href="/how-to-lay-out-tube-bends/">laying out tube bends</a>.</p>
+
+<figure class="bhg-figure" data-slot="tube-stock"><figcaption>Tube comes in long sticks. Good cut-length math lets you plan several parts per stick with less scrap.</figcaption></figure>
+
+<h2 id="real-life">Real-life lessons from the cut list</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The hoop that came out wide</span><p>A builder measures an old hoop outside-to-outside and uses that number as the top leg. After bending, the new hoop is wider than the old one, by about one tube OD. The outside dimension had never been converted to centerline.</p><p><strong>Lesson:</strong> subtract one OD from outside-to-outside widths, and half an OD from heights to the top of the tube.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The "just add the legs" bumper</span><p>Someone cuts a bumper tube to the sum of its leg lengths, with no bend deduction. With two 90° corners on a 6" die, the tube is about 5.15" too long. The extra length ends up in the wrong place, so the wings come out uneven.</p><p><strong>Lesson:</strong> subtract two tangents and add one arc for every bend. For a 90° on a 6" die, that's 2.575" per bend.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The last bend with nothing to clamp</span><p>A builder cuts a part to the exact math. The last bend sits a few inches from the tube end. There isn't enough straight tube left for the bender's clamp. The part gets scrapped.</p><p><strong>Lesson:</strong> leave extra length for clamping, bend, then trim.</p></div>
+
+<h2 id="mistakes">Common cut-length mistakes (and how to fix them)</h2>
+
+<p>Most wasted tube comes from a handful of mistakes. Here they are, with the fix for each.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Adding the legs and calling it done.</strong> Every bend shortens the tube.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> subtract two tangents and add one arc per bend.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Mixing outside and centerline dimensions.</strong> The part comes out an OD too wide or half an OD too tall.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> convert every drawing dimension to the centerline before doing the math.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Using degrees where radians belong.</strong> 6 × 90 = 540 isn't an arc length.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> multiply degrees by 0.017453 first, or use CLR × degrees × 0.017453 in one step.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Copying a typo'd constant.</strong> Some web pages show 0.001745, which is 10× too small.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> sanity-check: a 90° bend on a 6" die should use about 9.4" of tube.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Measuring every mark from the last mark.</strong> Small errors stack up along the tube.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> measure every mark from the same end of the tube.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Skipping the test bend.</strong> Springback, stretch and your bender's offset all shift the result.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> bend a scrap piece with the same tube and die, measure it and adjust your numbers.</p></div>
+
+<h2 id="pro-tips">Pro tips for faster, more accurate cut lengths</h2>
+
+<p>These habits turn cut-length math from a chore into a two-minute job. They also save a lot of tube.</p>
+
+<ul><li>💡 <strong>Write inches per degree on each die.</strong> CLR × 0.017453. Then arc length is just degrees × that number.</li><li>💡 <strong>Memorize the 90° rule.</strong> On a 90° bend, the tangent length equals the CLR, and the arc is CLR × 1.5708.</li><li>💡 <strong>Carry four decimals, round once.</strong> Do all the math in decimals, then round the final cut length to the nearest 1/16".</li><li>💡 <strong>Draw centerlines.</strong> Sketch each part as a centerline with the corner points marked. Leg lengths come straight off the sketch.</li><li>💡 <strong>Build a cut-list spreadsheet.</strong> One row per part, with columns for legs, angles, tangents and arcs. You'll reuse it on every project.</li><li>💡 <strong>Keep a bend log.</strong> Record tube, die, springback and how far your test parts landed from the math. Use it to fine-tune.</li><li>💡 <strong>Nest parts on the stick.</strong> Add up your cut lengths plus saw kerf and trim. Plan which parts come from which stick before you cut.</li></ul>
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: verify the first part</span><p>On a multi-part job, experienced builders bend one complete part first. They measure it against the drawing and adjust the cut list before cutting the rest. One test part is cheaper than a pile of wrong ones.</p></div>
+
+<p>Building exhaust instead? The same math works for mandrel bends. Our <a data-bhg-link="exhaust-tube-cut-length" href="/exhaust-tube-cut-length/">exhaust tube cut length guide</a> covers pre-bent U-bends and J-bends.</p>
+
+<!-- 📷 IMAGE IDEA (owner's photo): a bent hoop on the bench next to a tape measure, with start-of-bend and end-of-bend marks visible on the tube. Suggested alt text: "Tube marked with start and end of bend points before bending". -->
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is the formula for tube bend length?</h3><p>Arc length = CLR × angle in radians, or CLR × degrees × 0.017453. A 90° bend on a 6" CLR die uses about 9.42" of tube.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How do I calculate the cut length for a bent tube?</h3><p>Add all the leg lengths measured to the corner points. Subtract two tangent lengths per bend, where tangent = CLR × tan(angle ÷ 2). Then add one arc length per bend, plus a little trim allowance.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Why is the tangent length equal to the CLR on a 90° bend?</h3><p>The tangent length is CLR × tan(angle ÷ 2). For 90°, that's tan(45°), which equals 1. So the tangent length is exactly the CLR.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Why does JD2 use .0175 instead of 0.01745?</h3><p>It's a rounded version of π ÷ 180. It reads about 0.27% long. That's fine for a single bend, but use 0.017453 if you're adding up many bends.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Do I measure bend length on the inside or outside of the tube?</h3><p>Neither. Measure at the centerline. The inside of the bend is shorter than the centerline and the outside is longer.</p></div></div>
+
+<h2 id="checklist">Your cut-length checklist</h2>
+
+<p>Run through this list before you cut any tube for a bent part.</p>
+
+<div class="bhg-checklist"><ul><li>I've measured the true OD with calipers</li><li>Every leg is a centerline length to a corner point (or to the tangent point on U-bends)</li><li>I know my die's CLR and its inches per degree</li><li>I've converted degrees to radians for every arc</li><li>I've figured the tangent length for every bend</li><li>Cut length = legs − 2 tangents per bend + 1 arc per bend</li><li>I've added trim allowance and clamp room</li><li>All marks are measured from the same end of the tube</li><li>I know my bender's start-of-bend offset</li><li>I've planned a test bend to check springback and stretch</li></ul></div>
+
+<p>The tube bend length formula is just three small steps: arc, tangent, then cut length. Do them in order, keep everything on the centerline and check with a test bend. Your parts will come out the right size, and your scrap pile will shrink. 🔧</p>
+
+<div class="bhg-cta"><h3>Let the calculator check your math</h3><p>Enter your OD, wall, die CLR and bend angles to get arc length, tangent length and cut length in seconds. Or see the geometry drawn out in the visualizer.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/calculator/">Open the bend calculator</a><a class="bhg-btn bhg-btn--ghost" href="/visualizer/">Try the geometry visualizer</a></div></div>

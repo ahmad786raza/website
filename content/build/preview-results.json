@@ -36,5 +36,43 @@
   "imgsOk": true,
   "imgCount": 5,
   "problems": []
+ },
+ "harbor-freight-12-ton-pipe-bender": {
+  "id": 123,
+  "h1": 1,
+  "cat": "Home\nBuying Guides\nHarbor Freight 12 Ton Pipe Bender: What It’s For (and What It Isn’t)",
+  "php": false,
+  "inlineToc": false,
+  "tocBroken": 0,
+  "amazon": 15,
+  "amazonBad": 0,
+  "disclosure": true,
+  "leftoverLinks": 0,
+  "products": 3,
+  "credits": 8,
+  "overflow": false,
+  "jsErrors": 0,
+  "imgsOk": true,
+  "imgCount": 5,
+  "problems": []
+ },
+ "manual-vs-hydraulic-tube-bender": {
+  "id": 124,
+  "h1": 1,
+  "cat": "Home\nBuying Guides\nManual vs Hydraulic Tube Bender: Drives, Upgrade Kits and Pumps",
+  "php": false,
+  "inlineToc": false,
+  "tocBroken": 0,
+  "amazon": 4,
+  "amazonBad": 0,
+  "disclosure": true,
+  "leftoverLinks": 0,
+  "products": 3,
+  "credits": 5,
+  "overflow": false,
+  "jsErrors": 0,
+  "imgsOk": true,
+  "imgCount": 4,
+  "problems": []
  }
 }

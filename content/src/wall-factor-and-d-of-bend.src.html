@@ -1,0 +1,213 @@
+<p class="bhg-lead">Will this tube bend cleanly on this die, or will it wrinkle, flatten or kink? Before you waste a stick finding out, two quick numbers can tell you a lot. They're called <strong>wall factor and D of bend</strong>, and every tooling maker, mandrel chart and serious fabricator uses them.</p>
+
+<p>You'll see them in forum threads ("that's a 30 wall factor at 1.5D, you need a mandrel"). You'll see them on mandrel and wiper charts. And you'll see them inside bend calculators. They look like jargon, but each one is a single division. One describes the tube. The other describes the bend.</p>
+
+<p>This guide explains both, the way a friend in the next garage bay would. You'll learn what each number means and why it matters. You'll see how to read a mandrel chart, and what the numbers mean for a garage bender with no mandrel at all. Every example shows the math, so you can run your own tube and die through it in a minute.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p>Two simple ratios predict how hard a bend will be:</p><ul><li><strong>Wall factor = OD ÷ wall.</strong> Higher means a thinner wall for the size, and a harder bend. 1.75" × .120" tube = 14.6.</li><li><strong>D of bend = CLR ÷ OD.</strong> Lower means a tighter bend, and a harder one. 1.75" tube on a 6" CLR die = 3.4D.</li><li><strong>Mandrel and wiper charts</strong> plot one against the other to show whether you need a mandrel, how many balls and a wiper die.</li><li><strong>Garage rule of thumb:</strong> without a mandrel, Pro-Tools puts the practical minimum at about 3D. Measure your real OD and wall with <a href="#digital-caliper">digital calipers</a>.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#two-numbers">The two numbers</a></li><li><a href="#wall-factor">Wall factor explained</a></li><li><a href="#d-of-bend">D of bend explained</a></li><li><a href="#together">How they work together</a></li><li><a href="#mandrel-chart">Reading a mandrel and wiper chart</a></li><li><a href="#garage-bending">Garage bending without a mandrel</a></li><li><a href="#worked-examples">Worked examples</a></li><li><a href="#real-life">Real-life lessons</a></li><li><a href="#mistakes">Common mistakes</a></li><li><a href="#pro-tips">Pro tips</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Your checklist</a></li></ol></div>
+
+<h2 id="two-numbers">Wall factor and D of bend: two numbers that predict your bend</h2>
+
+<p>When tube bends, three things try to go wrong. The outside wall stretches and thins. The inside wall gets squeezed and can wrinkle. And the round tube wants to flatten into an oval. How likely each problem is depends mostly on two things: how thin the wall is for the tube's size, and how tight the bend is for the tube's size.</p>
+
+<p>That's exactly what our two numbers capture. Pro-Tools defines them in its <a href="https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate" target="_blank" rel="noopener">wall factor and D of bend article</a>:</p>
+
+<ul><li><strong>Wall factor</strong> = tube outside diameter (OD) ÷ wall thickness</li><li><strong>D of bend</strong> = centerline radius (CLR) ÷ tube OD</li></ul>
+
+<p>Here's an easy way to remember them. Wall factor describes the <em>tube</em>. D of bend describes the <em>bend</em>. Put the two together and you have a decent picture of the job.</p>
+
+<table><thead><tr><th>Ratio</th><th>Formula</th><th>What it describes</th><th>A higher number means</th><th>Example: 1.75" × .120" on 6" CLR</th></tr></thead><tbody><tr><td><strong>Wall factor</strong></td><td>OD ÷ wall</td><td>How thin the wall is for the tube size</td><td>Thinner wall, <strong>harder</strong> bend</td><td>1.75 ÷ .120 = 14.6</td></tr><tr><td><strong>D of bend</strong></td><td>CLR ÷ OD</td><td>How tight the bend is for the tube size</td><td>Gentler bend, <strong>easier</strong></td><td>6 ÷ 1.75 = 3.4D</td></tr></tbody></table>
+
+<p>Notice the two run in opposite directions. A <em>high</em> wall factor is bad news. A <em>high</em> D of bend is good news. The Fabricator's tooling articles put it the same way: the greater the wall factor, the more difficult the bend, and the greater the D of bend, the less difficult it is.</p>
+
+<div class="bhg-callout bhg-callout--tip"><span class="bhg-callout-icon">💡</span><span class="bhg-callout-title">They're ratios, so units don't matter</span><p>Inches or millimeters, the answer is the same, as long as you use the same unit top and bottom. That's why tooling charts can use them for any tube size.</p></div>
+
+<h2 id="wall-factor">Wall factor explained</h2>
+
+<p>Wall factor tells you how thin the wall is compared with the tube's size. To get it, divide the OD by the wall thickness. That's it.</p>
+
+<p>Take 1.75" OD tube with a .120" wall. 1.75 ÷ .120 = <strong>14.6</strong>. Now the same OD with a .095" wall: 1.75 ÷ .095 = <strong>18.4</strong>. Same size, thinner wall, higher wall factor.</p>
+
+<h3>Why thin walls struggle</h3>
+
+<p>On the inside of a bend, the tube wall has to get shorter. A thick wall can squeeze and thicken. A thin wall is more likely to buckle into ripples instead. That's a wrinkle. On the outside, a thin wall has less metal to give before it thins too much or flattens. So the higher the wall factor, the more support the tube needs to bend cleanly.</p>
+
+<h3>Common garage tubes</h3>
+
+<table><thead><tr><th>Tube (OD × wall)</th><th>Wall factor</th><th>What it tells you</th></tr></thead><tbody><tr><td><strong>1.5" × .120"</strong></td><td>12.5</td><td>Thick wall for the size</td></tr><tr><td><strong>1.75" × .120"</strong></td><td>14.6</td><td>Thick wall for the size</td></tr><tr><td><strong>1.5" × .095"</strong></td><td>15.8</td><td>A bit thinner</td></tr><tr><td><strong>2" × .120"</strong></td><td>16.7</td><td>Same wall, bigger tube, so a higher number</td></tr><tr><td><strong>1.75" × .095"</strong></td><td>18.4</td><td>Thinner again</td></tr><tr><td><strong>1.75" × .083"</strong></td><td>21.1</td><td>Thinner still</td></tr><tr><td><strong>2" × .065"</strong></td><td>30.8</td><td>Thin wall</td></tr><tr><td><strong>3" × .065"</strong></td><td>46.2</td><td>Thin-wall exhaust territory</td></tr></tbody></table>
+
+<p>One thing wall factor does <em>not</em> tell you is how much force the bend takes. Thick wall has a low wall factor, so it's less likely to wrinkle. But it takes far more muscle to bend. JD2, for example, says its Model 32 needs hydraulics for round tube over 2" × .120". That's a capacity limit, not a wall factor limit. You need both checks.</p>
+
+<h2 id="d-of-bend">D of bend explained</h2>
+
+<p>D of bend tells you how tight the bend is compared with the tube's size. Divide the die's CLR by the tube's OD. A 1.75" tube on a 6" CLR die is 6 ÷ 1.75 = <strong>3.4D</strong>. A 3" exhaust bend with a 4.5" CLR is 4.5 ÷ 3 = <strong>1.5D</strong>.</p>
+
+<p>The lower the D, the tighter the bend. Tighter bends stretch the outside wall more and squeeze the inside wall more. So lower D means a harder bend. Want the full story on CLR itself? Read our <a data-bhg-link="bend-radius-explained" href="/bend-radius-explained/">centerline radius guide</a>.</p>
+
+<h3>How hard is a given D?</h3>
+
+<p>Tube fabricator Advanced Tubular gives rough <a href="https://advancedtubular.helpjuice.com/en_US/bending-terminology/what-is-d-of-bend-in-tube-fabrication" target="_blank" rel="noopener">difficulty bands for D of bend</a>. These come from production bending on professional machines, so treat them as context for garage work, not targets.</p>
+
+<table><thead><tr><th>D of bend</th><th>Advanced Tubular's description</th><th>On 1.75" tube</th></tr></thead><tbody><tr><td><strong>2.00 or more</strong></td><td>Generally not difficult</td><td>3.5" CLR or more</td></tr><tr><td><strong>1.50</strong></td><td>Moderately difficult</td><td>2.625" CLR</td></tr><tr><td><strong>1.00</strong></td><td>Difficult</td><td>1.75" CLR</td></tr><tr><td><strong>0.75</strong></td><td>Very difficult and much more expensive</td><td>1.31" CLR</td></tr></tbody></table>
+
+<p>Advanced Tubular adds that D of bend at 1 and below is possible but rare. It takes special benders that push material into the die. It also says other variables, like wall factor, change what counts as difficult.</p>
+
+<h3>The garage reality check</h3>
+
+<p>Those bands assume a production machine with a mandrel. A garage rotary-draw bender usually has no mandrel. For that, Pro-Tools puts the practical minimum CLR at about <strong>3 × OD</strong>, and Baileigh's <a href="https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/" target="_blank" rel="noopener">basic bending concepts</a> suggests starting at <strong>4 × OD</strong>. So in a home shop, think 3D as a floor and 3.5D to 4D as comfortable.</p>
+
+<h2 id="together">How wall factor and D of bend work together</h2>
+
+<p>Neither number tells the whole story alone. A thin wall on a gentle bend can be fine. A thick wall on a very tight bend can be fine too. The trouble comes when a high wall factor meets a low D of bend. The Fabricator's mandrel articles sum it up: the support a tube needs goes up as wall factor rises and D of bend falls.</p>
+
+<h3>One number that combines both</h3>
+
+<p>Some makers roll the two into a single difficulty number. BLM Group describes a <a href="https://blog.blmgroup.com/what-is-the-best-cnc-tube-bending-machine-for-aerospace-work" target="_blank" rel="noopener">"difficulty ratio"</a> as the diameter squared, divided by the wall thickness times the bend radius. Do a little algebra and that's just <strong>wall factor ÷ D of bend</strong>.</p>
+
+<p>Here's the check. For 1.75" × .120" on a 6" CLR: wall factor 14.58 ÷ D 3.43 = 4.25. BLM's version: 1.75² ÷ (.120 × 6) = 3.0625 ÷ 0.72 = 4.25. Same answer. ✅</p>
+
+<h3>Comparing jobs</h3>
+
+<ul><li><strong>1.75" × .120" on a 6" die:</strong> 14.58 ÷ 3.43 = 4.3</li><li><strong>1.75" × .095" on the same die:</strong> 18.42 ÷ 3.43 = 5.4</li><li><strong>2" × .065" on a 2.5" CLR:</strong> 30.77 ÷ 1.25 = 24.6</li><li><strong>3" × .065" exhaust at 1D:</strong> 46.15 ÷ 1.00 = 46.2</li></ul>
+
+<p>The higher the number, the harder the job. You can see at a glance why a thin-wall 1D exhaust bend lives in a different world from a thick-wall bumper bend.</p>
+
+<div class="bhg-callout bhg-callout--warn"><span class="bhg-callout-icon">⚠️</span><span class="bhg-callout-title">Use it to compare, not as pass or fail</span><p>The combined ratio is handy for comparing two jobs. But we haven't seen a published cut-off that says "below this number, it bends." For tooling decisions, use your tooling maker's chart, and test on scrap.</p></div>
+
+<blockquote class="bhg-quote"><p>Wall factor describes the tube. D of bend describes the bend. Trouble starts when a thin wall meets a tight radius.</p></blockquote>
+
+<h2 id="mandrel-chart">How to read a mandrel and wiper chart</h2>
+
+<p>A <strong>mandrel</strong> is a support that sits inside the tube during the bend. A <strong>wiper die</strong> supports the inside of the bend, right where wrinkles start. Production shops decide whether they need them using a mandrel and wiper chart. Wall factor and D of bend are the two axes.</p>
+
+<p>Tube Form Solutions <a href="https://tubeformsolutions.com/blog/mandrel-pipe-bending" target="_blank" rel="noopener">explains</a> that such a chart shows three things. It shows whether a mandrel is needed. If so, it shows the pitch and number of balls. And it shows whether a wiper is needed.</p>
+
+<ol class="bhg-steps"><li><strong>Work out your wall factor.</strong> OD ÷ wall, using measured numbers.</li><li><strong>Work out your D of bend.</strong> CLR ÷ OD.</li><li><strong>Find the row and column.</strong> One axis is wall factor, the other is D of bend.</li><li><strong>Read the cell.</strong> It gives the mandrel style and ball count, and flags a wiper if needed.</li><li><strong>Check the chart's assumptions.</strong> Material and bend angle matter. Read the notes.</li></ol>
+
+<h3>A worked example from The Fabricator</h3>
+
+<p>The Fabricator's article on <a href="https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper" target="_blank" rel="noopener">selecting the right mandrel and wiper</a> walks through 2" OD tube with a .065" wall on a 2.5" CLR. That's a wall factor of 2 ÷ .065 = 30.8 and a D of bend of 2.5 ÷ 2 = 1.25. On that article's chart, the cell reads <strong>M3W</strong>. That means a standard-pitch mandrel with three balls, plus a wiper die.</p>
+
+<p>The same article makes another key point. When a 2" tube moves from a 4" CLR to a 3" CLR with a thin wall, what worked before may not work now. Change the wall or the radius, and you re-check the chart.</p>
+
+<h3>Mandrel types by wall factor</h3>
+
+<table><thead><tr><th>Mandrel type</th><th>Typical use, per The Fabricator</th></tr></thead><tbody><tr><td><strong>Plug mandrel</strong></td><td>A solid rod. Mainly heavy-wall tube and larger radii.</td></tr><tr><td><strong>Standard ball mandrel</strong></td><td>The most common type. Normal walls, wall factor about 15 to 70, average radii.</td></tr><tr><td><strong>Thin-wall or close-pitch mandrel</strong></td><td>Thinner walls, wall factor of 70 or more, and tight radii.</td></tr><tr><td><strong>Ultrathin-wall mandrel</strong></td><td>Even thinner walls, beyond the thin-wall range.</td></tr></tbody></table>
+
+<p>Those ranges come from The Fabricator's article on <a href="https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/using-mandrels-for-bending-tube" target="_blank" rel="noopener">using mandrels for bending tube</a>. It also notes that as wall factor rises, the number of balls needed goes up.</p>
+
+<h3>Know the chart's limits</h3>
+
+<p>Most of these charts are built around bending mild steel to 180°. Different materials and angles can shift the answer. Charts also vary between tooling makers. Treat any chart as a starting point, and follow your own tooling maker's chart for your machine.</p>
+
+<figure class="bhg-figure" data-slot="mandrel"><figcaption>Tight, thin-wall bends like these sit high on the wall factor scale and low on D of bend, which is mandrel territory.</figcaption></figure>
+
+<h2 id="garage-bending">What it means for garage bending without a mandrel</h2>
+
+<p>Most garage rotary-draw benders don't use a mandrel. The die and the follower block support the outside of the tube, and that's it. So in a home shop, wall factor and D of bend work as a quick sanity check before you buy tube or dies.</p>
+
+<h3>Where common garage jobs sit</h3>
+
+<p>Look back at the common tubes above. Typical bumper, slider and cage tubes have wall factors in the teens and low twenties. Baileigh says the most popular off-road dies are 1.5" and 1.75" at about 5.5" and 6.5" CLR. That's 3.7D for both. So the common garage zone is a modest wall factor at roughly 3 to 4D.</p>
+
+<h3>When the numbers look tough</h3>
+
+<ul><li><strong>Use a bigger CLR.</strong> Raising D is often the easiest fix. Stay at 3D or more without a mandrel.</li><li><strong>Use a thicker wall</strong> if your design, weight budget and any rulebook allow it. That lowers the wall factor.</li><li><strong>Buy pre-bent mandrel sections.</strong> For thin-wall exhaust, most garage builders cut and weld mandrel U-bends and J-bends.</li><li><strong>Test on scrap.</strong> A single test bend tells you more than any chart.</li></ul>
+
+<h3>Material changes the picture</h3>
+
+<p>Charts usually assume mild steel. Other materials behave differently. Rogue Fab recommends about 3.5–4D for <a href="https://www.roguefab.com/aluminum-pipe-benders/" target="_blank" rel="noopener">6061-T6 aluminum</a> and calls 3D marginal. JD2 says 4130 chromoly springs back about twice as much as mild steel of the same size and wall. And bender capacities change too.</p>
+
+<p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+
+<p>Eastwood's <a href="https://www.amazon.com/dp/B07PRLN2PG?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">High Capacity bender</a>, for example, is listed for 2" × .120" mild steel but limits 4130 to a .090" wall. On 2" tube, that's a wall factor of 16.7 in mild steel but 22.2 in chromoly. Stronger material, so a thinner maximum wall. Always check your bender's capacity chart for your material. Our <a data-bhg-link="best-tube-bender-for-chromoly" href="/best-tube-bender-for-chromoly/">chromoly bender guide</a> covers this in depth.</p>
+
+<h3 id="digital-caliper">The tool that keeps the math honest: digital calipers</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">🔧 Measuring essential</span><p class="bhg-product-title">NEIKO 01407A Electronic Digital Caliper (0–6")</p><p class="bhg-product-sub">A budget digital caliper for checking real tube OD and wall thickness.</p></div><div class="bhg-product-body"><div><p>Both ratios depend on the OD and the wall. Tube labels and yard tags aren't always right, and a small wall difference changes the wall factor. Calipers check both at the cut end in seconds.</p><p><strong>Who it's for:</strong> anyone ordering dies, comparing tube from different suppliers or working out wall factor before a job.</p><p><strong>Why we picked it:</strong> it's a widely sold, low-cost caliper with inch, fraction and millimeter modes. Our pick is based on the published listing, not hands-on testing. See <a href="/methodology/">how we evaluate equipment</a>.</p></div><dl class="bhg-specs"><div><dt>Range</dt><dd>0–6" (0–150 mm)</dd></div><div><dt>Readout</dt><dd>Inch, fraction and mm</dd></div><div><dt>Body</dt><dd>Stainless steel, per the main listing</dd></div><div><dt>Zero</dt><dd>Can be set at any point</dd></div><div><dt>Check</dt><dd>Some listings bundle multiple units or show a different model, so confirm 01407A</dd></div></dl></div><div class="bhg-product-lists"><div class="bhg-pros"><h4>Why we like it</h4><ul><li>Reads OD and wall at a cut end</li><li>Fraction mode suits inch tube sizes</li><li>Cheap enough to keep one at the bender</li></ul></div><div class="bhg-cons"><h4>Know before you buy</h4><ul><li>Can't reach the wall in the middle of a tube</li><li>A budget tool, not a lab instrument</li><li>Battery-powered, so keep a spare</li></ul></div></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B000GSLKIW?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Affiliate links. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<figure class="bhg-figure" data-slot="measuring"><figcaption>Measure the real OD and wall at a cut end. Both ratios are only as good as these two numbers.</figcaption></figure>
+
+<h2 id="worked-examples">Worked examples: five common jobs</h2>
+
+<p>Let's run five real-world jobs through both numbers. The math is shown for each one.</p>
+
+<h3>1. A bumper in 1.75" × .120" on a 6" die</h3>
+
+<p>Wall factor: 1.75 ÷ .120 = 14.6. D of bend: 6 ÷ 1.75 = 3.43. Combined: 14.6 ÷ 3.43 = 4.3. This is right in the common garage zone, above the 3D floor.</p>
+
+<h3>2. A lighter bar in 1.75" × .095" on the same die</h3>
+
+<p>Wall factor: 1.75 ÷ .095 = 18.4. D stays 3.43. Combined: 5.4. The thinner wall makes the job harder than example 1, even though the die didn't change. Expect to watch the inside of the bend more closely.</p>
+
+<h3>3. 2" × .120" on a 6" die</h3>
+
+<p>Wall factor: 2 ÷ .120 = 16.7. D of bend: 6 ÷ 2 = 3.0. That's right at Pro-Tools' practical non-mandrel floor of about 3 × OD. It can work, but there's no margin. And at 2" × .120", you're also near the manual limit of many garage benders, so check your capacity chart.</p>
+
+<h3>4. 3" × .065" exhaust at 1.5D</h3>
+
+<p>Wall factor: 3 ÷ .065 = 46.2. D of bend: 4.5 ÷ 3 = 1.5. Combined: 30.8. High wall factor, low D. That's mandrel and wiper territory, well beyond a garage rotary-draw bender. Buy pre-bent mandrel sections instead.</p>
+
+<h3>5. The Fabricator's chart example</h3>
+
+<p>2" × .065" on a 2.5" CLR. Wall factor 30.8, D of bend 1.25. The chart in that article calls for a three-ball standard-pitch mandrel with a wiper.</p>
+
+<table><thead><tr><th>Job</th><th>Wall factor</th><th>D of bend</th><th>WF ÷ D</th><th>What it suggests</th></tr></thead><tbody><tr><td><strong>1.75" × .120" on 6"</strong></td><td>14.6</td><td>3.43</td><td>4.3</td><td>Common garage zone</td></tr><tr><td><strong>1.75" × .095" on 6"</strong></td><td>18.4</td><td>3.43</td><td>5.4</td><td>Harder; watch for wrinkles</td></tr><tr><td><strong>2" × .120" on 6"</strong></td><td>16.7</td><td>3.00</td><td>5.6</td><td>At the non-mandrel floor</td></tr><tr><td><strong>3" × .065" at 1.5D</strong></td><td>46.2</td><td>1.50</td><td>30.8</td><td>Mandrel and wiper</td></tr><tr><td><strong>2" × .065" on 2.5"</strong></td><td>30.8</td><td>1.25</td><td>24.6</td><td>M3W on The Fabricator's chart</td></tr></tbody></table>
+
+<p>Our free <a href="/calculator/">bend calculator</a> works out wall factor and D of bend for you, along with arc and cut length.</p>
+
+<h2 id="real-life">Real-life lessons</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The weight-saving wall</span><p>A builder's first rack in 1.75" × .120" bends cleanly. For the next one, they switch to a much thinner wall to save weight, on the same die. The inside of each bend now shows small ripples. The wall factor jumped, and the die stayed just as tight.</p><p><strong>Lesson:</strong> when the wall changes, re-check the wall factor. A combo that worked before may not work now.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The exhaust on a bumper bender</span><p>Someone tries to bend thin-wall exhaust tube on a tight die meant for structural tube. The bend flattens and kinks. The numbers show why: a wall factor in the 40s at a low D is mandrel work.</p><p><strong>Lesson:</strong> for thin-wall exhaust, buy mandrel bends and cut and weld them.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The chromoly that looked fine</span><p>A cage builder checks wall factor for 2" × .120" 4130 and decides it's easy. Then they read their bender's chart. It limits 4130 to a thinner wall than mild steel. The tube was fine for wrinkles but too strong for the bender.</p><p><strong>Lesson:</strong> wall factor predicts wrinkle and flattening risk. The capacity chart decides what your bender can pull.</p></div>
+
+<figure class="bhg-figure" data-slot="tube-stock"><figcaption>Two tubes can share an OD and still bend very differently. The wall thickness changes the wall factor.</figcaption></figure>
+
+<h2 id="mistakes">Common mistakes (and how to fix them)</h2>
+
+<p>Here are the slip-ups that trip people up most with these two ratios.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Flipping a ratio.</strong> Wall ÷ OD gives 0.069, not 14.6. CLR ÷ OD is D, not OD ÷ CLR.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> wall factor always has OD on top. D of bend always has CLR on top. Both answers should usually be bigger than 1.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Using a pipe's nominal size as the OD.</strong> 1-1/2" pipe is 1.900" OD, so both ratios come out wrong.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> measure the real OD with calipers.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Trusting the tag for wall thickness.</strong> A small wall difference moves the wall factor.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> measure the wall at a clean cut end, in a few spots.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Reading a mild-steel chart for every material.</strong> Charts are usually built for mild steel at 180°.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> check the chart's notes, and test-bend aluminum, 4130 and stainless on scrap.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Thinking a low wall factor means an easy pull.</strong> Thick wall resists wrinkles but needs more force.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> check your bender's capacity chart as well as the ratios.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Changing CLR or wall without re-checking.</strong> A setup that worked can fail on a tighter die or thinner wall.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> recalculate both numbers any time the tube or die changes.</p></div>
+
+<h2 id="pro-tips">Pro tips</h2>
+
+<p>These habits make wall factor and D of bend part of your routine, instead of something you look up after a bad bend.</p>
+
+<ul><li>💡 <strong>Write both numbers on every die.</strong> Mark the D of bend for each tube size the die fits. You'll never have to work it out at the bender again.</li><li>💡 <strong>Add wall factor to your bend log.</strong> Record OD, wall, wall factor, D, material and how the bend came out. Patterns show up fast.</li><li>💡 <strong>Measure every new batch.</strong> Tube from a new supplier can differ. A quick caliper check catches it.</li><li>💡 <strong>Raise D before you lower wall.</strong> If a combo looks tough, a bigger CLR die is often an easier fix than a heavier wall.</li><li>💡 <strong>Compare jobs with WF ÷ D.</strong> It's a quick way to see which of two setups is harder.</li><li>💡 <strong>Ask your tooling maker.</strong> If you're buying mandrel tooling, send them your OD, wall, CLR, angle and material. Their chart is the one that counts.</li></ul>
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: check both numbers before buying tube</span><p>Experienced builders run wall factor and D of bend before they order tube or dies, not after the first wrinkle. Two divisions on the back of an envelope can save a whole stick of tube.</p></div>
+
+<p>Want to go deeper on bend defects? See our guides to <a data-bhg-link="tube-wrinkling-prevention" href="/tube-wrinkling-prevention/">preventing tube wrinkles</a>, <a data-bhg-link="ovality-in-tube-bending" href="/ovality-in-tube-bending/">ovality in tube bending</a> and <a data-bhg-link="mandrel-vs-rotary" href="/mandrel-vs-rotary/">mandrel vs rotary-draw bending</a>.</p>
+
+<!-- 📷 IMAGE IDEA (owner's photo): calipers measuring the wall thickness at a freshly cut tube end, with the readout visible. Suggested alt text: "Digital calipers measuring tube wall thickness to work out wall factor". -->
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is wall factor in tube bending?</h3><p>Wall factor is the tube's outside diameter divided by its wall thickness. 1.75" × .120" tube has a wall factor of 14.6. Higher numbers mean a thinner wall for the size and a harder bend.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is D of bend?</h3><p>D of bend is the centerline radius divided by the tube's OD. A 1.75" tube on a 6" CLR die is 3.4D. Lower numbers mean a tighter, harder bend.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What wall factor needs a mandrel?</h3><p>It depends on the D of bend and the material, so there's no single cut-off. Use your tooling maker's mandrel chart. The Fabricator notes that standard ball mandrels cover wall factors of about 15 to 70.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What D of bend can a garage bender handle?</h3><p>Without a mandrel, Pro-Tools puts the practical minimum at about 3D, and Baileigh suggests starting around 4D. Popular off-road dies sit near 3.7D.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Is "bend ratio" the same as D of bend?</h3><p>Often, but people use the terms loosely. Some fabricators also say "D factor." If someone quotes a bend ratio, ask whether they mean CLR ÷ OD.</p></div></div>
+
+<h2 id="checklist">Your wall factor and D of bend checklist</h2>
+
+<p>Run through this list before you order tube, dies or mandrel tooling.</p>
+
+<div class="bhg-checklist"><ul><li>I've measured the real OD with calipers</li><li>I've measured the wall at a clean cut end</li><li>Wall factor = OD ÷ wall, worked out and written down</li><li>D of bend = CLR ÷ OD, worked out and written down</li><li>For non-mandrel bending, my D is at or above about 3</li><li>I've compared the job with WF ÷ D against setups that worked before</li><li>I've checked the material: mild steel, 4130, stainless or aluminum</li><li>My bender's capacity chart covers this OD, wall and material</li><li>For mandrel work, I've read my tooling maker's chart and its notes</li><li>I've planned a test bend on scrap from the same batch</li></ul></div>
+
+<p>Wall factor and D of bend are just two divisions. Do them before every new job, and you'll know which bends will be easy, which need care, and which need a mandrel. That's a lot of saved tube for very little math. 💡</p>
+
+<div class="bhg-cta"><h3>Run your numbers in seconds</h3><p>Enter your OD, wall and die CLR to get wall factor, D of bend, arc length and cut length. Or compare bender types to see which one suits your tube.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/calculator/">Open the bend calculator</a><a class="bhg-btn bhg-btn--ghost" href="/compare/">Compare bender types</a></div></div>
