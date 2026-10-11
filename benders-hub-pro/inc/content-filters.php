@@ -166,3 +166,28 @@ add_filter( 'the_content', 'bdh_strip_seed_scores', 9 );
  * Excerpt length/more for cards.
  */
 add_filter( 'excerpt_more', function () { return '…'; } );
+
+/**
+ * Links between articles that were written before their targets went live.
+ * Authors write <a data-bhg-link="target-slug" href="/target-slug/">text</a>.
+ * Once the target post (or page) is published the anchor points to its real
+ * permalink; until then only the text is shown, so visitors never hit a 404
+ * whatever order the drafts are published in.
+ */
+function bdh_resolve_article_links( $content ) {
+	if ( false === strpos( $content, 'data-bhg-link' ) ) { return $content; }
+	return preg_replace_callback(
+		'#<a\s[^>]*data-bhg-link=["\']([a-z0-9-]+)["\'][^>]*>(.*?)</a>#is',
+		function ( $m ) {
+			static $cache = array();
+			$slug = $m[1];
+			if ( ! array_key_exists( $slug, $cache ) ) {
+				$target         = get_page_by_path( $slug, OBJECT, array( 'post', 'page' ) );
+				$cache[ $slug ] = ( $target && 'publish' === $target->post_status ) ? get_permalink( $target ) : '';
+			}
+			return $cache[ $slug ] ? '<a href="' . esc_url( $cache[ $slug ] ) . '">' . $m[2] . '</a>' : $m[2];
+		},
+		$content
+	);
+}
+add_filter( 'the_content', 'bdh_resolve_article_links', 20 );
