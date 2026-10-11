@@ -1,6 +1,7 @@
 <?php
 /**
- * Navigation helpers: fallback menu, dropdown chevrons and mobile drawer support.
+ * Navigation: fallback primary menu that follows the site's information architecture,
+ * dropdown chevrons and the mobile drawer markup helpers.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -8,82 +9,107 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Fallback primary menu built from the site's real categories when no menu is assigned.
+ * The menu the theme builds when no WordPress menu is assigned to "Primary Menu".
+ * Each item points to a real destination: a topic category created by the setup tool,
+ * or the lead article until then. Items without a destination are skipped.
  */
+function hbg_menu_blueprint() {
+	$hubs  = hbg_topic_hubs();
+	$items = array();
+
+	$items[] = array( 'label' => __( 'Best Hoverboards', 'hoverboards-guide' ), 'url' => hbg_key_url( 'best' ) );
+
+	$short = array( 'hoverboards-for-kids' => __( 'For Kids', 'hoverboards-guide' ), 'hoverboards-for-adults' => __( 'For Adults', 'hoverboards-guide' ), 'all-terrain-hoverboards' => __( 'All-Terrain', 'hoverboards-guide' ) );
+	foreach ( array( 'hoverboards-for-kids', 'hoverboards-for-adults', 'all-terrain-hoverboards' ) as $slug ) {
+		$link = hbg_hub_link( $slug );
+		if ( $link['url'] ) {
+			$items[] = array( 'label' => $hubs[ $slug ]['name'], 'short' => $short[ $slug ], 'url' => $link['url'] );
+		}
+	}
+
+	$reviews = hbg_hub_link( 'hoverboard-reviews' );
+	$rev_children = array();
+	foreach ( array( 'budget-hoverboards', 'bluetooth-hoverboards' ) as $slug ) {
+		$l = hbg_hub_link( $slug );
+		if ( $l['url'] ) {
+			$rev_children[] = array( 'label' => $hubs[ $slug ]['name'], 'url' => $l['url'] );
+		}
+	}
+	if ( $reviews['url'] ) {
+		$items[] = array( 'label' => __( 'Reviews', 'hoverboards-guide' ), 'url' => $reviews['url'], 'children' => $rev_children );
+	}
+
+	$guides = get_term_by( 'slug', 'buying-guide', 'category' );
+	$guide_children = array();
+	if ( hbg_key_url( 'buying_guide' ) ) {
+		$guide_children[] = array( 'label' => __( 'Hoverboard buying guide', 'hoverboards-guide' ), 'url' => hbg_key_url( 'buying_guide' ) );
+	}
+	$guide_children[] = array( 'label' => __( 'Hoverboard finder', 'hoverboards-guide' ), 'url' => home_url( '/#finder' ) );
+	$guide_children[] = array( 'label' => __( 'Compare specifications', 'hoverboards-guide' ), 'url' => home_url( '/#compare' ) );
+	$items[] = array( 'label' => __( 'Buying Guides', 'hoverboards-guide' ), 'url' => $guides && $guides->count ? get_category_link( $guides ) : hbg_key_url( 'buying_guide' ), 'children' => $guide_children );
+
+	$safety = hbg_hub_link( 'hoverboard-safety' );
+	$fix    = hbg_hub_link( 'hoverboard-troubleshooting' );
+	$sh_children = array();
+	if ( $fix['url'] ) {
+		$sh_children[] = array( 'label' => $hubs['hoverboard-troubleshooting']['name'], 'url' => $fix['url'] );
+	}
+	if ( hbg_key_url( 'how_to_ride' ) ) {
+		$sh_children[] = array( 'label' => __( 'How to ride a hoverboard', 'hoverboards-guide' ), 'url' => hbg_key_url( 'how_to_ride' ) );
+	}
+	if ( $safety['url'] ) {
+		$items[] = array( 'label' => __( 'Safety & How-To', 'hoverboards-guide' ), 'url' => $safety['url'], 'children' => $sh_children );
+	}
+
+	// Secondary rides stay in one dropdown so hoverboard content keeps the spotlight.
+	$more = array();
+	foreach ( hbg_more_rides() as $ride ) {
+		$t = get_term_by( 'slug', $ride['slug'], 'category' );
+		if ( $t && $t->count > 0 ) {
+			$more[] = array( 'label' => $ride['label'], 'url' => get_category_link( $t ) );
+		}
+	}
+	if ( $more ) {
+		$items[] = array( 'label' => __( 'More rides', 'hoverboards-guide' ), 'short' => __( 'More', 'hoverboards-guide' ), 'url' => $more[0]['url'], 'children' => $more );
+	}
+
+	return apply_filters( 'hbg_menu_blueprint', array_values( array_filter( $items, function ( $i ) { return ! empty( $i['url'] ); } ) ) );
+}
+
 function hbg_fallback_menu( $args = array() ) {
 	$echo  = ! isset( $args['echo'] ) || $args['echo'];
 	$class = isset( $args['menu_class'] ) ? $args['menu_class'] : 'nav-menu';
-	$items = array();
-
-	$groups = array(
-		array( 'label' => __( 'Hoverboards', 'hoverboards-guide' ), 'slugs' => array( 'hoverboards' ), 'children' => array( 'bumper-cars', 'self-balancing' ) ),
-		array( 'label' => __( 'E-Scooters', 'hoverboards-guide' ), 'slugs' => array( 'e-scooters', 'scooters' ), 'children' => array( 'scooters' ) ),
-		array( 'label' => __( 'E-Bikes', 'hoverboards-guide' ), 'slugs' => array( 'ebikes' ), 'children' => array() ),
-		array( 'label' => __( 'Guides', 'hoverboards-guide' ), 'slugs' => array( 'buying-guide', 'guide' ), 'children' => array( 'guide', 'how-to', 'reviews' ) ),
-		array( 'label' => __( 'More rides', 'hoverboards-guide' ), 'slugs' => array( 'skateboards', 'unicycles', 'longboards' ), 'children' => array( 'skateboards', 'unicycles', 'longboards', 'electric-cars' ) ),
-	);
-
-	foreach ( $groups as $g ) {
-		$term = null;
-		foreach ( $g['slugs'] as $slug ) {
-			$t = get_term_by( 'slug', $slug, 'category' );
-			if ( $t && $t->count > 0 ) {
-				$term = $t;
-				break;
-			}
-		}
-		if ( ! $term ) {
-			continue;
-		}
-		$children = array();
-		foreach ( $g['children'] as $slug ) {
-			$c = get_term_by( 'slug', $slug, 'category' );
-			if ( $c && $c->count > 0 && $c->term_id !== $term->term_id ) {
-				$children[] = $c;
-			}
-		}
-		$items[] = array( 'label' => $g['label'], 'url' => get_category_link( $term ), 'children' => $children );
-	}
-
-	$items[] = array( 'label' => __( 'Top Picks', 'hoverboards-guide' ), 'url' => home_url( '/#picks' ), 'children' => array() );
-	$items[] = array( 'label' => __( 'Compare', 'hoverboards-guide' ), 'url' => home_url( '/#compare' ), 'children' => array() );
-
-	$html = '<ul class="' . esc_attr( $class ) . '">';
-	foreach ( $items as $item ) {
-		$has = ! empty( $item['children'] );
+	$mobile = false !== strpos( $class, 'mobile' );
+	$html  = '<ul class="' . esc_attr( $class ) . '">';
+	foreach ( hbg_menu_blueprint() as $item ) {
+		$has   = ! empty( $item['children'] );
+		$label = ( ! $mobile && ! empty( $item['short'] ) ) ? $item['short'] : $item['label'];
 		$html .= '<li class="menu-item' . ( $has ? ' menu-item-has-children' : '' ) . '">';
-		$html .= '<a href="' . esc_url( $item['url'] ) . '">' . esc_html( $item['label'] ) . ( $has ? hbg_svg_icon( 'chevron-down', 14, 'menu-chevron' ) : '' ) . '</a>';
+		$html .= '<a href="' . esc_url( $item['url'] ) . '">' . esc_html( $label ) . ( $has ? hbg_svg_icon( 'chevron-down', 14, 'menu-chevron' ) : '' ) . '</a>';
 		if ( $has ) {
 			$html .= '<ul class="sub-menu">';
 			foreach ( $item['children'] as $c ) {
-				$html .= '<li class="menu-item"><a href="' . esc_url( get_category_link( $c ) ) . '">' . esc_html( $c->name ) . '</a></li>';
+				$html .= '<li class="menu-item"><a href="' . esc_url( $c['url'] ) . '">' . esc_html( $c['label'] ) . '</a></li>';
 			}
 			$html .= '</ul>';
 		}
 		$html .= '</li>';
 	}
 	$html .= '</ul>';
-
 	if ( $echo ) {
 		echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 	return $html;
 }
 
-/**
- * Append a chevron to parent items in the primary menu.
- */
 function hbg_menu_item_chevron( $title, $item, $args, $depth ) {
-	if ( isset( $args->theme_location ) && in_array( $args->theme_location, array( 'primary', 'mobile' ), true ) && 0 === $depth && in_array( 'menu-item-has-children', (array) $item->classes, true ) ) {
+	if ( isset( $args->theme_location ) && 'primary' === $args->theme_location && 0 === $depth && in_array( 'menu-item-has-children', (array) $item->classes, true ) ) {
 		$title .= hbg_svg_icon( 'chevron-down', 14, 'menu-chevron' );
 	}
 	return $title;
 }
 add_filter( 'nav_menu_item_title', 'hbg_menu_item_chevron', 10, 4 );
 
-/**
- * Output the primary menu (desktop or mobile) with fallback.
- */
 function hbg_primary_menu( $location = 'primary', $class = 'nav-menu' ) {
 	wp_nav_menu( array(
 		'theme_location' => $location,

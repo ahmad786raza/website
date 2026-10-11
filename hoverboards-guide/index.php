@@ -5,16 +5,14 @@
 get_header();
 $has_sidebar = 'none' !== get_theme_mod( 'hbg_sidebar_position', 'right' );
 ?>
-
-<main id="main" class="site-main site-main--blog" role="main">
+<main id="main" class="site-main site-main--blog">
 	<div class="container">
 		<?php hbg_breadcrumbs(); ?>
-		<header class="page-header page-header--archive">
-			<div class="section-heading__kicker"><?php esc_html_e( 'The magazine', 'hoverboards-guide' ); ?></div>
-			<h1 class="page-title"><?php echo is_home() && ! is_front_page() && get_option( 'page_for_posts' ) ? esc_html( get_the_title( get_option( 'page_for_posts' ) ) ) : esc_html__( 'All articles', 'hoverboards-guide' ); ?></h1>
-			<p class="archive-desc"><?php esc_html_e( 'Every review, guide and how-to, newest first.', 'hoverboards-guide' ); ?></p>
+		<header class="archive-header">
+			<div class="section-heading__kicker"><?php esc_html_e( 'All articles', 'hoverboards-guide' ); ?></div>
+			<h1 class="archive-header__title"><?php echo is_home() && ! is_front_page() && get_option( 'page_for_posts' ) ? esc_html( get_the_title( get_option( 'page_for_posts' ) ) ) : esc_html__( 'Latest articles', 'hoverboards-guide' ); ?></h1>
+			<p class="archive-header__desc"><?php esc_html_e( 'Every review, guide and how-to, newest first.', 'hoverboards-guide' ); ?></p>
 		</header>
-
 		<div class="layout<?php echo $has_sidebar ? ' layout--sidebar' : ''; ?>">
 			<div class="layout__main">
 				<?php if ( have_posts() ) : ?>
@@ -32,5 +30,4 @@ $has_sidebar = 'none' !== get_theme_mod( 'hbg_sidebar_position', 'right' );
 		</div>
 	</div>
 </main>
-
 <?php get_footer(); ?>

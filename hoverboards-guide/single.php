@@ -1,11 +1,10 @@
 <?php
 /**
- * Single post template.
+ * Single post.
  */
 get_header();
 ?>
-
-<main id="main" class="site-main site-main--single" role="main">
+<main id="main" class="site-main site-main--single">
 	<div class="container">
 		<?php hbg_breadcrumbs(); ?>
 		<div class="layout layout--sidebar">
@@ -24,5 +23,4 @@ get_header();
 		</div>
 	</div>
 </main>
-
 <?php get_footer(); ?>

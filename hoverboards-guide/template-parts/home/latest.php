@@ -1,44 +1,29 @@
 <?php
 /**
- * Latest articles grid with AJAX "load more".
- * The sidebar is off by default on the homepage (v2.1) — enable it under
- * Customize → Hoverboards Guide → Homepage Sections if you prefer the two-column look.
+ * E. Reviews & comparisons: curated evergreen cards first, then the newest hoverboard posts via "load more".
  */
-$per     = max( 3, (int) get_theme_mod( 'hbg_latest_count', 6 ) );
-$exclude = hbg_featured_ids();
-$q       = new WP_Query( array( 'posts_per_page' => $per, 'post__not_in' => $exclude, 'ignore_sticky_posts' => true ) );
-if ( ! $q->have_posts() ) {
+$count = max( 3, (int) get_theme_mod( 'hbg_featured_count', 6 ) );
+$posts = hbg_get_featured_posts( $count );
+if ( ! $posts ) {
 	return;
 }
-$with_sidebar = (bool) get_theme_mod( 'hbg_home_sidebar', false );
-$all_url      = hbg_all_articles_url();
+$term    = get_term_by( 'slug', 'hoverboards', 'category' );
+$exclude = wp_list_pluck( $posts, 'ID' );
+$all_url = hbg_all_articles_url();
 ?>
-<section class="latest section<?php echo $with_sidebar ? ' latest--sidebar' : ''; ?>" id="latest" aria-labelledby="latest-heading">
+<section class="section section--alt reviews" id="reviews" aria-labelledby="reviews-title">
 	<div class="container">
-		<?php if ( $with_sidebar ) : ?><div class="layout layout--sidebar"><div class="layout__main"><?php endif; ?>
-
-			<?php hbg_section_heading( array(
-				'id'         => 'latest-heading',
-				'kicker'     => __( 'Fresh off the road', 'hoverboards-guide' ),
-				'title'      => __( 'Latest reviews & guides', 'hoverboards-guide' ),
-				'link'       => $all_url,
-				'link_label' => __( 'All articles', 'hoverboards-guide' ),
-			) ); ?>
-
-			<div class="grid grid--3" id="latest-grid" data-load-more-grid>
-				<?php while ( $q->have_posts() ) : $q->the_post(); ?>
-					<?php get_template_part( 'template-parts/content', 'card' ); ?>
-				<?php endwhile; wp_reset_postdata(); ?>
-			</div>
-
-			<?php if ( $q->max_num_pages > 1 ) : ?>
-			<div class="load-more-wrap">
-				<button type="button" class="btn btn--outline load-more" data-load-more data-page="1" data-per-page="<?php echo esc_attr( $per ); ?>" data-exclude="<?php echo esc_attr( implode( ',', $exclude ) ); ?>" data-max="<?php echo esc_attr( $q->max_num_pages ); ?>">
-					<?php esc_html_e( 'Load more articles', 'hoverboards-guide' ); ?>
-				</button>
-			</div>
-			<?php endif; ?>
-
-		<?php if ( $with_sidebar ) : ?></div><?php get_sidebar(); ?></div><?php endif; ?>
+		<?php hbg_section_heading( array( 'id' => 'reviews-title', 'kicker' => __( 'Reviews & comparisons', 'hoverboards-guide' ), 'title' => __( 'The hoverboard reviews and comparisons readers use most', 'hoverboards-guide' ), 'link' => $all_url, 'link_label' => __( 'All hoverboard articles', 'hoverboards-guide' ) ) ); ?>
+		<div class="grid grid--3" id="latest-grid" data-load-more-grid>
+			<?php foreach ( $posts as $p ) : ?>
+				<?php $GLOBALS['post'] = $p; setup_postdata( $p ); // phpcs:ignore ?>
+				<?php get_template_part( 'template-parts/content', 'card', array( 'heading' => 'h3' ) ); ?>
+			<?php endforeach; wp_reset_postdata(); ?>
+		</div>
+		<?php if ( $term && $term->count > count( $posts ) ) : ?>
+		<div class="load-more-wrap">
+			<button type="button" class="btn btn--ghost load-more" data-load-more data-page="0" data-per-page="6" data-cat="<?php echo esc_attr( $term->term_id ); ?>" data-exclude="<?php echo esc_attr( implode( ',', $exclude ) ); ?>"><?php esc_html_e( 'Load more hoverboard articles', 'hoverboards-guide' ); ?></button>
+		</div>
+		<?php endif; ?>
 	</div>
 </section>

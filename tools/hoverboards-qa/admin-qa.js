@@ -1,0 +1,57 @@
+// Dashboard tools check: log in, run Setup actions, save a product, verify front-end effects.
+const { chromium } = require(require('child_process').execSync('npm root -g').toString().trim() + '/playwright');
+const BASE = process.argv[2];
+let pass = 0, fail = 0;
+const check = (n, ok, info) => { console.log((ok ? 'PASS ' : 'FAIL ') + n + (info ? ' — ' + info : '')); ok ? pass++ : fail++; };
+(async () => {
+  const b = await chromium.launch();
+  const p = await (await b.newContext({ viewport: { width: 1366, height: 900 } })).newPage();
+  const errors = []; p.on('pageerror', e => errors.push(e.message));
+  await p.goto(BASE + '/wp-login.php');
+  await p.fill('#user_login', 'admin'); await p.fill('#user_pass', 'localtest-pass-123'); await p.click('#wp-submit');
+  await p.waitForURL(/wp-admin/);
+  await p.goto(BASE + '/wp-admin/admin.php?page=hbg-setup');
+  check('setup page loads', await p.evaluate(() => document.body.innerText.includes('Hoverboards Guide — Setup')));
+  const rows = await p.evaluate(() => [...document.querySelectorAll('table')[1].querySelectorAll('tbody tr')].map(r => r.innerText.replace(/\s+/g, ' ')));
+  console.log('  hubs before:', rows.slice(0, 3).join(' | '));
+  await p.click('button[name="do"][value="hubs"]');
+  await p.waitForURL(/hbg_msg/);
+  check('topic categories created', await p.evaluate(() => /categories created/.test(document.querySelector('.notice').innerText)), await p.evaluate(() => document.querySelector('.notice').innerText.trim()));
+  await p.click('button[name="do"][value="menu"]');
+  await p.waitForURL(/hbg_msg=Primary/);
+  check('primary menu created and assigned', await p.evaluate(() => document.body.innerText.includes('A WordPress menu is assigned')));
+  await p.click('button[name="do"][value="pages"]');
+  await p.waitForURL(/hbg_msg=\d\+draft/);
+  check('trust pages created as drafts (or already present)', await p.evaluate(() => /draft page/.test(document.querySelector('.notice').innerText)), await p.evaluate(() => document.querySelector('.notice').innerText.trim().split('\n')[0]));
+  await p.goto(BASE + '/wp-admin/admin.php?page=hbg-products');
+  check('products page loads', await p.evaluate(() => document.querySelectorAll('details.hbg-prod').length >= 7));
+  await p.click('details.hbg-prod:has(#hover1-titan_weight_cap) summary');
+  await p.fill('#hover1-titan_weight_cap', '265 lb (checked)');
+  await p.check('input[name="p[hover1-titan][verified]"]');
+  await p.fill('input[name="p[hover1-titan][checked]"]', '2026-10-11');
+  await p.click('form button.button-primary');
+  await p.waitForURL(/hbg_msg=Products/);
+  check('product saved', true);
+  // front-end effects
+  await p.goto(BASE + '/category/hoverboards/hoverboards-for-kids/');
+  check('kids topic category page renders with articles', (await p.evaluate(() => ({ h1: document.querySelector('h1') && document.querySelector('h1').innerText, cards: document.querySelectorAll('.card').length, crumbs: document.querySelectorAll('.breadcrumbs li').length })))?.cards >= 5, await p.evaluate(() => document.querySelector('h1').innerText + ' / ' + document.querySelectorAll('.card').length + ' cards / crumbs ' + document.querySelectorAll('.breadcrumbs li').length));
+  await p.goto(BASE + '/');
+  const nav = await p.evaluate(() => [...document.querySelectorAll('.primary-nav .nav-menu > li > a')].map(a => a.textContent.trim() + '→' + a.getAttribute('href')));
+  check('WP menu drives the header (kids item links to category)', nav.some(x => /For Kids→.*category\/hoverboards\/hoverboards-for-kids/.test(x)), nav.join(' ; '));
+  const titan = await p.evaluate(() => { const c = [...document.querySelectorAll('.pcard')].find(c => c.dataset.product === 'hover1-titan'); return c ? { weight: [...c.querySelectorAll('dd')].map(d => d.textContent).join('|'), note: c.querySelector('.pcard__note').textContent } : null; });
+  check('edited product shows on homepage with verified note', titan && /checked/.test(titan.weight) && /checked against/.test(titan.note), JSON.stringify(titan));
+  await p.goto(BASE + '/hover-1-titan-hoverboard/');
+  check('article breadcrumbs now include the child category', await p.evaluate(() => document.querySelector('.breadcrumbs').innerText.replace(/\s+/g, ' ')).then(t => /Home.*Hoverboards.*(All-Terrain|Reviews)/.test(t) ? true : t));
+  // undo hubs & menu
+  await p.goto(BASE + '/wp-admin/admin.php?page=hbg-setup');
+  await p.click('button[name="do"][value="undo_menu"]'); await p.waitForURL(/restored/);
+  p.once('dialog', d => d.accept());
+  await p.click('button[name="do"][value="undo_hubs"]'); await p.waitForURL(/removed/);
+  await p.goto(BASE + '/category/hoverboards/hoverboards-for-kids/');
+  check('undo removed empty topic categories (404 again)', await p.evaluate(() => document.body.classList.contains('error404')));
+  await p.goto(BASE + '/wp-admin/customize.php');
+  check('customizer loads', await p.waitForSelector('#customize-controls', { timeout: 30000 }).then(() => true).catch(() => false));
+  check('no JS errors in admin pages', errors.length === 0, errors.slice(0, 2).join(' | '));
+  console.log('RESULT ' + pass + ' passed, ' + fail + ' failed');
+  await b.close();
+})().catch(e => { console.error('ERR', e.message); process.exit(1); });

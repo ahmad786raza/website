@@ -1,22 +1,17 @@
 <?php
-/**
- * Search results template.
- */
 get_header();
 $has_sidebar = 'none' !== get_theme_mod( 'hbg_sidebar_position', 'right' );
 $total       = (int) $GLOBALS['wp_query']->found_posts;
 ?>
-
-<main id="main" class="site-main site-main--search" role="main">
+<main id="main" class="site-main site-main--search">
 	<div class="container">
 		<?php hbg_breadcrumbs(); ?>
-		<header class="page-header page-header--archive search-header">
+		<header class="archive-header">
 			<div class="section-heading__kicker"><?php esc_html_e( 'Search results', 'hoverboards-guide' ); ?></div>
-			<h1 class="page-title"><?php printf( esc_html__( '“%s”', 'hoverboards-guide' ), esc_html( get_search_query() ) ); ?></h1>
-			<p class="archive-desc"><?php printf( esc_html( _n( '%s result', '%s results', $total, 'hoverboards-guide' ) ), esc_html( number_format_i18n( $total ) ) ); ?></p>
-			<?php get_search_form(); ?>
+			<h1 class="archive-header__title"><?php printf( esc_html__( '“%s”', 'hoverboards-guide' ), esc_html( get_search_query() ) ); ?></h1>
+			<p class="archive-header__count"><?php printf( esc_html( _n( '%s result', '%s results', $total, 'hoverboards-guide' ) ), esc_html( number_format_i18n( $total ) ) ); ?></p>
+			<div class="archive-header__search"><?php get_search_form(); ?></div>
 		</header>
-
 		<div class="layout<?php echo $has_sidebar ? ' layout--sidebar' : ''; ?>">
 			<div class="layout__main">
 				<?php if ( have_posts() ) : ?>
@@ -34,5 +29,4 @@ $total       = (int) $GLOBALS['wp_query']->found_posts;
 		</div>
 	</div>
 </main>
-
 <?php get_footer(); ?>

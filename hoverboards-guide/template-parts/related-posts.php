@@ -1,17 +1,14 @@
 <?php
-/**
- * Related articles (by tag, then category).
- */
 $related = hbg_related_posts( get_the_ID(), 3 );
-if ( ! $related->have_posts() ) {
+if ( ! $related ) {
 	return;
 }
 ?>
-<section class="related" aria-labelledby="related-heading">
-	<?php hbg_section_heading( array( 'id' => 'related-heading', 'kicker' => __( 'Keep reading', 'hoverboards-guide' ), 'title' => __( 'Related articles', 'hoverboards-guide' ), 'tag' => 'h2' ) ); ?>
+<section class="related" aria-labelledby="related-title">
+	<?php hbg_section_heading( array( 'id' => 'related-title', 'kicker' => __( 'Keep reading', 'hoverboards-guide' ), 'title' => __( 'Related guides', 'hoverboards-guide' ), 'tag' => 'h2', 'class' => 'section-heading--sm' ) ); ?>
 	<div class="grid grid--3">
-		<?php while ( $related->have_posts() ) : $related->the_post(); ?>
+		<?php foreach ( $related as $rp ) : $GLOBALS['post'] = $rp; setup_postdata( $rp ); // phpcs:ignore ?>
 			<?php get_template_part( 'template-parts/content', 'card', array( 'compact' => true ) ); ?>
-		<?php endwhile; wp_reset_postdata(); ?>
+		<?php endforeach; wp_reset_postdata(); ?>
 	</div>
 </section>

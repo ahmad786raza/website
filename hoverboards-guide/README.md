@@ -1,57 +1,66 @@
-# Hoverboards Guide — WordPress theme v2.0 ("Rich Magazine" edition)
+# Hoverboards Guide — WordPress theme v3.0 ("Magazine")
 
-A post-driven magazine theme for hoverboard, electric-scooter and e-bike review sites.
+An editorial magazine theme for hoverboardsguide.com: hoverboard-first navigation, honest product recommendation cards, a comparison table, a four-question finder, topic hubs, and article templates with breadcrumbs, a table of contents, affiliate disclosure, read-next links and related guides.
 
-## What's new in 2.0
+The theme folder is still `hoverboards-guide`, so it installs over v2.1 with **Appearance → Themes → Add New → Upload Theme → "Replace current with uploaded"** and keeps every Customizer setting that still applies.
 
-**Magazine homepage (built from your real posts)**
-- Featured stories module: 1 lead story + 4 secondary stories. Uses **sticky posts** first, then the latest (change under *Customize → Hoverboards Guide → Homepage Sections*).
-- Category tiles with bundled photos (edit slugs under *Homepage Categories*).
-- Latest reviews & guides grid with AJAX **Load more** + sidebar.
-- Two category story blocks (Hoverboards / E Scooters by default), a Guides & how-tos row and an extra category row (eBikes by default).
-- Editor's top picks, product grids, 60-second quiz, comparison table, buying-guide cards, newsletter banner, FAQ, trust section, final CTA — every section can be toggled off.
+## What the theme does
 
-**Engagement**
-- Sticky header with search overlay (`/` or `Ctrl/Cmd+K`), mega-style dropdowns, mobile drawer, dark-mode toggle (remembers the choice).
-- Top bar with trending ticker (latest or most-viewed posts) and social icons.
-- Single posts: breadcrumbs, author line, updated date, reading time, view counter, share buttons (sticky on wide screens), auto table of contents, affiliate disclosure, tags, newsletter box, author box, previous/next, related articles, styled comments.
-- View counter (`hbg_views` post meta) powers "Most read" lists everywhere; counts are collected by an AJAX beacon so they work behind page caches.
-- Newsletter capture stored in WordPress (*Appearance → Subscribers*, CSV export) or forwarded to Mailchimp/ConvertKit via an action URL.
-- Widgets: HBG Popular Posts, HBG Category Posts, HBG Top Picks, HBG Newsletter. Widget areas: Sidebar, Homepage After Featured, Homepage Before Footer, Post After Content, Footer.
-- Shortcodes for rich review content: `[hbg_product id="hiboy-s2-pro"]`, `[hbg_product name="…" search="…" image="…" score="8.4" range="25 mi" speed="20 mph" weight="220 lb"]`, `[hbg_pros_cons pros="a|b" cons="c"]`, `[hbg_box type="tip|warning|note|success" title="…"]…[/hbg_box]`, `[hbg_verdict score="8.8"]…[/hbg_verdict]`, `[hbg_button url="…" text="…"]`, `[hbg_top_picks]`, `[hbg_newsletter]`.
+**Homepage** (each block is a toggle under *Customize → Hoverboards Guide → Homepage: Sections*)
 
-**Products & affiliate**
-- All demo products are real, currently-sold models (Segway Ninebot MAX G2, Hiboy S2 Pro, Gotrax GXL V2, Varla Eagle One, Hover-1 Helios/Titan, Swagtron T6, Ninebot S, Ninebot ZING E10).
-- Buttons use tagged Amazon **model-name search links** (`/s?k=…&tag=…`) so they never resolve to a dead ASIN. Put a verified ASIN (starting with `B0`) in a product's `search` field to link a listing directly.
-- Prices are shown as tiers ("$250–$500") instead of fixed numbers to stay accurate and Amazon-compliant.
-- Every Amazon link inside post content is automatically given `rel="sponsored nofollow noopener"` and `target="_blank"`.
-- Edit products in `inc/theme-data.php` or via filters: `hbg_products`, `hbg_top_pick_ids`, `hbg_hoverboard_ids`, `hbg_scooter_ids`, `hbg_compare_ids`, `hbg_quiz_rules`, `hbg_faqs`, `hbg_buying_guide`, `hbg_category_presets`.
+| Section | What it shows |
+|---|---|
+| Hero | Headline, supporting text, primary button (buying guide), secondary link (safety guide), three plain points, one photo. |
+| Quick recommendations | One product per need (best overall, budget, kids, adults, all-terrain, beginners) with an evidence-based sentence, three specs, "View full review" and "Check price on Amazon". |
+| Browse by topic | Eight hoverboard hubs: kids, adults, all-terrain, budget, Bluetooth, reviews, safety, troubleshooting. |
+| Featured buying guide | The hoverboard buying guide with the seven decisions it covers. |
+| Reviews & comparisons | Curated evergreen articles, then "Load more" from the Hoverboards category. |
+| Compare specifications | Sortable, filterable table; wide tables scroll inside the page on phones. |
+| Learn before you buy | Six practical how-to and safety resources. |
+| Hoverboard finder | Four questions → guides to read first + the matching pick (works without JavaScript as a decision table). |
+| FAQ, editorial transparency, more rides | Honest answers, how the site is researched, links to policy pages, secondary ride categories. |
 
-**Images**
-- 29 royalty-free photos (Unsplash / Pexels / Pixabay licenses — free for commercial use, no attribution required) in `assets/images/` as compact WebP files (960 px for hero/category shots, 640 px for product cards) so the whole theme stays under typical 2 MB upload limits. Credits in `assets/images/CREDITS.md`. If your host allows larger uploads and you want sharper hero images, drop higher-resolution versions in with the same file names.
-- Posts without a featured image automatically get a category-matched photo, so no card is ever blank.
+**Articles**: breadcrumbs, category label, title, standfirst (excerpt), author/published/updated/reading time, hero image, disclosure (only on articles with affiliate links), table of contents, read-next (curated by topic), author box, previous/next in the same category, related guides. Imported articles are normalised on output (purple header blocks, duplicate H1s, inline fonts and "#ad" strips) without touching the database.
 
-## Setup checklist
+**Honesty rules built in**: no prices, star ratings, review counts, editor scores or testing claims are generated by the theme. Product specifications are labelled "advertised" until the owner checks them and ticks *Verified* in the product editor.
 
-1. Upload and activate the theme (Appearance → Themes → Add New → Upload).
-2. Settings → Reading: set **Your homepage displays: A static page** and pick any page as Homepage (the theme's `front-page.php` takes over). Optionally set a Posts page for `/blog/`.
-3. Appearance → Menus: create a menu with your categories and assign it to **Primary Menu (header)**. Without a menu the theme builds one from your categories automatically. Second-level items become dropdowns.
-4. Mark 1–5 posts as **Sticky** to feature them (Quick Edit → Make this post sticky).
-5. Customize → Hoverboards Guide: accent colour, social profiles, homepage sections, newsletter, single-post options, trust stats, footer.
-6. Optional: run a thumbnail regeneration plugin once so older uploads get the new `hbg-card` sizes (the theme falls back to WordPress' built-in sizes, so this is cosmetic).
-7. The sidebar shows the theme's curated set by default (search, most read, newsletter, top picks, categories). To use your own widgets instead, add them under Appearance → Widgets → Sidebar and set *Customize → Hoverboards Guide → Single Post → Sidebar content* to "Widgets".
+## Dashboard tools
+
+- **Hoverboards Guide → Setup**: status checks; one-click, reversible actions to create topic child-categories and assign the matching articles, create the primary menu, and create draft Affiliate Disclosure and Editorial Policy pages.
+- **Hoverboards Guide → Products**: edit every recommended product (specs, why, best-for, advantages, limitations, ASIN or search words, review slug, photo, verified flag).
+- **Customize → Hoverboards Guide**: brand colour and typography, header, hero copy and photo, homepage sections, topic photos, affiliate tag and disclosure, newsletter service URL, article options, editorial transparency text, SEO fields, social links, footer.
+
+## Shortcodes
+
+```
+[hbg_product id="hover1-titan"]
+[hbg_product name="…" search="ASIN or words" wheel="…" speed="…" range="…" weight="…" cert="UL 2272" pros="a|b" cons="c" best_for="…" review="post-slug"]
+[hbg_compare ids="gyroor-warrior-g2,hover1-titan"]
+[hbg_specs name="…" wheel="…" speed="…" range="…" weight="…" cert="…" motor="…" battery="…" charge="…" board_weight="…" age="…" warranty="…" source="…" checked="2026-10-11"]
+[hbg_verdict best_for="…" search="…"]…[/hbg_verdict]
+[hbg_pros_cons pros="a|b" cons="c"]
+[hbg_box type="tip|warning|note|safety" title="…"]…[/hbg_box]
+[hbg_steps]<ol><li>…</li></ol>[/hbg_steps]
+[hbg_button search="…" text="Check price on Amazon"]
+[hbg_picks]  [hbg_finder]  [hbg_disclosure]  [hbg_newsletter]
+```
+
+## Images
+
+Bundled photos in `assets/images/` are royalty-free (Unsplash / Pexels / Pixabay licences; credits in `assets/images/CREDITS.md`). Illustrations in `inc/illustrations.php` are original SVG. Product cards show a labelled representative photo or illustration until a licensed product photo is set in the product editor.
 
 ## Requirements
 
-WordPress 6.0+, PHP 7.4+. No plugins required. Works with Yoast / Rank Math (the theme skips its own Open Graph tags when one is active).
+WordPress 6.0+, PHP 7.4+. No plugins required. Works alongside Yoast / Rank Math / AIOSEO / SEOPress (the theme stops printing its own meta tags and schema when one is active) and Site Kit (affiliate clicks are sent as GA4 events when gtag is present).
 
 ## Changelog
 
-### 2.1.0 — "Convert" homepage (September 2026)
-- New hero: headline, two calls to action (top picks / quiz) and a **quick picks** panel with the top products, scores, price tiers and "Check price" buttons above the fold.
-- Editor's top picks moved directly under the category tiles; each card gains a **Read our review** link when the site has a review of that model (title match, cached daily).
-- **Browse by topic** tabs (Hoverboards / E-Scooters / Guides / eBikes) replace the four stacked story rows; **Shop by use case** tabs replace the two separate product rows. The v2.0 rows remain as "Legacy" toggles.
-- **Most read** strip replaces the homepage sidebar (which left an empty column). The sidebar can be re-enabled per Customizer.
-- 16:9 card frames (no cropping of the new featured photos), loading shimmer on image frames, gradient CTAs, softer radii, `content-visibility` hints for faster rendering.
-- Anchors that point into a tab (e.g. `#scooters`) open the right tab automatically.
-- Popular / trending queries cached for 15 minutes; "All articles" links to the Posts page (or a custom URL) and hides otherwise; the theme TOC is skipped when the post already contains one.
+### 3.0.0 — "Magazine" (October 2026)
+- New light editorial design system: white background, navy headings, one blue accent, quiet borders; web fonts optional (system fonts switch).
+- Hoverboard-first information architecture: topic hubs, header menu per hub, breadcrumbs with child categories, curated related content.
+- Homepage rebuilt: hero, quick recommendations, topics, featured buying guide, reviews & comparisons, comparison table, learn-before-you-buy, finder, FAQ, editorial transparency, more rides.
+- Removed from v2: dark mode, top bar ticker, editor scores and stars, price tiers, trust statistics, "updated weekly" and testing claims, newsletter capture that stored emails without a service, sticky "shop" bar, animations.
+- Articles: duplicate in-body H1 removed, imported styling normalised, disclosure only where affiliate links exist, read-next, same-category prev/next, title-card featured images skipped (optional).
+- SEO: meta descriptions, canonical on archives, noindex on search/author/date, BlogPosting + BreadcrumbList + CollectionPage schema with duplicate-aware output, homepage title override.
+- Dashboard: Setup tools (reversible) and Products editor.
+- Performance: one stylesheet, one deferred script, no emoji script, hero preload, fewer requests.

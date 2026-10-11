@@ -1,6 +1,6 @@
 <?php
 /**
- * Post card used in grids (home, archives, search, related, load-more).
+ * Article card used in grids (home, archives, search, related, load-more).
  *
  * @param array $args { 'heading' => 'h3', 'compact' => false }
  */
@@ -10,14 +10,12 @@ $compact = ! empty( $args['compact'] );
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'card' . ( $compact ? ' card--compact' : '' ) ); ?>>
 	<a href="<?php the_permalink(); ?>" class="card__media" tabindex="-1" aria-hidden="true">
-		<?php hbg_post_thumbnail( 'medium_large', array( 'class' => 'card__img', 'sizes' => '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px' ) ); ?>
-		<?php hbg_cat_badge( null, false, 'cat-badge--overlay' ); ?>
+		<?php hbg_post_thumbnail( 'hbg-card', array( 'class' => 'card__img', 'sizes' => '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px' ) ); ?>
 	</a>
 	<div class="card__body">
+		<?php hbg_cat_badge( null, false, 'cat-badge--sm' ); ?>
 		<<?php echo $heading; // phpcs:ignore ?> class="card__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></<?php echo $heading; // phpcs:ignore ?>>
-		<?php if ( ! $compact ) : ?>
-			<p class="card__excerpt"><?php echo esc_html( hbg_excerpt( 20 ) ); ?></p>
-		<?php endif; ?>
-		<?php hbg_post_meta( array( 'views' => true ) ); ?>
+		<?php if ( ! $compact ) : ?><p class="card__excerpt"><?php echo esc_html( hbg_excerpt( 20 ) ); ?></p><?php endif; ?>
+		<?php hbg_post_meta( array( 'updated' => true, 'views' => true ) ); ?>
 	</div>
 </article>
