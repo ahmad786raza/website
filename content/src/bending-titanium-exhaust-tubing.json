@@ -1,0 +1,36 @@
+{
+ "slug": "bending-titanium-exhaust-tubing",
+ "title": "Bending Titanium Exhaust Tubing: Grade 2 vs 9, Mandrels & Purging",
+ "excerpt": "Bending titanium exhaust tubing: grade 2 vs grade 9, why most builders buy pre-bent mandrel bends, springback test bends and back purging for welds.",
+ "category": "tutorials",
+ "featured_slot": "exhaust",
+ "primary_keyword": "bending titanium exhaust tubing",
+ "asins": [
+  {"asin": "B01FN3XTV0", "product": "Ticon Industries Titanium 90° Mandrel Bend, 3\" (part 101-07653-0000)", "evidence": "https://www.amazon.com/Ticon-Industries-Titanium-Mandrel-101-07653-0000/dp/B01FN3XTV0"},
+  {"asin": "B01FN3XRWG", "product": "Ticon Industries Titanium 45° Mandrel Bend, 3\" (part 101-07623-1000)", "evidence": "https://www.amazon.com/Ticon-Industries-Titanium-Mandrel-101-07623-1000/dp/B01FN3XRWG"},
+  {"asin": "B0F76Y97S3", "product": "TitanFlow Exhaust 90 Degree Tube 3\" OD, Titanium Exhaust Pipe Mandrel Bend Elbow, 1.05D CLR Tight Radius", "evidence": "https://www.amazon.com/TitanFlow-Exhaust-Degree-Titanium-Mandrel/dp/B0F76Y97S3"},
+  {"asin": "B00P2UB6QA", "product": "2.75\" Titanium Exhaust Tubing 2 Foot Length 1mm/.039\" wall (Qty 1)", "evidence": "https://www.amazon.com/clp/B00P2UB6QA"},
+  {"asin": "B07VHF6KWN", "product": "Silicone Back Purge Plugs (Exhaust Tubing Kit - 2.5\" to 4\") - Tig Aesthetics by Ticon Industries", "evidence": "https://www.amazon.com/Silicone-Purge-Plugs-Exhaust-Tubing/dp/B07VHF6KWN"},
+  {"asin": "B06Y22QHNY", "product": "Strictly Modified Welding Back Purge Plugs 1.5\"-2\" NPS & Tube (Set of 2)", "evidence": "https://us.amazon.com/Strictly-Modified-Welding-Purge-Plugs/dp/B06Y22QHNY"}
+ ],
+ "sources": [
+  "https://www.smithmetal.com/ti-3al-2-5v-grade-9.htm",
+  "https://www.smithmetal.com/pdf/titanium/ti-3al-2-5v-grade-9.pdf",
+  "https://www.aircraftmaterials.com/data/titanium/ti3al2-5v.html",
+  "https://www.bozemetal.com/prods/417",
+  "https://metals.bibus.com/id-en/products/itm/titanium-grade-9/",
+  "https://www.roguefab.com/titanium-tube-bender/",
+  "https://pure.nwpu.edu.cn/en/publications/springback-characterization-and-behaviors-of-high-strength-ti-3al/",
+  "https://eprints.whiterose.ac.uk/103638/",
+  "https://www.millerwelds.com/resources/article-library/only-as-strong-as-the-weld-best-practices-for-welding-titanium-tube-pipe",
+  "https://www.thefabricator.com/tubepipejournal/article/arcwelding/critical-steps-for-tig-welding-titanium-tubing",
+  "https://www.thefabricator.com/tubepipejournal/article/arcwelding/only-the-clean-survive",
+  "https://www.thefabricator.com/thewelder/article/arcwelding/titanium-you-can-weld-it",
+  "https://www.thefabricator.com/tubepipejournal/article/consumables/dam-the-purge-gas-and-full-speed-ahead",
+  "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7075033",
+  "https://www.amazon.com/Ticon-Industries-Titanium-Mandrel-101-07653-0000/dp/B01FN3XTV0",
+  "https://www.amazon.com/TitanFlow-Exhaust-Degree-Titanium-Mandrel/dp/B0F76Y97S3",
+  "https://www.amazon.com/Silicone-Purge-Plugs-Exhaust-Tubing/dp/B07VHF6KWN"
+ ],
+ "notes": "Direct page fetches were blocked in this environment, so every fact came from WebSearch result summaries of the listed pages. Please spot-check: (1) Smiths Metal: grade 9 density 4.48 g/cc (under 60% of steel) and 20-50% more strength than CP grades. (2) Aircraft Materials: grade 9 strength between grades 4 and 5; usable at higher temperatures than grades 1-4. (3) Bozeman Metal: welded thin-wall Ti exhaust tube in grades 1/2/9 to ASTM B862/B338; Bibus: grade 9 tube to AMS 4943/4944. (4) Rogue Fab titanium page: mandrel needed for thin wall, more springback than mild steel (depends on alloy/wall/CLR), galling, non-ferrous lube (Bend All 002 with bronze mandrels), annealed stock easier, mandrel nose just ahead of tangency, ~3.5 deg/s, under 4% deformation on 1.25 x .049 (3.5 in CLR) and 1.50 x .070; these are the maker's own tests. (5) Springback research: the yield/modulus-ratio statement came from a 2012 NWPU study on stress-relieved Ti-3Al-2.5V; the search summary did not make clear which NWPU URL holds that quote, so the linked NWPU page should be checked. Sheffield (White Rose) 2016 paper: wall thickness variation the largest contributor. (6) Postflow/cooling CONFLICT is stated in the text: Fabricator 'critical steps' (800 F, 20-25 s postflow, some codes below 500 F) vs 'only the clean survive' (500-800 F critical range) vs 'titanium you can weld it' (below ~500 F). (7) Weld color: Fabricator says any hint of blue suggests a shielding problem and 99.995% argon can leave some yellow-straw; gray/white unacceptable comes from a welding guide seen in search summary (source page not identified) and is stated generically; patent 7075033 (or the other titanium patent in the same search) said surface color is not always a reliable indicator - confirm which patent. (8) 'Some titanium welders use a trailing shield' is stated as practice without a specific source. (9) Product listings: Ticon B01FN3XTV0 says CP grade 1 but its material field also says 'Stainless Steel' (flagged in the article); TitanFlow B0F76Y97S3 listed as grade 1, 1.05D CLR; B00P2UB6QA brand not shown in search title (likely Ticon) so the article does not name a brand; Strictly Modified evidence URL is on us.amazon.com. (10) Purge volume example (3 in x 1 mm x 24 in = ~161 cu in, ~0.93 cu ft for 10 volumes) is our own arithmetic. No flow-rate recommendation is given because none could be sourced. Web search budget ran out during research."
+}

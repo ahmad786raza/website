@@ -1,0 +1,32 @@
+{
+ "slug": "mandrel-tube-bender-for-home-shop",
+ "title": "Mandrel Tube Bender for Home Shop Use: What It Can and Can't Do",
+ "excerpt": "Thinking about a mandrel tube bender for home shop use? What a home mandrel setup can and can't do, its limits, and smarter alternatives like pre-bent bends.",
+ "category": "guides",
+ "featured_slot": "mandrel",
+ "primary_keyword": "mandrel tube bender for home shop",
+ "asins": [
+  {"asin": "B002VR3S2C", "product": "2.5\" OD 180 Deg. 304 Stainless Steel Mandrel U-Bend, 16 Gauge - 3.75\" Radius, 6\" Legs", "evidence": "https://www.amazon.com/Stainless-Steel-Mandrel-U-Bend-Gauge/dp/B002VR3S2C"},
+  {"asin": "B00AKFE6TQ", "product": "Patriot Exhaust H6937 2-1/2\" 304 Stainless Steel U-Bend Exhaust Pipe", "evidence": "https://www.amazon.com/Patriot-Exhaust-H6937-Stainless-U-Bend/dp/B00AKFE6TQ"}
+ ],
+ "sources": [
+  "https://www.roguefab.com/mandrel-bending/",
+  "https://www.roguefab.com/product/mandrel/",
+  "https://www.roguefab.com/product/mandrelbender/",
+  "https://www.roguefab.com/product-category/m600mandrel/",
+  "https://www.roguefab.com/product/elite-package/",
+  "https://www.roguefab.com/product/twr-assembly/",
+  "https://www.roguefab.com/tube-capacity-chart/",
+  "https://www.roguefab.com/exhaust-pipe-benders/",
+  "https://www.roguefab.com/brass-tube-bender/",
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/wipe-out-the-wrinkles-of-tube-bending",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper",
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/tube-bending-basics-how-to-bend-tubing-and-metal-pipe",
+  "https://blog.blmgroup.com/when-is-it-useful-to-bend-a-tube-with-a-small-bending-radius",
+  "https://www.tubeformsolutions.com/blog/tube-bending-1-11/8-reasons-for-tube-wrinkling-when-using-a-mandrel-tubing-bender-349",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://pro-tools.com/pages/round-tube-dies-for-302-one-shot-tube-and-pipe-bender",
+  "https://vibrantperformance.com/304-stainless-steel-90-brushed-mandrel-bends/"
+ ],
+ "notes": "No prices anywhere. Direct page fetches (roguefab.com, thefabricator.com) were blocked, so Rogue Fab facts came from WebSearch result summaries of Rogue Fab's own pages; please spot-check: (1) mandrel attachment V2.0 page: supported M600 xHD/M600 HD/M605/M625 (standard M600/M601 need HD or M605 conversion), adjustable for 2.5/3.5/4.5/6.0 CLR dies, mid-2014 Model 600 limited to 3.5/4.5 CLR, max bending diameter 2\", no mandrels or lube included, roller pressure die needed per die and two for CLR over 4.5\", may be compatible with TWR but not the Backstop, V2.0 handles higher wall ratios and lower D (no numbers), links titanium test data; (2) mandrel-bending guide: 3.0D 'worth serious consideration', below 2.0D 'typically required', wall ratio above 20 with tight D; bullet vs ball mandrels; automatic mandrel extraction on ram retract; CNC machines cost far more/longer changeovers. The search summary said another Rogue Fab page gives a different wiper threshold (D below 2.5 with wall ratio above 20); the article flags that Rogue Fab's pages don't fully agree rather than quoting both. (3) Elite package mandrel sizes (1 x .049, 1.5 x .065, 2 x .095 etc.); (4) M625 with mandrel attachment down to about .065 wall on 1.75 OD is from the kit fact-check notes (capacity chart); (5) TWR 10.0% vs 6.4% and 'wall ratios above 14'. Statement that we found no published mandrel attachments for other popular garage benders is hedged as 'in our research'. Industrial 0.7xOD (The Fabricator) and BLM 'below 1 extreme' are from the kit fact-check notes. U-bend specs (16 ga/.065, 3.75\" radius, 6\" legs) are from the Amazon listing title/summary."
+}

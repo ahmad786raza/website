@@ -8,19 +8,20 @@
   "83": 2,
   "87": 1,
   "114": 1,
-  "51": 2,
-  "86": 2,
+  "51": 4,
+  "86": 3,
   "55": 1,
   "47": 1,
   "63": 1,
   "57": 1,
   "70": 1,
-  "44": 1,
-  "81": 1,
+  "44": 2,
+  "81": 2,
   "98": 1,
   "48": 1,
   "91": 1,
-  "118": 1
+  "118": 1,
+  "99": 1
  },
  "pipe-bender-vs-tube-bender": 45,
  "harbor-freight-12-ton-pipe-bender": 46,
@@ -43,5 +44,11 @@
  "how-to-choose-a-tube-bender": 83,
  "custom-exhaust-fabrication": 48,
  "electric-vs-air-over-hydraulic-bender-pump": 91,
- "hydraulic-cylinder-for-tube-bender": 118
+ "hydraulic-cylinder-for-tube-bender": 118,
+ "chromoly-fabrication": 51,
+ "best-tube-bender-for-chromoly": 86,
+ "how-to-build-a-roll-cage": 51,
+ "jd2-model-32-vs-rogue-fab-m605": 99,
+ "pro-tools-105hd-vs-jd2-model-32": 44,
+ "rogue-fab-m605-vs-m625": 81
 }
