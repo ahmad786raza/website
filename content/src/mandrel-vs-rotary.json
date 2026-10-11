@@ -1,0 +1,42 @@
+{
+ "slug": "mandrel-vs-rotary",
+ "title": "Mandrel Bending vs Crush Bending Exhaust: What Really Changes",
+ "excerpt": "Mandrel bending vs crush bending exhaust, explained simply: what each does to the pipe, when crush bends are fine, and when mandrel bends earn their cost.",
+ "category": "fabrication-theory",
+ "featured_slot": "exhaust",
+ "primary_keyword": "mandrel bending vs crush bending exhaust",
+ "asins": [
+  {
+   "asin": "B0778RQTGW",
+   "product": "2.5\" Stainless 90° Mandrel Bend Elbow - 1.5D/3.75\" CLR Loose Radius - 16GA/.065\" Wall - 2\" Leg - SS304 - Exhaust Fabrication (Stainless Bros, MPN 601-03856-4150)",
+   "evidence": "https://www.amazon.com/2-5-Stainless-Mandrel-Bend-Elbow/dp/B0778RQTGW"
+  },
+  {
+   "asin": "B079QD58WT",
+   "product": "2.5\" Stainless 180° Mandrel Bend - 1.5D/3.75\" Radius - 16GA/.065\" Wall - 6\" Leg/6\" Leg - SS304 - Exhaust Fabrication",
+   "evidence": "https://www.amazon.com/2-5-Stainless-180%C2%B0-Mandrel-Bend/dp/B079QD58WT"
+  },
+  {
+   "asin": "B07L72RHHF",
+   "product": "2.5\" 90 Degree Exhaust Elbow Mandrel Bend Aluminized Steel 16ga 2 Pack USA (Khaos Motorsports)",
+   "evidence": "https://amazon.com/Aluminized-Mandrel-EXHAUST-Khaos-Motorsports/dp/B07L72RHHF"
+  }
+ ],
+ "sources": [
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/tube-and-pipe-basics-how-to-achieve-the-perfect-bend",
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/4-essential-modes-of-tube-bending",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper",
+  "https://www.roguefab.com/exhaust-pipe-benders/",
+  "https://www.roguefab.com/product/mandrels/",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://imeko.org/publications/tc14-2007/IMEKO-TC14-2007-51.pdf",
+  "https://vibrantperformance.com/304-stainless-steel-90-brushed-mandrel-bends/",
+  "https://cb1100forum.net/forum/showthread.php?tid=5700",
+  "https://www.amazon.com/2-5-Stainless-Mandrel-Bend-Elbow/dp/B0778RQTGW",
+  "https://www.amazon.com/2-5-Stainless-180%C2%B0-Mandrel-Bend/dp/B079QD58WT",
+  "https://amazon.com/Aluminized-Mandrel-EXHAUST-Khaos-Motorsports/dp/B07L72RHHF"
+ ],
+ "notes": "REWRITE of draft #33: written fresh; none of the old draft's percentages (15-20% ID restriction, 5-8% ovaling, 'nearly 100%', 2-3x cycle time) are reused. No flow-loss percentage is given anywhere because none could be sourced; the article says so plainly. Direct page fetches were blocked (DNS) in this environment, so ALL facts come from web-search result summaries, not pages read directly: The Fabricator (ram bending CLR 3-4x OD 'generally achievable'; rotary draw most versatile; ball mandrel/wiper; charts based on mild steel to 180 deg), Rogue Fab exhaust page (ram benders standard in muffler shops, flatten pipe and wrinkle inside; 0.9% deformation on a 2.75in 1D mandrel bend, from page title/image alt) and Rogue Fab mandrels page (5.5-11% deformation without mandrel vs ~1.8-2.5% with; wall ratio >30 and tighter than 2.5D 'not likely possible'). Please re-verify those Rogue Fab figures on the live pages before publishing; they are presented as vendor figures. The 1D-1.5D 'common in aftermarket exhaust' statement comes from the fact-check notes (Vibrant 1D page + retailer 1.5D listings). Stainless Bros listing for B0778RQTGW says elbows are 'individually extruded' with laser-cut ends; the article mentions this. Khaos B07L72RHHF listing does not state a CLR; article tells readers to check. Wall factor 38.5 = 2.5/.065 (computed). CB1100 forum thread is only used for the general cut-section description (round vs oval), not for numbers."
+}

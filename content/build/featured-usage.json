@@ -9,7 +9,10 @@
   "87": 1,
   "114": 1,
   "51": 2,
-  "86": 1
+  "86": 2,
+  "55": 1,
+  "47": 1,
+  "63": 1
  },
  "pipe-bender-vs-tube-bender": 45,
  "harbor-freight-12-ton-pipe-bender": 46,
@@ -19,5 +22,9 @@
  "wall-factor-and-d-of-bend": 114,
  "best-tube-bender-for-roll-cage": 51,
  "roll-cage-bend-radius-rule": 86,
- "roll-cage-specifications": 51
+ "roll-cage-specifications": 51,
+ "best-tube-bender": 86,
+ "best-hydraulic-tube-bender": 55,
+ "best-exhaust-pipe-bender": 47,
+ "cnc-tube-bending": 63
 }

@@ -98,5 +98,45 @@
    46
   ],
   "at": "2026-10-11T15:13:59.602Z"
+ },
+ "best-tube-bender": {
+  "id": 131,
+  "status": "draft",
+  "identical": true,
+  "featured": 86,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:14:53.994Z"
+ },
+ "best-hydraulic-tube-bender": {
+  "id": 31,
+  "status": "draft",
+  "identical": true,
+  "featured": 55,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:14:55.815Z"
+ },
+ "best-exhaust-pipe-bender": {
+  "id": 133,
+  "status": "draft",
+  "identical": true,
+  "featured": 47,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:14:58.692Z"
+ },
+ "cnc-tube-bending": {
+  "id": 36,
+  "status": "draft",
+  "identical": true,
+  "featured": 63,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:15:00.372Z"
  }
 }

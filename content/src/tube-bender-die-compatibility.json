@@ -1,0 +1,69 @@
+{
+ "slug": "tube-bender-die-compatibility",
+ "title": "Tube Bender Die Compatibility: What Fits What, Brand by Brand",
+ "excerpt": "Tube bender die compatibility, brand by brand: which dies makers say fit, which don't, pin sizes, and why cross-brand fit stays unknown until confirmed.",
+ "category": "guides",
+ "featured_slot": "manual-bender",
+ "primary_keyword": "tube bender die compatibility",
+ "asins": [
+  {
+   "asin": "B07B7MFPCZ",
+   "product": "Woodward Fab WFBDT2X6 die (2\" OD x 6\" CLR) for WFB2",
+   "evidence": "Kit pre-verified ASIN (WRITER-KIT.md section 3)"
+  },
+  {
+   "asin": "B01M12Z84P",
+   "product": "Woodward Fab WFB2 manual tube & pipe bender",
+   "evidence": "Kit pre-verified ASIN (WRITER-KIT.md section 3)"
+  },
+  {
+   "asin": "B07PPJ4WN4",
+   "product": "Eastwood 1.75 in. X 6 in. Radius 240 Degree Die Replacement Tubing Tube Bender High Capacity Pipe Bender Machine",
+   "evidence": "https://www.amazon.com/Eastwood-Radius-Replacement-Capacity-Machine/dp/B07PPJ4WN4"
+  },
+  {
+   "asin": "B07PQMRB5K",
+   "product": "Eastwood 1.75 in. X 6 in. Radius 120 Degree Die Replacement Tubing Tube Bender High Capacity Pipe Bender Machine",
+   "evidence": "https://www.amazon.com/Eastwood-Radius-Replacement-Capacity-Machine/dp/B07PQMRB5K"
+  },
+  {
+   "asin": "B07PQMV4RC",
+   "product": "Eastwood 1.5 in. X 5 in. Radius 240 Degree Die Replacement Tubing Tube Bender High Capacity Pipe Bender Machine",
+   "evidence": "https://www.amazon.com/clp/B07PQMV4RC"
+  },
+  {
+   "asin": "B07PRLN2PG",
+   "product": "Eastwood High Capacity tube bender (#21115)",
+   "evidence": "https://www.amazon.com/Eastwood-Tubing-Plumbing-Capacity-Machine/dp/B07PRLN2PG"
+  }
+ ],
+ "sources": [
+  "https://www.jd2.com/model-32-bender",
+  "https://www.jd2.com/frequently-asked-questions",
+  "https://support.jd2.com/MiscDown/dl/M4BDirections.pdf",
+  "https://www.trick-tools.com/JD2_Model_32_Hydraulic_Tubing_Bender_302001_2248",
+  "https://www.roguefab.com/faqs/",
+  "https://www.roguefab.com/product-category/tubing-benders/",
+  "https://www.roguefab.com/product/2-0-round-tube-die-bundle-7-8-pin/",
+  "https://www.roguefab.com/product/m600xhd-to-m625-conversion-kit-7-8%E2%80%B3-pin-upgrades-old-models-to-be-like-our-current-ones/",
+  "https://www.roguefab.com/product/m600-m600hd-to-m601-m605-conversion-kit-upgrades-old-models-to-be-like-our-current-ones/",
+  "https://www.roguefab.com/tube-capacity-chart/",
+  "https://www.baileigh.com/accessories-parts/tooling-accessories/tube-pipe-bender-accessories/manual-rotary-draw-tooling/rdb-050-tooling",
+  "https://www.baileigh.com/1-3-4-round-tube-die-set-6-clr-ds-1750t-r600",
+  "https://www.baileigh.com/manual-tube-bender-rdb-050",
+  "https://pro-tools.com/products/square-tube-bending-die-1-in-odx3-1-2-in-clr-180-degrees-b-105-sd-hd",
+  "https://pro-tools.com/products/square-tube-bending-die-1-in-odx3-1-2-in-clr-90-degrees-b-105-sd-hd",
+  "https://pro-tools.com/pages/90-degree-round-tube-dies-for-105-brute-tube-and-pipe-bender",
+  "https://pro-tools.com/pages/round-tube-dies-for-portabender-tube-and-pipe-bender",
+  "https://www.trick-tools.com/tools/Pro-Tools-105-Bender-Die",
+  "https://www.woodwardfab.com/product-category/product/pipe-and-tube-fabrication/woodward-fab-pipe-and-tube-benders/180-degree-die-sets/",
+  "https://www.woodwardfab.com/blog/hydraulic-or-manual-pipe-and-tube-bender-what-is-your-choice/",
+  "https://www.woodwardfab.com/product/manual-tube-and-pipe-bender/",
+  "https://www.eastwood.com/eastwood-high-capacity-tubing-bender.html",
+  "https://www.eastwood.com/eastwood-s-pro-former-tubing-bender.html",
+  "https://www.eastwood.com/images/library/21115Q.pdf",
+  "https://www.harborfreight.com/12-ton-hydraulic-pipe-bender-32888.html",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf"
+ ],
+ "notes": "No cross-brand die fit is claimed anywhere: every cross-brand cell says 'Unknown, ask the maker'. An Eastwood Q&A answer claims Eastwood HC dies fit the WFB2; deliberately NOT repeated (owner claim, not maker/retailer). Research was via web-search result summaries; maker sites could not be opened directly from this environment, so please spot-check: JD2 FAQ wording (only Model 3 dies in Model 4; Model 1 uses Model 4 dies, Model 2 uses Model 3 dies), JD2 Model 32 1-1/4 in pins vs Model 3 7/8 in pins, Rogue FAQ pin sizes (7/8 in for 2023+, 3/4 in earlier) and 'pressure die capacity should match model'. Baileigh RDB-050 die wall figures are the wall each set's CLR is 'based on', not stated limits. The WFBDT2X6 die's bend angle is not stated (Woodward sells 120 and 180 degree families). New ASINs B07PQMRB5K and B07PQMV4RC were seen in a WebSearch restricted to amazon.com with matching titles."
+}

@@ -1,0 +1,32 @@
+{
+ "slug": "tube-wrinkling-prevention",
+ "title": "Tube Bending Wrinkles, Kinks and Flattening: Causes and Fixes",
+ "excerpt": "Fix tube bending wrinkles, kinks and flattening with symptom-to-cause-to-fix tables, clamp and pressure-die checks, and how to read die maker charts.",
+ "category": "fabrication-theory",
+ "featured_slot": "mandrel",
+ "primary_keyword": "tube bending wrinkles kinks and flattening",
+ "asins": [
+  {"asin": "B000GSLKIW", "product": "NEIKO 01407A Electronic Digital Caliper Measuring Tool, 0-6 Inches Stainless Steel Construction", "evidence": "https://www.amazon.com/Neiko-01407A-Electronic-Digital-Stainless/dp/B000GSLKIW"},
+  {"asin": "B00AKFE6TQ", "product": "Patriot Exhaust H6937 2-1/2\" 304 Stainless Steel U-Bend Exhaust Pipe", "evidence": "https://www.amazon.com/Patriot-Exhaust-H6937-Stainless-U-Bend/dp/B00AKFE6TQ"}
+ ],
+ "sources": [
+  "https://www.roguefab.com/bend-quality/",
+  "https://www.roguefab.com/product/twr-assembly/",
+  "https://www.roguefab.com/faqs/",
+  "https://www.roguefab.com/bender-configurator/",
+  "https://www.roguefab.com/stainless-steel-tube-bender/",
+  "https://www.roguefab.com/tube-capacity-chart/",
+  "https://www.thefabricator.com/thefabricator/article/bending/steps-to-troubleshooting-draw-bending-of-tube",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/setup-or-cover-upr",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/when-a-good-tube-bends-bad---part-i",
+  "https://www.thefabricator.com/tubepipejournal/article/bending/getting-a-grip",
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/wipe-out-the-wrinkles-of-tube-bending",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper",
+  "https://www.tubeformsolutions.com/blog/tube-bending-1-11/8-reasons-for-tube-wrinkling-when-using-a-mandrel-tubing-bender-349",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://pro-tools.com/pages/round-tube-dies-for-302-one-shot-tube-and-pipe-bender",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf"
+ ],
+ "notes": "REWRITE of draft #38: written fresh; no D/T or CLR/OD wrinkle thresholds (readers are sent to die maker charts). Direct page fetches were blocked, so every Rogue Fab, The Fabricator, Tube Form Solutions and Pro-Tools fact came from WebSearch result summaries of those maker/trade pages; please spot-check: (1) Rogue Fab bend-quality page: four causes, clamp fix with 220-grit/emery cloth and lacquer thinner/acetone, rear pressure-die hole marked 'HD, never use on .120 wall or thinner'; (2) Rogue Fab TWR page: 10.0% vs 6.4% deformation (vendor test); (3) Pro-Tools 302/Portabender die page: 1\" x 3\" CLR die .065 min DOM, .083 recommended for ERW; (4) The Fabricator troubleshooting claims were summarised across several articles (inconsistent wrinkles = clamp slip; continuous wrinkles = low pressure-die force; end-of-bend wrinkles = wiper; flat outside = too much pressure-die force; never set wiper at/past tangent); (5) Fabricator mandrel chart example 2 x .065 on 4 CLR -> two-ball mandrel with wiper (from the kit fact-check notes). Primary keyword is used verbatim only in the intro (as a quoted search phrase); title and H2 use the comma form for readability. Ovality worked example uses illustrative caliper readings."
+}

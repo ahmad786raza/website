@@ -6,10 +6,26 @@
  "featured_slot": "stainless",
  "primary_keyword": "aluminized vs stainless exhaust tubing",
  "asins": [
-  {"asin": "B07L7GLWKK", "product": "2.5\" 180 Degree Exhaust Elbow Mandrel U Bend Aluminized Steel 16ga 2 Pack USA (Khaos Motorsports)", "evidence": "https://www.amazon.com/Aluminized-Mandrel-EXHAUST-Khaos-Motorsports/dp/B07L7GLWKK"},
-  {"asin": "B07L2GJB6J", "product": "2.5\" 90 Degree Exhaust Elbow Mandrel Bend 304 Stainless Steel 16ga 2 Pack USA (Khaos Motorsports)", "evidence": "https://www.amazon.com/Stainless-Mandrel-EXHAUST-Khaos-Motorsports/dp/B07L2GJB6J"},
-  {"asin": "B004RUFBLW", "product": "Vibrant Performance VIB13040 (13040) 90° T304 Stainless Steel Mandrel Bend Tube", "evidence": "https://www.amazon.com/Vibrant-Performance-VIB13040-Stainless-Mandrel/dp/B004RUFBLW"},
-  {"asin": "B01FN3XTV0", "product": "Ticon Industries Titanium 90° Mandrel Bend, 3\" (part 101-07653-0000)", "evidence": "https://www.amazon.com/Ticon-Industries-Titanium-Mandrel-101-07653-0000/dp/B01FN3XTV0"}
+  {
+   "asin": "B07L7GLWKK",
+   "product": "2.5\" 180 Degree Exhaust Elbow Mandrel U Bend Aluminized Steel 16ga 2 Pack USA (Khaos Motorsports)",
+   "evidence": "https://www.amazon.com/Aluminized-Mandrel-EXHAUST-Khaos-Motorsports/dp/B07L7GLWKK"
+  },
+  {
+   "asin": "B07L2GJB6J",
+   "product": "2.5\" 90 Degree Exhaust Elbow Mandrel Bend 304 Stainless Steel 16ga 2 Pack USA (Khaos Motorsports)",
+   "evidence": "https://www.amazon.com/Stainless-Mandrel-EXHAUST-Khaos-Motorsports/dp/B07L2GJB6J"
+  },
+  {
+   "asin": "B004RUFBLW",
+   "product": "Vibrant Performance VIB13040 (13040) 90° T304 Stainless Steel Mandrel Bend Tube",
+   "evidence": "https://www.amazon.com/Vibrant-Performance-VIB13040-Stainless-Mandrel/dp/B004RUFBLW"
+  },
+  {
+   "asin": "B01FN3XTV0",
+   "product": "Ticon Industries Titanium 90° Mandrel Bend, 3\" (part 101-07653-0000)",
+   "evidence": "https://www.amazon.com/Ticon-Industries-Titanium-Mandrel-101-07653-0000/dp/B01FN3XTV0"
+  }
  ],
  "sources": [
   "https://www.blocksteel.com/products/aluminized-steel-products",
@@ -39,6 +55,5 @@
   "https://forum.millerwelds.com/forum/motorsports/24615-newb-question-weld-stainless-to-aluminized-exhaust",
   "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf"
  ],
- "notes": "Direct page fetches were blocked in this environment (DNS failures), so EVERY fact above came from WebSearch result summaries of the listed pages, not from reading the pages directly. Please spot-check: (1) Cleveland-Cliffs Type 1 bulletin: 'heat resistance effective up to 1250°F' and 'outperforms zinc-coated' (a distributor, Block Steel, gives 900°F without discoloring; we used only the Cliffs figure). (2) Block Steel: Type 1 = Al with 5-11% Si. (3) 409: ~11% Cr, Ti-stabilized, weldability 'fair', formable by roll forming/stretch bending; ATI note that hot-end parts may need an 18% Cr grade; 885°F embrittlement range 700-1100°F (attributed to ATI datasheet in the summary). (4) 321: excellent intergranular resistance after 800-1500°F exposure (Upmet/NKS); NKS caveat on long 900-1500°F exposure; AMS 5510 uses. (5) Burns Stainless: 321 for most turbo builds; 321 above ~1,400°F appears in one Burns blog article (which one was not visible in the summary; linked the materials article); 308 filler for 304 and 347 for 321; Inconel for higher EGTs. (6) Rogue Fab exhaust-bender page: mandrel for 304 exhaust when wall ratio > 20 or 'D/R' < 3.0; we interpreted D/R as D of bend (CLR/OD). (7) Smiths Metal: Ti grade 9 density 4.48 g/cc, under 60% of steel. (8) 'Grinding the aluminized coating before welding' is forum practice (Miller forum), written as 'many welders report'. (9) Magnet behaviour from supplier blogs (sakysteel). (10) Khaos B07L2GJB6J is only an inline alt link; its specs are from the listing title. Vibrant B004RUFBLW specs (2.5 OD, 3.5 CLR, 5/11 in legs, .065 wall) from the search summary of the listing. Ticon B01FN3XTV0 listing says CP grade 1 titanium but its material field also says 'Stainless Steel' (listing conflict). No lifespan numbers were used because none could be sourced. Web search budget ran out during research, so no further verification was possible.",
- "word_count_note": "see validator"
+ "notes": "Direct page fetches were blocked in this environment (DNS failures), so EVERY fact above came from WebSearch result summaries of the listed pages, not from reading the pages directly. Please spot-check: (1) Cleveland-Cliffs Type 1 bulletin: 'heat resistance effective up to 1250°F' and 'outperforms zinc-coated' (a distributor, Block Steel, gives 900°F without discoloring; we used only the Cliffs figure). (2) Block Steel: Type 1 = Al with 5-11% Si. (3) 409: ~11% Cr, Ti-stabilized, weldability 'fair', formable by roll forming/stretch bending; ATI note that hot-end parts may need an 18% Cr grade; 885°F embrittlement range 700-1100°F (attributed to ATI datasheet in the summary). (4) 321: excellent intergranular resistance after 800-1500°F exposure (Upmet/NKS); NKS caveat on long 900-1500°F exposure; AMS 5510 uses. (5) Burns Stainless: 321 for most turbo builds; 321 above ~1,400°F appears in one Burns blog article (which one was not visible in the summary; linked the materials article); 308 filler for 304 and 347 for 321; Inconel for higher EGTs. (6) Rogue Fab exhaust-bender page: mandrel for 304 exhaust when wall ratio > 20 or 'D/R' < 3.0; we interpreted D/R as D of bend (CLR/OD). (7) Smiths Metal: Ti grade 9 density 4.48 g/cc, under 60% of steel. (8) 'Grinding the aluminized coating before welding' is forum practice (Miller forum), written as 'many welders report'. (9) Magnet behaviour from supplier blogs (sakysteel). (10) Khaos B07L2GJB6J is only an inline alt link; its specs are from the listing title. Vibrant B004RUFBLW specs (2.5 OD, 3.5 CLR, 5/11 in legs, .065 wall) from the search summary of the listing. Ticon B01FN3XTV0 listing says CP grade 1 titanium but its material field also says 'Stainless Steel' (listing conflict). No lifespan numbers were used because none could be sourced. Web search budget ran out during research, so no further verification was possible."
 }
