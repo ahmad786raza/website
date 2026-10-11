@@ -220,7 +220,7 @@ All URLs below were surfaced and summarised by the search tool. None was opened 
 | F6 | Rogue Fab M605 vs M625 | Commercial | M601 vs M605 vs M625 | roguefab.com pages only | NV | L | Comparison | Cmp | High (direct sale; affiliate status unknown) | **P2** |
 | F7 | 6-way "home-shop bender comparison": JD2 32 vs M605 vs RDB-050 vs 105HD vs HF 12-ton vs WFB2 / Eastwood | Commercial | tube bender comparison chart | none found (gap) | NV | L | Master comparison table plus test results | Cmp, Quiz, Calc | High | **P1.** Flagship; no competitor offers it |
 
-**Count:** 38 topics (8 + 8 + 7 + 5 + 9 + 7). If the team wants about 30, merge A8 into A1, B8 into B6, D5 into D2, E8 into E6, E9 into C7 and F6 into F7.
+**Count:** 44 topics (8 + 8 + 7 + 5 + 9 + 7): 24 P1, 16 P2 and 4 P3. To cut this to 38, merge A8 into A1, B8 into B6, D5 into D2, E8 into E6, E9 into C7 and F6 into F7.
 
 ### Suggested build order (P1 only)
 
