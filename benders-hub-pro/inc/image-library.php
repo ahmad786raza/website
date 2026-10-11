@@ -49,6 +49,14 @@ function bdh_image_slots() {
 		'measuring'       => __( 'Measuring tube', 'benders-hub' ),
 		'cutting'         => __( 'Cutting / notching tube', 'benders-hub' ),
 		'tube-stock'      => __( 'Tube stock', 'benders-hub' ),
+		'offroad'         => __( 'Off-road tube work (bumpers, buggies, karts)', 'benders-hub' ),
+		'defects'         => __( 'Bending defects (kinks, wrinkles)', 'benders-hub' ),
+		'hydraulics'      => __( 'Hydraulic cylinders and pumps', 'benders-hub' ),
+		'compressor'      => __( 'Air compressor', 'benders-hub' ),
+		'railing'         => __( 'Bent tube railings', 'benders-hub' ),
+		'angle'           => __( 'Measuring angles', 'benders-hub' ),
+		'hole-saw'        => __( 'Hole saws', 'benders-hub' ),
+		'bending-tooling' => __( 'Bending machine tooling', 'benders-hub' ),
 	);
 }
 

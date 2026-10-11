@@ -137,20 +137,27 @@ Write the caption so it fits *any* photo of that subject. Don't describe colours
 
 | Slot | What the photos show |
 |---|---|
-| `manual-bender` | Lever-type hand tubing benders (small tube) |
-| `industrial-pipe` | Huge pipeline pipe-bending machines on tracks, and pipe welding |
-| `exhaust` | Stainless exhaust tubes with TIG welds; tubular exhaust headers |
+| `manual-bender` | Hand pipe/tube benders: lever tubing benders, a bending iron, a small hand pipe-bending machine with its bending block |
+| `industrial-pipe` | Huge pipeline pipe-bending machines on tracks; pipe welding |
+| `exhaust` | Stainless exhaust tubes with TIG welds; tubular headers; a chassis with a bent-pipe exhaust |
 | `mandrel` | Tight mandrel-bent headers |
-| `stainless` | Stainless tube welds, orbital weld |
+| `stainless` | Stainless tube welds; orbital weld |
 | `roll-cage` | Race-car interior roll cages |
-| `chassis` | Tube space-frame chassis; tube-frame sand rails |
-| `offroad` | Tube-frame sand-rail buggies |
-| `welding` | TIG/MIG welding pipe and tube, welders in helmets |
-| `workshop` | Large workshop hall; fabricators at work |
+| `chassis` | Tube space-frame chassis, sand rails, go-kart frames, a ladder chassis |
+| `offroad` | Tube-frame buggies and sand rails, go-kart frames, a truck bull bar |
+| `go-kart` | Bare go-kart frames made of bent tube |
+| `railing` | Stainless tube handrail |
+| `welding` | TIG/MIG welding pipe and tube; welders in helmets |
+| `workshop` | Workshop hall; fabricators at work; an air compressor |
 | `safety` | Welders wearing helmets and gloves |
-| `measuring` | Calipers measuring tube OD and wall |
-| `cutting` | Angle grinders and chop saws throwing sparks |
-| `tube-stock` | Stacked metal tube in racks and yards |
+| `measuring` | Calipers measuring tube OD and wall; bevel protractor |
+| `angle` | Universal bevel protractor (measuring and setting angles) |
+| `cutting` | Angle grinders and chop saws throwing sparks; hole saws |
+| `hole-saw` | A set of hole saws (the cutters used in tube notchers) |
+| `tube-stock` | Stacked metal tube in racks and yards; tubing in a 1940s factory |
+| `defects` | A tube with a sharp kink from bending |
+| `hydraulics` | A large hydraulic cylinder on an industrial press |
+| `compressor` | Air compressors |
 | `conduit-bender` | Electrical conduit hand bender |
 
 More slots may be filled later: `cnc-bender`, `hydraulic-bender`, `notcher`. You may use them. If no photo exists yet the figure is skipped, so always include at least 2 figures from the list above.

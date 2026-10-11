@@ -25,7 +25,7 @@ LIVE_PATHS = {'/quiz/', '/calculator/', '/visualizer/', '/compare/', '/database/
 SLOTS = set()
 for c in bhg_blocks.load_catalog():
     SLOTS.update(c['slots'])
-SLOTS.update({'cnc-bender', 'hydraulic-bender', 'notcher', 'offroad'})  # may be filled by later imports
+SLOTS.update({'cnc-bender', 'hydraulic-bender', 'notcher'})  # may be filled by later imports
 DISCLOSURE = 'As an Amazon Associate I earn from qualifying purchases.'
 AMZ_RE = re.compile(r'^https://www\.amazon\.com/dp/([A-Z0-9]{10})\?tag=polyfreeplanet-20$')
 MANIFEST_KEYS = {'slug', 'title', 'excerpt', 'category', 'featured_slot', 'primary_keyword', 'asins', 'sources'}

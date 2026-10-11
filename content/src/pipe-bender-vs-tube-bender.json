@@ -1,0 +1,30 @@
+{
+ "slug": "pipe-bender-vs-tube-bender",
+ "title": "Pipe Bender vs Tube Bender: Which One Do You Actually Need?",
+ "excerpt": "Pipe bender vs tube bender: how NPS pipe and OD tube differ, why a ram pipe bender kinks tubing, and which bender fits your project.",
+ "category": "fabrication-theory",
+ "featured_slot": "industrial-pipe",
+ "primary_keyword": "pipe bender vs tube bender",
+ "asins": [
+  {"asin": "B01M12Z84P", "product": "Woodward Fab Tube and Pipe Bender, Model# WFB2", "evidence": "https://www.amazon.com/Woodward-Fab-Bender-Model-WFB2/dp/B01M12Z84P (pre-verified in writer kit; also seen in search 2026-10-11)"},
+  {"asin": "B075DJJT85", "product": "Woodward Fab WFB2 stand", "evidence": "Pre-verified in writer kit ASIN table"},
+  {"asin": "B07CZS1XNK", "product": "Woodward Fab (HECWFBDT112X5) 1-1/2\" OD x 5\" CLR tubing die for WFB2 bender", "evidence": "https://www.amazon.com/Woodward-Fab-HECWFBDT112X5-tubing-bender/dp/B07CZS1XNK"},
+  {"asin": "B0BRK4VZS3", "product": "Woodward Fab WFBDT13/4X6 1-3/4 OD X 6 Tubing Die For WFB2 Bender", "evidence": "https://www.amazon.com/Woodward-Fab-WFBDT13-Tubing-Bender/dp/B0BRK4VZS3"},
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity tube bender (#21115)", "evidence": "Pre-verified in writer kit ASIN table"}
+ ],
+ "sources": [
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://www.harborfreight.com/12-ton-hydraulic-pipe-bender-32888.html",
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/tube-and-pipe-basics-how-to-achieve-the-perfect-bend",
+  "https://www.archtoolbox.com/materials-systems/plumbing/standard-pipe-dimensions.html",
+  "https://www.engineeringtoolbox.com/ansi-steel-pipes-d_305.html",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://pro-tools.com/products/manual-tube-and-pipe-bender-105-heavy-duty-package",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://www.roguefab.com/tube-pipe-bending-types/",
+  "https://timetrials.scca.com/pages/safety-level-3",
+  "https://www.amazon.com/Woodward-Fab-Bender-Model-WFB2/dp/B01M12Z84P"
+ ],
+ "notes": "Research was done through web-search result summaries only: direct page fetches (harborfreight.com, manuals.harborfreight.com, pro-tools.com, roguefab.com, jd2.com, thefabricator.com, amazon.com) were blocked by the sandbox egress policy. Harbor Freight facts (12 tons / 24,000 lb, 1/2-2 in Sch 40/80, up to 90 deg, six cast dies, 'not intended for thin-wall pipe such as conduit or exhaust') come from the kit fact table plus a search summary of the HF manual; please re-check the manual wording. Schedule 40 OD/wall values (1/2 to 2 in NPS) were confirmed in ArchToolbox search results; wall factors are simple division. SCCA Time Trials material list (seamless/DOM, 4130/T45, Docol R8, no ERW) and 3x centerline bend radius were seen in search summaries of SCCA TT rules (the radius wording came via a motorsportreg.com copy) - re-verify on timetrials.scca.com before publishing. Rogue Fab's bending-types page lists exhaust systems as a ram-bender use, which conflicts with HF's manual for its own model; the article states both. Left out (unverified): HF ram stroke length, Schedule 80 wall values, a forum report of HF kinking 2 in x .120 tube at about 15 deg."
+}

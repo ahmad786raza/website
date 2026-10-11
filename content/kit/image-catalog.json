@@ -1,5 +1,420 @@
 [
  {
+  "id": 119,
+  "slots": [
+   "compressor"
+  ],
+  "alt": "Large stationary piston air compressor in an industrial building",
+  "title": "Air compressor",
+  "creator": "Masugn",
+  "source": "https://commons.wikimedia.org/wiki/File:Air_Compressor.JPG",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/workshop-air-compressor-1024x683.jpg",
+   "w": 1024,
+   "h": 683
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/workshop-air-compressor-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1280
+ },
+ {
+  "id": 118,
+  "slots": [
+   "compressor",
+   "workshop"
+  ],
+  "alt": "Old belt-driven piston air compressor on its receiver tank",
+  "title": "Old belt-driven air compressor",
+  "creator": "Chris Bartle",
+  "source": "https://commons.wikimedia.org/wiki/File:Old_belt_driven_Air_compressor.jpg",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/belt-driven-workshop-air-compressor-1024x683.jpg",
+   "w": 1024,
+   "h": 683
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/belt-driven-workshop-air-compressor-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1280
+ },
+ {
+  "id": 116,
+  "slots": [
+   "hydraulics"
+  ],
+  "alt": "Large hydraulic cylinder on an industrial press brake",
+  "title": "Hydraulic press-brake cylinder",
+  "creator": "M\u00e1rton Kiss-Albert",
+  "source": "https://commons.wikimedia.org/wiki/File:Hydraulic_press_brake%27s_cylinder.jpg",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/hydraulic-press-brake-cylinder-1024x768.jpg",
+   "w": 1024,
+   "h": 768
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/hydraulic-press-brake-cylinder-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1440
+ },
+ {
+  "id": 115,
+  "slots": [
+   "hole-saw",
+   "cutting"
+  ],
+  "alt": "Set of hole saws in different diameters with a pilot drill and arbor",
+  "title": "Hole saws for cutting pipe",
+  "creator": "Herusutimbul",
+  "source": "https://commons.wikimedia.org/wiki/File:Mata_Bor_Hidroponik_Hole_Saw.jpg",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/hole-saw-cutters-1024x683.jpg",
+   "w": 1024,
+   "h": 683
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/hole-saw-cutters-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1280
+ },
+ {
+  "id": 114,
+  "slots": [
+   "angle",
+   "measuring"
+  ],
+  "alt": "Steel universal bevel protractor for measuring and setting angles",
+  "title": "Universal bevel protractor",
+  "creator": "Rebecca Siegel",
+  "source": "https://commons.wikimedia.org/wiki/File:Universal_bevel_protractor.jpg",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/universal-bevel-protractor-1024x681.jpg",
+   "w": 1024,
+   "h": 681
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/universal-bevel-protractor-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1277
+ },
+ {
+  "id": 113,
+  "slots": [
+   "defects"
+  ],
+  "alt": "Metal tube with a sharp kink where it collapsed during bending",
+  "title": "Kinked metal pipe",
+  "creator": "Swpb",
+  "source": "https://commons.wikimedia.org/wiki/File:Kinked_pipe.jpg",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/kinked-metal-pipe-bending-defect-768x1024.jpg",
+   "w": 768,
+   "h": 1024
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/kinked-metal-pipe-bending-defect-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 2560
+ },
+ {
+  "id": 112,
+  "slots": [
+   "tube-stock"
+  ],
+  "alt": "Racks of metal tubing in a 1940s aircraft factory",
+  "title": "Metal tubing at an aircraft plant, 1940s",
+  "creator": "Howard R. Hollem",
+  "source": "https://commons.wikimedia.org/wiki/File:Metal_tubing_at_the_Consolidated_Aircraft_Corp1a34940v.jpg",
+  "license": "Public domain",
+  "license_url": "",
+  "large": null,
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/wwii-aircraft-metal-tubing-consolidated-1024x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1024,
+  "h": 823
+ },
+ {
+  "id": 110,
+  "slots": [
+   "railing"
+  ],
+  "alt": "Stainless steel tube handrail beside outdoor stone steps",
+  "title": "Stainless steel stair railing",
+  "creator": "Editorq35",
+  "source": "https://commons.wikimedia.org/wiki/File:Stainless_steel_railing.jpg",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/stainless-steel-tube-handrail-1024x768.jpg",
+   "w": 1024,
+   "h": 768
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/stainless-steel-tube-handrail-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1440
+ },
+ {
+  "id": 109,
+  "slots": [
+   "offroad"
+  ],
+  "alt": "Heavy tubular steel bull bar on the front of a truck",
+  "title": "Tubular bull bar on a B-double truck",
+  "creator": "John Hewat",
+  "source": "https://commons.wikimedia.org/wiki/File:Bull_bar_roo_bar_on_b_double.JPG",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/tubular-bull-bar-on-truck-1024x768.jpg",
+   "w": 1024,
+   "h": 768
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/tubular-bull-bar-on-truck-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1440
+ },
+ {
+  "id": 108,
+  "slots": [
+   "offroad",
+   "chassis"
+  ],
+  "alt": "Tube-frame desert buggy with spare wheel and roll bars on display",
+  "title": "Longline light strike vehicle tube chassis",
+  "creator": "Calreyn88",
+  "source": "https://commons.wikimedia.org/wiki/File:1990_Longline_MKII_Loght_Strike_Vehicle_Chassis_-L40007.jpg",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/longline-light-strike-vehicle-tube-chassis-1024x785.jpg",
+   "w": 1024,
+   "h": 785
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/longline-light-strike-vehicle-tube-chassis-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1471
+ },
+ {
+  "id": 107,
+  "slots": [
+   "offroad",
+   "chassis",
+   "go-kart"
+  ],
+  "alt": "Go-kart frame built from bent blue steel tube with a seat and wheels",
+  "title": "Modified electric go-kart frame",
+  "creator": "Criveros0248",
+  "source": "https://commons.wikimedia.org/wiki/File:MODIFIED_GO_KART_FRAME.jpg",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/modified-go-kart-tube-frame-612x1024.jpg",
+   "w": 612,
+   "h": 1024
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/modified-go-kart-tube-frame-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1531,
+  "h": 2560
+ },
+ {
+  "id": 106,
+  "slots": [
+   "offroad",
+   "chassis",
+   "go-kart"
+  ],
+  "alt": "Bare go-kart frame of bent steel tube with a seat, batteries and wheels on a workshop floor",
+  "title": "Prototype go-kart frame",
+  "creator": "Criveros0248",
+  "source": "https://commons.wikimedia.org/wiki/File:Go_kart_frame.jpg",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/go-kart-tube-frame-prototype-1024x612.jpg",
+   "w": 1024,
+   "h": 612
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/go-kart-tube-frame-prototype-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1148
+ },
+ {
+  "id": 105,
+  "slots": [
+   "offroad",
+   "chassis"
+  ],
+  "alt": "Yellow tube-frame sand rail buggy parked outside a workshop",
+  "title": "Tube-frame sand rail buggy",
+  "creator": "Blue line industries",
+  "source": "https://commons.wikimedia.org/wiki/File:Blue_line_industries_dune_buggy_sand_rail.jpg",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/tube-frame-sand-rail-dune-buggy-1024x576.jpg",
+   "w": 1024,
+   "h": 576
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/tube-frame-sand-rail-dune-buggy-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1080
+ },
+ {
+  "id": 104,
+  "slots": [
+   "chassis",
+   "exhaust"
+  ],
+  "alt": "Bare vehicle ladder chassis with suspension, wheels and part of a bent-pipe exhaust",
+  "title": "Vehicle chassis with exhaust system",
+  "creator": "Christopher Ziemnowicz (CZmarlin)",
+  "source": "https://commons.wikimedia.org/wiki/File:Chassis_with_suspension_and_exhaust_system.jpg",
+  "license": "CC BY-SA 2.5",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/vehicle-chassis-with-exhaust-system-1024x768.jpg",
+   "w": 1024,
+   "h": 768
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/vehicle-chassis-with-exhaust-system-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1600,
+  "h": 1200
+ },
+ {
+  "id": 102,
+  "slots": [
+   "exhaust",
+   "mandrel"
+  ],
+  "alt": "White-painted tubular exhaust headers fitted in an engine bay",
+  "title": "Aftermarket exhaust headers",
+  "creator": "Dyno Tested",
+  "source": "https://commons.wikimedia.org/wiki/File:Headers.jpg",
+  "license": "Public domain",
+  "license_url": "",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/aftermarket-exhaust-headers-1024x768.jpg",
+   "w": 1024,
+   "h": 768
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/aftermarket-exhaust-headers-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1632,
+  "h": 1224
+ },
+ {
+  "id": 99,
+  "slots": [
+   "manual-bender"
+  ],
+  "alt": "Pipe bending iron taken apart, next to a copper pipe bent at two corners",
+  "title": "Pipe bending iron, disassembled",
+  "creator": "Martink (Dutch Wikipedia)",
+  "source": "https://commons.wikimedia.org/wiki/File:Buigijzer_uit_elkaar.jpg",
+  "license": "CC BY-SA 3.0",
+  "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/pipe-bending-iron-disassembled-1024x686.jpg",
+   "w": 1024,
+   "h": 686
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/pipe-bending-iron-disassembled-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1792,
+  "h": 1200
+ },
+ {
+  "id": 98,
+  "slots": [
+   "manual-bender"
+  ],
+  "alt": "Hand pipe-bending machine and its grooved bending block on a tiled floor",
+  "title": "Hand pipe-bending machine with bending block",
+  "creator": "S.J. de Waard",
+  "source": "https://commons.wikimedia.org/wiki/File:Buigmachine_en_buigblok_voor_unionbuis.JPG",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "large": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/hand-pipe-bending-machine-and-bending-block-1024x683.jpg",
+   "w": 1024,
+   "h": 683
+  },
+  "lead": {
+   "url": "https://bendershub.com/wp-content/uploads/2026/10/hand-pipe-bending-machine-and-bending-block-1200x675.jpg",
+   "w": 1200,
+   "h": 675
+  },
+  "w": 1920,
+  "h": 1281
+ },
+ {
   "id": 91,
   "slots": [
    "cutting",
@@ -153,7 +568,7 @@
   ],
   "alt": "Hand tube bending tool",
   "title": "Buigijzer",
-  "creator": "Martink at Dutch Wikipedia.(door mij gemaakte foto voor het publiek domein van Wikipedia.)",
+  "creator": "Martink (Dutch Wikipedia)",
   "source": "https://commons.wikimedia.org/wiki/File:Buigijzer.jpg",
   "license": "CC BY-SA 3.0",
   "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",

@@ -1,0 +1,219 @@
+<p class="bhg-lead">You go to order a die, and the listing says "1.75 × 6 CLR." A friend tells you to "go 3D." A rulebook says "three times the tube diameter." An old drawing just says "6-inch radius." Are those all the same number? Not quite. Welcome to <strong>centerline radius tube bending</strong>. CLR is the one number that sets the size, shape and difficulty of every bend you make.</p>
+
+<p>CLR sounds technical, but it isn't. It's the radius of the bend, measured to the middle of the tube. The trouble starts when you mix it up with the inside or outside radius. Parts come out the wrong size. Cut lengths drift. Dies get ordered wrong. And on a roll cage, you could end up under a rulebook minimum without knowing it.</p>
+
+<p>This guide clears it all up, the way a friend in the next garage bay would. You'll learn what CLR is and how it differs from inside and outside radius. You'll see how to measure it on a die or a bent part, and how to choose the right die CLR for your project. We'll work real numbers with the math shown, so you can check every step yourself.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p><strong>Centerline radius (CLR)</strong> is the distance from the center of a bend to the centerline of the tube. Rotary-draw dies are sold by tube OD × CLR.</p><ul><li><strong>Inside radius = CLR − OD ÷ 2.</strong> <strong>Outside radius = CLR + OD ÷ 2.</strong> A 1.75" tube on a 6" CLR die has a 5.125" inside radius and a 6.875" outside radius.</li><li><strong>How tight?</strong> Pro-Tools puts the practical minimum without a mandrel at about 3 × OD. Baileigh suggests starting at 4 × OD. Cage rulebooks may set their own minimum.</li><li><strong>Length:</strong> arc length = CLR × angle in radians. A 90° bend on a 6" CLR uses 9.42" of tube.</li><li><strong>Measuring:</strong> on a U-bend, the center-to-center distance between the legs is 2 × CLR. Use <a href="#digital-caliper">digital calipers</a> to get the true OD first.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#what-is-clr">What centerline radius means</a></li><li><a href="#clr-vs-inside-outside">CLR vs inside and outside radius</a></li><li><a href="#why-centerline">Why the centerline matters</a></li><li><a href="#d-of-bend">CLR as a multiple of OD</a></li><li><a href="#how-to-measure">How to measure CLR</a></li><li><a href="#choosing-die-clr">Choosing a die CLR</a></li><li><a href="#clr-and-cut-length">How CLR changes cut length</a></li><li><a href="#real-life">Real-life lessons</a></li><li><a href="#mistakes">Common mistakes</a></li><li><a href="#pro-tips">Pro tips</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Your CLR checklist</a></li></ol></div>
+
+<h2 id="what-is-clr">Centerline radius tube bending: the plain-English definition</h2>
+
+<p>Picture any bend as a slice of a circle. Every circle has a center point. Now picture a line running down the exact middle of the tube, halfway between the walls. That's the <strong>centerline</strong>. The <strong>centerline radius</strong> is the distance from the circle's center point to that line.</p>
+
+<p>That's it. The Fabricator's <a href="https://www.thefabricator.com/glossary/centerline-radius" target="_blank" rel="noopener">glossary</a> defines it the same way. It also notes that CLR is often written as a multiple of the tube size. Its example: a "5 × D" bend on 2" tube has a 10" CLR. We'll come back to that "D" idea soon.</p>
+
+<h3>The die decides the CLR</h3>
+
+<p>On a rotary-draw bender, the die sets the CLR. The tube wraps around the die's groove, so the bend can only follow that one radius. That's why dies are sold by two numbers: the tube's <strong>outside diameter (OD)</strong> and the CLR. A "1.75 × 6" die bends 1.75" OD tube at a 6" centerline radius.</p>
+
+<p>You can't change the CLR by pulling harder, slower or in smaller steps. Want a bigger or tighter radius? You need a different die. Hand benders for brake line and conduit benders work the same way. Their forming wheel or shoe has a fixed radius built in.</p>
+
+<h3>"Bend radius" is a slippery phrase</h3>
+
+<p>In tube shops, "bend radius" usually means CLR. But not always. Some drawings, sellers and older references use "bend radius" for the inside curve instead. Stainless Headers' <a href="https://www.stainlessheaders.com/p-35900-tube-cut-length.html" target="_blank" rel="noopener">cut-length calculator</a> sums up the tube-world habit well: bent tubing is normally measured at the centerline, not the inside or outside edge.</p>
+
+<figure class="bhg-figure" data-slot="manual-bender"><figcaption>Even a small hand bender has a fixed radius built into its forming wheel. That radius is its CLR.</figcaption></figure>
+
+<div class="bhg-callout bhg-callout--tip"><span class="bhg-callout-icon">💡</span><span class="bhg-callout-title">Always ask "which radius?"</span><p>If a drawing, plan or seller gives you a radius without saying CLR or centerline, ask before you order a die. On 1.75" tube, mixing up inside radius and CLR puts you off by 0.875". That's half the tube's diameter.</p></div>
+
+<h2 id="clr-vs-inside-outside">CLR vs inside radius vs outside radius</h2>
+
+<p>A tube has thickness, so every bend really has three radii. The <strong>inside radius</strong> is the tight curve on the inside of the bend. The <strong>outside radius</strong> is the big sweeping curve on the outside. The <strong>CLR</strong> sits exactly halfway between them.</p>
+
+<p>One quick note on words. Here, "inside radius" means the radius of the tube's outer surface on the inside of the bend. It's what you'd touch with a radius gauge. It is <em>not</em> the tube's bore. Because these numbers are measured on the outside surface, wall thickness doesn't change them. Only the OD does.</p>
+
+<h3>The three formulas</h3>
+
+<ul><li><strong>Inside radius</strong> = CLR − (OD ÷ 2)</li><li><strong>Outside radius</strong> = CLR + (OD ÷ 2)</li><li><strong>CLR</strong> = inside radius + (OD ÷ 2), or outside radius − (OD ÷ 2)</li></ul>
+
+<h3>Worked example</h3>
+
+<p>Take 1.75" OD tube on a 6" CLR die. Half the OD is 1.75 ÷ 2 = 0.875". The inside radius is 6 − 0.875 = <strong>5.125"</strong>. The outside radius is 6 + 0.875 = <strong>6.875"</strong>. Swap in 1.5" tube on a 5.5" CLR die and you get 4.75" inside and 6.25" outside.</p>
+
+<table><thead><tr><th>Measurement</th><th>Measured to</th><th>Formula</th><th>1.75" OD on 6" CLR</th><th>1.5" OD on 5.5" CLR</th></tr></thead><tbody><tr><td><strong>Inside radius</strong></td><td>Tube surface on the inside of the bend</td><td>CLR − OD ÷ 2</td><td>5.125"</td><td>4.750"</td></tr><tr><td><strong>Centerline radius (CLR)</strong></td><td>Middle of the tube</td><td>Set by the die</td><td>6.000"</td><td>5.500"</td></tr><tr><td><strong>Outside radius</strong></td><td>Tube surface on the outside of the bend</td><td>CLR + OD ÷ 2</td><td>6.875"</td><td>6.250"</td></tr><tr><td><strong>U-bend leg spacing</strong></td><td>Center of one leg to center of the other</td><td>2 × CLR</td><td>12.000"</td><td>11.000"</td></tr></tbody></table>
+
+<p>See how the tube size changes everything? The same inside radius on a different tube gives a different CLR. That's why a radius with no tube size is only half the story. Whenever you write down a bend, write the OD next to it.</p>
+
+<div class="bhg-callout bhg-callout--warn"><span class="bhg-callout-icon">⚠️</span><span class="bhg-callout-title">Check the listing wording</span><p>Most rotary-draw dies are listed by CLR. Pre-bent elbows and some drawings may not say which radius they mean. If the listing doesn't say "CLR" or "centerline," confirm it with the seller before you buy.</p></div>
+
+<h2 id="why-centerline">Why the centerline is the number that matters</h2>
+
+<p>When tube bends, it doesn't just curve. The outside wall gets stretched and thins out. The inside wall gets squeezed and thickens. <a href="https://www.thefabricator.com/thefabricator/article/tubepipefabrication/tube-bending-basics-how-to-bend-tubing-and-metal-pipe" target="_blank" rel="noopener">The Fabricator</a> describes the same thing in its tube-bending basics. Somewhere near the middle is a line that's neither stretched nor squeezed much. For everyday shop math, that line is treated as the tube's centerline.</p>
+
+<p>That's why tube lengths are figured at the centerline. Measure on the inside and your number is too short. Measure on the outside and it's too long.</p>
+
+<h3>The numbers, side by side</h3>
+
+<p>Let's bend 1.75" tube 90° on a 6" CLR die. First convert the angle to radians: 90° = 1.5708 radians. Arc length is radius × angle in radians.</p>
+
+<ul><li><strong>Inside arc:</strong> 5.125 × 1.5708 = 8.05"</li><li><strong>Centerline arc:</strong> 6 × 1.5708 = 9.42"</li><li><strong>Outside arc:</strong> 6.875 × 1.5708 = 10.80"</li></ul>
+
+<p>The outside skin is about 2.75" longer than the inside skin on that one bend. Only the centerline number tells you how much straight tube the bend really uses. That's the 9.42" figure.</p>
+
+<h3>The JD2 shortcut</h3>
+
+<p>JD2's <a href="https://support.jd2.com/MiscDown/dl/M32BDirections.pdf" target="_blank" rel="noopener">Model 32 manual</a> writes bend length as CLR × degrees × .0175. That's the same formula with π ÷ 180 rounded up. The exact value is about 0.017453. On our example, JD2's shortcut gives 6 × 90 × .0175 = 9.45". The exact answer is 9.42". The tiny difference only matters when you add up many bends.</p>
+
+<p>You may also run into sheet-metal "bend allowance" formulas that use a K-factor and the material thickness. Those come from sheet-metal work. For tube on a rotary-draw die, makers and tube calculators use CLR × angle. Our full <a data-bhg-link="tube-bend-length-formula" href="/tube-bend-length-formula/">tube bend length formula guide</a> walks through it with more examples.</p>
+
+<blockquote class="bhg-quote"><p>Measure bends at the centerline. The inside of the bend is too short, the outside is too long, and the middle is just right.</p></blockquote>
+
+<h2 id="d-of-bend">CLR as a multiple of OD: the "D" number</h2>
+
+<p>Fabricators often talk about CLR as a multiple of the tube OD. That ratio is called <strong>D of bend</strong>. Pro-Tools defines it simply as <strong>CLR ÷ OD</strong> in its <a href="https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate" target="_blank" rel="noopener">wall factor and D of bend article</a>.</p>
+
+<p>So a 1.75" tube on a 6" CLR die is 6 ÷ 1.75 = <strong>3.43D</strong>. A "1D" exhaust bend has a CLR equal to its OD. Vibrant, for example, <a href="https://www.velocityshop.com/products/vibrant-3in-od-t304-ss-90-deg-mandrel-bend-3in-centerline-radius" target="_blank" rel="noopener">lists a 3" OD 304 stainless 90° mandrel bend</a> with a 3" centerline radius. That's 1D. When someone says "1.5D," they mean 1.5 × OD, not a 1.5" radius.</p>
+
+<h3>Lower D means a tighter, harder bend</h3>
+
+<p>The lower the D number, the tighter the bend and the harder it is on the tube. Pro-Tools puts the practical minimum CLR for bending <em>without a mandrel</em> at about <strong>3 × OD</strong>. Baileigh's <a href="https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/" target="_blank" rel="noopener">basic bending concepts</a> suggests <strong>4 × OD</strong> as a starting estimate. Those two aren't in conflict. One is a floor and the other is a comfortable place to start.</p>
+
+<table><thead><tr><th>Situation</th><th>Typical D (CLR ÷ OD)</th><th>On 1.75" OD tube</th><th>Source</th></tr></thead><tbody><tr><td><strong>Practical non-mandrel minimum</strong></td><td>About 3D</td><td>About 5.25" CLR</td><td>Pro-Tools</td></tr><tr><td><strong>Starting estimate</strong></td><td>4D</td><td>7" CLR</td><td>Baileigh</td></tr><tr><td><strong>Popular off-road dies</strong></td><td>1.5" at about 5.5" CLR, 1.75" at about 6.5" CLR</td><td>6.5" ÷ 1.75 = 3.7D</td><td><a href="https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/" target="_blank" rel="noopener">Baileigh</a></td></tr><tr><td><strong>SCCA Time Trials cage bends</strong></td><td>At least 3 × tube diameter, at the centerline</td><td>5.25" CLR or larger</td><td><a href="https://timetrials.scca.com/pages/full-safety-rules" target="_blank" rel="noopener">SCCA Time Trials</a></td></tr><tr><td><strong>6061-T6 aluminum</strong></td><td>About 3.5–4D; 3D is marginal</td><td>About 6.1"–7" CLR</td><td><a href="https://www.roguefab.com/aluminum-pipe-benders/" target="_blank" rel="noopener">Rogue Fab</a></td></tr><tr><td><strong>Mandrel-bent exhaust</strong></td><td>1D to 1.5D is common</td><td>Needs a mandrel bender</td><td>Vibrant listings</td></tr></tbody></table>
+
+<p>At the extreme end, BLM Group calls bends with a CLR-to-diameter ratio under 1 "extreme" curvatures that take serious know-how. That's production machine territory, not garage work.</p>
+
+<p>D of bend is only half the difficulty story. Wall thickness matters just as much. Our guide to <a data-bhg-link="wall-factor-and-d-of-bend" href="/wall-factor-and-d-of-bend/">wall factor and D of bend</a> shows how the two work together.</p>
+
+<h2 id="how-to-measure">How to measure CLR: 4 reliable methods</h2>
+
+<p>Sometimes you need to find the CLR yourself. Maybe the die has no markings. Maybe you're copying a part someone else bent. Here are four methods, from easiest to fiddliest. All of them start with the true OD, so measure it with calipers first. Don't trust the label.</p>
+
+<h3>1. Read the die</h3>
+
+<p>Most dies are stamped or listed as OD × CLR. Check the die face, the box, the maker's die chart or the listing. This is the most reliable number you'll get. If the maker's chart and a reseller's listing disagree, trust the maker and ask.</p>
+
+<h3>2. Measure a 180° U-bend</h3>
+
+<p>This is the easiest way to measure a bent part. Lay the U-bend flat. Measure from the left edge of one leg to the left edge of the other leg. Same-side edges cancel out the tube size, so this distance is the <strong>center-to-center</strong> spacing. Divide by 2 to get the CLR.</p>
+
+<p>Or measure the inside gap between the legs, add one OD, then divide by 2. Example: a 10.25" gap on 1.75" tube gives (10.25 + 1.75) ÷ 2 = <strong>6"</strong> CLR.</p>
+
+<h3>3. Measure a 90° bend with a framing square</h3>
+
+<p>Set a framing square against the outside of both legs. Measure the gap from the inside corner of the square to the tube, along the 45° line. Multiply that gap by 2.414 to get the outside radius. Then subtract half the OD.</p>
+
+<p>Example: a 2.85" gap on 1.75" tube. 2.85 × 2.414 = 6.88" outside radius. 6.88 − 0.875 = <strong>about 6"</strong> CLR. Be careful, though. Any reading error gets multiplied by 2.4, so measure twice.</p>
+
+<h3>4. Measure the die groove</h3>
+
+<p>On a die you can measure straight across, find the diameter at the bottom of the groove. That equals 2 × (CLR − OD ÷ 2). So CLR = (groove diameter + OD) ÷ 2. A 10.25" groove diameter for 1.75" tube gives (10.25 + 1.75) ÷ 2 = 6" CLR. This only works on dies wide enough to measure across.</p>
+
+<figure class="bhg-figure" data-slot="measuring"><figcaption>Every CLR calculation starts with the true outside diameter, so measure it with calipers.</figcaption></figure>
+
+<p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+
+<h3 id="digital-caliper">The tool that makes all of this easier: digital calipers</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">📏 Measuring essential</span><p class="bhg-product-title">NEIKO 01407A Electronic Digital Caliper (0–6")</p><p class="bhg-product-sub">A budget digital caliper for checking tube OD, wall and die grooves.</p></div><div class="bhg-product-body"><div><p>Every CLR formula uses the OD, and labels aren't always right. A digital caliper reads the true OD in seconds. It also checks wall thickness at a cut end, which you'll need for wall factor.</p><p><strong>Who it's for:</strong> anyone ordering dies, copying a bent part or checking that "1.5 inch" stock is really tube and not pipe.</p><p><strong>Why we picked it:</strong> it's a widely sold, low-cost caliper with inch, fraction and millimeter modes. Picks are based on published listing details, not hands-on testing. See <a href="/methodology/">how we evaluate equipment</a>.</p></div><dl class="bhg-specs"><div><dt>Range</dt><dd>0–6" (0–150 mm)</dd></div><div><dt>Readout</dt><dd>Inch, fraction and mm</dd></div><div><dt>Body</dt><dd>Stainless steel, per the main listing</dd></div><div><dt>Zero</dt><dd>Can be set at any point</dd></div><div><dt>Check</dt><dd>Some listings bundle multiple units or show a different model, so confirm 01407A</dd></div></dl></div><div class="bhg-product-lists"><div class="bhg-pros"><h4>Why we like it</h4><ul><li>Fast, easy OD and wall checks</li><li>Fraction mode suits inch tube sizes</li><li>Small enough to live in the bender drawer</li></ul></div><div class="bhg-cons"><h4>Know before you buy</h4><ul><li>A budget tool, not a lab instrument</li><li>Can't reach the wall in the middle of a tube</li><li>Battery-powered, so keep a spare</li></ul></div></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B000GSLKIW?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Affiliate link. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<h2 id="choosing-die-clr">How to choose a die CLR for your project</h2>
+
+<p>For most garage builders, the CLR choice comes down to one die purchase. Dies cost real money, so it pays to think it through once. Work through these questions in order.</p>
+
+<h3>1. Do any rules apply?</h3>
+
+<p>For roll cages and roll bars, the rulebook comes first. SCCA Time Trials, for example, says cage bends measured at the tube centerline must have a radius of at least three times the tube diameter. Other bodies have their own rules, and they change. Benders Hub is not a tech inspector or an engineer. Read the current rulebook for your class and talk to your inspector before you buy tube or dies. Our <a data-bhg-link="roll-cage-bend-radius-rule" href="/roll-cage-bend-radius-rule/">roll cage bend radius guide</a> has more.</p>
+
+<h3>2. What material are you bending?</h3>
+
+<p>Mild steel is the most forgiving. Aluminum is pickier. Rogue Fab says 6061-T6 is more likely to crack on tight radii and recommends about 3.5–4D, calling 3D marginal. If you'll bend 6061, lean toward a bigger CLR. More in our <a data-bhg-link="bending-aluminum-tube-6061" href="/bending-aluminum-tube-6061/">6061 aluminum tube guide</a>.</p>
+
+<h3>3. What look and space do you need?</h3>
+
+<p>A tighter CLR looks sportier and tucks into small spaces. A bigger CLR is gentler on the tube and easier to bend. Off-road builders often land in the middle. Baileigh says the most popular off-road dies are 1.5" and 1.75" at about 5.5" and 6.5" CLR.</p>
+
+<h3>4. Can you buy the die, in your exact OD?</h3>
+
+<p>Check that your bender's maker sells the CLR you want in your tube size. And make sure it's a <em>tube</em> die, not a pipe die. Pipe is sold by nominal size. A 1-1/2" pipe measures 1.900" OD, so a 1.5" tube die won't fit it.</p>
+
+<ul><li>✅ Rules checked (cages, roll bars, anything sanctioned)</li><li>✅ CLR suits the material, with room to spare</li><li>✅ Die is sold for your bender, in your true OD</li><li>✅ The bend fits the space on your part</li></ul>
+
+<div class="bhg-callout bhg-callout--danger"><span class="bhg-callout-icon">🛑</span><span class="bhg-callout-title">Safety parts follow the rulebook</span><p>For cages and roll bars, never pick a die just because it looks good. Confirm the minimum bend radius, tube size, wall and material in the current rulebook, and with your tech inspector, before you buy. Read our <a href="/safety/">workshop safety notes</a> too.</p></div>
+
+<h2 id="clr-and-cut-length">How CLR changes your layout and cut length</h2>
+
+<p>CLR doesn't just change how a bend looks. It changes where the bend starts and how much tube it uses. That matters every time you cut a stick to length.</p>
+
+<h3>Tangent length grows with CLR</h3>
+
+<p>Imagine the two straight legs of a bend extended until they meet in a sharp corner. The distance from where the bend starts to that imaginary corner is the <strong>tangent length</strong>. It equals CLR × tan(angle ÷ 2). For a 90° bend, tan(45°) = 1, so the tangent length equals the CLR. A 6" CLR die starts a 90° bend 6" before the corner. A 7" die starts it 7" before.</p>
+
+<h3>A quick comparison</h3>
+
+<p>Say you need one 90° bend with legs of 24" and 18". Both are measured along the centerline to that imaginary corner. The cut length is the two legs, minus two tangent lengths, plus the arc.</p>
+
+<ul><li><strong>6" CLR die:</strong> 24 + 18 − (2 × 6) + (6 × 1.5708) = 42 − 12 + 9.42 = <strong>39.42"</strong></li><li><strong>7" CLR die:</strong> 24 + 18 − (2 × 7) + (7 × 1.5708) = 42 − 14 + 11.00 = <strong>39.00"</strong></li></ul>
+
+<p>Same part, different die, and the cut length changes by about 0.43". Cut by the wrong number and your legs come out short or long.</p>
+
+<p>Bigger CLRs also eat more straight tube for clamping. Plan for that on parts with bends close together. Our free <a href="/calculator/">bend calculator</a> handles tangent, arc and cut length. The <a href="/visualizer/">geometry visualizer</a> lets you see how a change in CLR moves the bend.</p>
+
+<h3>Your bend won't match the die perfectly</h3>
+
+<p>The Fabricator notes that harder tube and a smaller CLR mean more springback and more "radial growth." In other words, the finished bend can open up a little after you release it. That's why test bends matter. Our <a data-bhg-link="springback-in-tube-bending" href="/springback-in-tube-bending/">springback guide</a> covers how to measure and correct it.</p>
+
+<h2 id="real-life">Real-life lessons about CLR</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads. Each one costs someone tube, time or a die order.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The drawing that meant inside radius</span><p>A builder copies a bumper plan that says "6-inch radius" and orders a 1.75 × 6 CLR die. The parts look right but don't line up with the brackets. The plan's author had measured the inside of the bend. The real CLR was 6 + 0.875 = 6.875", much closer to a 7" die.</p><p><strong>Lesson:</strong> ask which radius a plan means, and convert to CLR before you buy a die.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The cracked aluminum rail</span><p>Someone bends a 6061-T6 handrail on a tight die that bends mild steel just fine. The outside of each bend shows cracks. The die was well under the roughly 3.5–4D that Rogue Fab recommends for 6061-T6.</p><p><strong>Lesson:</strong> match the CLR to the material, not just the bender.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The cage die bought for looks</span><p>A first-time cage builder wants tight, sporty bends and buys a die well under 3 × OD. Before welding anything, they read their series rulebook. It calls for a centerline radius of at least three times the tube diameter. The die goes back on the shelf.</p><p><strong>Lesson:</strong> read the rulebook before you order dies for a cage.</p></div>
+
+<figure class="bhg-figure" data-slot="roll-cage"><figcaption>On a roll cage, the rulebook decides the minimum bend radius, so check it before you choose a die.</figcaption></figure>
+
+<h2 id="mistakes">Common CLR mistakes (and how to fix them)</h2>
+
+<p>Most CLR headaches come from a short list of mix-ups. Here they are, with the fix for each.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Treating any "radius" as CLR.</strong> Plans and listings don't always say which radius they mean.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> ask. Convert inside radius to CLR by adding half the OD.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Measuring the inside curve and calling it CLR.</strong> You'll be off by half the tube's diameter.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> use the U-bend, framing-square or groove method, and always add or subtract OD ÷ 2.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Using sheet-metal bend allowance formulas for tube.</strong> K-factor formulas were built for sheet.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> for tube, use arc length = CLR × angle in radians, then check with a test bend.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Picking the tightest die because it looks cool.</strong> Below about 3 × OD without a mandrel, tube is likely to flatten or wrinkle.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> stay at or above 3D for non-mandrel work. Start nearer 4D if you're unsure.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Mixing up tube and pipe sizes.</strong> 1-1/2" pipe is 1.900" OD, so the D and the die are both wrong.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> measure the real OD with calipers and buy dies for that size.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Assuming the part matches the die exactly.</strong> Springback can open the bend slightly.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> make a test bend in the same tube, measure it and log the result.</p></div>
+
+<h2 id="pro-tips">Pro tips for working with CLR</h2>
+
+<p>These habits make CLR second nature. None of them cost much, and they save tube.</p>
+
+<ul><li>💡 <strong>Write OD and CLR together, every time.</strong> "1.75 × 6" tells the whole story. "6-inch bend" doesn't.</li><li>💡 <strong>Label your dies.</strong> Paint marker or stamps on the die face: OD, CLR and max angle. Future you will be grateful.</li><li>💡 <strong>Keep a U-bend sample from each die.</strong> It's a quick reference for leg spacing, and it lets you check the real CLR any time.</li><li>💡 <strong>Pick a house die.</strong> Many builders design most parts around one OD and one CLR. One springback number to learn, and parts that match.</li><li>💡 <strong>Use the centerline in CAD too.</strong> Draw tube parts as centerlines with the die CLR at each corner. Your cut lengths then come straight from the drawing.</li><li>💡 <strong>Check D before buying a die.</strong> Divide CLR by OD. If it's under 3 for non-mandrel steel, think twice.</li><li>💡 <strong>Know when you need a mandrel.</strong> Tight exhaust bends near 1D–1.5D need mandrel support. Read more in <a data-bhg-link="mandrel-vs-rotary" href="/mandrel-vs-rotary/">mandrel vs rotary-draw bending</a>.</li></ul>
+
+<figure class="bhg-figure" data-slot="exhaust"><figcaption>Tight exhaust bends often sit around 1D to 1.5D, which takes mandrel support.</figcaption></figure>
+
+<!-- 📷 IMAGE IDEA (owner's photo): a 180° U-bend sample lying on a bench with a tape measure across the legs, edge to edge. Suggested alt text: "Measuring center-to-center leg spacing on a U-bend to find the centerline radius". -->
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: think in centerlines</span><p>Experienced fabricators sketch every part as a centerline with radiused corners. Legs, tangents and arcs all live on that one line. Once you think that way, CLR stops being a mystery and becomes a simple layout tool.</p></div>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">What does CLR mean in tube bending?</h3><p>CLR stands for centerline radius. It's the distance from the center of the bend to the centerline of the tube. Rotary-draw dies are sold by tube OD and CLR, such as 1.75 × 6.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How do I convert inside radius to centerline radius?</h3><p>Add half the tube's outside diameter. A 5.125" inside radius on 1.75" tube is 5.125 + 0.875 = 6" CLR. To go from outside radius, subtract half the OD.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is the minimum centerline radius for tube bending?</h3><p>Without a mandrel, Pro-Tools puts the practical minimum at about 3 × OD, and Baileigh suggests starting at 4 × OD. Mandrel benders can go much tighter. Rulebooks and materials such as 6061-T6 may require more.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Is a 1.5D bend the same as a 1.5" radius?</h3><p>No. "D" means the tube's OD. A 1.5D bend has a CLR of 1.5 × OD. On 3" exhaust tube that's a 4.5" CLR, not 1.5".</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Does wall thickness change the CLR?</h3><p>No. The die sets the CLR. But wall thickness changes how tight you can bend without flattening or wrinkling. That's what wall factor measures.</p></div></div>
+
+<h2 id="checklist">Your CLR checklist</h2>
+
+<p>Run through this list before you order a die or cut tube for a bent part.</p>
+
+<div class="bhg-checklist"><ul><li>I've measured the true tube OD with calipers</li><li>I know whether my plan's radius is CLR, inside or outside radius</li><li>I've converted any inside or outside radius to CLR</li><li>I've worked out D of bend (CLR ÷ OD) for my die</li><li>My D is at or above about 3 for non-mandrel steel</li><li>I've checked material limits, such as 6061-T6 at about 3.5–4D</li><li>For cages and roll bars, I've checked the current rulebook minimum</li><li>The die is sold for my bender in my exact OD, not a pipe size</li><li>I've figured cut length with tangents and arcs at the centerline</li><li>I've planned a test bend to check springback and the real radius</li></ul></div>
+
+<p>CLR is just the radius to the middle of the tube. Get that one number right, write it next to the OD, and the rest of your layout falls into place. Your bends will match your plans, and your plans will match your parts. ✅</p>
+
+<div class="bhg-cta"><h3>Ready to put your CLR to work?</h3><p>Plug in your OD, wall and die CLR to get D of bend, wall factor, arc length, tangent length and cut length. Or see how a bigger or smaller radius changes the shape.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/calculator/">Open the bend calculator</a><a class="bhg-btn bhg-btn--ghost" href="/visualizer/">Try the geometry visualizer</a></div></div>
