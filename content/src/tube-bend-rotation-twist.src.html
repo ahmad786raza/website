@@ -1,0 +1,257 @@
+<p class="bhg-lead">Your first bend is perfect. Your second bend is perfect too. But when you set the part on the floor, it rocks like a wobbly table. One leg points a few degrees off where it should. That's <strong>twist</strong>, and it almost always comes from <strong>tube bend rotation</strong>: how far the tube turned, or didn't turn, between bends.</p>
+
+<p>Rotation is the part of tube bending nobody explains well. Bend angles get all the attention. But on any part with two or more bends, the rotation between them matters just as much. Get it wrong by a few degrees and a bumper won't sit flat, a cage bar misses its mount, or you build a perfect left-side part when you needed the right.</p>
+
+<p>This guide makes it simple. You'll learn what "plane of bend" means, how to read rotation at a glance, how to set it with a degree wheel or angle finder, a hidden trap that catches a lot of builders, and how to check a finished part for twist. We'll finish with a fully worked example.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p><strong>Rotation</strong> is how far you turn the tube about its own axis between one bend and the next.</p><ul><li><strong>0°</strong> means both bends lie in the same plane and turn the same way, like a U.</li><li><strong>180°</strong> means same plane, opposite way, like a Z or an offset.</li><li><strong>To eliminate twist</strong>, draw a straight reference line, set rotation with a degree wheel on the tube, and support long legs.</li><li><strong>Watch the trap:</strong> an angle finder on the previous leg reads true rotation only when that bend was 90°.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#what-is-rotation">What tube bend rotation means</a></li><li><a href="#rotation-shapes">Rotation at a glance: 0°, 90° and 180°</a></li><li><a href="#why-twist-happens">Why parts end up twisted</a></li><li><a href="#reference-line">Start with a reference line</a></li><li><a href="#degree-wheel">Setting tube bend rotation with a degree wheel</a></li><li><a href="#angle-finder">The angle finder trap</a></li><li><a href="#worked-example">Worked example: a corner bar</a></li><li><a href="#checking-twist">How to check a part for twist</a></li><li><a href="#real-life">Real-life lessons</a></li><li><a href="#mistakes">Common rotation mistakes and fixes</a></li><li><a href="#pro-tips">Pro tips to eliminate twist</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Your rotation checklist</a></li></ol></div>
+
+<h2 id="what-is-rotation">What tube bend rotation means</h2>
+
+<p>Every bend happens in a flat plane. Picture a single 90° bend lying on a table. The two legs and the curve between them all sit on the tabletop. That flat surface is the bend's <strong>plane of bend</strong>.</p>
+
+<p>Now add a second bend. If you don't turn the tube between bends, the second bend lands in the same plane as the first. The whole part still lies flat on the table. If you <em>do</em> turn the tube, the second bend tips up out of that plane. How far you turn it is the <strong>rotation between bends</strong>.</p>
+
+<p>So a bent tube part is really described by three things for each bend:</p>
+
+<ul><li><strong>Where</strong> the bend starts along the tube (from your layout).</li><li><strong>How much</strong> it bends (the bend angle).</li><li><strong>Which way</strong> it bends, set by how far you rotate the tube from the bend before (the rotation).</li></ul>
+
+<p>Bend programs and CNC benders describe parts this way, as a list of feed lengths, rotations and bend angles. In a home garage, you do the same thing by hand. The first two items come from your layout. We cover those in our guide to <a data-bhg-link="how-to-lay-out-tube-bends" href="/how-to-lay-out-tube-bends/">how to lay out tube bends</a>. This guide is all about the third.</p>
+
+<h3>What "twist" means</h3>
+
+<p><strong>Twist</strong> is rotation you didn't mean to have. Either the tube turned when it shouldn't have, or it turned the wrong amount. Builders sometimes call the result a "dog leg." It's the most common reason a part with good bend angles still doesn't fit.</p>
+
+<div class="bhg-callout bhg-callout--tip"><span class="bhg-callout-icon">💡</span><span class="bhg-callout-title">Always say which way</span><p>A 30° rotation clockwise and a 30° rotation counterclockwise make mirror-image parts. On your sketch, write the direction as seen from one fixed spot, such as looking down the tube from the end that goes into the bender first.</p></div>
+
+<figure class="bhg-figure" data-slot="manual-bender"><figcaption>Every bender makes bends in one fixed plane. Rotation is how you aim the next bend somewhere else.</figcaption></figure>
+
+<h2 id="rotation-shapes">Rotation at a glance: 0°, 90° and 180°</h2>
+
+<p>Before you measure anything, learn to "read" rotation by eye. Most parts use one of three easy values. Once you can spot them, you'll catch mistakes before you bend.</p>
+
+<h3>0° rotation: the U</h3>
+
+<p>Both bends sit in the same plane and turn the same way. You get a U, a hoop or a C shape. A simple roll hoop, a bed bar and a bumper with both wings swept back all use 0° rotation. You don't turn the tube at all between bends. You just slide it to the next mark.</p>
+
+<h3>180° rotation: the Z</h3>
+
+<p>Both bends sit in the same plane but turn opposite ways. You get a Z, an S or an offset. Think of a bar that jogs sideways to clear something, then carries on parallel. You flip the tube exactly halfway round between bends.</p>
+
+<h3>90° rotation: the corner</h3>
+
+<p>The second bend turns straight out of the first bend's plane. With two 90° bends, the three legs point along three edges of a box corner. Parts that wrap around a corner of a vehicle often have a 90° rotation somewhere.</p>
+
+<h3>Everything in between</h3>
+
+<p>Real parts often use odd values like 17° or 62°. Those come from a mock-up, a drawing or bend software. They're the ones where careful measuring really pays off.</p>
+
+<table><thead><tr><th>Rotation</th><th>Shape with two bends</th><th>Lies flat on a table?</th><th>Typical parts</th></tr></thead><tbody><tr><td><strong>0°</strong></td><td>U, hoop, C</td><td>✅ Yes</td><td>Hoops, bed bars, swept bumpers</td></tr><tr><td><strong>180°</strong></td><td>Z, S, offset</td><td>✅ Yes</td><td>Jogs, offsets, steps</td></tr><tr><td><strong>90°</strong></td><td>Box corner</td><td>❌ No</td><td>Bars that wrap a corner</td></tr><tr><td><strong>Other</strong></td><td>3D shape</td><td>❌ No</td><td>Cage bars, sliders, door bars</td></tr></tbody></table>
+
+<p>Notice the "lies flat" column. Any part with only 0° and 180° rotations is a flat part. That gives you a very easy way to check for twist, which we'll use later.</p>
+
+<h2 id="why-twist-happens">Why parts end up twisted</h2>
+
+<p>Twist rarely comes from one big mistake. It usually comes from a few small ones. Here are the common causes, and how to stop each.</p>
+
+<h3>The tube turns during the bend</h3>
+
+<p>If the clamp isn't tight, or the tube and die are oily, the tube can rotate in the die as it's pulled. A die that doesn't match the tube's real OD makes this worse. Clean the tube, use the right die and tighten the clamp firmly.</p>
+
+<h3>The tube turns between bends</h3>
+
+<p>This is the big one. When you unclamp and slide the tube to the next mark, it's easy to let it roll a few degrees. Long legs make it worse. Their weight wants to swing down and turn the tube.</p>
+
+<h3>The reference is wrong</h3>
+
+<p>A wobbly reference line, an angle finder zeroed on the wrong surface, or a bender that isn't level all feed you bad numbers. You set "0°" carefully, but it isn't really 0°.</p>
+
+<h3>The measuring method is wrong</h3>
+
+<p>Measuring rotation off the previous leg with an angle finder only works in one special case. We'll show you why in the angle finder section.</p>
+
+<table><thead><tr><th>Cause</th><th>What you see</th><th>Fix</th></tr></thead><tbody><tr><td>Tube slips in the die</td><td>Reference line drifts during the bend</td><td>Clean tube, correct die, tight clamp</td></tr><tr><td>Tube rolls between bends</td><td>Reference line not where you left it</td><td>Support long legs; re-check the line</td></tr><tr><td>Bad reference line</td><td>Parts twist in the same way every time</td><td>Draw the line against a straightedge</td></tr><tr><td>Angle finder zeroed wrong</td><td>Every rotation off by the same amount</td><td>Zero on the bender or tube, not the floor</td></tr><tr><td>Measuring off a non-90° leg</td><td>Rotation larger than you set</td><td>Use a degree wheel, or correct the reading</td></tr><tr><td>Wrong direction</td><td>Mirror-image part</td><td>Write the direction on your sketch</td></tr></tbody></table>
+
+<p>Pro-Tools has a whole blog post on this topic, <a href="https://pro-tools.com/blogs/protoolsusa/19180859-dont-get-it-twisted-how-to-eliminate-twist-when-bending-tube-or-pipe" target="_blank" rel="noopener">"Don't Get It Twisted"</a>, if you want a second take.</p>
+
+<h2 id="reference-line">Start with a reference line</h2>
+
+<p>The simplest anti-twist tool costs nothing. It's a straight line drawn along the full length of the tube. Every other method in this guide builds on it.</p>
+
+<h3>Why it works</h3>
+
+<p>A straight tube has no "top" or "side." The reference line gives it one. Before the first bend, you line it up with a fixed point, such as the top of the die. After that, the line tells you exactly how far the tube has turned. If it moves during a bend, you'll see it. If it moves between bends, you'll see that too.</p>
+
+<h3>How to draw a straight one</h3>
+
+<ol class="bhg-steps"><li><strong>Lay the tube in a length of angle iron</strong> or against a long straightedge so it can't roll.</li><li><strong>Run a fine paint pen or marker</strong> along the edge of the angle, the full length of the tube.</li><li><strong>Check it by eye.</strong> Sight down the tube. The line should look perfectly straight, not spiraled.</li><li><strong>Add a second line</strong> exactly opposite, at 180°, if you'll make Z-shaped parts. It makes flipping the tube easy.</li></ol>
+
+<p>Freehand lines tend to wander. A line that spirals a few degrees over the length of the tube will put that error into every rotation you set from it.</p>
+
+<h3>Use it at every bend</h3>
+
+<p>Line it up before the first bend. Check it after every bend. When you slide the tube to the next mark, look at it before you clamp. It takes a few seconds and catches most twist before it happens.</p>
+
+<blockquote class="bhg-quote"><p>A straight reference line is the cheapest anti-twist tool in the shop. Draw it once, check it at every bend, and most twist never happens.</p></blockquote>
+
+<figure class="bhg-figure" data-slot="measuring"><figcaption>Careful marking and measuring prevent twist. Small errors at each bend add up across a part.</figcaption></figure>
+
+<h2 id="degree-wheel">Setting tube bend rotation with a degree wheel</h2>
+
+<p>A <strong>degree wheel</strong> is a disc marked in degrees that clamps onto the tube or fits in its end. A fixed pointer on the bender, or a mark on the bench, shows the reading. Turn the tube, and the wheel turns with it. The pointer tells you exactly how far. Chassis-tool suppliers such as Mittler Bros sell degree wheels for this job.</p>
+
+<h3>Why a degree wheel beats the alternatives</h3>
+
+<p>A degree wheel measures rotation directly, about the tube's own axis. It doesn't care what angle the previous bend was, or which way the old leg points. That's why it's the most reliable way to set rotation by hand.</p>
+
+<h3>How to use one, step by step</h3>
+
+<ol class="bhg-steps"><li><strong>Fit the wheel</strong> on the free end of the tube, or clamp it on a straight section that won't enter the die.</li><li><strong>Line up zero.</strong> With the reference line at your chosen spot, such as straight up, set the wheel to read 0°.</li><li><strong>Make bend 1.</strong> Bend, release and check the angle as usual.</li><li><strong>Slide to the next mark.</strong> Keep the wheel on the tube. Support the bent leg so it can't swing.</li><li><strong>Rotate to the target.</strong> Turn the tube until the wheel reads the rotation on your sketch, in the right direction.</li><li><strong>Clamp and check.</strong> Clamp the tube, then glance at the wheel again before you bend. Clamping can nudge it.</li></ol>
+
+<h3>A DIY version</h3>
+
+<p>No degree wheel? Print a paper protractor ring, glue it to a disc of plywood with a hole sized to slip over the tube, and add a small clamp. A pointer made from a strip of metal bolted to the bender completes it. It's not fancy, but it reads rotation directly, which is what matters.</p>
+
+<h3>Mock-up tools</h3>
+
+<p>For parts with several odd rotations, a mock-up helps. Rogue Fab sells a PVC mock-up tool called the Prototractor that lists rotation between bends from 0.0° to 177.5° (<a href="https://www.roguefab.com/product/prototractor/" target="_blank" rel="noopener">Rogue Fab</a>). Build the part in PVC, read the rotations, then set them with your degree wheel. You can also plan shapes in our <a href="/visualizer/">geometry visualizer</a>.</p>
+
+<div class="bhg-callout bhg-callout--info"><span class="bhg-callout-icon">🧮</span><span class="bhg-callout-title">Plan lengths and angles first</span><p>Rotation is only one of three numbers per bend. Use our <a href="/calculator/">bend calculator</a> for tangent, arc and cut lengths before you start setting rotations.</p></div>
+
+<h2 id="angle-finder">The angle finder trap</h2>
+
+<p>Lots of builders set rotation with a <strong>digital angle finder</strong> laid on the previous leg. It's quick, and everyone owns one. But it only reads the true rotation in one special case: when the previous bend was exactly 90°.</p>
+
+<h3>Why it goes wrong</h3>
+
+<p>Picture a bender that bends flat, side to side, with the tube sitting level. After the first bend, the old leg sticks out sideways. Roll the tube, and that leg tips up. The angle finder reads how steeply the leg slopes, not how far the tube rolled.</p>
+
+<p>When the old bend is 90°, the leg sticks straight out from the tube. Then the slope and the rotation are the same number. When the old bend is shallower, the leg points partly along the tube. It can't tip up as steeply, so the angle finder reads less than the real rotation.</p>
+
+<h3>The numbers</h3>
+
+<p>For a level tube in a bender that bends flat, the angle finder on the old leg reads: <strong>arcsin(sin of bend angle × sin of rotation)</strong>. Here's what that looks like.</p>
+
+<table><thead><tr><th>Previous bend</th><th>15° rotation</th><th>30° rotation</th><th>45° rotation</th><th>60° rotation</th><th>90° rotation</th></tr></thead><tbody><tr><td><strong>30°</strong></td><td>7.4°</td><td>14.5°</td><td>20.7°</td><td>25.7°</td><td>30.0°</td></tr><tr><td><strong>45°</strong></td><td>10.5°</td><td>20.7°</td><td>30.0°</td><td>37.8°</td><td>45.0°</td></tr><tr><td><strong>60°</strong></td><td>13.0°</td><td>25.7°</td><td>37.8°</td><td>48.6°</td><td>60.0°</td></tr><tr><td><strong>90°</strong></td><td>15.0°</td><td>30.0°</td><td>45.0°</td><td>60.0°</td><td>90.0°</td></tr></tbody></table>
+
+<p>Read it like this. If your last bend was 45° and you want 30° of rotation, roll the tube until the angle finder on the old leg reads <strong>20.7°</strong>, not 30°. Only the 90° row matches the rotation.</p>
+
+<h3>Worked check</h3>
+
+<p>Say you ignore this and roll a 45° leg until it reads 30°. What rotation did you really set? Solve for it: sin(rotation) = sin(30°) ÷ sin(45°) = 0.5 ÷ 0.7071 = 0.7071. That's a rotation of <strong>45°</strong>. You wanted 30°. The part is 15° off.</p>
+
+<div class="bhg-callout bhg-callout--warn"><span class="bhg-callout-icon">⚠️</span><span class="bhg-callout-title">These numbers assume a flat-bending bender</span><p>The table assumes the tube sits level and the bender bends side to side. If your bender bends up and down, the math changes. The safe rule works for every bender: use a degree wheel on the tube, or measure off a 90° leg only.</p></div>
+
+<h2 id="worked-example">Worked example: a corner bar</h2>
+
+<p>Let's put it together with a part that has a 90° rotation: a bar that wraps around a box corner. Think of a bar that runs along a frame rail, turns up, then turns back across.</p>
+
+<h3>The setup</h3>
+
+<ul><li><strong>Tube:</strong> 1.75" OD mild steel, bent on a 6" CLR die.</li><li><strong>Leg A:</strong> 20" from its end to the first intersection point.</li><li><strong>Middle section:</strong> 24" between the two intersection points.</li><li><strong>Leg B:</strong> 20" from the second intersection point to its end.</li><li><strong>Bends:</strong> two 90° bends, with 90° of rotation between them.</li></ul>
+
+<h3>Step 1: the layout numbers</h3>
+
+<p>For a 90° bend on a 6" CLR die, the tangent length is 6" and the arc length is 9.42" (6 × 90 × 0.017453). So:</p>
+
+<ul><li><strong>Leg A straight:</strong> 20 − 6 = 14.00"</li><li><strong>Middle straight:</strong> 24 − 6 − 6 = 12.00"</li><li><strong>Leg B straight:</strong> 20 − 6 = 14.00"</li><li><strong>Cut length:</strong> 14 + 9.42 + 12 + 9.42 + 14 = <strong>58.85"</strong>, using the unrounded arcs</li></ul>
+
+<p>Check it: the intersection lengths add up to 64". Each 90° bend gains 2 × 6 − 9.4248 = 2.575". Two bends gain 5.15", and 64 − 5.15 = 58.85". ✅</p>
+
+<h3>Step 2: mark the tube</h3>
+
+<ul><li><strong>Bend 1 start:</strong> 14.00" from end A</li><li><strong>Bend 1 end:</strong> 23.42" (23-7/16")</li><li><strong>Bend 2 start:</strong> 35.42" (35-7/16")</li><li><strong>Bend 2 end:</strong> 44.85" (44-7/8")</li><li><strong>End B:</strong> 58.85" (58-7/8")</li></ul>
+
+<p>Draw your reference line before marking. Write "rotate 90°" and the direction on the tube between the two bends.</p>
+
+<h3>Step 3: bend 1</h3>
+
+<p>Set the reference line at your zero spot, such as straight up, and zero the degree wheel. Make bend 1, allowing for your springback. Check it reads 90° after release.</p>
+
+<h3>Step 4: rotate 90°</h3>
+
+<p>Slide the tube to the bend 2 mark. Support leg A. Turn the tube 90° in the direction on your sketch. Because bend 1 was exactly 90°, you can double-check with an angle finder on leg A. In a flat-bending bender, leg A should now point straight up or straight down and read 90° from level.</p>
+
+<h3>Step 5: bend 2 and check</h3>
+
+<p>Make bend 2. Now the three straights should point along three edges of a box corner. Set the part on a flat surface on leg A and the middle section, and leg B should point straight up. Check it with a square.</p>
+
+<p>Want to check the math first? Our <a data-bhg-link="tube-bend-length-formula" href="/tube-bend-length-formula/">tube bend length formula</a> guide walks through tangent and arc lengths in more detail.</p>
+
+<h2 id="checking-twist">How to check a part for twist</h2>
+
+<p>Don't wait until fit-up to find twist. Check each part as soon as it's bent, while it's still easy to remake.</p>
+
+<h3>The flat-table test (for flat parts)</h3>
+
+<p>Any part with only 0° and 180° rotations should lie perfectly flat. Set it on a flat welding table or a clean, flat floor. Press down on each corner in turn. If it rocks, it's twisted. If every straight touches, it's flat. This is the fastest check there is.</p>
+
+<h3>The square test (for 90° rotations)</h3>
+
+<p>Lay the part on one flat plane, like the bottom of the corner bar. Use a framing square against the leg that should stand up. If the leg leans, the rotation is off. Measure how far it leans at a known height to see how big the error is.</p>
+
+<h3>The angle test (for odd rotations)</h3>
+
+<p>For 3D parts, rest one bend's plane flat on the table. Then check the next leg's angle with an angle finder, and compare it with your mock-up or your plan. Use the table in the angle finder section if the bend before it wasn't 90°.</p>
+
+<h3>What to do if it's twisted</h3>
+
+<p>Small errors can sometimes be pulled into place during fit-up on non-critical parts. For anything structural, like a cage or a chassis tube, remake the part. Forcing a twisted tube into place builds stress into the joint. And for roll cages, your rulebook and your tech inspector have the final word. See our guide to <a data-bhg-link="how-to-build-a-roll-cage" href="/how-to-build-a-roll-cage/">building a roll cage</a>.</p>
+
+<div class="bhg-callout bhg-callout--danger"><span class="bhg-callout-icon">🛑</span><span class="bhg-callout-title">Keep clear of swinging legs</span><p>When you rotate a part with long bent legs, they swing through a big arc. Keep your head and helpers out of the swing path, and support the legs so they can't drop. Read our <a href="/safety/">workshop safety notes</a>.</p></div>
+
+<figure class="bhg-figure" data-slot="chassis"><figcaption>Frames and chassis tubes have to land exactly on their mounts, so rotation errors show up fast.</figcaption></figure>
+
+<h2 id="real-life">Real-life lessons</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads. Every one of them is easy to avoid once you've seen it.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The rocking bumper</span><p>A builder bends a front bumper with two swept-back wings. Both bends are 0° rotation, so the part should lie flat. But they didn't support the long first wing when they slid the tube to bend 2. The wing sagged and rolled the tube a few degrees. On the floor, the bumper rocks.</p><p><strong>Lesson:</strong> support long legs between bends and check the reference line before you clamp.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The 45° surprise</span><p>Someone needs 30° of rotation after a 45° bend. They roll the tube until the angle finder on the old leg reads 30°. The real rotation is 45°, and the bar misses its mount by a long way.</p><p><strong>Lesson:</strong> an angle finder on the old leg only reads true rotation after a 90° bend. Use a degree wheel.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The mirror-image slider</span><p>A builder makes a perfect rock slider for the driver's side, then makes the second one with the same numbers. It comes out identical, not mirrored, and won't fit the passenger side.</p><p><strong>Lesson:</strong> mirror parts need the rotation direction reversed. Write the direction on every sketch.</p></div>
+
+<figure class="bhg-figure" data-slot="roll-cage"><figcaption>Cage bars often combine odd bend angles and rotations, so careful rotation pays off.</figcaption></figure>
+
+<h2 id="mistakes">Common rotation mistakes (and how to fix them)</h2>
+
+<p>Most twisted parts come from a short list of mistakes. Here they are, with the fix for each.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>No reference line.</strong> You can't see when the tube turns.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> draw a straight line along the tube against angle iron, and check it at every bend.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Measuring rotation off a non-90° leg.</strong> The angle finder reads less than the real rotation.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> use a degree wheel on the tube, or correct the reading with the table above.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Letting long legs hang.</strong> Their weight rolls the tube between bends.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> support the bent leg with a stand or a helper while you slide and clamp.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Not writing the direction.</strong> You get a mirror image of the part you needed.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> note clockwise or counterclockwise, seen from a fixed end, on the sketch and the tube.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Loose clamp or oily tube.</strong> The tube spins in the die as it bends.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> wipe the tube clean, use the right die and tighten the clamp firmly.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Checking only at the end.</strong> By then, every bend has added error.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> check the reference line or degree wheel after every bend, not just the last one.</p></div>
+
+<h2 id="pro-tips">Pro tips to eliminate twist</h2>
+
+<p>These habits come up again and again among builders whose parts drop straight into place.</p>
+
+<ul><li>💡 <strong>Zero on the bender, not the floor.</strong> Garage floors slope. Set your angle finder to zero on the bender or the straight tube before bend 1, and take every reading the same way.</li><li>💡 <strong>Check flat sections as you go.</strong> After any pair of bends with 0° or 180° rotation, lay that section on a flat surface before the next bend.</li><li>💡 <strong>Mark rotations on the tube.</strong> Write each rotation and direction right on the tube between the bends, so you can't forget.</li><li>💡 <strong>Use two reference lines.</strong> A second line at 90° or 180° gives you a quick visual check for common rotations.</li><li>💡 <strong>Mock up the hard ones.</strong> Build tricky parts in PVC or wire first and read the rotations off the mock-up.</li><li>💡 <strong>Keep notches in phase too.</strong> The notches on each end of a bar must line up with the bends. Our <a data-bhg-link="tube-notching-guide" href="/tube-notching-guide/">tube notching guide</a> covers this.</li><li>💡 <strong>Log your results.</strong> Note any part that came out twisted and why. Patterns show up fast.</li></ul>
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: one zero for the whole part</span><p>Experienced builders pick one zero at the start, usually the reference line straight up, and measure every rotation from it. They never "re-zero" halfway through a part. That way errors can't stack up from bend to bend.</p></div>
+
+<!-- 📷 IMAGE IDEA (owner's photo): a degree wheel clamped on a tube in the bender, with the reference line and pointer visible. Suggested alt text: "Degree wheel on a tube used to set rotation between bends". -->
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is tube bend rotation?</h3><p>It's how far you turn the tube about its own axis between one bend and the next. It sets which way each bend points. 0° keeps both bends in the same plane, turning the same way.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is the plane of bend?</h3><p>It's the flat plane a single bend lies in, containing both straights and the curve between them. Rotation tips the next bend out of that plane.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How do I stop my tube parts from twisting?</h3><p>Draw a straight reference line, tighten the clamp, support long legs between bends and set rotation with a degree wheel. Check each part on a flat surface as soon as it's bent.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Can I set rotation with a digital angle finder?</h3><p>Yes, but only by measuring off a leg whose bend was 90°. After a shallower bend, the reading is smaller than the real rotation. A degree wheel on the tube avoids the problem.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What's the difference between 0° and 180° rotation?</h3><p>Both keep the bends in one plane. At 0°, the bends turn the same way and make a U. At 180°, they turn opposite ways and make a Z or an offset.</p></div></div>
+
+<h2 id="checklist">Your rotation checklist</h2>
+
+<p>Run through this list before your next multi-bend part. If you can tick every box, you're ready.</p>
+
+<div class="bhg-checklist"><ul><li>My sketch shows every bend angle, every rotation and its direction</li><li>I've drawn a straight reference line against angle iron</li><li>I've picked one zero for the whole part, such as the line straight up</li><li>My degree wheel or rotation indicator is on the tube and zeroed</li><li>I only measure rotation off a leg whose bend was 90°, or I use the correction table</li><li>The clamp is tight and the tube and die are clean</li><li>I have a stand or helper to support long legs between bends</li><li>I check the reference line after every bend</li><li>I'll test flat parts on a flat surface as soon as they're bent</li><li>For mirror parts, I've reversed the rotation direction</li></ul></div>
+
+<p>That's rotation, demystified. Draw a good line, pick one zero, set each rotation directly on the tube and check as you go. Your parts will sit flat, line up and drop into place. 🔧</p>
+
+<div class="bhg-cta"><h3>Plan the whole part before you bend</h3><p>See bend geometry in 3D, then work out tangent, arc and cut lengths in seconds.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/visualizer/">Try the geometry visualizer</a><a class="bhg-btn bhg-btn--ghost" href="/calculator/">Open the bend calculator</a></div></div>

@@ -5,9 +5,9 @@
   "45": 1,
   "46": 1,
   "54": 1,
-  "83": 2,
-  "87": 1,
-  "114": 1,
+  "83": 3,
+  "87": 2,
+  "114": 2,
   "51": 4,
   "86": 3,
   "55": 1,
@@ -50,5 +50,8 @@
  "how-to-build-a-roll-cage": 51,
  "jd2-model-32-vs-rogue-fab-m605": 99,
  "pro-tools-105hd-vs-jd2-model-32": 44,
- "rogue-fab-m605-vs-m625": 81
+ "rogue-fab-m605-vs-m625": 81,
+ "springback-in-tube-bending": 87,
+ "ovality-in-tube-bending": 114,
+ "wall-thinning-in-tube-bending": 83
 }

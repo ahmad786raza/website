@@ -1,0 +1,247 @@
+<p class="bhg-lead">You've measured the car twice, cut the pipe once, and it's still wrong. Too long, and the muffler won't line up. Too short, and you're making a filler piece you didn't plan for. Sound familiar? Getting <strong>exhaust tube cut length</strong> right isn't about luck. It's three simple formulas, used in the right order.</p>
+
+<p>Bends eat tube in a way that surprises most people. A pipe that turns a corner is <em>shorter</em> than the two straight distances you measured to that corner. And a pre-bent J-bend or U-bend already has straight legs built in, which you have to subtract. Miss either one and your cut list is off before you start.</p>
+
+<p>This guide walks you through the maths step by step, with three worked examples: a 90° turn with a J-bend, a 45° offset cut from one J-bend, and a U-bend turn-back. Every number is shown, so you can follow along with a calculator. When you're done, you can check your own pipe in seconds with our <a href="/calculator/">bend calculator</a>.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p><strong>Cut length = all the straight sections + all the bend arcs + a little trim allowance.</strong></p><ul><li><strong>Arc length</strong> (tube inside a bend) = CLR × angle in radians. A 90° bend on a 3.75" CLR holds 5.89" of tube.</li><li><strong>Tangent length</strong> (where the bend starts, measured back from the corner) = CLR × tan(angle ÷ 2). For 90° it equals the CLR.</li><li><strong>Straight section</strong> = your measurement to the corner, minus the tangent, minus any leg already on the bend.</li><li><strong>Parts used in our examples:</strong> a <a href="#j-bend-pick">2.5" 1.5D J-bend</a> and a <a href="#u-bend-pick">2.5" 1.5D U-bend</a>.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#why-cut-length">Why exhaust tube cut length trips people up</a></li><li><a href="#formulas">The three numbers: CLR, arc and tangent</a></li><li><a href="#measuring">How to measure the car for a pipe</a></li><li><a href="#example-j-bend">Worked example 1: a 90° turn with a J-bend</a></li><li><a href="#example-offset">Worked example 2: a 45° offset from one J-bend</a></li><li><a href="#example-u-bend">Worked example 3: a U-bend turn-back</a></li><li><a href="#cutting">Marking, cutting and trimming</a></li><li><a href="#real-life">Real-life lessons</a></li><li><a href="#mistakes">Common mistakes and fixes</a></li><li><a href="#pro-tips">Pro tips</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Your cut-list checklist</a></li></ol></div>
+
+<figure class="bhg-figure" data-slot="exhaust"><figcaption>Every joint in a welded exhaust is a cut that had to land in the right place.</figcaption></figure>
+
+<h2 id="why-cut-length">Why exhaust tube cut length trips people up</h2>
+
+<p>When you measure a car for a pipe, you naturally measure to corners. "From the flange to here is 18 inches. Then it turns and goes 12 inches to the muffler." That's the right way to measure. The trouble starts when you add those two numbers and cut a 30" pipe.</p>
+
+<p>A bent pipe doesn't go all the way into the corner. It cuts across it on a curve. So the tube in a bent pipe is always shorter than the corner-to-corner measurements added together. How much shorter depends on the bend's radius and angle.</p>
+
+<h3>The two things a bend does to your numbers</h3>
+
+<ul><li><strong>It starts early.</strong> The pipe begins to curve before it reaches the corner. That distance is the <strong>tangent length</strong>. You subtract it from each straight.</li><li><strong>It adds its own length back.</strong> The curve itself holds tube. That's the <strong>arc length</strong>, and you add it once per bend.</li></ul>
+
+<p>Because the arc is always shorter than the two tangents put together, the pipe comes out shorter than your corner measurements. On a 90° bend with a 3.75" centerline radius, the difference is about <strong>1.61"</strong>. Do that at three or four bends and you're off by several inches.</p>
+
+<h3>Pre-bent parts add one more step</h3>
+
+<p>Most garage exhausts are built from <strong>mandrel bends</strong> bought pre-bent: J-bends, U-bends and short elbows. Those parts come with straight legs already attached. When you cut a filler straight to go between two bends, you must also subtract those legs. Our guide to <a data-bhg-link="mandrel-vs-rotary" href="/mandrel-vs-rotary/">mandrel vs crush bending</a> explains why pre-bent mandrel parts are the usual choice for cut-and-weld work.</p>
+
+<blockquote class="bhg-quote"><p>Measure to the corners, then let the maths take the corners back off. That's the whole trick to cut length.</p></blockquote>
+
+<h2 id="formulas">The three numbers: CLR, arc length and tangent length</h2>
+
+<p>Every cut list uses the same three numbers. Learn these once and you can lay out any exhaust.</p>
+
+<h3>1. Centerline radius (CLR)</h3>
+
+<p>The <strong>CLR</strong> is the radius of the bend measured to the middle of the tube. Mandrel bends are usually sold by it. A "1.5D" bend on 2.5" tube has a CLR of 1.5 × 2.5 = 3.75". If D numbers are new to you, read our <a data-bhg-link="exhaust-bend-radius-1d-vs-1-5d-vs-2d" href="/exhaust-bend-radius-1d-vs-1-5d-vs-2d/">1D vs 1.5D vs 2D exhaust bend radius guide</a> first.</p>
+
+<h3>2. Arc length</h3>
+
+<p>This is how much tube sits inside the bend, measured along the centerline:</p>
+
+<p><strong>Arc length = CLR × angle in radians</strong></p>
+
+<p>To turn degrees into radians, multiply by π ÷ 180, which is about 0.017453. Bender makers often round this. JD2's manual uses CLR × degrees × .0175 (<a href="https://support.jd2.com/MiscDown/dl/M32BDirections.pdf" target="_blank" rel="noopener">JD2 manual</a>). Stainless Headers' cut-length calculator uses 0.01745 (<a href="https://www.stainlessheaders.com/p-35900-tube-cut-length.html" target="_blank" rel="noopener">Stainless Headers</a>). The rounding is tiny. On a 3.75" CLR at 90°, .0175 gives 5.906" against an exact 5.890", a difference of about 0.016".</p>
+
+<h3>3. Tangent length</h3>
+
+<p>This is the distance from the start of the bend back to the corner point, where the two straight centerlines would meet:</p>
+
+<p><strong>Tangent length = CLR × tan(angle ÷ 2)</strong></p>
+
+<p>For a 90° bend, tan(45°) = 1, so the tangent equals the CLR. For any other angle it doesn't. That's the number-one source of cut-length errors.</p>
+
+<table><thead><tr><th>Bend angle</th><th>Radians</th><th>Arc on 3.75" CLR</th><th>tan(angle ÷ 2)</th><th>Tangent on 3.75" CLR</th></tr></thead><tbody><tr><td><strong>15°</strong></td><td>0.2618</td><td>0.982"</td><td>0.1317</td><td>0.494"</td></tr><tr><td><strong>22.5°</strong></td><td>0.3927</td><td>1.473"</td><td>0.1989</td><td>0.746"</td></tr><tr><td><strong>30°</strong></td><td>0.5236</td><td>1.963"</td><td>0.2679</td><td>1.005"</td></tr><tr><td><strong>45°</strong></td><td>0.7854</td><td>2.945"</td><td>0.4142</td><td>1.553"</td></tr><tr><td><strong>60°</strong></td><td>1.0472</td><td>3.927"</td><td>0.5774</td><td>2.165"</td></tr><tr><td><strong>90°</strong></td><td>1.5708</td><td>5.890"</td><td>1.0000</td><td>3.750"</td></tr><tr><td><strong>180°</strong></td><td>3.1416</td><td>11.781"</td><td>No value</td><td>Doesn't apply (see example 3)</td></tr></tbody></table>
+
+<p>The 3.75" CLR columns match a 2.5" pipe at 1.5D, which we'll use in all three examples. For a different CLR, multiply the radians or the tan value by your own CLR. For the general version of these formulas, see our <a data-bhg-link="tube-bend-length-formula" href="/tube-bend-length-formula/">tube bend length formula guide</a>.</p>
+
+<h2 id="measuring">How to measure the car for a pipe</h2>
+
+<p>Good maths can't fix bad measurements. Here's how to get numbers you can trust.</p>
+
+<h3>Measure to the centerline</h3>
+
+<p>All three formulas work on the tube's centerline. Stainless Headers notes that fabricators usually measure bent tube by the centerline, not the inside or outside edge. Under a car, you'll often measure to the edge of something. Just add or subtract half the OD to get back to the centerline. On 2.5" pipe, that's 1.25".</p>
+
+<h3>Find the corner points</h3>
+
+<ol class="bhg-steps"><li><strong>Mark where the pipe must start and end.</strong> Usually a flange face, a muffler inlet or a slip joint.</li><li><strong>Run a string or a length of stiff wire</strong> along the path you want. Bend the wire to follow the route.</li><li><strong>Mark each straight run.</strong> Imagine each straight part of the wire continuing past the bend.</li><li><strong>Find the corner points.</strong> Where two straight runs would cross, that's a corner.</li><li><strong>Measure corner to corner.</strong> Measure from the start point to the first corner, then corner to corner, then to the end point.</li><li><strong>Note each bend angle.</strong> An angle finder or protractor on the wire gives you a good starting number.</li></ol>
+
+<figure class="bhg-figure" data-slot="measuring"><figcaption>Calipers confirm the real OD, and half of it gets you from the tube's edge to its centerline.</figcaption></figure>
+
+<h3>Write it down as a list</h3>
+
+<p>Make a simple table: segment, length to corner, bend angle, CLR. That list is your cut plan. You'll fill in tangents, arcs and filler lengths next to it. It's also a good time to check that each corner has room for its bend. If the straight before a corner is shorter than the tangent length, that bend can't fit there.</p>
+
+<div class="bhg-callout bhg-callout--tip"><span class="bhg-callout-icon">💡</span><span class="bhg-callout-title">Measure in one unit</span><p>Pick inches or millimeters and stick with it. Mixing a metric muffler spec with inch tape measurements is an easy way to cut wrong. Convert everything first.</p></div>
+
+<p>If you're new to laying out bends, our <a data-bhg-link="how-to-lay-out-tube-bends" href="/how-to-lay-out-tube-bends/">guide to measuring and laying out tube bends</a> covers the same ideas for structural tube.</p>
+
+<h2 id="example-j-bend">Worked example 1: a 90° turn with a J-bend</h2>
+
+<p>A <strong>J-bend</strong> is a 90° mandrel bend with straight legs on both ends, usually one long and one short. Let's use a 2.5" OD, 1.5D J-bend with a 3.75" CLR and legs of 8" and 5". That matches the listing for our <a href="#j-bend-pick">J-bend pick</a>.</p>
+
+<h3>The job</h3>
+
+<p>The pipe leaves a flange, runs <strong>18"</strong> to a corner, turns 90°, and runs <strong>12"</strong> to a muffler. Both numbers are measured to the corner point, on the centerline.</p>
+
+<ol class="bhg-steps"><li><strong>Tangent length.</strong> 3.75 × tan(45°) = 3.75 × 1 = <strong>3.75"</strong>.</li><li><strong>Straight on side A.</strong> 18 − 3.75 = <strong>14.25"</strong>.</li><li><strong>Straight on side B.</strong> 12 − 3.75 = <strong>8.25"</strong>.</li><li><strong>Arc length.</strong> 3.75 × 1.5708 = <strong>5.890"</strong>.</li><li><strong>Total tube.</strong> 14.25 + 8.25 + 5.890 = <strong>28.39"</strong>, or about 28-3/8".</li></ol>
+
+<p>Notice the total is <strong>1.61" shorter</strong> than the 30" you'd get by adding 18 and 12. That's two tangents (7.5") minus one arc (5.89"). If a shop bends this pipe from one straight stick, that stick needs at least 28.39" plus trim.</p>
+
+<h3>Building it from the J-bend</h3>
+
+<p>The J-bend's legs already cover part of each straight. Put the 8" leg on side A and the 5" leg on side B:</p>
+
+<ul><li><strong>Filler A:</strong> 14.25 − 8 = <strong>6.25"</strong> (6-1/4")</li><li><strong>Filler B:</strong> 8.25 − 5 = <strong>3.25"</strong> (3-1/4")</li></ul>
+
+<p>Check it: 6.25 + 8 + 5.890 + 5 + 3.25 = 28.39". It matches. ✅</p>
+
+<p>What if you flip the J-bend? The 5" leg on side A needs a 9.25" filler. Side B needs 8.25" of straight, and the 8" leg covers all but 0.25" of it. A quarter-inch filler is fiddly to cut and weld. So orientation matters. <strong>When a leg is longer than the straight you need, trim the leg. When a leg leaves only a sliver, flip the bend or pick different legs.</strong></p>
+
+<div class="bhg-callout bhg-callout--warn"><span class="bhg-callout-icon">⚠️</span><span class="bhg-callout-title">Check how the legs are measured</span><p>Our maths assumes the listed leg is the straight part past the end of the bend. Vibrant, for example, lists its leg lengths "from tangent". Not every seller says. Lay a straightedge along each leg and mark where the tube starts to curve away. Measure from there to the end.</p></div>
+
+<p>Here's the J-bend this example is based on. We picked it because the listing states OD, CLR, wall, material and both leg lengths. We haven't used it hands-on. See <a href="/methodology/">how we choose products</a>.</p>
+
+<p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+
+<h3 id="j-bend-pick">J-bend pick: 2.5" 1.5D stainless 90° with 8" and 5" legs</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">🔧 Used in examples 1 and 2</span><p class="bhg-product-title">2.5" Stainless 90° Mandrel Bend, 1.5D / 3.75" CLR, 16GA, 5" and 8" Legs</p><p class="bhg-product-sub">A 304 stainless 90° with one short and one long leg, J-bend style.</p></div><div class="bhg-product-body"><div><p>Two unequal legs give you choices. Use it as a full 90°, as in example 1. Or cut it at the middle of the bend for two 45° pieces, as in example 2.</p><p><strong>Who it's for:</strong> builders making a 2.5" stainless system from parts, who want enough leg on each end for clamps or easy welding.</p></div><dl class="bhg-specs"><div><dt>OD</dt><dd>2.5"</dd></div><div><dt>CLR</dt><dd>3.75" (1.5D)</dd></div><div><dt>Wall</dt><dd>16GA / .065"</dd></div><div><dt>Material</dt><dd>304 stainless</dd></div><div><dt>Legs</dt><dd>5" and 8"</dd></div></dl></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B079P687YJ?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Need a shorter elbow? The same radius comes as a <a href="https://www.amazon.com/dp/B0778RQTGW?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">2.5" 1.5D elbow with 2" legs</a>. Affiliate links. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<h2 id="example-offset">Worked example 2: a 45° offset cut from one J-bend</h2>
+
+<p>Exhausts often need to step sideways to clear something, then carry on in the same direction. That's an <strong>offset</strong>, or dogleg: two equal bends turning opposite ways. Here's a neat trick. One 90° J-bend, cut at its midpoint, gives you two 45° pieces. Let's use the same 2.5" J-bend (3.75" CLR, 8" and 5" legs).</p>
+
+<h3>The job</h3>
+
+<p>The pipe runs <strong>20"</strong> to the first corner, steps sideways <strong>6"</strong> on two 45° bends, then runs <strong>12"</strong> from the second corner to the end.</p>
+
+<ol class="bhg-steps"><li><strong>Diagonal between corners.</strong> Offset ÷ sin(45°) = 6 ÷ 0.7071 = <strong>8.485"</strong>.</li><li><strong>Tangent for 45°.</strong> 3.75 × tan(22.5°) = 3.75 × 0.4142 = <strong>1.553"</strong>. Not 3.75"!</li><li><strong>Arc for 45°.</strong> 3.75 × 0.7854 = <strong>2.945"</strong>.</li><li><strong>Straight between the bends.</strong> 8.485 − (2 × 1.553) = <strong>5.379"</strong>.</li><li><strong>First straight.</strong> 20 − 1.553 = <strong>18.447"</strong>.</li><li><strong>Last straight.</strong> 12 − 1.553 = <strong>10.447"</strong>.</li><li><strong>Total tube.</strong> 18.447 + 2.945 + 5.379 + 2.945 + 10.447 = <strong>40.16"</strong>.</li></ol>
+
+<p>The corner measurements add up to 20 + 8.485 + 12 = 40.49". So the pipe is about 0.32" shorter. That's smaller than the 90° case, because gentle bends cut less off the corner.</p>
+
+<h3>Cutting the J-bend in half</h3>
+
+<p>You can't measure 45° along the centerline of a bent tube easily. So measure along the outside and inside walls instead. Start from the tangent point at the 8" leg end of the bend:</p>
+
+<ul><li><strong>Outside (heel) mark:</strong> (3.75 + 1.25) × 0.7854 = <strong>3.927"</strong>, about 3-15/16".</li><li><strong>Inside (throat) mark:</strong> (3.75 − 1.25) × 0.7854 = <strong>1.963"</strong>, just under 2".</li></ul>
+
+<p>Join the two marks around the tube and cut on that line. Piece 1 is the 8" leg plus 45° of bend. Piece 2 is 45° of bend plus the 5" leg.</p>
+
+<h3>The filler pieces</h3>
+
+<ul><li><strong>Before the offset:</strong> 18.447 − 8 = <strong>10.447"</strong>, about 10-7/16".</li><li><strong>Between the bends:</strong> <strong>5.379"</strong>, about 5-3/8". This joins the two fresh cut faces.</li><li><strong>After the offset:</strong> 10.447 − 5 = <strong>5.447"</strong>, about 5-7/16".</li></ul>
+
+<figure class="bhg-figure" data-slot="angle"><figcaption>Check each cut piece with a protractor or angle finder before you tack it in place.</figcaption></figure>
+
+<h2 id="example-u-bend">Worked example 3: a U-bend turn-back</h2>
+
+<p>A <strong>U-bend</strong> turns the pipe 180°, so it ends up heading back the way it came. Let's use a 2.5" OD, 1.5D U-bend with a 3.75" radius and two 6" legs. That matches our <a href="#u-bend-pick">U-bend pick</a>.</p>
+
+<h3>Why the tangent formula breaks</h3>
+
+<p>Try the tangent formula on 180°. You need tan(90°), and that has no value. Your calculator will show an error. It makes sense if you picture it: the two straights of a U-bend are parallel, so they never meet at a corner. For a U-bend, measure each straight from the <strong>tangent line</strong> instead. That's the line across both legs, right where the bend begins.</p>
+
+<h3>The fixed numbers of a U-bend</h3>
+
+<ul><li><strong>Leg spacing (center to center):</strong> 2 × 3.75 = <strong>7.5"</strong>.</li><li><strong>Overall width:</strong> 7.5 + 2.5 = <strong>10"</strong>.</li><li><strong>Gap between the legs:</strong> 7.5 − 2.5 = <strong>5"</strong>.</li><li><strong>Arc length:</strong> 3.75 × 3.1416 = <strong>11.781"</strong>.</li></ul>
+
+<p>The leg spacing is fixed by the radius. If your two pipes must sit exactly 7.5" apart, center to center, this U-bend does it with no extra work.</p>
+
+<h3>The job</h3>
+
+<p>One pipe runs <strong>14"</strong> from a flange to the tangent line. The return pipe runs <strong>30"</strong> from the tangent line to the tip.</p>
+
+<ol class="bhg-steps"><li><strong>Filler on the short side.</strong> 14 − 6 = <strong>8"</strong>.</li><li><strong>Filler on the long side.</strong> 30 − 6 = <strong>24"</strong>.</li><li><strong>Total tube, if bent from one stick.</strong> 14 + 11.781 + 30 = <strong>55.78"</strong>.</li></ol>
+
+<h3>Bonus: two 90s from one U-bend</h3>
+
+<p>Cut a U-bend at its top and you get two matching 90° bends with 6" legs. To find the top, measure from the tangent line along the walls. On the outside, that's (3.75 + 1.25) × 1.5708 = <strong>7.854"</strong>, about 7-7/8". On the inside, it's 2.5 × 1.5708 = <strong>3.927"</strong>, about 3-15/16". Each half then holds 6" of leg plus 5.890" of arc.</p>
+
+<p>Splitting a U-bend this way is a common way to get two 90s with a shared radius. Remember the saw blade takes a little tube, so each half ends up a hair under 90°.</p>
+
+<h3 id="u-bend-pick">U-bend pick: 2.5" 1.5D stainless 180° with 6" legs</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">🧩 Used in example 3</span><p class="bhg-product-title">2.5" Stainless 180° Mandrel Bend, 1.5D / 3.75" Radius, 16GA, 6" Legs</p><p class="bhg-product-sub">A full 180° of mandrel bend with equal legs. Use it whole, or cut it into smaller angles.</p></div><div class="bhg-product-body"><div><p>A U-bend is the most flexible pre-bent part you can buy. Use it as a turn-back, split it into two 90s, or slice off 30° and 45° pieces as the routing needs. The maths in example 3 is based on this listing's numbers.</p><p><strong>Who it's for:</strong> anyone building a full system who'd rather cut angles to suit than stock lots of different elbows.</p></div><dl class="bhg-specs"><div><dt>OD</dt><dd>2.5"</dd></div><div><dt>Radius</dt><dd>3.75" (1.5D)</dd></div><div><dt>Wall</dt><dd>16GA / .065"</dd></div><div><dt>Material</dt><dd>304 stainless</dd></div><div><dt>Legs</dt><dd>6" and 6"</dd></div></dl></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B079QD58WT?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Affiliate link. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<h2 id="cutting">Marking, cutting and trimming for a tight fit</h2>
+
+<p>The maths gives you lengths. Turning them into clean joints is about marking and cutting with care.</p>
+
+<h3>Leave a little extra</h3>
+
+<p>Stainless Headers suggests leaving about <strong>1/4"</strong> of extra length for trimming during final fit-up (<a href="https://www.stainlessheaders.com/p-35901-j-bend-optimizer.html" target="_blank" rel="noopener">J-bend cut optimizer</a>). Measuring under a car is never perfect. A filler cut 1/4" long can be trimmed. One cut 1/4" short can't be stretched.</p>
+
+<h3>Mark a square line</h3>
+
+<p>A pipe end that isn't square leaves a wedge-shaped gap. Wrap a strip of paper or thin card tightly around the tube, line up its edges, and draw along it. Many builders use a band clamp as a guide for the same job. Either way, the line goes all the way around at 90° to the tube.</p>
+
+<h3>Cut, then clean up</h3>
+
+<ul><li><strong>Cut just outside the line.</strong> Keep the blade on the waste side so the kerf doesn't eat your length.</li><li><strong>Square it up.</strong> A disc sander or file brings the end flat to the line.</li><li><strong>Deburr inside and out.</strong> Burrs hold the joint apart and spoil the weld.</li><li><strong>Test fit.</strong> Butt the pieces together and look for light through the joint.</li></ul>
+
+<figure class="bhg-figure" data-slot="cutting"><figcaption>Whatever saw you use, cut on the waste side of the line and square the end afterwards.</figcaption></figure>
+
+<h3>Tack, check, then weld</h3>
+
+<p>Tack each joint in two or three spots. Fit the whole pipe to the car before you finish any welds. If a joint needs to rotate to line up a bend, a tack is easy to break. A full weld isn't. Keeping each bend in its plane matters too. Our guide to <a data-bhg-link="tube-bend-rotation-twist" href="/tube-bend-rotation-twist/">tube bend rotation</a> explains how to stop parts twisting.</p>
+
+<div class="bhg-callout bhg-callout--danger"><span class="bhg-callout-icon">🛑</span><span class="bhg-callout-title">Cutting safety</span><p>Saws and grinders throw sparks and hot chips. Wear eye protection and gloves, clamp the tube firmly, and keep sparks away from fuel lines. Read our <a href="/safety/">workshop safety notes</a> before you start.</p></div>
+
+<h2 id="real-life">Real-life lessons from exhaust builds</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads. Each one is a cut-length slip that's easy to avoid once you've seen it.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The 45s that came up short</span><p>A builder lays out an offset with two 45° bends on a 3.75" CLR. They remember "tangent equals CLR" from a 90° job and subtract 3.75" at each corner. The real 45° tangent is 1.553". Every straight next to a bend is now about 2.2" too short, and the offset won't reach.</p><p><strong>Lesson:</strong> tangent equals CLR only at 90°. For anything else, use CLR × tan(angle ÷ 2).</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The pipe that pushed the muffler back</span><p>Someone measures corner to corner and cuts each filler to that full length. They forget that the elbows have legs and that bends start early. The finished pipe is several inches too long. The muffler hangers don't line up.</p><p><strong>Lesson:</strong> subtract the tangent and the leg from every straight before you cut.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The calculator error</span><p>A builder tries to lay out a U-bend with the tangent formula. The calculator throws an error at tan(90°), and they guess instead. Measuring from the tangent line across the legs would have given exact numbers.</p><p><strong>Lesson:</strong> for 180° bends, measure straights from the tangent line, not a corner.</p></div>
+
+<p>All three mistakes have the same fix: write the cut list on paper first, and check it before the saw comes out.</p>
+
+<h2 id="mistakes">Common mistakes (and how to fix them)</h2>
+
+<p>These are the slips that cost the most tube. Each has a simple fix.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Adding corner measurements and cutting that length.</strong> Bends cut across corners, so the pipe ends up too long.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> subtract the tangent at every corner and add the arc once per bend.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Using tangent = CLR for every angle.</strong> It's only true at 90°.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> tangent = CLR × tan(angle ÷ 2). At 45°, that's CLR × 0.4142.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Putting degrees straight into the arc formula.</strong> 3.75 × 90 gives 337.5, not 5.89.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> convert to radians first. Multiply degrees by 0.017453.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Forgetting the legs on pre-bent parts.</strong> A J-bend's 8" leg is 8" of straight you don't need to cut.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> filler = straight − leg. Check where each leg starts with a straightedge.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Measuring along the outside of a bend.</strong> The heel is longer than the centerline.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> work on the centerline. Add or subtract half the OD when you measure to an edge.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Cutting to the exact number first time.</strong> Small measuring errors add up across joints.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> leave about 1/4" for trimming, then sneak up on the fit.</p></div>
+
+<h2 id="pro-tips">Pro tips for accurate cut lists</h2>
+
+<p>These habits make every exhaust build smoother. They take minutes and save whole pieces of tube.</p>
+
+<ul><li>💡 <strong>Use one radius where you can.</strong> If most bends share a CLR, you only need one set of tangent and arc numbers.</li><li>💡 <strong>Mark tangent points on every bend.</strong> A paint-marker line where the bend starts makes leg checks and cut marks quick.</li><li>💡 <strong>Label every piece.</strong> Write "A1", "A2" and so on to match your cut list. Fillers look alike once they pile up.</li><li>💡 <strong>Check the total.</strong> Add every piece in your cut list and compare it with the full developed length. If they match, your list is right.</li><li>💡 <strong>Order one spare bend.</strong> A miscut elbow happens to everyone eventually.</li><li>💡 <strong>Let the calculator check you.</strong> Run each bend through our <a href="/calculator/">bend calculator</a>. It gives arc length, tangent length and cut length, so you can compare with your hand maths.</li></ul>
+
+<figure class="bhg-figure" data-slot="welding"><figcaption>Accurate cuts make tight joints, and tight joints are the easiest to weld well.</figcaption></figure>
+
+<!-- 📷 IMAGE IDEA (owner's photo): a J-bend on the bench with paint-marker lines at the tangent points and the 45° cut marks on the heel and throat. Suggested alt text: "Exhaust J-bend marked for cutting at the 45 degree point, with tangent lines drawn". -->
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: paper first, saw second</span><p>Experienced builders write the whole cut list before they cut anything: segment, corner length, angle, CLR, tangent, arc, leg, filler. Ten minutes on paper beats an afternoon of filler pieces.</p></div>
+
+<p>Want to see how angle and radius change the shape? Our <a href="/visualizer/">geometry visualizer</a> draws it, and the <a href="/glossary/">glossary</a> explains any term you're unsure of.</p>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">How do you calculate exhaust tube cut length?</h3><p>Measure each straight run to the corner points. Subtract the tangent length (CLR × tan(angle ÷ 2)) at each bend. Add the arc length (CLR × angle in radians) for each bend. Then add a small trim allowance.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How much tube is in a 90° mandrel bend?</h3><p>CLR × 1.5708. A 2.5" 1.5D bend has a 3.75" CLR, so it holds about 5.89" of tube along the centerline, plus whatever straight legs it has.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is the tangent length of a 45° bend?</h3><p>CLR × tan(22.5°), which is CLR × 0.4142. On a 3.75" CLR, that's about 1.553". Only 90° bends have a tangent equal to the CLR.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How much extra should I leave for trimming?</h3><p>Stainless Headers suggests about 1/4" for fit-up trimming. Cut a little long, test fit, and trim to suit.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Is 0.0175 accurate enough for arc length?</h3><p>Yes, for exhaust work. It's about 0.3% high. On a 90° bend with a 3.75" CLR, it adds about 0.016". The exact factor is 0.017453.</p></div></div>
+
+<h2 id="checklist">Your exhaust cut-list checklist</h2>
+
+<p>Run through this list before every cut. If every box is ticked, your pipe should go together first time.</p>
+
+<div class="bhg-checklist"><ul><li>I've measured every straight run to the corner points, on the centerline</li><li>I know the angle and CLR of every bend</li><li>I've worked out the tangent for each bend with CLR × tan(angle ÷ 2)</li><li>I've worked out the arc for each bend with CLR × angle in radians</li><li>For U-bends, I've measured straights from the tangent line</li><li>I've subtracted the legs of every pre-bent part</li><li>I've checked each leg's start point with a straightedge</li><li>My cut list adds up to the full developed length</li><li>Each filler has about 1/4" extra for trimming</li><li>Every piece is labelled to match the cut list</li></ul></div>
+
+<p>That's the whole method. Measure to the corners, take the tangents off, put the arcs back, and subtract the legs. Do it on paper first, check it with the calculator, and your exhaust will line up like it was built on a jig. 🔧</p>
+
+<div class="bhg-cta"><h3>Check your numbers in seconds</h3><p>Enter your CLR and bend angles to get arc length, tangent length and cut length. Or see the bend shape in the visualizer.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/calculator/">Open the bend calculator</a><a class="bhg-btn bhg-btn--ghost" href="/visualizer/">Try the geometry visualizer</a></div></div>

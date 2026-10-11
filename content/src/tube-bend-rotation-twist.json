@@ -1,0 +1,17 @@
+{
+ "slug": "tube-bend-rotation-twist",
+ "title": "Tube Bend Rotation: Plane of Bend, Degree Wheels and Eliminating Twist",
+ "excerpt": "Tube bend rotation explained: plane of bend, 0°/90°/180° shapes, degree wheels, the angle-finder trap and simple checks to eliminate twist.",
+ "category": "tutorials",
+ "featured_slot": "measuring",
+ "primary_keyword": "tube bend rotation",
+ "asins": [],
+ "sources": [
+  "https://pro-tools.com/blogs/protoolsusa/19180859-dont-get-it-twisted-how-to-eliminate-twist-when-bending-tube-or-pipe",
+  "https://www.roguefab.com/product/prototractor/",
+  "https://www.mittlerbros.com/mittler-bros/tube-benders.html",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "/home/user/website/docs/research/competitors-keywords-factcheck.md (PART 2 Mittler Bros row; PART 3.3 formulas)"
+ ],
+ "notes": "Mostly geometry and technique; very few external facts. The angle-finder table (reading = arcsin(sin bend x sin rotation), for a level tube in a bender that bends in a horizontal plane) and the '45° bend set to read 30° gives a true 45° rotation' example were derived and checked by a 3D vector simulation in Python. The 0°/90°/180° = U / box-corner / Z conventions were checked with plane-normal (dihedral) math. Corner-bar layout: 20/24/20\" intersections, 6\" CLR, two 90° bends -> straights 14/12/14, arc 9.4248, cut 58.8496 (58.85), marks 14.00 / 23.42 / 35.42 / 44.85 / 58.85, gain check 64 - 5.15. I could NOT read the Pro-Tools twist blog (direct fetch failed with a DNS error and the shared search budget ran out), so the article only links it as 'a second take' by its title (taken from the URL slug) and states nothing from it. Prototractor '0.0° to 177.5°' rotation range is from a roguefab.com search summary. 'Mittler Bros sells degree wheels' is from the project research notes (PART 2, search-index summary), not a page I opened. No Amazon links: the genuinely useful tool here is a digital angle finder or degree wheel, but I could not verify any ASIN for one (search budget exhausted), and forcing a bender/die link would not fit the topic. The editor may add a verified angle-finder box later; the validator WARN 'no Amazon product links' is expected."
+}
