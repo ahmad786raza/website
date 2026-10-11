@@ -29,7 +29,7 @@ function check(name, ok, info) { results.push({ name, ok: !!ok, info: info || ''
       canonical: document.querySelectorAll('link[rel="canonical"]').length,
       ldParsed: ld.every(Boolean), ldTypes: types,
       aff: aff.length,
-      affTagged: aff.filter(a => /tag=rcblogs-20/.test(a.href)).length,
+      affTagged: aff.filter(a => /tag=hoverboardsgu-20/.test(a.href)).length,
       affRel: aff.filter(a => /sponsored/.test(a.rel) && /nofollow/.test(a.rel)).length,
       affBlank: aff.filter(a => a.target === '_blank').length,
       scripts: document.querySelectorAll('script[src]').length,
@@ -37,7 +37,7 @@ function check(name, ok, info) { results.push({ name, ok: !!ok, info: info || ''
       imgsNoAlt: [...document.images].filter(i => !i.hasAttribute('alt')).length,
       heroEager: (document.querySelector('.hero__img') || {}).loading,
       sections: [...document.querySelectorAll('main section')].map(s => s.id || s.className.split(' ')[0]),
-      claims: (() => { const c = document.body.cloneNode(true); c.querySelectorAll('.card__excerpt, .card__title, .post-content, .learn__sub, .guide__excerpt').forEach(e => e.remove()); return /tested|re-checked weekly|Prime shipping|30-day returns|never sponsored|independent editors/i.test(c.innerText); })(),
+      claims: /tested|re-checked weekly|Prime shipping|30-day returns|never sponsored|independent editors/i.test(document.body.innerText),
       stars: document.querySelectorAll('.stars, .score-badge').length,
       navItems: [...document.querySelectorAll('.primary-nav .nav-menu > li > a')].map(a => a.textContent.trim()),
       overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
@@ -88,7 +88,7 @@ function check(name, ok, info) { results.push({ name, ok: !!ok, info: info || ''
   const clickOpt = async (step, value) => { await page.click('.finder__step[data-step="' + step + '"] .finder__option[data-value="' + value + '"]'); await page.waitForTimeout(100); };
   await clickOpt(0, 'child'); await clickOpt(1, 'rough'); await clickOpt(2, 'mid'); await clickOpt(3, 'wheels');
   const fr = await page.evaluate(() => ({ hidden: document.querySelector('.finder__result').hidden, name: document.querySelector('[data-finder-name]').textContent, guides: document.querySelectorAll('[data-finder-guides] a').length, link: document.querySelector('[data-finder-link]').href, note: document.querySelector('[data-finder-note]').textContent }));
-  check('home: finder child/rough → Gyroor G13 with guides', !fr.hidden && /G13/.test(fr.name) && fr.guides >= 2 && /amazon\.com.*tag=rcblogs-20/.test(fr.link), fr.name + ' | ' + fr.guides + ' guides | ' + fr.note);
+  check('home: finder child/rough → Gyroor G13 with guides', !fr.hidden && /G13/.test(fr.name) && fr.guides >= 2 && /amazon\.com.*tag=hoverboardsgu-20/.test(fr.link), fr.name + ' | ' + fr.guides + ' guides | ' + fr.note);
   await page.click('[data-finder-restart]');
   await clickOpt(0, 'adult'); await clickOpt(1, 'rough'); await clickOpt(2, 'high'); await clickOpt(3, 'wheels');
   check('home: finder adult/rough/high → Swagtron T6', /T6/.test(await page.textContent('[data-finder-name]')));
