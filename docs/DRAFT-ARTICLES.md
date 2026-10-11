@@ -1,6 +1,6 @@
 # Draft articles: editor checklist
 
-All articles below were saved on bendershub.com as **drafts**. **Published on 11 October 2026:** #95 (Best Tube Bender for a Home Garage) and #121 (Pipe Bender vs Tube Bender). Everything else is still a draft. Edit: `https://bendershub.com/wp-admin/post.php?post=ID&action=edit`.
+All articles below were saved on bendershub.com as **drafts**. **Published on 11 October 2026:** #95 (Best Tube Bender for a Home Garage) and #121 (Pipe Bender vs Tube Bender). **The other 42 are scheduled to publish automatically, one a day at 13:00 UTC, from 12 October to 22 November 2026** (see the schedule below). You can still edit any of them before its date. To change a date, open the post and edit "Publish" in the sidebar. To hold one back, switch it to Draft. "DIY Garage Workshop" (#37) and "Conduit Bending for Electricians" (#42) are old-format starter drafts. They were left unscheduled. Edit: `https://bendershub.com/wp-admin/post.php?post=ID&action=edit`.
 
 **Before you publish each one:**
 
@@ -55,6 +55,54 @@ All articles below were saved on bendershub.com as **drafts**. **Published on 11
 | 42 | Tutorials | Tube Bend Rotation: Plane of Bend, Degree Wheels and Eliminating Twist | 161 | 4375 | 2 |  |
 | 43 | Workshop Setup | Electric vs Air Over Hydraulic Tube Bender Pump: Which Fits? | 142 | 3886 | 4 |  |
 | 44 | Workshop Setup | Hydraulic Cylinder for Tube Bender: Match Tonnage and Stroke | 143 | 3724 | 3 |  |
+
+
+## Publishing schedule
+
+| Date (13:00 UTC) | Post | Title |
+|---|---|---|
+| 2026-10-12 | 131 | Best Tube Bender (2026): Top Picks for Every Job |
+| 2026-10-13 | 135 | Tube Bender Comparison Chart: 7 Benders by Published Specs |
+| 2026-10-14 | 32 | Centerline Radius Tube Bending: CLR Explained With Real Math |
+| 2026-10-15 | 124 | Manual vs Hydraulic Tube Bender: Drives, Upgrade Kits and Pumps |
+| 2026-10-16 | 126 | Tube Bend Length Formula: Arc, Tangent and Cut Length Math |
+| 2026-10-17 | 123 | Harbor Freight 12 Ton Pipe Bender: What It's For (and What It Isn't) |
+| 2026-10-18 | 31 | Best Hydraulic Tube Bender (2026): Rotary Draw vs Bottle-Jack |
+| 2026-10-19 | 136 | Tube Bender Capacity Chart: Published Limits for 9 Benders |
+| 2026-10-20 | 150 | Springback in Tube Bending: How to Measure and Correct It |
+| 2026-10-21 | 139 | Woodward Fab WFB2 Review: Specs, Dies and Upgrade Path |
+| 2026-10-22 | 140 | How to Choose a Tube Bender: A 10-Step Buying Guide |
+| 2026-10-23 | 127 | Wall Factor and D of Bend: How to Read Any Mandrel Chart |
+| 2026-10-24 | 137 | Tube Bender Die Compatibility: What Fits What, Brand by Brand |
+| 2026-10-25 | 133 | Best Exhaust Pipe Bender for Home Garage Builds (2026) |
+| 2026-10-26 | 33 | Mandrel Bending vs Crush Bending Exhaust: What Really Changes |
+| 2026-10-27 | 41 | Best Tube Notcher for Roll Cage Builds (and Tight Fishmouth Joints) |
+| 2026-10-28 | 138 | Baileigh RDB-050 Review: Specs, Strengths and Who It Suits |
+| 2026-10-29 | 38 | Tube Bending Wrinkles, Kinks and Flattening: Causes and Fixes |
+| 2026-10-30 | 163 | Exhaust Bend Radius 1D vs 1.5D vs 2D: Geometry and Fitment |
+| 2026-10-31 | 147 | JD2 Model 32 vs Rogue Fab M605: Specs Compared Side by Side |
+| 2026-11-01 | 160 | How to Measure and Lay Out Tube Bends (With Worked Examples) |
+| 2026-11-02 | 128 | Best Tube Bender for Roll Cage Builds (2026): Picks by Rule Needs |
+| 2026-11-03 | 35 | Buy Mandrel Bends vs Bend Your Own Exhaust: An Honest Guide |
+| 2026-11-04 | 148 | Pro-Tools 105HD vs JD2 Model 32: Manual Bender Specs Compared |
+| 2026-11-05 | 129 | Roll Cage Bend Radius Rule: Is Your Die Legal? (3× Check) |
+| 2026-11-06 | 164 | Exhaust Tube Cut Length: Step-by-Step Maths for J-Bends and U-Bends |
+| 2026-11-07 | 145 | Best Tube Bender for Chromoly: Picks by Published 4130 Rating |
+| 2026-11-08 | 40 | Roll Cage Tubing Size and Wall Thickness: Where the Rules Live |
+| 2026-11-09 | 156 | Aluminized vs Stainless Exhaust Tubing: 409, 304, 321 & Titanium |
+| 2026-11-10 | 34 | DOM vs 4130 Chromoly Roll Cage: Which Tube Should You Use? |
+| 2026-11-11 | 39 | Bending Stainless Exhaust Tubing: Mandrels, Springback & Test Bends |
+| 2026-11-12 | 149 | Rogue Fab M605 vs M625: Which Rogue Bender Do You Need? |
+| 2026-11-13 | 146 | How to Build a Roll Cage: A Step-by-Step Garage Guide |
+| 2026-11-14 | 161 | Tube Bend Rotation: Plane of Bend, Degree Wheels and Eliminating Twist |
+| 2026-11-15 | 151 | Ovality in Tube Bending: Formula, Measuring and Limits |
+| 2026-11-16 | 155 | Mandrel Tube Bender for Home Shop Use: What It Can and Can't Do |
+| 2026-11-17 | 142 | Electric vs Air Over Hydraulic Tube Bender Pump: Which Fits? |
+| 2026-11-18 | 154 | Bending Aluminum Tube: How to Bend 6061 Without Cracking |
+| 2026-11-19 | 36 | CNC Tube Bender for Small Shop Work: When NC or CNC Pays Off |
+| 2026-11-20 | 152 | Wall Thinning in Tube Bending: Stretch, Geometry and Checks |
+| 2026-11-21 | 143 | Hydraulic Cylinder for Tube Bender: Match Tonnage and Stroke |
+| 2026-11-22 | 158 | Bending Titanium Exhaust Tubing: Grade 2 vs 9, Mandrels & Purging |
 
 ## Check before publishing (from each writer's notes)
 

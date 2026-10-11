@@ -311,3 +311,13 @@ All **43** pending articles from the keyword research are written and saved on b
 - The cached copy of `wp-sitemap-posts-post-1.xml` refreshes when its cache file expires. Requests with any query string already show the new URLs.
 
 **To undo:** choose "Day and name" again in Settings → Permalinks.
+
+**Daily publishing schedule (owner's request, 11 October 2026):**
+- The 42 remaining new-format articles are set to "Scheduled" (status `future`), one a day at 13:00 UTC from 12 October to 22 November 2026. The full schedule is in `docs/DRAFT-ARTICLES.md` and `content/build/schedule.json`.
+- **Order:** hub and comparison pages first, then explainers, reviews and exhaust guides, alternating. The six roll-cage and chassis articles start on 2 November. That leaves time to check their rule statements against the current rulebooks.
+- **Not scheduled:** the old starter drafts #37 and #42, which were never fact-checked.
+- **How publishing runs:** WordPress publishes scheduled posts through WP-Cron. Site Health reports "Scheduled events are running" and loopback requests work.
+  - WP-Cron runs when a request reaches PHP. On quiet days a post can go live a little after 13:00, at the first such request.
+  - For exact timing, add a hosting cron job that calls `https://bendershub.com/wp-cron.php?doing_wp_cron` every 15 minutes.
+- W3 Total Cache purges the homepage and archives when each post publishes.
+- Links between articles point to scheduled posts and become live links when those posts publish.
