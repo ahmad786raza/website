@@ -1,0 +1,30 @@
+{
+ "slug": "how-to-choose-a-tube-bender",
+ "title": "How to Choose a Tube Bender: A 10-Step Buying Guide",
+ "excerpt": "How to choose a tube bender in 10 steps: match capacity, CLR, dies, drive and floor mounting to your projects, with worksheets and a checklist.",
+ "category": "guides",
+ "featured_slot": "measuring",
+ "primary_keyword": "how to choose a tube bender",
+ "asins": [
+  {"asin": "B07PQJZJ37", "product": "Eastwood tube & pipe notcher, 0-60°, up to 2\" round", "evidence": "kit-verified ASIN table (WRITER-KIT.md section 3)"},
+  {"asin": "B0CLT6ZC29", "product": "Woodward Fab WWFSPPIPENOTCH 2\" hole-saw notcher, 60° adjustment", "evidence": "kit-verified ASIN table"}
+ ],
+ "sources": [
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.jd2.com/model-32-bender",
+  "https://www.roguefab.com/aluminum-pipe-benders/",
+  "https://www.roguefab.com/stainless-steel-tube-bender/",
+  "https://www.roguefab.com/bending-101/",
+  "https://www.roguefab.com/faqs/",
+  "https://www.roguefab.com/product/metal-tube-bender-m605-1-die/",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://www.eastwood.com/images/library/21115Q.pdf",
+  "https://www.baileigh.com/manual-tube-bender-rdb-050",
+  "https://timetrials.scca.com/pages/safety-level-3",
+  "ASME B36.10 pipe tables (NPS 1-1/2 = 1.900 in OD, NPS 1-1/4 = 1.660 in OD)"
+ ],
+ "notes": "Vendor-neutral process guide; real machines appear only as examples of how makers word capacity limits, with product picks deferred to best-tube-bender-for-home-garage and best-tube-bender. One product box (Eastwood notcher, brand-neutral accessory) plus one inline alternative notcher. No new research searches were possible (shared WebSearch budget exhausted; direct fetches blocked), so every number comes from the kit's known-good fact table or the PART 3 fact-check notes (which were themselves search-summary sourced): Eastwood '90 deg max with 120 deg dies / 180 deg with 240 deg dies' is from the fact-check notes (Eastwood 21115 PDF) and also appeared in an Eastwood search summary earlier this session. Rogue Fab M605 .188 vs .250 wall conflict is shown openly. SCCA Time Trials 3x rule: kit says re-verify wording. Worksheet tables intentionally contain blank '____' cells and checkbox characters for a printable feel. No prices anywhere by design."
+}

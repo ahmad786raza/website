@@ -1,0 +1,245 @@
+<p class="bhg-lead">You've got a stick of tube, a bender and a part in your head. You make the first bend and it looks great. Then the second bend lands two inches off, and the whole piece is scrap. Sound familiar? Learning <strong>how to measure and lay out tube bends</strong> is what turns "close enough" into parts that drop right into place.</p>
+
+<p>Good news: tube layout is mostly simple math plus a few habits. You need three numbers from your die and your sketch. Then you mark the tube, bend in order and check as you go. This guide walks you through it with two full worked examples, every number shown, so you can follow along with a calculator or our free tools.</p>
+
+<p>We'll cover the key terms (CLR, tangent, arc length and gain), how to measure the space, a step-by-step layout method, how to find where your bender really starts a bend, and template bending for shapes you can't draw on paper. Grab a tape measure, and let's go.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p>To lay out a bent tube part, work in <strong>centerline</strong> dimensions and use two formulas:</p><ul><li><strong>Tangent length</strong> = CLR × tan(bend angle ÷ 2). For a 90° bend, it equals the CLR.</li><li><strong>Arc length</strong> = CLR × bend angle in radians (about CLR × degrees × 0.01745).</li><li><strong>Each straight</strong> = the centerline distance between intersections, minus the tangents at each end.</li><li><strong>Cut length</strong> = all straights + all arcs, plus a little trim. Then do a test bend to learn your bender's real bend start and springback.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#why-layout-matters">Why layout beats guesswork</a></li><li><a href="#key-terms">The layout words you need</a></li><li><a href="#measuring">How to measure the space</a></li><li><a href="#layout-method">How to measure and lay out tube bends: the method</a></li><li><a href="#worked-example">Worked example: a two-bend hoop</a></li><li><a href="#second-example">Worked example: a bumper with 30° wings</a></li><li><a href="#bend-start">Finding your bender's true bend start</a></li><li><a href="#template-bending">Template bending for tricky shapes</a></li><li><a href="#real-life">Real-life layout lessons</a></li><li><a href="#mistakes">Common layout mistakes and fixes</a></li><li><a href="#pro-tips">Pro tips for accurate parts</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Your layout checklist</a></li></ol></div>
+
+<h2 id="why-layout-matters">Why layout beats guesswork</h2>
+
+<p>Bending without a layout is like cutting lumber without measuring. You might get lucky on a single bend. But every bend after the first depends on where the first one landed. Small errors add up fast.</p>
+
+<p>Here's what a proper layout gives you:</p>
+
+<ul><li><strong>The right cut length.</strong> Bends use up tube in a curve, so a bent part needs less tube than its outside measurements suggest. Layout tells you exactly how much to cut.</li><li><strong>Bend marks in the right place.</strong> You'll know where each bend starts and ends on the straight tube, before you clamp it.</li><li><strong>Room to clamp.</strong> You'll see early if a straight is too short for the bender's clamp, so you can plan around it.</li><li><strong>Repeatable parts.</strong> Write the numbers down once and you can make a matching part, like the other side of a bumper, every time.</li></ul>
+
+<p>Layout matters most on parts where tubes meet other tubes: roll bars, cages, bumpers, sliders and frames. A bar that's half an inch long won't fit between its mounts. A bend that starts too early throws every later bend off. And tube isn't cheap.</p>
+
+<p>The math is not hard. If you can multiply and subtract, you can lay out tube bends. And if you'd rather skip the arithmetic, our free <a href="/calculator/">bend calculator</a> does it for you. It still helps to understand what it's doing, so you can spot a bad number before it costs you a stick of tube.</p>
+
+<blockquote class="bhg-quote"><p>Every bend after the first depends on where the first one landed. Layout is how you make the first one land in the right place.</p></blockquote>
+
+<figure class="bhg-figure" data-slot="measuring"><figcaption>Accurate layout starts with accurate numbers: real tube OD, real die radius and careful marks.</figcaption></figure>
+
+<h2 id="key-terms">The layout words you need</h2>
+
+<p>Tube layout uses a handful of terms. Learn these and every layout guide, manual and calculator will make sense. You'll also find them in our <a href="/glossary/">glossary</a>.</p>
+
+<h3>Centerline radius (CLR)</h3>
+
+<p>The <strong>CLR</strong> is the radius of the bend, measured to the center of the tube. Your die sets it. A 6" CLR die always makes a 6" CLR bend in the tube it's made for. Read more in our guide to <a data-bhg-link="bend-radius-explained" href="/bend-radius-explained/">bend radius</a>.</p>
+
+<h3>Tangent points and tangent length</h3>
+
+<p>A bend starts and ends at <strong>tangent points</strong>. That's where straight tube turns into curve. Now picture the two straights extended until they cross. That crossing is the <strong>intersection point</strong>. The distance from a tangent point to the intersection is the <strong>tangent length</strong>. It equals CLR × tan(angle ÷ 2). For a 90° bend, the tangent length equals the CLR.</p>
+
+<h3>Arc length</h3>
+
+<p>The <strong>arc length</strong> is the tube used up inside the bend, measured along the centerline. It's CLR × angle in radians. JD2's manual writes it as CLR × degrees × .0175 (<a href="https://support.jd2.com/MiscDown/dl/M32BDirections.pdf" target="_blank" rel="noopener">JD2 Model 32 manual</a>). The exact constant is 0.017453, so JD2's rounded number reads a little long.</p>
+
+<h3>Gain</h3>
+
+<p>A bent part is shorter than the sum of its intersection-to-intersection measurements. The difference is called <strong>gain</strong>. Per bend, it's 2 × tangent − arc. Watch out, though. Some people also use "gain" for the stretch a tube picks up in a particular bender. That kind is machine- and die-specific, so you find it with a test bend. "Setback" is another word that different sources define differently, so we avoid it.</p>
+
+<table><thead><tr><th>Term</th><th>What it means</th><th>Formula</th><th>90° bend on a 6" CLR die</th></tr></thead><tbody><tr><td><strong>CLR</strong></td><td>Bend radius to the tube's center</td><td>Set by the die</td><td>6.00"</td></tr><tr><td><strong>Tangent length</strong></td><td>Tangent point to intersection point</td><td>CLR × tan(angle ÷ 2)</td><td>6.00"</td></tr><tr><td><strong>Arc length</strong></td><td>Tube used inside the bend</td><td>CLR × angle in radians</td><td>9.42"</td></tr><tr><td><strong>Gain</strong></td><td>Tube "saved" by the bend</td><td>2 × tangent − arc</td><td>2.58"</td></tr><tr><td><strong>Springback</strong></td><td>How much the tube relaxes after release</td><td>Measured with a test bend</td><td>Varies</td></tr></tbody></table>
+
+<p>Want the full derivation? See our <a data-bhg-link="tube-bend-length-formula" href="/tube-bend-length-formula/">tube bend length formula</a> guide.</p>
+
+<h2 id="measuring">How to measure the space</h2>
+
+<p>Before you touch the tube, you need a sketch with dimensions. The trick is to think in <strong>centerlines</strong>. The formulas above all work on the tube's centerline, so your sketch should too.</p>
+
+<h3>Measure to centerlines, not edges</h3>
+
+<p>Tape measures hook onto edges, so you'll often measure outside-to-outside or inside-to-inside. Convert them like this:</p>
+
+<ul><li><strong>Outside-to-outside</strong> width minus one tube OD = centerline width.</li><li><strong>Inside-to-inside</strong> width plus one tube OD = centerline width.</li><li><strong>Height to the top of a bar</strong> minus half the OD = height to its centerline.</li></ul>
+
+<p>For example, a hoop in 1.75" tube that measures 41.75" across the outside is 40" wide on the centerline. The same hoop measures 38.25" across the inside. Add 1.75" and you're back to 40".</p>
+
+<h3>Find the intersection points</h3>
+
+<p>Next, mark where each pair of straights would meet if there were no bend. Those are your intersection points. Measure the distances between them along each straight. On a simple hoop, that's the leg height and the width. On a bumper, it's each section's length from corner to corner.</p>
+
+<h3>Note the angles and the die</h3>
+
+<p>Write down each bend angle and the CLR of the die you'll use. Check your tube OD with calipers, too. Tube and pipe sizes are not the same thing. 1-1/2" pipe actually measures 1.900" across the outside.</p>
+
+<div class="bhg-callout bhg-callout--tip"><span class="bhg-callout-icon">💡</span><span class="bhg-callout-title">Sketch it, then label it</span><p>Draw the part on paper or cardboard. Label every centerline length between intersection points and every bend angle. Number the bends in the order you'll make them. This one sheet becomes your whole layout.</p></div>
+
+<p>Building a cage or roll bar? The rulebook sets your tube size, wall and minimum bend radius. SCCA Time Trials, for example, says cage bends must have a centerline radius of at least three times the tube diameter (<a href="https://timetrials.scca.com/pages/safety-level-3" target="_blank" rel="noopener">SCCA Time Trials</a>). Check your own rulebook first, and see our <a data-bhg-link="roll-cage-bend-radius-rule" href="/roll-cage-bend-radius-rule/">roll cage bend radius rule</a> guide.</p>
+
+<h2 id="layout-method">How to measure and lay out tube bends: the method</h2>
+
+<p>This is the routine we'll use in both worked examples. It works for any part where all the bends are in one plane. Parts with bends in different directions add one more step, rotation. We cover that in our guide to <a data-bhg-link="tube-bend-rotation-twist" href="/tube-bend-rotation-twist/">tube bend rotation and twist</a>.</p>
+
+<ol class="bhg-steps"><li><strong>Sketch the part in centerlines.</strong> Write the distance between each pair of intersection points and each bend angle.</li><li><strong>Work out each tangent length.</strong> Tangent = CLR × tan(angle ÷ 2). For 90°, it's just the CLR.</li><li><strong>Work out each straight.</strong> Take each centerline distance and subtract the tangent at each end that touches a bend.</li><li><strong>Work out each arc.</strong> Arc = CLR × angle in radians, or CLR × degrees × 0.017453.</li><li><strong>Add it up.</strong> Cut length = all straights + all arcs. Add trim allowance on the ends if you want to square them up later.</li><li><strong>Mark the tube.</strong> From one end, mark each bend start and bend end in order. Draw a straight reference line along the tube too.</li></ol>
+
+<h3>Tools you'll need</h3>
+
+<p>A tape measure, a fine marker or soapstone, calipers and a digital angle finder cover most layout work. The bender and die set your CLR, so pick those first. Here are two Amazon options that fit the examples in this guide.</p>
+
+<p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+
+<h3 id="eastwood-die">Eastwood 1.75" × 6" CLR die</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">🔧 The die in our examples</span><p class="bhg-product-title">Eastwood 1.75" × 6" CLR 240° Die</p><p class="bhg-product-sub">A 1.75" OD die with a 6" centerline radius for the Eastwood High Capacity bender.</p></div><div class="bhg-product-body"><div><p>Both worked examples below use a 1.75" tube on a 6" CLR die, a very common off-road and cage combination. This is Eastwood's version for its High Capacity bender. The 240° die lets that bender reach 180° bends.</p><p><strong>Who it's for:</strong> Eastwood High Capacity owners building in 1.75" tube. Owners of other benders need a die made for their machine.</p></div><dl class="bhg-specs"><div><dt>Tube OD</dt><dd>1.75"</dd></div><div><dt>CLR</dt><dd>6"</dd></div><div><dt>Die</dt><dd>240° (bends up to 180° on the High Capacity)</dd></div><div><dt>Fits</dt><dd>Eastwood High Capacity bender</dd></div></dl></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B07PPJ4WN4?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Bender: <a href="https://www.amazon.com/dp/B07PRLN2PG?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">Eastwood High Capacity tube bender</a>. Affiliate links. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<h3 id="eastwood-bender">Eastwood High Capacity tube bender</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">💪 Bender for the examples</span><p class="bhg-product-title">Eastwood High Capacity Tube Bender (#21115)</p><p class="bhg-product-sub">A manual rotary-draw bender that can take air- or electric-hydraulic power later.</p></div><div class="bhg-product-body"><div><p>A repeatable bender makes layout pay off. If the bender starts each bend in the same place every time, your marks work every time.</p><p><strong>Who it's for:</strong> builders who want a manual bender for 1.5" to 2" tube with an upgrade path. Note that 4130 is limited to a thinner wall than mild steel.</p></div><dl class="bhg-specs"><div><dt>Tube size</dt><dd>3/4" to 2" OD</dd></div><div><dt>Mild steel</dt><dd>Up to 2" × .120" wall</dd></div><div><dt>4130 chromoly</dt><dd>Limited to .090" wall</dd></div><div><dt>Bend angle</dt><dd>Up to 180° with 240° dies</dd></div><div><dt>Sold separately</dt><dd>Dies, handle and stand (check the listing)</dd></div></dl></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B07PRLN2PG?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Affiliate link. See our <a href="/affiliate-disclosure/">disclosure</a>. Compare other machines in our <a data-bhg-link="best-tube-bender-for-home-garage" href="/best-tube-bender-for-home-garage/">home garage bender guide</a>.</p></div></div>
+
+<h2 id="worked-example">Worked example: a two-bend hoop</h2>
+
+<p>Let's lay out a simple hoop, the kind you'd use for a bed bar, a light hoop or a kart frame. It has two legs, a top bar and two 90° bends. The same method works for a roll bar main hoop, but there the rulebook sets the tube and radius.</p>
+
+<h3>The setup</h3>
+
+<ul><li><strong>Tube:</strong> 1.75" OD × .120" wall mild steel.</li><li><strong>Die:</strong> 6" CLR.</li><li><strong>Width:</strong> 40" on the centerline between the legs.</li><li><strong>Height:</strong> 30" from the leg ends to the centerline of the top bar.</li><li><strong>Bends:</strong> two 90° bends, both in the same direction and the same plane.</li></ul>
+
+<p>Quick health check first. D of bend is CLR ÷ OD: 6 ÷ 1.75 = 3.43. Wall factor is OD ÷ wall: 1.75 ÷ .120 = 14.6. A 3.4D bend sits right in the range of common off-road dies, so this is a normal combination.</p>
+
+<h3>Step 1: tangent length</h3>
+
+<p>For a 90° bend, tangent = CLR × tan(45°) = 6 × 1 = <strong>6.00"</strong>.</p>
+
+<h3>Step 2: the straights</h3>
+
+<ul><li><strong>Each leg:</strong> 30" − 6" tangent = <strong>24.00"</strong>. Only one end of each leg touches a bend.</li><li><strong>Top bar:</strong> 40" − 6" − 6" = <strong>28.00"</strong>. Both ends touch a bend.</li></ul>
+
+<h3>Step 3: the arcs</h3>
+
+<p>Arc = 6 × 90 × 0.017453 = <strong>9.42"</strong> per bend (9.4248" before rounding). With JD2's .0175 constant you'd get 9.45". That's only 0.025" more per bend, but it adds up on a part with many bends.</p>
+
+<h3>Step 4: cut length</h3>
+
+<p>Cut length = 24.00 + 9.42 + 28.00 + 9.42 + 24.00 = <strong>94.85"</strong>, using the unrounded arcs. Check it with gain: the intersection measurements add up to 30 + 40 + 30 = 100". Each 90° bend gains 2 × 6 − 9.4248 = 2.575". Two bends gain 5.15". And 100 − 5.15 = 94.85". ✅ The two methods agree.</p>
+
+<h3>Step 5: the bend marks</h3>
+
+<table><thead><tr><th>Mark (from end A)</th><th>Decimal</th><th>Nearest 1/16"</th><th>What happens here</th></tr></thead><tbody><tr><td>Bend 1 start</td><td>24.00"</td><td>24"</td><td>Leg A ends, first bend begins</td></tr><tr><td>Bend 1 end</td><td>33.42"</td><td>33-7/16"</td><td>Top bar begins</td></tr><tr><td>Bend 2 start</td><td>61.42"</td><td>61-7/16"</td><td>Top bar ends, second bend begins</td></tr><tr><td>Bend 2 end</td><td>70.85"</td><td>70-7/8"</td><td>Leg B begins</td></tr><tr><td>End B (cut)</td><td>94.85"</td><td>94-7/8"</td><td>End of the tube</td></tr></tbody></table>
+
+<p>Each mark is worked from the exact arc and rounded once at the end. That's why adding the rounded numbers can be off by 0.01". Cut the tube to 94-7/8", or a little longer if you want to trim the legs to fit.</p>
+
+<h3>Step 6: bend it</h3>
+
+<p>Draw a reference line along the tube. Line up the bend 1 start mark with your bender's start point. Bend to 90° plus your springback. Then slide the tube to bend 2, keep the reference line in the same spot so the second bend stays in the same plane, and bend again. Both bends go the same direction, so the tube doesn't rotate between them.</p>
+
+<div class="bhg-callout bhg-callout--info"><span class="bhg-callout-icon">🧮</span><span class="bhg-callout-title">See it before you bend it</span><p>Enter 1.75" OD, a 6" CLR and two 90° bends into our <a href="/calculator/">bend calculator</a> to check these numbers. Then use the <a href="/visualizer/">geometry visualizer</a> to see where the tangent points and arcs fall.</p></div>
+
+<h2 id="second-example">Worked example: a bumper with 30° wings</h2>
+
+<p>Not every bend is 90°. Let's try a front bumper with a straight center section and two wings bent back 30°. Same 1.75" tube, same 6" CLR die.</p>
+
+<h3>The setup</h3>
+
+<ul><li><strong>Center section:</strong> 36" between the two intersection points.</li><li><strong>Each wing:</strong> 14" from the intersection point to the end of the tube.</li><li><strong>Bends:</strong> two 30° bends, same direction, same plane.</li></ul>
+
+<h3>The math</h3>
+
+<ul><li><strong>Tangent:</strong> 6 × tan(15°) = 6 × 0.2679 = <strong>1.61"</strong>.</li><li><strong>Arc:</strong> 6 × 30 × 0.017453 = <strong>3.14"</strong>.</li><li><strong>Each wing straight:</strong> 14 − 1.61 = <strong>12.39"</strong>.</li><li><strong>Center straight:</strong> 36 − 1.61 − 1.61 = <strong>32.78"</strong>.</li><li><strong>Cut length:</strong> 12.39 + 3.14 + 32.78 + 3.14 + 12.39 = <strong>63.85"</strong>, using the unrounded values.</li></ul>
+
+<p>Check with gain: 14 + 36 + 14 = 64". Each 30° bend gains only 2 × 1.608 − 3.142 = 0.074". Two bends gain 0.15", and 64 − 0.15 = 63.85". ✅ Notice how small the gain is on a shallow bend. On a 90° bend it was 2.58".</p>
+
+<table><thead><tr><th>Mark (from end A)</th><th>Decimal</th><th>Nearest 1/16"</th></tr></thead><tbody><tr><td>Bend 1 start</td><td>12.39"</td><td>12-3/8"</td></tr><tr><td>Bend 1 end</td><td>15.53"</td><td>15-9/16"</td></tr><tr><td>Bend 2 start</td><td>48.32"</td><td>48-5/16"</td></tr><tr><td>Bend 2 end</td><td>51.46"</td><td>51-7/16"</td></tr><tr><td>End B (cut)</td><td>63.85"</td><td>63-7/8"</td></tr></tbody></table>
+
+<h3>How tangent and gain change with angle</h3>
+
+<p>As before, each mark above is worked from unrounded values. Here's the same 6" CLR die at different bend angles. Use it to sanity-check your own math.</p>
+
+<table><thead><tr><th>Bend angle</th><th>Tangent length</th><th>Arc length</th><th>Gain per bend</th></tr></thead><tbody><tr><td>15°</td><td>0.79"</td><td>1.57"</td><td>0.01"</td></tr><tr><td>30°</td><td>1.61"</td><td>3.14"</td><td>0.07"</td></tr><tr><td>45°</td><td>2.49"</td><td>4.71"</td><td>0.26"</td></tr><tr><td>60°</td><td>3.46"</td><td>6.28"</td><td>0.65"</td></tr><tr><td>90°</td><td>6.00"</td><td>9.42"</td><td>2.58"</td></tr></tbody></table>
+
+<p>One handy shortcut: on a 6" CLR die, each degree of bend uses 0.1047" of tube. Rogue Fab rounds that to 0.105" per degree in its Bending 101 guide (<a href="https://www.roguefab.com/bending-101/" target="_blank" rel="noopener">Rogue Fab</a>).</p>
+
+<figure class="bhg-figure" data-slot="offroad"><figcaption>Bumpers, bars and frames all start as a sketch with centerline lengths and bend angles.</figcaption></figure>
+
+<h2 id="bend-start">Finding your bender's true bend start</h2>
+
+<p>Your math says the bend starts at 24.00". But where does your bender actually start bending, relative to your mark? Every bender and die is a bit different. The only way to know is a <strong>test bend</strong> on scrap.</p>
+
+<h3>The test bend, step by step</h3>
+
+<ol class="bhg-steps"><li><strong>Cut a scrap piece</strong> of the same tube you'll use for the real part.</li><li><strong>Mark it 20" from one end.</strong> Line that mark up with the die's start point, the way your manual describes.</li><li><strong>Bend to a true 90°.</strong> Overbend, release and check with a digital angle finder until it reads 90° after springback.</li><li><strong>Lay it flat and measure.</strong> Measure from the cut end of the short leg to the outside face of the other leg. Use a square against that leg.</li><li><strong>Compare.</strong> With a 6" CLR and 1.75" tube, you'd expect 20 + 6 + 0.875 = 26.875" (26-7/8").</li><li><strong>Record the difference.</strong> If you measure, say, 27.125", the bend started a quarter-inch late. Move future start marks a quarter-inch toward the tube end.</li></ol>
+
+<p>Write that offset on your bender or in a notebook, along with the tube and die. It folds any stretch and die quirks into one number you can trust.</p>
+
+<h3>Springback</h3>
+
+<p>Tube relaxes a little after you release the bend. That's <strong>springback</strong>. Rogue Fab shows a mild-steel bend that read 86.5° after release when 90° was the target. JD2's Template Bending Tutorial suggests 3–4° should be enough for its example material (<a href="https://support.jd2.com/MiscDown/dl/TemplateBendingTutorial.pdf" target="_blank" rel="noopener">JD2 tutorial</a>). And JD2 says 4130 springs back about twice as much as mild steel of the same size and wall. Your number will be different, so measure it on your test piece. See our <a data-bhg-link="springback-in-tube-bending" href="/springback-in-tube-bending/">springback guide</a> for more.</p>
+
+<div class="bhg-callout bhg-callout--warn"><span class="bhg-callout-icon">⚠️</span><span class="bhg-callout-title">New batch, new test</span><p>Springback and bend start can change between tube batches, materials and dies. Do a fresh test bend whenever any of those change. A short scrap piece is cheaper than a ruined part.</p></div>
+
+<h2 id="template-bending">Template bending for tricky shapes</h2>
+
+<p>Some parts are hard to draw on paper. Think of a hoop that has to follow a curved roofline, or a bar that dodges a steering column. For these, many builders use <strong>template bending</strong>. You make the shape first in something cheap and easy to bend, then copy it in steel.</p>
+
+<h3>What to make a template from</h3>
+
+<ul><li><strong>Stiff wire or welding rod.</strong> Bend it by hand to the shape you need, right in the vehicle.</li><li><strong>PVC pipe and fittings.</strong> Good for parts with several bends. Rogue Fab sells a PVC mock-up tool called the Prototractor that measures the rotation between bends.</li><li><strong>Cardboard.</strong> Great for flat parts like bumpers. Trace the shape, then measure off it.</li></ul>
+
+<h3>How to read the template</h3>
+
+<ol class="bhg-steps"><li><strong>Mark the straights.</strong> Find where each straight section of the template begins and ends.</li><li><strong>Extend the straights.</strong> Lay the template on a flat surface and extend each straight with a ruler until they cross. Those crossings are your intersection points.</li><li><strong>Measure the angles.</strong> Use a protractor or digital angle finder on each pair of straights.</li><li><strong>Measure between intersections.</strong> These are your centerline lengths.</li><li><strong>Run the normal layout.</strong> Now use the same tangent, arc and cut-length steps from the examples above.</li></ol>
+
+<p>Remember that your template's own bend radius doesn't matter. Only the straights, the intersection points and the angles carry over. Your die sets the real radius.</p>
+
+<p>JD2 publishes a free <a href="https://support.jd2.com/MiscDown/dl/TemplateBendingTutorial.pdf" target="_blank" rel="noopener">Template Bending Tutorial</a> (PDF) on this method. It's worth a read before your first template part.</p>
+
+<figure class="bhg-figure" data-slot="workshop"><figcaption>Templates and mock-ups come together in the shop long before any steel gets bent.</figcaption></figure>
+
+<!-- 📷 IMAGE IDEA (owner's photo): a straight tube on sawhorses with bend start and end marks, a reference line and a tape measure. Suggested alt text: "Tube marked with bend start and end lines ready for bending". -->
+
+<h2 id="real-life">Real-life layout lessons</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads. Each one is easy to avoid once you've seen it.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The outside-edge hoop</span><p>A builder measures a truck bed outside-to-outside, 41.75", and lays out the hoop as if that were the centerline width. The finished hoop is 1.75" too wide and won't drop onto the mounts.</p><p><strong>Lesson:</strong> convert every measurement to centerlines before you do any math.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The bumper that grew</span><p>Someone lays out a bumper perfectly on paper but never checks where their bender starts the bend. Every bend starts a little late. The center section comes out long and the wings miss the frame horns.</p><p><strong>Lesson:</strong> do one test bend, measure it and apply the offset to every mark.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The short last leg</span><p>A builder cuts a part to the exact length and starts bending. The last straight turns out too short for the clamp block, so the final bend can't be made. The part goes in the scrap pile.</p><p><strong>Lesson:</strong> check clamp room on every straight. Leave extra on a short end and trim it after bending.</p></div>
+
+<p>Notice the pattern. None of these builders made a math error in the formulas. Each one skipped a check: centerlines, the test bend or clamp room. A two-minute check would have saved each part.</p>
+
+<h2 id="mistakes">Common layout mistakes (and how to fix them)</h2>
+
+<p>Most layout errors come from a short list. Here they are, with the fix for each.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Mixing edge and centerline measurements.</strong> The part comes out one OD too wide or too narrow.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> convert every number to centerlines on your sketch before you start.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Adding the outside measurements as the cut length.</strong> The tube is too long because you ignored gain.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> cut length = straights + arcs. Check it with intersection total − gain.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Using the wrong constant.</strong> One layout page online gives 0.001745, which is ten times too small.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> use 0.017453 per degree, or convert degrees to radians first.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Rounding at every step.</strong> Small rounding errors stack up over several bends.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> keep full numbers in the calculator and round only the final marks.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Skipping the test bend.</strong> You don't know where your bender really starts a bend.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> bend a scrap piece, measure it and record the offset and springback.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>No reference line.</strong> The tube rotates between bends and the part twists.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> draw a straight line along the tube and keep it lined up at every bend.</p></div>
+
+<h2 id="pro-tips">Pro tips for accurate parts</h2>
+
+<p>These habits come up again and again among builders who make parts that fit the first time.</p>
+
+<ul><li>💡 <strong>Mark both ends of every bend.</strong> A start mark and an end mark let you check that the bend landed where it should.</li><li>💡 <strong>Measure after each bend.</strong> Check the first leg before you make the second bend. Fixing a plan is easier than fixing a part.</li><li>💡 <strong>Bend from the tight end.</strong> If one straight is short, think about which end to start from so the clamp always has enough tube.</li><li>💡 <strong>Keep a die card.</strong> For each die, write the CLR, the bend start offset, the springback per material and any quirks.</li><li>💡 <strong>Lay out symmetric parts from the center.</strong> On a hoop or bumper, find the center mark first and measure out both ways. It keeps both sides equal.</li><li>💡 <strong>Leave trim.</strong> Add a little extra length on ends that will be notched or cut to fit. Our <a data-bhg-link="tube-notching-guide" href="/tube-notching-guide/">tube notching guide</a> covers the fit-up side.</li><li>💡 <strong>Use paint pen, not tape.</strong> A thin, crisp line is easier to line up than the edge of masking tape.</li></ul>
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: one sheet per part</span><p>Experienced builders keep a single sheet for each part: the sketch, the math, the marks and the offset they used. When they need a second bumper or a matching bar, they just repeat the sheet.</p></div>
+
+<figure class="bhg-figure" data-slot="manual-bender"><figcaption>Whatever bender you use, accurate marks and a known bend start make repeatable parts.</figcaption></figure>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">How do you measure and lay out tube bends?</h3><p>Sketch the part in centerline dimensions. Work out each tangent (CLR × tan of half the angle), each straight (distance between intersections minus tangents) and each arc (CLR × angle in radians). Add straights and arcs for the cut length, then mark bend starts from one end.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How much tube does a 90° bend use?</h3><p>The arc length is CLR × 1.5708. On a 6" CLR die, that's about 9.42" of tube inside the bend.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is gain in tube bending?</h3><p>Geometric gain is the difference between the sum of intersection measurements and the real cut length: 2 × tangent − arc per bend. Some people also use "gain" for stretch in a specific bender, which you find with a test bend.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Where does the bend start on a tube bender?</h3><p>It depends on the bender and die. Line up your mark the way your manual describes, then do a test bend on scrap and measure it to find your real offset.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is template bending?</h3><p>You make the shape first in wire, PVC or cardboard, then measure the straights, intersection points and angles off the template and lay out the steel part from those numbers.</p></div></div>
+
+<h2 id="checklist">Your layout checklist</h2>
+
+<p>Run through this list before you cut or bend. If you can tick every box, you're ready.</p>
+
+<div class="bhg-checklist"><ul><li>My sketch shows centerline lengths between intersection points</li><li>I've converted every outside or inside measurement to centerlines</li><li>I've measured the real tube OD with calipers</li><li>I know my die's CLR and checked it against any rulebook minimum</li><li>I've worked out tangent, straight and arc lengths for every bend</li><li>My cut length matches both methods: straights + arcs, and intersections − gain</li><li>Every straight is long enough for my bender's clamp, or I've left extra</li><li>I've done a test bend and know my bend start offset and springback</li><li>A reference line runs the full length of the tube</li><li>Bend start and end marks are on the tube, numbered in order</li></ul></div>
+
+<p>That's the whole method. Think in centerlines, do the simple math, test once on scrap and mark carefully. Do that, and your next bent part will drop into place like it was made for it. 🔧</p>
+
+<div class="bhg-cta"><h3>Let the tools do the math</h3><p>Check your tangent, arc and cut lengths in seconds, then see the bend geometry before you touch the tube.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/calculator/">Open the bend calculator</a><a class="bhg-btn bhg-btn--ghost" href="/visualizer/">Try the geometry visualizer</a></div></div>

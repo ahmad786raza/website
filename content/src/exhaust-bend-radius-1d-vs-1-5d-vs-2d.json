@@ -1,0 +1,53 @@
+{
+ "slug": "exhaust-bend-radius-1d-vs-1-5d-vs-2d",
+ "title": "Exhaust Bend Radius 1D vs 1.5D vs 2D: Geometry and Fitment",
+ "excerpt": "Exhaust bend radius 1D vs 1.5D vs 2D explained: CLR = D × OD worked out for common pipe sizes, the space each bend needs, and how to pick for fitment.",
+ "category": "fabrication-theory",
+ "featured_slot": "exhaust",
+ "primary_keyword": "exhaust bend radius 1D vs 1.5D vs 2D",
+ "asins": [
+  {
+   "asin": "B0768SGR3H",
+   "product": "Stainless 2.5\" 90° Mandrel Bend Elbow - 1D/2.5\" CLR Tight Radius - 16GA/.065\" Wall - No Leg - SS304 - Stainless Bros",
+   "evidence": "https://www.amazon.com/Stainless-2-5-Mandrel-Bend-Elbow/dp/B0768SGR3H"
+  },
+  {
+   "asin": "B0778RQTGW",
+   "product": "2.5\" Stainless 90° Mandrel Bend Elbow - 1.5D/3.75\" CLR Loose Radius - 16GA/.065\" Wall - 2\" Leg - SS304 - Exhaust Fabrication (Stainless Bros)",
+   "evidence": "https://www.amazon.com/2-5-Stainless-Mandrel-Bend-Elbow/dp/B0778RQTGW"
+  },
+  {
+   "asin": "B07F78QQJS",
+   "product": "1.75\" Stainless 90° Mandrel Bends - 1.5D/2.625\" CLR Loose Radius - 16GA/.065\" Wall - 6.5\"/6.5\" Leg - SS304 - Exhaust Fabrication",
+   "evidence": "https://us.amazon.com/1-75-Stainless-90%C2%B0-Mandrel-Bends/dp/B07F78QQJS"
+  },
+  {
+   "asin": "B005GVU90E",
+   "product": "Vibrant Performance Vibrant (13032) 90° T304 Stainless Steel Mandrel Bend Tube",
+   "evidence": "https://www.amazon.com/Vibrant-13032-Stainless-Steel-Mandrel/dp/B005GVU90E"
+  },
+  {
+   "asin": "B004UR1QUM",
+   "product": "Vibrant Performance Vibrant 13030 T304 Stainless Steel 90 Degree Mandrel Bend",
+   "evidence": "https://www.amazon.com/Vibrant-13030-Stainless-Degree-Mandrel/dp/B004UR1QUM"
+  }
+ ],
+ "sources": [
+  "https://www.thefabricator.com/glossary/centerline-radius",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper",
+  "https://blog.blmgroup.com/when-is-it-useful-to-bend-a-tube-with-a-small-bending-radius",
+  "https://www.roguefab.com/exhaust-pipe-benders/",
+  "https://vibrantperformance.com/304-stainless-steel-90-brushed-mandrel-bends/",
+  "https://www.jegs.com/i/jegs-555-319045-mandrel-j-bend-16-gauge-aluminized-steel",
+  "https://www.jegs.com/i/jegs-555-319145-mandrel-u-bend-16-gauge-aluminized-steel",
+  "https://billysspeedshop.com/collections/exhaust-emissions-exhaust-systems/products/12270hkr",
+  "https://www.holley.com/products/exhaust/builder_components/mandrel_bends/",
+  "https://www.amazon.com/Stainless-2-5-Mandrel-Bend-Elbow/dp/B0768SGR3H",
+  "https://www.amazon.com/2-5-Stainless-Mandrel-Bend-Elbow/dp/B0778RQTGW",
+  "https://us.amazon.com/1-75-Stainless-90%C2%B0-Mandrel-Bends/dp/B07F78QQJS",
+  "https://www.amazon.com/Vibrant-13032-Stainless-Steel-Mandrel/dp/B005GVU90E",
+  "https://www.amazon.com/Vibrant-13030-Stainless-Degree-Mandrel/dp/B004UR1QUM"
+ ],
+ "notes": "All geometry (CLR = D x OD, inside/outside radius, heel/throat ratios, tangent = CLR x tan(angle/2), arc = CLR x radians, U-bend width = 2xCLR + OD, minimum jog of back-to-back bends = 2 x CLR x (1 - cos angle)) was computed and double-checked in Python. No flow figures are given; the article says none could be sourced. Direct page fetches were blocked (DNS) in this environment, so listing specs come from web-search result summaries, not pages read directly: JEGS 555-319045 (2.5in, 3.5in radius, 6in/15in legs), JEGS 555-319145 (2.5in aluminized U-bend, 4-1/4in CL radius, 12in legs), Hooker 12270HKR (2.5in mild steel U-bend, 5in radius, 12in legs; from a Billy's Speed Shop retailer listing summary), Vibrant 13032 (1.5in OD, 1.5in CLR, 4in/12in legs, .065 wall) and Vibrant 13030 (1.25in OD, 2.75in CLR). Please spot-check those listing specs before publishing. The Fabricator mandrel-chart example (2in x .065 on 4in CLR -> two-ball mandrel with wiper) and BLM 'extreme' below 1D come from the fact-check notes (PART 3). Rogue Fab 0.9% is a vendor figure. 'True 2D parts were less common in what we found' reflects our searches only, not a market survey."
+}

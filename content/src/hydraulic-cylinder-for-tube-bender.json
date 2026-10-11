@@ -1,0 +1,26 @@
+{
+ "slug": "hydraulic-cylinder-for-tube-bender",
+ "title": "Hydraulic Cylinder for Tube Bender: Match Tonnage and Stroke",
+ "excerpt": "Choosing a hydraulic cylinder for tube bender work? Match tonnage and stroke to your maker's spec, compare 10 vs 15 ton, and stay safe.",
+ "category": "workshop",
+ "featured_slot": "workshop",
+ "primary_keyword": "hydraulic cylinder for tube bender",
+ "asins": [
+  {"asin": "B0DXQB2TVP", "product": "Eastwood air-hydraulic conversion kit for the High Capacity tube bender", "evidence": "Pre-verified in WRITER-KIT.md ASIN table (90 psi working pressure per kit fact table)"},
+  {"asin": "B0DXQCZQSY", "product": "Eastwood electric-hydraulic conversion kit for the High Capacity tube bender (0.75 HP, 110 V)", "evidence": "Pre-verified in WRITER-KIT.md ASIN table (0.75 HP / 110 V per kit fact table)"},
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity tube bender (#21115)", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"}
+ ],
+ "sources": [
+  "https://www.jd2.com/model-32-bender",
+  "https://www.jd2.com/model-32-tube-bender-hydraulic-adapter-kit",
+  "https://pro-tools.com/products/hydraulic-tube-and-pipe-bender-105-heavy-duty",
+  "https://pro-tools.com/products/hydraulic-tube-and-pipe-bender-brute",
+  "https://www.roguefab.com/product/metal-tube-bender-m605-1-die/",
+  "https://www.roguefab.com/product-category/tubing-benders/",
+  "https://www.harborfreight.com/12-ton-hydraulic-pipe-bender-32888.html",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://www.amazon.com/dp/B0DXQB2TVP",
+  "https://www.amazon.com/dp/B0DXQCZQSY"
+ ],
+ "notes": "JD2 STROKE NOT VERIFIED AND LEFT OUT. The WebSearch budget for this session ran out before this article, and the egress proxy blocks jd2.com and support.jd2.com, so I could not confirm the 14-inch stroke mentioned in topics.json and the fact-check notes. The article therefore states only the verified 10-ton recommendation and tells readers to check the stroke on JD2's kit page. Please verify the stroke and add it if JD2 confirms it. Other facts: JD2 10-ton recommendation, 2\" x .120\" manual limit and 2\" x .250\" DOM with hydraulics come from the kit fact table. Eastwood 90 psi / 0.75 HP 110 V and the High Capacity capacities also come from the kit fact table. Rogue Fab M605 about 94 degrees per stroke, continuing past 180 degrees, comes from the kit fact table. The rest come only from the fact-check notes (search summaries, not opened here), so please re-verify: Pro-Tools 105HD hydraulic package with a 10-ton cylinder; Pro-Tools 105 Brute at 15 tons, 2-1/2\" OD and NPS 2; Harbor Freight 12-ton = 24,000 lb; Rogue Fab M605 offered with manual-hydraulic, air or 1.5 / 2.0 HP electric power; JD2's hydraulic adapter kit listings disagreeing on whether the cylinder is included. The force = pressure x area example uses labelled made-up round numbers. Hydraulic safety advice (fluid injection, relieve pressure, no leak-checking by hand) is general qualitative guidance with no numbers. No maker-specified cylinder sold on Amazon could be verified, so no third-party cylinder ASINs are used; the SWAG JD2 ram mount B00LBFQ4U8 was not verified and is not used."
+}

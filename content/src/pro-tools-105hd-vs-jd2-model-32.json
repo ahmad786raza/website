@@ -1,0 +1,37 @@
+{
+ "slug": "pro-tools-105hd-vs-jd2-model-32",
+ "title": "Pro-Tools 105HD vs JD2 Model 32: Manual Bender Specs Compared",
+ "excerpt": "Pro-Tools 105HD vs JD2 Model 32, compared from published specs: tube and pipe capacity, 4130 by hand, dies, CLR and hydraulic upgrades.",
+ "category": "guides",
+ "featured_slot": "manual-bender",
+ "primary_keyword": "Pro-Tools 105HD vs JD2 Model 32",
+ "asins": [
+  {"asin": "B085C8PSKB", "product": "Angle Gauge eOUTIL Digital Protractor Inclinometer Angle Finder with V-Groove Magnetic Base", "evidence": "https://www.amazon.com/eOUTIL-Digital-Waterproof-Protractor-Backlight/dp/B085C8PSKB"},
+  {"asin": "B00LBFQ4U8", "product": "SWAG Off Road Formed Tubing Bender Air/Hydraulic Ram Mount (Un-Welded) JD2 Model 32", "evidence": "https://www.amazon.com/SWAG-Formed-Tubing-Hydraulic-Welded/dp/B00LBFQ4U8"},
+  {"asin": "B07PQJZJ37", "product": "Eastwood tube & pipe notcher, 0-60 deg, up to 2\" round", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"},
+  {"asin": "B0CLT6ZC29", "product": "Woodward Fab WWFSPPIPENOTCH 2\" hole-saw notcher, 60 deg adjustment", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"},
+  {"asin": "B00F6GYB8A", "product": "Baileigh RDB-050 manual rotary-draw bender", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"}
+ ],
+ "sources": [
+  "https://pro-tools.com/products/manual-tube-and-pipe-bender-105-heavy-duty-package",
+  "https://pro-tools.com/products/hydraulic-tube-and-pipe-bender-105-heavy-duty",
+  "https://pro-tools.com/products/hydraulic-tube-and-pipe-bender-brute",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://pro-tools.com/blogs/protoolsusa/19923715-springback-to-basics-defining-springback-and-how-to-compensate-for-it",
+  "https://www.jd2.com/model-32-bender",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.jd2.com/frequently-asked-questions",
+  "https://www.jd2.com/model-32-pedestal",
+  "https://www.jd2.com/model-32-tube-bender-hydraulic-adapter-kit",
+  "https://www.jd2.com/model-32-tube-bender-hydraulic",
+  "https://www.jd2.com/model-32-tube-bender-hydraulic-cylinder-not-included",
+  "https://www.jd2.com/hydraulic-cylinder-10-ton-14-stroke",
+  "https://www.jd2.com/airhydraulic-pump-with-10000-psi-hose",
+  "https://www.jd2.com/electric-1-hp-4000-psi-hyd-pump-4-way-valve-and-hose",
+  "https://www.jd2.com/model-32-die-set-1-round-tube-1-od",
+  "ASME B36.10 pipe tables (1-1/2\" NPS = 1.900\" OD, via WRITER-KIT fact table)",
+  "https://www.amazon.com/eOUTIL-Digital-Waterproof-Protractor-Backlight/dp/B085C8PSKB",
+  "https://www.amazon.com/SWAG-Formed-Tubing-Hydraulic-Welded/dp/B00LBFQ4U8"
+ ],
+ "notes": "IMPORTANT: the shared WebSearch budget ran out before any Pro-Tools-specific search could run, and pro-tools.com, jd2.com and roguefab.com all fail DNS for direct WebFetch here. Pro-Tools facts therefore come ONLY from the WRITER-KIT verified fact table (1/2-2\" OD round, NPS 1/4-1-1/2 pipe, .134\" max round wall, 2\" x .134\" 4130 with extension handle, 180 deg) and from docs/research/competitors-keywords-factcheck.md section 3.6, which itself was built from search-index summaries: square tube 1/2-1-1/2\" (.065-.125 wall), 36\" extension handle, min CLR about 3 x OD and max CLR 7\", 180 deg 'after springback' on die pages, hydraulic package with 10-ton cylinder, and 105 Brute = 2-1/2\" OD, NPS 2, 15-ton. Please re-verify all of these on pro-tools.com before publishing. JD2 facts come from WebSearch summaries of jd2.com pages run for the sibling article jd2-model-32-vs-rogue-fab-m605 (same caveat: summaries, not direct reads). Not verified and left out or softened: whether the hydraulic 105HD package has a wall rating above .134\" (article says 'we found no rating above .134\"'), what pump the Pro-Tools hydraulic package includes (article says 'check the package contents'), 105HD mounting/stand details, weights, warranties, and any separate 4130 rating for the JD2 Model 32 (article says none found). Cross-brand die fit is NOT claimed. A Rogue Fab comparison page claims the Pro-Tools 105 hydraulics are single-acting; left out as an unverified competitor claim. No prices used."
+}

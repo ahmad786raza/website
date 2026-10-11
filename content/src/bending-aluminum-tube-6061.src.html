@@ -1,0 +1,185 @@
+<p class="bhg-lead">Aluminum tube looks easy. It's light, it cuts like butter, and it seems soft next to steel. Then you put a stick of 6061 in your bender, pull the handle, and hear a faint tick. There's a crack on the outside of the bend. If that's happened to you, you're not alone. <strong>Bending aluminum tube</strong> follows different rules than bending mild steel, and 6061-T6 is the alloy that catches people out most often.</p>
+
+<p>The fix isn't a secret trick. It's a handful of choices you make <em>before</em> the bend: the right alloy and temper, a die radius with enough room, a pressure die that won't gall the surface, and an honest look at whether annealing is worth the strength you'll give up. Get those right and aluminum bends cleanly on the same garage bender you use for steel.</p>
+
+<p>This guide walks you through it step by step. You'll learn what T4 and T6 actually mean, how tight you can bend 6061, how to set up your dies, when annealing makes sense, and how to check for cracks and springback. We'll stick to what die makers and trade sources publish, and we'll tell you where they disagree.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p>6061-T6 tube bends, but it cracks on tight radii. Give it room and the right tooling.</p><ul><li><strong>Radius:</strong> Rogue Fab recommends about <strong>3.5D–4D</strong> for 6061-T6 and calls 3D marginal. A trade column in <em>The Fabricator</em> says T6 needs at least 4 × the tube diameter. See <a href="#bend-radius">how tight you can go</a>.</li><li><strong>Temper:</strong> annealed (O) bends easiest, then T4, then T6. Softer tempers trade away strength.</li><li><strong>Tooling:</strong> use a roller pressure die. Rogue Fab says its friction pressure die galls aluminum.</li><li><strong>Test first:</strong> bend scrap, inspect the outside of the bend for cracks, and measure springback.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#why-aluminum-is-different">Why aluminum is different from steel</a></li><li><a href="#alloys-tempers">6061, 6063 and tempers: O, T4 and T6</a></li><li><a href="#bend-radius">How tight can you bend 6061?</a></li><li><a href="#tooling">Bender and die setup for aluminum</a></li><li><a href="#annealing">Annealing 6061 before bending</a></li><li><a href="#step-by-step">Bending aluminum tube, step by step</a></li><li><a href="#welding-heat">Welding and heat after the bend</a></li><li><a href="#real-life">Real-life lessons</a></li><li><a href="#mistakes">Common mistakes and fixes</a></li><li><a href="#pro-tips">Pro tips</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Aluminum bending checklist</a></li></ol></div>
+
+<h2 id="why-aluminum-is-different">Why bending aluminum tube is different from steel</h2>
+
+<p>If you've bent a lot of mild steel, aluminum will feel familiar at first. Same bender, same dies, same handle. But the metal behaves differently in four ways that matter.</p>
+
+<h3>1. It cracks instead of stretching</h3>
+
+<p>When you bend any tube, the outside wall stretches. Mild steel usually stretches happily. Hard aluminum tempers like 6061-T6 don't stretch as far before they crack. So the classic aluminum failure isn't a wrinkle on the inside. It's a <strong>crack on the outside</strong> of the bend. Rogue Fabrication's aluminum guide warns that tight radii add cracking risk, especially for 6061-T6.</p>
+
+<h3>2. Temper matters as much as alloy</h3>
+
+<p>"6061" alone doesn't tell you how it will bend. The letters and numbers after it, the <strong>temper</strong>, tell you how it was heat-treated. The same alloy can be soft and bendy or hard and crack-prone. We'll decode tempers in the next section.</p>
+
+<h3>3. The surface is soft</h3>
+
+<p>Aluminum marks and galls easily. <strong>Galling</strong> is when metal smears and tears as it slides under pressure. Rogue Fab notes that a steel die that leaves no mark on DOM steel tube will mark aluminum, especially pre-anodized tube or finished extrusions.</p>
+
+<h3>4. Heat changes it for good</h3>
+
+<p>Heat from annealing or welding can soften heat-treated aluminum. Unlike steel, it won't glow or change color to warn you. We'll cover that in the annealing and welding sections.</p>
+
+<figure class="bhg-figure" data-slot="tube-stock"><figcaption>Aluminum and steel tube can look alike on the rack. Check the alloy and temper on the label or mill cert before you bend.</figcaption></figure>
+
+<p>None of this makes aluminum hard to bend. It just means you plan the bend around the material, not around your steel habits.</p>
+
+<h2 id="alloys-tempers">6061, 6063 and tempers: O vs T4 vs T6</h2>
+
+<p>Let's decode the label on your tube. The number is the <strong>alloy</strong>. The letter-and-number after the dash is the <strong>temper</strong>, which describes its heat treatment.</p>
+
+<ul><li><strong>O</strong> means annealed. It's the softest, most formable state.</li><li><strong>T4</strong> means solution heat-treated, then <em>naturally</em> aged at room temperature. Suppliers describe it as more ductile and formable than T6, with somewhat lower strength.</li><li><strong>T6</strong> means solution heat-treated, then <em>artificially</em> aged in an oven. It's the peak-strength condition, and the hardest to bend.</li></ul>
+
+<p>A trade column in <em>The Fabricator</em> ranks common tube alloys from weakest to strongest as 1100-O, 3003-O, 6063-T4, 6063-T6, 6061-T4 and 6061-T6. It also notes the obvious catch: the stronger the alloy, the harder it is to bend (<a href="https://www.thefabricator.com/thewelder/article/aluminumwelding/aluminum-workshop-alloys-for-furniture-fabrication" target="_blank" rel="noopener">The Fabricator</a>).</p>
+
+<table><thead><tr><th>Alloy and temper</th><th>What it means</th><th>Bendability</th><th>Strength</th><th>Good for</th></tr></thead><tbody><tr><td><strong>6061-O</strong></td><td>Annealed</td><td>Easiest</td><td>Lowest of the 6061 tempers</td><td>Tight shapes that will be re-heat-treated or don't need strength</td></tr><tr><td><strong>6061-T4</strong></td><td>Solution treated, naturally aged</td><td>Good</td><td>Medium</td><td>Tighter bends when you can source it</td></tr><tr><td><strong>6061-T6</strong></td><td>Solution treated, artificially aged</td><td>Hardest; cracks on tight radii</td><td>Highest</td><td>Racks, frames and brackets on generous radii</td></tr><tr><td><strong>6063</strong></td><td>A softer alloy, often used for rails and trim</td><td>More forgiving than 6061-T6, per Rogue Fab</td><td>Lower than 6061-T6</td><td>Handrails, trim, furniture, light frames</td></tr></tbody></table>
+
+<p>Rogue Fab sums up the trade-off well. It says 6063 is more forgiving to bend than 6061-T6 in most uses, with lower strength but higher elongation. 6061-T6 bends, but it needs more care and is more likely to crack on tight radii unless you anneal it (<a href="https://www.roguefab.com/aluminum-pipe-benders/" target="_blank" rel="noopener">Rogue Fab</a>).</p>
+
+<div class="bhg-callout bhg-callout--tip"><span class="bhg-callout-icon">💡</span><span class="bhg-callout-title">Ask for the cert</span><p>Buy from a supplier who can tell you the alloy and temper, ideally with a mill cert. "Aluminum tube" from a scrap bin could be anything. A test bend on unknown stock teaches you very little.</p></div>
+
+<h2 id="bend-radius">How tight can you bend 6061 aluminum tube?</h2>
+
+<p>This is the big question, and the sources give slightly different answers. Here's what each one says, in their own terms.</p>
+
+<ul><li><strong>Rogue Fabrication:</strong> target about <strong>3.5D to 4D</strong> as a minimum for most aluminum. It calls a 3D die "on the edge" for most alloys and walls, with extra cracking risk for 6061-T6 (<a href="https://www.roguefab.com/aluminum-pipe-benders/" target="_blank" rel="noopener">Rogue Fab</a>).</li><li><strong><em>The Fabricator</em>'s Aluminum Workshop column:</strong> 6061-T4 and 6063-T4 can typically be bent around a radius of <strong>2.5 ×</strong> the tube diameter. 6061-T6 and 6063-T6 need at least <strong>4 ×</strong> the tube diameter.</li><li><strong><em>The Fabricator</em> on extrusions:</strong> T6 is the strongest but hardest temper to form. For tight radii, it suggests T4 at most.</li></ul>
+
+<p>So where do they disagree? Rogue Fab allows 3.5D for 6061-T6 in some cases. <em>The Fabricator</em>'s column says 4D minimum for T6. If you want to stay on the safe side of both, plan on <strong>4D or more for T6</strong>, and treat anything tighter as a test-bend-first job.</p>
+
+<h3>What that means in real dies</h3>
+
+<p><strong>D of bend</strong> is just CLR ÷ OD. Rogue Fab gives two examples on 1.25" tube: a 4.5" CLR die is 3.6D, and a 6.0" CLR die is 4.8D. It says the bigger die gives meaningfully less wall thinning and less cracking risk. Here are a few more, worked out with the same formula:</p>
+
+<table><thead><tr><th>Tube OD</th><th>Die CLR</th><th>D of bend</th><th>For 6061-T6</th></tr></thead><tbody><tr><td>1.25"</td><td>4.5"</td><td>3.6D</td><td>Inside Rogue Fab's 3.5–4D range; below the 4D column figure. Test first.</td></tr><tr><td>1.25"</td><td>6.0"</td><td>4.8D</td><td>Room to spare by both sources</td></tr><tr><td>1.5"</td><td>6.0"</td><td>4.0D</td><td>Meets both sources' guidance</td></tr><tr><td>1.75"</td><td>6.0"</td><td>3.4D</td><td>Below both. Expect cracking risk; consider annealing, T4 or a bigger die</td></tr><tr><td>1"</td><td>3.0"</td><td>3.0D</td><td>Rogue Fab calls 3D marginal for 6061-T6</td></tr></tbody></table>
+
+<p>Notice the 1.75" × 6" row. That's a common off-road die for steel. It's fine for mild steel, but it's tighter than either source suggests for 6061-T6. Wall thickness matters too: thinner walls behave differently, so check your die maker's chart. Our <a href="/calculator/">bend calculator</a> works out D of bend for you, and our guide to <a data-bhg-link="bend-radius-explained" href="/bend-radius-explained/">centerline radius</a> explains the geometry.</p>
+
+<h2 id="tooling">Bender and die setup for aluminum</h2>
+
+<p>Most rotary-draw benders that handle steel can bend aluminum. The difference is in the details: the pressure die, the die surfaces and the capacity rating.</p>
+
+<h3>Use a roller pressure die</h3>
+
+<p>The <strong>pressure die</strong> is the block that holds the tube against the bend die as it forms. On many benders, the tube slides through it. That sliding is where aluminum galls. Rogue Fab says its standard friction pressure die needs lube and "cannot run aluminum, it galls." Its roller pressure die rolls with the tube, needs no lube and works on all materials, including aluminum (<a href="https://www.roguefab.com/faqs/" target="_blank" rel="noopener">Rogue Fab FAQ</a>). Rogue Fab's aluminum guide adds that roller dies also cut the force needed, which helps on manual benders. Its <a href="https://www.roguefab.com/bender-tech/" target="_blank" rel="noopener">Bender Tech page</a> also mentions UHMW plastic pressure dies as an option.</p>
+
+<h3>Protect the finish</h3>
+
+<p>If the tube is polished or anodized, every mark shows. Clean the dies before each session. Ask your die maker about non-marring options. And bend a scrap piece of the <em>same finish</em> first.</p>
+
+<p>One more caution from Rogue Fab: on .125" wall 6061, its own Thin Wall Roller upgrade is very likely to leave a ridge or dent from the front roller. Extra tooling isn't always better for aluminum.</p>
+
+<h3>Check the capacity chart for aluminum</h3>
+
+<p>Some makers rate aluminum separately. Eastwood, for example, lists its High Capacity bender for up to 2" × .120" wall in mild steel, aluminum or copper, with 4130 limited to .090" wall (<a href="https://www.eastwood.com/images/library/21115Q.pdf" target="_blank" rel="noopener">Eastwood manual</a>).</p>
+
+<p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+
+<h3 id="eastwood-high-capacity">Eastwood High Capacity Tube Bender</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">🔧 Rated for aluminum</span><p class="bhg-product-title">Eastwood High Capacity Tube Bender (#21115)</p><p class="bhg-product-sub">A manual rotary-draw bender with a published aluminum rating and a hydraulic upgrade path.</p></div><div class="bhg-product-body"><div><p>This is a manual rotary-draw bender you can later convert to air- or electric-hydraulic power. What makes it relevant here is that Eastwood's documentation names aluminum in its capacity rating, alongside mild steel and copper.</p><p><strong>Who it's for:</strong> home builders who bend a mix of steel and aluminum for racks, frames and brackets, and want room to grow.</p><p><strong>Before you buy:</strong> dies, handle and stand are sold separately, so check the listing. Ask about pressure-die options if you'll bend finished aluminum. Our pick is based on published specs, not hands-on testing. See <a href="/methodology/">how we evaluate equipment</a>.</p></div><dl class="bhg-specs"><div><dt>Type</dt><dd>Manual rotary draw, hydraulic-ready</dd></div><div><dt>Rated capacity</dt><dd>Up to 2" × .120" mild steel, aluminum or copper</dd></div><div><dt>4130 chromoly</dt><dd>Limited to .090" wall</dd></div><div><dt>Bend angle</dt><dd>Up to 180° with 240° dies</dd></div><div><dt>Sold separately</dt><dd>Dies, handle and stand (check the listing)</dd></div></dl></div><div class="bhg-product-lists"><div class="bhg-pros"><h4>Why it fits</h4><ul><li>Aluminum named in the published rating</li><li>Air- and electric-hydraulic upgrade kits</li><li>180° bends with 240° dies</li></ul></div><div class="bhg-cons"><h4>Know before you buy</h4><ul><li>Several parts sold separately</li><li>Check die CLRs against the 4D guidance for T6</li><li>Confirm how the pressure die treats finished aluminum</li></ul></div></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B07PRLN2PG?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Affiliate link. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<h2 id="annealing">Annealing 6061 before bending: when and how</h2>
+
+<p><strong>Annealing</strong> means heating the metal to soften it. For 6061-T6, it moves the temper toward O. Rogue Fab says that raises ductility and lowers cracking risk, and that annealing is often the fix when 6061-T6 cracks on a moderate radius. Trade sources agree that annealed aluminum is about as bendable as it gets.</p>
+
+<h3>The trade-off: you lose the T6 strength</h3>
+
+<p>Here's the catch. Annealing undoes the heat treatment that made it T6. The bent part is now soft. <em>The Fabricator</em> notes that getting back to T6 means a full re-heat-treatment: solution heat-treating, quenching, then artificial aging (<a href="https://www.thefabricator.com/thefabricator/article/bending/bending-aluminum-101-how-to-bend-6061-t6-aluminum" target="_blank" rel="noopener">The Fabricator</a>). That needs a controlled furnace and a proper quench. It can also distort the part. Most home shops can't do it.</p>
+
+<p>So ask yourself one question first: <em>does this part need T6 strength?</em> A decorative rail or a light bracket may be fine annealed. A load-bearing part may not be. If you're unsure, a bigger die or a different alloy is the safer fix.</p>
+
+<h3>Torch annealing, as described in trade sources</h3>
+
+<p><em>The Fabricator</em> describes an old shop method for local annealing. You coat the area with soot from an acetylene flame, then heat it until the soot burns away. Treat this as a skill to practice on scrap, not a recipe. The same source warns that aluminum doesn't change color as it heats. That makes it easy to overheat, and easy to burn yourself.</p>
+
+<div class="bhg-callout bhg-callout--danger"><span class="bhg-callout-icon">🛑</span><span class="bhg-callout-title">Not for safety parts</span><p>Don't anneal, bend and install aluminum in anything that protects people: roll structures, seat mounts, steering or suspension. Annealed aluminum is much weaker than T6. Ask an engineer, and check our <a href="/safety/">safety notes</a>.</p></div>
+
+<figure class="bhg-figure" data-slot="welding"><figcaption>Torch heat and welding both soften heat-treated aluminum. Plan for that before you bend.</figcaption></figure>
+
+<h2 id="step-by-step">Bending aluminum tube, step by step</h2>
+
+<p>Here's a routine that works on any rotary-draw bender. It's built around one idea: find out how <em>this</em> tube behaves on <em>this</em> die before you cut project pieces.</p>
+
+<ol class="bhg-steps"><li><strong>Confirm alloy and temper.</strong> Check the label, the invoice or the mill cert. Write it on the stick with a marker.</li><li><strong>Measure OD and wall.</strong> Use calipers. Aluminum pipe is sold by nominal size, so 1-1/2" pipe is really 1.900" OD. Match the die to the real OD.</li><li><strong>Work out D of bend.</strong> CLR ÷ OD. For 6061-T6, aim for 4D or more, or plan a test-first job.</li><li><strong>Set up the dies.</strong> Fit a roller pressure die if you have one. Clean all die surfaces. Check the pressure-die position in your manual.</li><li><strong>Mark a reference line.</strong> Draw a straight line along the tube so you can spot twist and set rotation between bends.</li><li><strong>Bend a scrap piece slowly.</strong> Pull smoothly. Stop a few degrees short of your target.</li><li><strong>Inspect the outside of the bend.</strong> Look for cracks, a rough "orange peel" texture or galling. Use good light and a magnifier.</li><li><strong>Measure springback.</strong> Release the tube and check the angle. The gap between the degree ring and the real angle is your springback.</li><li><strong>Log it.</strong> Record alloy, temper, OD, wall, die and springback. Use the numbers on the real part.</li></ol>
+
+<h3>How much does aluminum spring back?</h3>
+
+<p>We couldn't find a published springback table for aluminum <em>tube</em>. Sheet-metal figures don't transfer to tube, so don't borrow them. The honest answer is the one above: measure it on a test bend. Our <a data-bhg-link="springback-in-tube-bending" href="/springback-in-tube-bending/">springback guide</a> walks through the method.</p>
+
+<figure class="bhg-figure" data-slot="angle"><figcaption>Measure the real angle after release. The difference from the bender's reading is your springback.</figcaption></figure>
+
+<h3 id="angle-gauge">A handy tool: a digital angle gauge</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">📐 Springback check</span><p class="bhg-product-title">Klein Tools 935DAG Digital Level and Angle Gauge</p><p class="bhg-product-sub">Measures and sets angles, with V-grooves that sit on round tube.</p></div><div class="bhg-product-body"><div><p>A digital angle gauge turns springback from a guess into a number. Zero it on one leg of the bend, set it on the other, and read the angle.</p><p><strong>Who it's for:</strong> anyone dialing in bends, on any metal.</p><p><strong>Aluminum note:</strong> its magnetic base won't grip aluminum, because aluminum isn't magnetic. Hold it in place, or use the V-groove edge against the tube.</p></div><dl class="bhg-specs"><div><dt>Ranges</dt><dd>0–90° and 0–180°</dd></div><div><dt>Base</dt><dd>Magnetic (steel only)</dd></div><div><dt>Fit</dt><dd>V-grooves for round tube and pipe</dd></div></dl></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B07ZWW3BW5?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Also useful: <a href="https://www.amazon.com/dp/B000GSLKIW?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">NEIKO 0–6" digital caliper</a> for OD and wall. Affiliate links. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<h2 id="welding-heat">Welding and heat after the bend</h2>
+
+<p>Many aluminum projects get welded after bending. That's fine, but know what the heat does. Welding softens 6061-T6 in the <strong>heat-affected zone</strong>, the band of metal next to the weld.</p>
+
+<p>ESAB, the welding equipment maker, gives an example: 6061-T6 at about 45,000 psi tensile strength before welding, and about 27,000 psi as-welded (<a href="https://esab.com/us/nam_en/esab-university/blogs/heat-treatable-vs-non-heat-treatable-aluminum-alloys/" target="_blank" rel="noopener">ESAB</a>). ESAB also notes that most common filler alloys won't respond to post-weld heat treatment unless heavily diluted with the base metal. In plain terms: a welded 6061-T6 part is not a T6 part at the weld.</p>
+
+<p>What does that mean for you?</p>
+
+<ul><li>✅ Design welded aluminum parts for the <em>as-welded</em> strength, not the T6 number on the tube label.</li><li>✅ Keep heat input sensible. ESAB's <a href="https://esab.com/us/nam_en/esab-university/blogs/how-to-pass-the-tensile-test-with-6061-t6-aluminum/" target="_blank" rel="noopener">tensile-test notes</a> say more heat input lowers heat-affected-zone strength.</li><li>✅ If the part needs full T6 strength after welding, that's a job for a heat-treating shop and an engineer.</li><li>⚠️ Don't assume a bend that was annealed and then welded will be strong. Both steps soften the metal.</li></ul>
+
+<p>This is also why aluminum is a poor fit for safety structures in a home shop. Steel tube is more forgiving of heat. If your project is a roll bar or cage, follow your rulebook and use the material it specifies. Our guide to the <a data-bhg-link="best-tube-bender-for-home-garage" href="/best-tube-bender-for-home-garage/">best tube bender for a home garage</a> covers steel setups.</p>
+
+<blockquote class="bhg-quote"><p>With 6061-T6 you're always trading. Tighter bends cost strength through annealing. Welding costs strength at the joint. Plan the trade on purpose, before the first bend.</p></blockquote>
+
+<h2 id="real-life">Real-life lessons from the garage</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads. Learn from them and you'll save a lot of aluminum.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The cracked roof rack</span><p>A builder plans a roof rack in 1.75" 6061-T6. They already own a 6" CLR die for their steel bumper work, so they use it. The first bend shows a hairline crack on the outside. That die is about 3.4D on 1.75" tube, below both sources' guidance for T6. They switch to 1.5" tube on the same die, which works out to 4D, and the cracks stop.</p><p><strong>Lesson:</strong> a die that's perfect for steel can be too tight for 6061-T6. Do the D-of-bend math first.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The scratched railing</span><p>Someone bends pre-anodized tube for a deck rail. The bends are round, but each one has a dull, smeared stripe where the pressure die dragged. They swap to a roller pressure die and test on an offcut first. The next bends come out clean.</p><p><strong>Lesson:</strong> on finished aluminum, the pressure die matters as much as the bend die.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The soft bracket</span><p>A builder torch-anneals 6061-T6 to get a tight bend for a mounting bracket. It bends perfectly. A few weeks later, the bracket has bent under load. The annealed zone was much softer than T6.</p><p><strong>Lesson:</strong> annealing fixes cracking, but it costs strength. Use it only where the part can live with that.</p></div>
+
+<h2 id="mistakes">Common mistakes (and how to fix them)</h2>
+
+<p>Most aluminum bending headaches come from treating it like mild steel. The bender is the same, so the habits carry over without you noticing. Here are the usual ones, with the fix for each.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Treating "aluminum" as one material.</strong> 6063-T4 and 6061-T6 bend very differently.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> confirm alloy and temper before you choose a die.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Using your tightest steel die on 6061-T6.</strong> It cracks on the outside of the bend.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> work out D of bend. Aim for 4D or more for T6, or test first.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Running a friction pressure die on aluminum.</strong> It galls and smears the surface.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> use a roller pressure die, or ask your die maker for an aluminum-friendly option.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Annealing a load-bearing part and expecting T6 strength.</strong> The annealed zone is soft.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> choose a bigger die or a softer alloy, or have the part properly re-heat-treated.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Overheating during torch annealing.</strong> Aluminum gives no color warning before it sags or melts.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> practice the method on scrap, and never rush it.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Ignoring the weld.</strong> A bend that came out perfect still loses strength next to the weld.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> design welded parts for as-welded strength. If the joint carries real load, ask an engineer.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Borrowing springback numbers from sheet metal.</strong> They don't apply to tube.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> measure springback on a test bend and log it.</p></div>
+
+<h2 id="pro-tips">Pro tips for bending aluminum tube</h2>
+
+<p>These habits make aluminum feel easy. None of them costs much, and all of them save material.</p>
+
+<ul><li>💡 <strong>Buy one extra length.</strong> Use it for test bends on every new batch, not just every new alloy.</li><li><strong>Keep aluminum and steel dies clean.</strong> Steel particles stuck in a die can mark soft aluminum.</li><li><strong>Bend in good light.</strong> Small outside-of-bend cracks are easy to miss. Check every test bend with a magnifier.</li><li><strong>Design around bigger radii.</strong> A slightly larger, smoother bend often looks better on aluminum anyway.</li><li><strong>Consider 6063 for non-structural work.</strong> Rogue Fab calls it more forgiving than 6061-T6.</li><li><strong>Ask for T4 when you need tight bends.</strong> Trade sources put T4 well ahead of T6 for formability.</li><li><strong>Check the inside of the bend too.</strong> Cracks show up on the outside, but thin wall can still ripple on the inside.</li><li><strong>Label your offcuts.</strong> Write alloy and temper on every scrap piece. Unlabeled aluminum scrap is useless for test bends.</li><li><strong>Bend before you anodize or polish.</strong> If you control the finish, do the bending first so die marks get cleaned up with the rest.</li><li><strong>Watch wall thickness.</strong> Thin-wall aluminum can wrinkle just like steel. See our guide to <a data-bhg-link="tube-wrinkling-prevention" href="/tube-wrinkling-prevention/">fixing wrinkles, kinks and flattening</a>.</li></ul>
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: choose the material for the bend</span><p>Experienced builders don't fight 6061-T6 on a tight radius. They pick the alloy, temper and die together at the design stage. The bend is decided before the tube is ordered.</p></div>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">Can you bend 6061-T6 aluminum tube?</h3><p>Yes, on a generous radius with the right tooling. Rogue Fab recommends about 3.5D to 4D and calls 3D marginal. A column in <em>The Fabricator</em> says at least 4 × the tube diameter for T6. Test on scrap first.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Should I anneal 6061 before bending?</h3><p>Only if the part can live with lower strength. Annealing makes 6061 much easier to bend, but it removes the T6 strength. Getting T6 back needs a full re-heat-treatment, which most home shops can't do.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">What's the difference between 6061-T4 and T6 for bending?</h3><p>Both are solution heat-treated. T4 is aged naturally at room temperature, and T6 is aged in an oven to peak strength. T4 bends more easily. <em>The Fabricator</em>'s column puts T4 at about 2.5 × diameter and T6 at 4 ×.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Is 6063 easier to bend than 6061?</h3><p>Generally, yes. Rogue Fab says 6063 is more forgiving to bend than 6061-T6 in most applications, with lower strength but higher elongation. It's a good choice for rails and trim.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Can I bend aluminum in my steel tube bender?</h3><p>Usually, if the maker rates it for aluminum and the die fits the OD. Use a roller pressure die if you can, keep dies clean, and check the capacity chart. Eastwood's High Capacity bender, for example, names aluminum in its rating.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Does aluminum spring back more than steel?</h3><p>We couldn't find a reliable published springback table for aluminum tube. It varies with alloy, temper, wall and die. Measure it on a test bend and record the number for that combination.</p></div></div>
+
+<h2 id="checklist">Your aluminum bending checklist</h2>
+
+<p>Run through this before you bend a project piece. If you can tick every line, you're ready.</p>
+
+<div class="bhg-checklist"><ul><li>I know the alloy and temper, ideally from a mill cert</li><li>I've measured the real OD and wall with calipers</li><li>My die's D of bend suits the temper (4D or more for 6061-T6, or a planned test)</li><li>My bender's capacity chart covers aluminum at this size and wall</li><li>I'm using a roller pressure die or another aluminum-friendly option</li><li>The dies are clean and free of steel debris</li><li>I've decided whether annealing is acceptable for this part's strength</li><li>I've bent a scrap piece and checked the outside of the bend for cracks</li><li>I've measured springback with an angle gauge and logged it</li><li>I've planned for weld softening if the part will be welded</li></ul></div>
+
+<p>Aluminum isn't harder than steel. It's just different. Pick the right temper, give 6061-T6 room to bend, protect the surface and test before you commit. Do that, and your aluminum parts will come out clean, round and crack-free. 🔧</p>
+
+<div class="bhg-cta"><h3>Check your die before you bend</h3><p>Plug in your OD, wall and CLR to get D of bend and wall factor in seconds. Not sure your bender is right for the job? Take the quiz.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/calculator/">Open the bend calculator</a><a class="bhg-btn bhg-btn--ghost" href="/quiz/">Take the Find My Bender quiz</a></div></div>

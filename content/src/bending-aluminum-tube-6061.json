@@ -1,0 +1,28 @@
+{
+ "slug": "bending-aluminum-tube-6061",
+ "title": "Bending Aluminum Tube: How to Bend 6061 Without Cracking",
+ "excerpt": "Bending aluminum tube without cracks: 6061 tempers (O, T4, T6), safe bend radius, roller pressure dies, annealing trade-offs and a step-by-step method.",
+ "category": "tutorials",
+ "featured_slot": "tube-stock",
+ "primary_keyword": "bending aluminum tube",
+ "asins": [
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity Tube Bender (#21115)", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"},
+  {"asin": "B07ZWW3BW5", "product": "Klein Tools 935DAG Digital Electronic Level and Angle Gauge, Measures 0 - 90 and 0 - 180 Degree Ranges", "evidence": "https://www.amazon.com/Klein-Tools-935DAG-Electronic-Measures/dp/B07ZWW3BW5"},
+  {"asin": "B000GSLKIW", "product": "NEIKO 01407A Electronic Digital Caliper Measuring Tool, 0-6 Inches Stainless Steel Construction", "evidence": "https://www.amazon.com/Neiko-01407A-Electronic-Digital-Stainless/dp/B000GSLKIW"}
+ ],
+ "sources": [
+  "https://www.roguefab.com/aluminum-pipe-benders/",
+  "https://www.roguefab.com/faqs/",
+  "https://www.roguefab.com/bender-configurator/",
+  "https://www.roguefab.com/bender-tech/",
+  "https://www.roguefab.com/product/twr-assembly/",
+  "https://www.thefabricator.com/thewelder/article/aluminumwelding/aluminum-workshop-alloys-for-furniture-fabrication",
+  "https://www.thefabricator.com/thefabricator/article/bending/demystifying-aluminum-extrusion-bending",
+  "https://www.thefabricator.com/thefabricator/article/bending/bending-aluminum-101-how-to-bend-6061-t6-aluminum",
+  "https://esab.com/us/nam_en/esab-university/blogs/heat-treatable-vs-non-heat-treatable-aluminum-alloys/",
+  "https://esab.com/us/nam_en/esab-university/blogs/how-to-pass-the-tensile-test-with-6061-t6-aluminum/",
+  "https://www.eastwood.com/images/library/21115Q.pdf",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate"
+ ],
+ "notes": "Direct page fetches were blocked, so all Rogue Fab, The Fabricator and ESAB facts came from WebSearch result summaries of those pages; please spot-check: (1) Rogue Fab aluminum page: 3.5D-4D target, 3D 'on the edge' with extra cracking risk for 6061-T6, 1.25 OD examples (4.5 CLR = 3.6D, 6.0 CLR = 4.8D, less thinning/cracking), annealing as the usual fix, 6063 more forgiving (lower strength, higher elongation), steel dies mark aluminum esp. pre-anodized, roller dies reduce force; (2) Rogue Fab FAQ: friction pressure die 'cannot run aluminum, it galls', roller die works on all materials; Bender Tech page mentions UHMW pressure dies; TWR page warns of a ridge/dent on .125 6061; (3) The Fabricator Aluminum Workshop column: 6061-T4/6063-T4 about 2.5x tube diameter, T6 at least 4x, alloy ranking 1100-O...6061-T6; extrusion article: T4 max for tight radii; Bending Aluminum 101: re-temper to T6 needs solution treat + quench + artificial age, soot torch-anneal method, aluminum shows no colour change; (4) ESAB 'Using heat with aluminum alloys': example ~45,000 psi before welding vs ~27,000 psi as-welded, common fillers don't respond to PWHT unless heavily diluted. Conflict flagged in text: Rogue Fab allows 3.5D for 6061-T6, The Fabricator column says 4x minimum for T6. Temper definitions (T4 naturally aged, T6 artificially aged) are standard designations, seen in a supplier datasheet summary. Left out: annealing and re-heat-treat temperatures/times (sheet-focused, search-summary only), sheet springback figures, any aluminum tube springback number (none published), 3003/5052 bending guidance (not found). Eastwood aluminum rating is from the 21115Q manual via the kit fact-check notes. Worked D-of-bend values in the radius table are simple arithmetic."
+}

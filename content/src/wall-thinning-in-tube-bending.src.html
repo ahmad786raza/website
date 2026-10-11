@@ -1,0 +1,219 @@
+<p class="bhg-lead">Bend a tube and you change more than its direction. The outside of the bend gets stretched, and stretched metal gets thinner. The inside gets squeezed, and squeezed metal gets thicker. That's <strong>wall thinning in tube bending</strong>, and it happens on every bend you make, whether you can see it or not.</p>
+
+<p>For most garage parts it's no big deal. But on tight bends, thin wall, pressure lines and safety parts like cages, it's worth understanding. The catch is that there's no simple, proven formula that tells you exactly how thin the wall will get. Anyone who hands you one exact number for every tube is guessing.</p>
+
+<p>What we <em>can</em> do is use simple geometry to see how hard the outside of the bend is being stretched. In this guide you'll learn why thinning happens, how to estimate the stretch with one easy formula, how to check real thinning on a test piece, and how to keep it under control with smart die and tube choices.</p>
+
+<div class="bhg-answer"><span class="bhg-answer-label">⚡ Quick answer</span><p><strong>Wall thinning</strong> is the outside wall of a bend getting thinner as it stretches. The inside wall gets thicker as it's squeezed.</p><ul><li><strong>Geometry gives a quick stretch estimate:</strong> outer-fibre stretch ≈ OD ÷ (2 × CLR). For 1.75" tube on a 6" CLR, that's about 14.6%.</li><li><strong>Stretch isn't the same as thinning.</strong> No simple, validated formula predicts the final wall. Check it by sectioning a test bend or with an ultrasonic gauge.</li><li><strong>The biggest lever is the bend radius.</strong> A larger CLR means less stretch. Pick your <a href="#eastwood-high-capacity">die and bender</a> with that in mind.</li></ul></div>
+
+<div class="bhg-toc"><p class="bhg-toc-title">📋 In this guide</p><ol><li><a href="#what-is-wall-thinning">What is wall thinning in tube bending?</a></li><li><a href="#why-it-happens">Why the outside wall gets thinner</a></li><li><a href="#stretch-geometry">The geometry of outer-wall stretch</a></li><li><a href="#stretch-by-radius">Stretch at common bend radii</a></li><li><a href="#stretch-vs-thinning">Stretch is not the same as thinning</a></li><li><a href="#why-it-matters">Why wall thinning matters</a></li><li><a href="#how-to-check">How to check wall thinning</a></li><li><a href="#reducing-thinning">How to limit wall thinning</a></li><li><a href="#real-life">Real-life lessons</a></li><li><a href="#mistakes">Common mistakes and fixes</a></li><li><a href="#pro-tips">Pro tips</a></li><li><a href="#faq">FAQ</a></li><li><a href="#checklist">Your wall-thinning checklist</a></li></ol></div>
+
+<h2 id="what-is-wall-thinning">What is wall thinning in tube bending?</h2>
+
+<p>Picture a tube bent into a 90° elbow. The outside of the elbow, called the <strong>extrados</strong>, travels a longer path than the inside, called the <strong>intrados</strong>. The tube's centerline sits in between.</p>
+
+<p>Metal can't appear from nowhere. When the outer wall has to cover a longer path, it stretches. When metal stretches in one direction, it gets thinner in another. So the outer wall ends up thinner than it was. On the inside, the opposite happens. The metal is squeezed into a shorter path, so it thickens.</p>
+
+<p>That's all <strong>wall thinning</strong> means: the outside wall of a bend losing some thickness. You'll also see it called <strong>outside wall thinning</strong> or <strong>outer wall stretch</strong>. Its partner on the inside is <strong>inner wall thickening</strong>.</p>
+
+<p>A few key terms will make the rest of this guide easier:</p>
+
+<ul><li><strong>OD:</strong> the tube's outside diameter.</li><li><strong>Wall:</strong> the wall thickness, like .120".</li><li><strong>CLR:</strong> centerline radius, the radius of the bend measured to the tube's center. It's set by your die.</li><li><strong>D of bend:</strong> CLR ÷ OD. A 6" CLR on 1.75" tube is about 3.4D.</li><li><strong>Wall factor:</strong> OD ÷ wall. Bigger numbers mean thinner wall for the size.</li></ul>
+
+<p>If any of those are new, our <a data-bhg-link="bend-radius-explained" href="/bend-radius-explained/">centerline radius guide</a> and our <a href="/glossary/">glossary</a> explain them in plain English.</p>
+
+<figure class="bhg-figure" data-slot="measuring"><figcaption>Wall thickness starts as a number on the tag. After bending, the outside of the bend is the place to check it.</figcaption></figure>
+
+<h2 id="why-it-happens">Why the outside wall gets thinner</h2>
+
+<p>Think of a rubber band. Stretch it and it gets longer and thinner. Steel isn't rubber, but once you bend it past its elastic limit, it flows in a similar way. Its volume stays about the same, so a longer piece has to give up thickness or width somewhere.</p>
+
+<p>In a tube bend, the stretch runs along the length of the tube on the outside of the bend. The wall there gets pulled thinner. The squeeze on the inside does the reverse and builds up thickness. Bender maker Rogue Fabrication describes it simply: the outside of the bend stretches, while the inside is in compression (<a href="https://www.roguefab.com/stainless-steel-tube-bender/" target="_blank" rel="noopener">Rogue Fab stainless guide</a>).</p>
+
+<h3>Thinning travels with other defects</h3>
+
+<p>Thinning rarely shows up alone. The same forces cause other changes:</p>
+
+<ul><li><strong>Ovality:</strong> the stretched outer wall pulls in toward the center and the section flattens. See our <a data-bhg-link="ovality-in-tube-bending" href="/ovality-in-tube-bending/">ovality guide</a>.</li><li><strong>Wrinkles:</strong> if the inner wall can't take the squeeze, it buckles. Rogue Fab notes this happens when the wall is thin relative to the bend radius.</li><li><strong>Work hardening:</strong> some metals get harder where they stretch. Rogue Fab says austenitic stainless, like 304 and 316, work hardens quickly during bending.</li></ul>
+
+<h3>The bend radius drives it</h3>
+
+<p>The tighter the bend, the bigger the difference between the outer and inner paths. That means more stretch outside, more squeeze inside, and more thinning. The next section shows how to put a number on that stretch with nothing but a calculator.</p>
+
+<div class="bhg-callout bhg-callout--info"><span class="bhg-callout-icon">💡</span><span class="bhg-callout-title">Thinning is normal</span><p>Every bend thins the outside wall a little. The question isn't "is there thinning?" It's "is there more than this part can accept?" That answer comes from your design, spec or rulebook.</p></div>
+
+<h2 id="stretch-geometry">The geometry of outer-wall stretch</h2>
+
+<p>Here's the useful bit. You can estimate how much the outside of a bend stretches with simple circle geometry. No lab, no software.</p>
+
+<h3>The formula</h3>
+
+<p>The length of any arc is its radius times the bend angle (in radians). The centerline runs at the CLR. The outside surface runs at CLR + OD ÷ 2. So the outer surface is longer by a fraction of:</p>
+
+<p><strong>Outer-fibre stretch ≈ OD ÷ (2 × CLR)</strong></p>
+
+<p>The inside surface runs at CLR − OD ÷ 2, so it's squeezed by the same fraction. Since D of bend is CLR ÷ OD, you can also write it as <strong>stretch ≈ 1 ÷ (2 × D)</strong>. That makes it easy to compare dies at a glance.</p>
+
+<h3>Worked example: 1.75" tube on a 6" CLR</h3>
+
+<p>Let's check it with real lengths for a 90° bend. A 90° bend is π ÷ 2, or about 1.5708 radians.</p>
+
+<ol class="bhg-steps"><li><strong>Centerline arc:</strong> 6 × 1.5708 = <strong>9.42"</strong>.</li><li><strong>Outer radius:</strong> 6 + (1.75 ÷ 2) = 6.875". Outer arc: 6.875 × 1.5708 = <strong>10.80"</strong>.</li><li><strong>Inner radius:</strong> 6 − 0.875 = 5.125". Inner arc: 5.125 × 1.5708 = <strong>8.05"</strong>.</li><li><strong>Outer stretch:</strong> 10.80 − 9.42 = 1.37" longer. Then 1.37 ÷ 9.42 ≈ <strong>14.6%</strong>.</li><li><strong>Shortcut check:</strong> 1.75 ÷ (2 × 6) = 1.75 ÷ 12 ≈ <strong>0.146</strong>, or 14.6%. It matches.</li></ol>
+
+<p>The inside is 9.42 − 8.05 = 1.37" shorter, also about 14.6%. So the outside wall is stretched about 14.6% and the inside squeezed about 14.6%, measured against the centerline.</p>
+
+<h3>The angle doesn't change the percentage</h3>
+
+<p>Try the same tube at 45°. The centerline arc is 4.71" and the outer arc is 5.40". The outside is still about 14.6% longer. In this simple model, the <em>percentage</em> stretch depends on OD and CLR, not on how far you bend. A bigger bend just stretches a longer stretch of tube by the same amount.</p>
+
+<p>Want to see this on screen? Our <a href="/visualizer/">geometry visualizer</a> draws the inner, outer and centerline arcs. The <a href="/calculator/">bend calculator</a> gives you D of bend and arc lengths for your die.</p>
+
+<h2 id="stretch-by-radius">Wall thinning in tube bending: stretch at common bend radii</h2>
+
+<p>Because stretch ≈ 1 ÷ (2 × D), you can build a quick table. The D values below aren't random. Each one ties back to a published source or a common die size.</p>
+
+<table><thead><tr><th>D of bend (CLR ÷ OD)</th><th>Outer stretch ≈ 1 ÷ (2D)</th><th>Where you see this radius</th></tr></thead><tbody><tr><td><strong>1D</strong></td><td>50%</td><td>Tight mandrel exhaust bends (Vibrant sells 1D bends)</td></tr><tr><td><strong>1.5D</strong></td><td>33%</td><td>Common aftermarket mandrel exhaust bends</td></tr><tr><td><strong>2D</strong></td><td>25%</td><td>The Fabricator's mandrel example: 2" tube on a 4" CLR</td></tr><tr><td><strong>3D</strong></td><td>16.7%</td><td>Pro-Tools' practical minimum without a mandrel; SCCA Time Trials cage minimum</td></tr><tr><td><strong>About 3.4D</strong></td><td>14.6%</td><td>1.75" tube on a 6" CLR die</td></tr><tr><td><strong>About 3.7D</strong></td><td>13.5%</td><td>1.75" tube on a 6.5" CLR, a common off-road die per Baileigh</td></tr><tr><td><strong>4D</strong></td><td>12.5%</td><td>Baileigh's suggested starting point</td></tr></tbody></table>
+
+<p>Sources for the radius column: <a href="https://vibrantperformance.com/304-stainless-steel-90-brushed-mandrel-bends/" target="_blank" rel="noopener">Vibrant Performance</a>, <a href="https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper" target="_blank" rel="noopener">The Fabricator</a>, <a href="https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate" target="_blank" rel="noopener">Pro-Tools</a>, <a href="https://timetrials.scca.com/pages/safety-level-3" target="_blank" rel="noopener">SCCA Time Trials</a> and Baileigh's <a href="https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/" target="_blank" rel="noopener">bending concepts</a> and <a href="https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/" target="_blank" rel="noopener">off-road</a> posts. The stretch column is pure geometry.</p>
+
+<h3>What the table tells you</h3>
+
+<p>Two things jump out. First, going from 4D to 3D only adds about four points of stretch. Going from 2D to 1D doubles it. Stretch climbs fast as bends get tight. Second, the tight exhaust bends people love are stretching the outside far more than a typical cage bend. That's one reason those bends are made on mandrel machines with careful tooling.</p>
+
+<blockquote class="bhg-quote"><p>Halve the bend radius and you double the stretch on the outside of the bend. The die you choose decides most of your wall thinning before you pull the handle.</p></blockquote>
+
+<h2 id="stretch-vs-thinning">Stretch is not the same as wall thinning</h2>
+
+<p>Here's where honesty matters. The 14.6% stretch on a 6" CLR does <strong>not</strong> mean the wall gets 14.6% thinner. Stretch is a length change along the tube. Thinning is a change in wall thickness. They're related, but they aren't the same number.</p>
+
+<h3>Why they differ</h3>
+
+<ul><li><strong>The metal has three directions to give.</strong> When the outer wall stretches along the tube, it can also shrink around the tube's circumference, not just through its thickness.</li><li><strong>The section changes shape.</strong> As the tube goes oval, the outer wall moves inward, which changes the path it has to cover.</li><li><strong>The real "neutral line" can move.</strong> Our formula assumes the centerline doesn't stretch. In a real bend, the line of zero stretch may not sit exactly at the center.</li><li><strong>Tooling matters.</strong> Pressure dies, mandrels, wipers, clamp grip and lube all change how the metal flows.</li><li><strong>Materials differ.</strong> Each alloy and temper stretches and hardens in its own way.</li></ul>
+
+<h3>So what's the real number?</h3>
+
+<p>We looked for a simple, validated formula that predicts final wall thickness for garage bending. We didn't find one we'd trust. Engineering codes and bending software have their own methods for their own industries. For your parts, the honest path is to <strong>measure a test bend</strong>.</p>
+
+<p>Use the stretch number as a warning light. If you move to a die with twice the stretch, expect noticeably more thinning, and check it. If the stretch is high and the wall is already thin, slow down and think before you bend the real part.</p>
+
+<div class="bhg-callout bhg-callout--warn"><span class="bhg-callout-icon">⚠️</span><span class="bhg-callout-title">Don't trust a one-size thinning figure</span><p>You'll see thinning percentages quoted online with no source, tube or tooling attached. Treat them as stories, not specs. Your tube, die and bender decide the real number.</p></div>
+
+<h2 id="why-it-matters">Why wall thinning matters</h2>
+
+<p>For a bumper, a rack or a gate, a bit of thinning almost never matters. The tube was chosen with plenty of margin. But there are jobs where it deserves attention.</p>
+
+<h3>Safety structures</h3>
+
+<p>Roll cages, roll bars and chassis are built to a minimum tube size and wall set by a rulebook. The outside of each bend is exactly where the wall is thinnest. Your sanctioning body's current rulebook decides tube, wall and bend radius. Some rulebooks also set a minimum CLR, like SCCA Time Trials' three times the tube diameter. Ask your inspector how they treat wall at the bends before you buy tube. Our <a data-bhg-link="roll-cage-specifications" href="/roll-cage-specifications/">roll cage tubing guide</a> points you to the right rulebooks.</p>
+
+<h3>Pressure and fluid lines</h3>
+
+<p>Hydraulic, fuel, brake and coolant lines hold pressure. Pressure pushes hardest where the wall is thinnest. That's why industrial piping works to codes with bend rules. If your line falls under a code or a maker's spec, follow it.</p>
+
+<h3>Cracking</h3>
+
+<p>Some materials don't stretch far before they crack. Aluminum in the hard T6 temper is the classic example. Rogue Fab recommends about 3.5D to 4D for 6061-T6 and calls 3D marginal (<a href="https://www.roguefab.com/aluminum-pipe-benders/" target="_blank" rel="noopener">Rogue Fab aluminum guide</a>). A crack on the outside of the bend is wall thinning taken to its limit. See our <a data-bhg-link="bending-aluminum-tube-6061" href="/bending-aluminum-tube-6061/">aluminum bending guide</a>.</p>
+
+<figure class="bhg-figure" data-slot="roll-cage"><figcaption>On a cage, the outside of every bend is where the wall is thinnest. That's why rulebooks and inspectors care about bend radius.</figcaption></figure>
+
+<div class="bhg-callout bhg-callout--danger"><span class="bhg-callout-icon">🛑</span><span class="bhg-callout-title">We're not your inspector</span><p>Benders Hub is not a tech inspector or an engineer. For cages, roll bars and chassis, confirm tube, wall, radius and any bend rules with your current rulebook and your inspector before you buy tube. Read our <a href="/safety/">safety notes</a> too.</p></div>
+
+<h2 id="how-to-check">How to check wall thinning on a test bend</h2>
+
+<p>You can't see wall thinning from the outside. To know your real number, you need to measure it. There are two practical ways for a small shop.</p>
+
+<h3>Method 1: section a test bend</h3>
+
+<p>This is cheap and very clear. You bend a scrap piece, cut it, and measure the wall directly.</p>
+
+<ol class="bhg-steps"><li><strong>Measure the straight tube.</strong> Check the wall at several points around a cut end. Tube wall isn't perfectly even from the mill, so note the range.</li><li><strong>Bend a test piece.</strong> Use the same die, tube batch and setup as your real part.</li><li><strong>Mark the middle of the bend</strong> on the outside and inside.</li><li><strong>Cut across the bend</strong> at that mark with a saw. Deburr the cut gently so you don't remove wall.</li><li><strong>Measure the outer wall</strong> at the extrados, then the inner wall at the intrados, and the sides.</li><li><strong>Compare.</strong> Thinning % = (original wall − bent wall) ÷ original wall × 100.</li><li><strong>Log it</strong> with the tube, die and date.</li></ol>
+
+<p>Calipers work for this, but their flat jaws don't sit perfectly on the curved inside of a tube. A <strong>tube micrometer</strong> with a rounded anvil reads the inside curve more accurately. Either way, take a few readings and keep the smallest one on the outside.</p>
+
+<h3>Method 2: an ultrasonic thickness gauge</h3>
+
+<p>An ultrasonic gauge measures wall from the outside, with no cutting. You put a little couplant gel on the tube and press the probe against it. It's handy for checking finished parts. Readings on small, curved tube can be tricky, so follow the gauge maker's instructions and check it on a known piece of straight tube first.</p>
+
+<h3>A worked thinning calculation</h3>
+
+<p>Say your straight tube measures .120" and the outside of your test bend measures .108". The readings are made up to show the math. Then (.120 − .108) ÷ .120 = .012 ÷ .120 = 0.10, or <strong>10% thinning</strong>. Notice that's a different number from the geometric stretch for the same die. That's exactly why you measure.</p>
+
+<!-- 📷 IMAGE IDEA (owner's photo): a test bend cut in half at mid-bend, with calipers on the outer wall. Suggested alt text: "Sectioned tube bend showing thinner outer wall measured with calipers". -->
+
+<h2 id="reducing-thinning">How to limit wall thinning</h2>
+
+<p>You can't stop the outer wall stretching. That's how bending works. But you can keep thinning to a level your part can live with.</p>
+
+<h3>1. Choose a larger CLR</h3>
+
+<p>This is the biggest lever by far. As the table showed, stretch ≈ 1 ÷ (2D). Moving from 3D to 4D drops the geometric stretch from about 16.7% to 12.5%. If your design and rulebook allow a bigger radius, it's the simplest fix.</p>
+
+<h3>2. Start with more wall</h3>
+
+<p>Thicker wall doesn't stretch less, but it leaves more metal when it's done. If the outside of the bend needs a certain minimum, starting with more wall gives you margin. Check your bender can handle it: heavier wall needs more force, and capacity charts set limits.</p>
+
+<h3>3. Pick a friendlier material or temper</h3>
+
+<p>Softer material stretches more evenly. For aluminum, Rogue Fab and The Fabricator both point to softer tempers as easier to bend than T6. For steel, follow your design or rulebook on grade.</p>
+
+<h3>4. Use mandrel support where you need it</h3>
+
+<p>A mandrel's main job is to support the inside of the tube so it doesn't flatten, kink or wrinkle. It doesn't change the geometry: the outside still travels a longer path. For tight, thin-wall bends you'll need one anyway. Read <a data-bhg-link="mandrel-vs-rotary" href="/mandrel-vs-rotary/">mandrel vs crush bending</a> for the trade-offs.</p>
+
+<table><thead><tr><th>Lever</th><th>What it changes</th><th>Effect on thinning</th></tr></thead><tbody><tr><td><strong>Larger CLR</strong></td><td>Geometric stretch</td><td>Directly lower</td></tr><tr><td><strong>Thicker wall</strong></td><td>Metal left after stretch</td><td>More margin</td></tr><tr><td><strong>Softer temper</strong></td><td>How evenly metal stretches</td><td>Less cracking risk</td></tr><tr><td><strong>Mandrel</strong></td><td>Inside support</td><td>Prevents collapse; geometry unchanged</td></tr><tr><td><strong>Matched die</strong></td><td>Support around the tube</td><td>Better shape, steadier results</td></tr></tbody></table>
+
+<p><em>As an Amazon Associate I earn from qualifying purchases.</em></p>
+
+<h3 id="eastwood-high-capacity">Eastwood High Capacity bender: choose the die first</h3>
+
+<div class="bhg-product"><div class="bhg-product-head"><span class="bhg-product-badge">🔧 Bender + die</span><p class="bhg-product-title">Eastwood High Capacity Tube Bender (#21115)</p><p class="bhg-product-sub">A manual rotary-draw bender with published limits and a 1.75" × 6" CLR die, about 3.4D.</p></div><div class="bhg-product-body"><div><p>If you're choosing a bender with wall thinning in mind, start with the die. A 1.75" × 6" CLR die works out to about 3.4D, or roughly 14.6% outer-fibre stretch by the geometry above. That's in the range of common off-road and cage dies.</p><p><strong>Who it's for:</strong> builders bending 1.5" to 1.75" mild-steel bumpers, bars and frames who want clear published limits and a hydraulic upgrade path later.</p><p><strong>Why it fits this topic:</strong> Eastwood publishes its wall limits, including a lower .090" limit for 4130. Knowing your bender's limits is part of managing wall at the bend.</p></div><dl class="bhg-specs"><div><dt>Type</dt><dd>Manual rotary draw, hydraulic-ready</dd></div><div><dt>Tube size</dt><dd>Up to 2" OD</dd></div><div><dt>Mild steel</dt><dd>Up to 2" × .120" wall</dd></div><div><dt>4130 chromoly</dt><dd>Limited to .090" wall</dd></div><div><dt>Bend angle</dt><dd>Up to 180° with 240° dies</dd></div><div><dt>Sold separately</dt><dd>Dies, handle and stand (check the listing)</dd></div></dl></div><div class="bhg-product-lists"><div class="bhg-pros"><h4>Why we like it</h4><ul><li>Clear published capacities</li><li>1.75" × 6" CLR 240° die available</li><li>Air- or electric-hydraulic kits for later</li></ul></div><div class="bhg-cons"><h4>Know before you buy</h4><ul><li>No mandrel, so tight thin-wall bends aren't its job</li><li>Several parts are sold separately</li><li>Lower chromoly wall limit than heavier benders</li></ul></div></div><div class="bhg-product-cta"><a class="bhg-btn bhg-btn--amazon" href="https://www.amazon.com/dp/B07PRLN2PG?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">🛒 Buy from Amazon</a><p class="bhg-product-extra">Die: <a href="https://www.amazon.com/dp/B07PPJ4WN4?tag=polyfreeplanet-20" target="_blank" rel="nofollow sponsored noopener">1.75" × 6" CLR 240° die</a>. Affiliate links. See our <a href="/affiliate-disclosure/">disclosure</a>.</p></div></div>
+
+<h2 id="real-life">Real-life lessons</h2>
+
+<p>These are composite stories. The same situations come up again and again in garage-fab forums and build threads.</p>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The tighter die</span><p>A builder wants a tighter look on a bumper and swaps a die for one with a much smaller CLR on the same thin-wall tube. The bends look sharp, but the outside of each one has a dull, rough "orange peel" texture and one shows a hairline crack. The stretch had jumped far more than they expected.</p><p><strong>Lesson:</strong> check stretch ≈ OD ÷ (2 × CLR) before you buy a tighter die, and test-bend the tube you'll really use.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The cut test piece</span><p>Someone building a roll bar wants to know how much wall is left at the bends. They bend a scrap piece from the same stick, cut it across the middle of the bend, and measure. The outer wall is thinner and the inner wall is thicker, just as the geometry predicts. They take the cut piece to their tech inspector to talk it through.</p><p><strong>Lesson:</strong> a sectioned test bend answers questions no chart can.</p></div>
+
+<div class="bhg-example"><span class="bhg-example-label">💬 The exhaust that wouldn't bend</span><p>A first-timer tries to make tight exhaust bends in thin-wall tube on a non-mandrel bender. The inside wrinkles and the section collapses. They switch to bought mandrel bends for the tight corners.</p><p><strong>Lesson:</strong> very tight radii on thin wall need a mandrel machine. That's what <a data-bhg-link="exhaust-bend-radius-1d-vs-1-5d-vs-2d" href="/exhaust-bend-radius-1d-vs-1-5d-vs-2d/">1D, 1.5D and 2D exhaust bends</a> are made on.</p></div>
+
+<figure class="bhg-figure" data-slot="exhaust"><figcaption>Tight exhaust bends stretch the outer wall far more than typical cage bends. They're made on mandrel machines for good reason.</figcaption></figure>
+
+<h2 id="mistakes">Common wall-thinning mistakes (and how to fix them)</h2>
+
+<p>Most wall-thinning problems come from a few habits. Here they are with the fix for each.</p>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Treating stretch as thinning.</strong> You see 14.6% stretch and assume the wall is 14.6% thinner.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> use stretch as a warning light. Measure real thinning on a sectioned test bend.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Choosing a die only for looks.</strong> A tight CLR looks great but stretches the outer wall hard.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> work out D of bend and stretch first. Check your rulebook's minimum radius.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Trusting an unsourced thinning figure.</strong> A forum post says "bends thin about X%," so you design to it.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> ignore numbers with no tube, die or source. Test your own setup.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Measuring the wrong spot.</strong> You check wall at the cut end, not at the outside of the bend.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> measure at the extrados, mid-bend, and keep the smallest reading.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Bending hard-temper aluminum tight.</strong> 6061-T6 on a tight radius cracks on the outside.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> use a larger radius, about 3.5D to 4D per Rogue Fab, or a softer temper if your design allows.</p></div>
+
+<div class="bhg-mistake"><p class="bhg-mistake-bad">❌ <strong>Expecting a mandrel to stop thinning.</strong> You add a mandrel and assume the outer wall is safe.</p><p class="bhg-mistake-fix">✅ <strong>Fix:</strong> remember a mandrel supports shape. The outer path is still longer, so the wall still stretches.</p></div>
+
+<h2 id="pro-tips">Pro tips for managing wall thinning</h2>
+
+<p>These habits keep wall thinning predictable and stop it from surprising you on an important part.</p>
+
+<ul><li><strong>Know your D before you buy a die.</strong> Divide CLR by OD. Then halve one over that number to get the stretch. Our <a href="/calculator/">bend calculator</a> does the first part for you.</li><li><strong>Keep a "known good" die per tube size.</strong> Once a die works well for a tube, stick with it for that size.</li><li><strong>Section one bend per new setup.</strong> One cut test piece per new tube, wall or die tells you more than any chart.</li><li><strong>Measure the straight tube too.</strong> Mill wall varies. Your thinning is the change from <em>your</em> tube's starting wall.</li><li><strong>Check ovality at the same time.</strong> Thinning and flattening grow together on tight bends.</li><li><strong>Watch the surface.</strong> A rough, dull texture on the outside of a bend can mean you're near the material's limit.</li><li><strong>Ask before you bend safety parts.</strong> For cages, talk to your inspector about bend radius and wall before you buy tube.</li></ul>
+
+<div class="bhg-callout bhg-callout--highlight"><span class="bhg-callout-icon">🎯</span><span class="bhg-callout-title">Expert habit: keep the cut pieces</span><p>Experienced builders often keep sectioned test bends, labelled with tube, wall and die, on a shelf. They're a quick reference, and they're great for showing a customer or inspector what's inside a bend.</p></div>
+
+<h2 id="faq">Frequently asked questions</h2>
+
+<div class="bhg-faq"><div class="bhg-faq-item"><h3 class="bhg-faq-q">What is wall thinning in tube bending?</h3><p>It's the outside wall of a bend getting thinner because it stretches over a longer path. The inside wall gets thicker because it's squeezed into a shorter one.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">How do you calculate outer wall stretch?</h3><p>Use outer-fibre stretch ≈ OD ÷ (2 × CLR). For 1.75" tube on a 6" CLR, that's 1.75 ÷ 12 ≈ 14.6%. It's a geometric estimate, not a thinning prediction.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Is there a formula for wall thinning?</h3><p>We didn't find a simple, validated one for garage bending. Real thinning depends on material, tooling and how the metal flows. Measure it on a sectioned test bend or with an ultrasonic gauge.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Does a bigger bend radius reduce wall thinning?</h3><p>Yes. Stretch ≈ 1 ÷ (2 × D of bend), so a larger CLR means less stretch on the outside of the bend. Going from 3D to 4D drops the geometric stretch from about 16.7% to 12.5%.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Does a mandrel prevent wall thinning?</h3><p>Not really. A mandrel supports the inside so the tube doesn't flatten or wrinkle. The outer wall still travels a longer path, so it still stretches.</p></div><div class="bhg-faq-item"><h3 class="bhg-faq-q">Does bend angle affect wall thinning?</h3><p>In the simple geometry, no. The stretch percentage depends on OD and CLR. A bigger angle just stretches a longer length of tube by the same percentage.</p></div></div>
+
+<h2 id="checklist">Your wall-thinning checklist</h2>
+
+<p>Run through this list before you commit to a die or bend an important part.</p>
+
+<div class="bhg-checklist"><ul><li>I know my tube's OD, wall and material</li><li>I've worked out D of bend (CLR ÷ OD) for my die</li><li>I've estimated outer stretch with OD ÷ (2 × CLR)</li><li>My CLR meets any rulebook or design minimum</li><li>I've checked my bender's capacity for this wall and material</li><li>I measured the straight tube's wall at several points</li><li>I sectioned a test bend from the same batch</li><li>I measured the outer wall at mid-bend and kept the smallest reading</li><li>I checked ovality on the same test piece</li><li>I logged the results with tube, die and date</li><li>For safety parts, I've talked to my inspector</li></ul></div>
+
+<p>Wall thinning sounds scary, but it's just geometry plus a cut test piece. Pick your radius with care, measure once, and you'll know exactly what's inside your bends. ✅</p>
+
+<div class="bhg-cta"><h3>Check your die before you buy it</h3><p>Work out D of bend, wall factor and arc lengths in seconds. Or see the inner, outer and centerline arcs drawn for your tube.</p><div class="bhg-cta-row"><a class="bhg-btn bhg-btn--primary" href="/calculator/">Open the bend calculator</a><a class="bhg-btn bhg-btn--ghost" href="/visualizer/">Try the geometry visualizer</a></div></div>

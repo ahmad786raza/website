@@ -1,0 +1,38 @@
+{
+ "slug": "ovality-in-tube-bending",
+ "title": "Ovality in Tube Bending: Formula, Measuring and Limits",
+ "excerpt": "Ovality in tube bending made simple: the formula, how to measure it with calipers, a worked example, and why your spec, not a chart, sets the limit.",
+ "category": "fabrication-theory",
+ "featured_slot": "measuring",
+ "primary_keyword": "ovality in tube bending",
+ "asins": [
+  {
+   "asin": "B01M12Z84P",
+   "product": "Woodward Fab WFB2 manual tube & pipe bender",
+   "evidence": "Writer kit pre-verified ASIN table (WRITER-KIT.md section 3)"
+  },
+  {
+   "asin": "B07B7MFPCZ",
+   "product": "Woodward Fab WFBDT2X6 die (2\" OD x 6\" CLR) for WFB2",
+   "evidence": "Writer kit pre-verified ASIN table (WRITER-KIT.md section 3)"
+  },
+  {
+   "asin": "B075DJJT85",
+   "product": "Woodward Fab WFB2 stand",
+   "evidence": "Writer kit pre-verified ASIN table (WRITER-KIT.md section 3)"
+  }
+ ],
+ "sources": [
+  "https://imeko.org/publications/tc14-2007/IMEKO-TC14-2007-51.pdf",
+  "https://ns1.engineersedge.com/calculators/ovality_roundness_tube_15572.htm",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://blog.baileigh.com/basic-bending-concepts-commonly-discussed/",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper",
+  "https://www.roguefab.com/tube-capacity-chart/",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://timetrials.scca.com/pages/safety-level-3",
+  "/home/user/website/docs/research/competitors-keywords-factcheck.md (PART 3, sections 3.1, 3.4, 3.5)"
+ ],
+ "notes": "The shared WebSearch budget ran out after the first article, so this article could not be freshly researched. Every fact comes from the writer-kit known-good table or the repo fact-check notes (PART 3), which were themselves built from search-index summaries. Please re-verify before publishing: (1) The ovality formula (Dmax - Dmin)/Dnominal x 100, sourced in the notes to The Fabricator and the IMEKO TC14 2007 paper. (2) Engineers Edge's alternative formula dividing by (Dmax + Dmin): the notes give the URL 'as surfaced in search results' (ns1.engineersedge.com host); confirm the exact formula on the live page. (3) 'The Fabricator has cited ovality tolerances from roughly 1.5% to 8% depending on end use': the notes do not record the exact article URL, so it is attributed in the text but not linked; please find and link it, or cut the sentence. (4) Rogue Fab thin-wall roller: 'deformation about 5-7% vs about 10% without' (capacity chart, via notes). (5) The Fabricator mandrel example (2 x .065 on 4 in CLR: WF 30.8, D 2.0, two-ball mandrel with wiper). (6) SCCA Time Trials 3x tube diameter bend radius (kit says re-verify wording). The worked-example readings (1.790 / 1.700 on 1.750 nominal) and the 1.5/3/5/8% rows of the limit table are labelled in the text as made-up numbers to show the arithmetic, not typical results or recommended limits. Left out as unverifiable: forum pressure-based limits (8% below / 5% above 600 psi), any code clause numbers (e.g. pressure-piping flattening limits), Rogue Fab's '0.9% deformation' 1D exhaust bend (image alt text only), and any rulebook ovality limit. A calipers product box would suit this article, but no calipers ASIN could be verified once the search budget was exhausted; the WFB2 box (kit-verified ASINs) is used instead. Editor may add a verified calipers box."
+}

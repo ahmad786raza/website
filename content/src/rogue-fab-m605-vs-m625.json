@@ -1,0 +1,35 @@
+{
+ "slug": "rogue-fab-m605-vs-m625",
+ "title": "Rogue Fab M605 vs M625: Which Rogue Bender Do You Need?",
+ "excerpt": "Rogue Fab M605 vs M625, compared from Rogue's published specs: wall ratings, frame, power, shared dies and the M605's .188 vs .250 conflict.",
+ "category": "guides",
+ "featured_slot": "manual-bender",
+ "primary_keyword": "Rogue Fab M605 vs M625",
+ "asins": [
+  {"asin": "B085C8PSKB", "product": "Angle Gauge eOUTIL Digital Protractor Inclinometer Angle Finder with V-Groove Magnetic Base", "evidence": "https://www.amazon.com/eOUTIL-Digital-Waterproof-Protractor-Backlight/dp/B085C8PSKB"},
+  {"asin": "B07PQJZJ37", "product": "Eastwood tube & pipe notcher, 0-60 deg, up to 2\" round", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"},
+  {"asin": "B0CLT6ZC29", "product": "Woodward Fab WWFSPPIPENOTCH 2\" hole-saw notcher, 60 deg adjustment", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"},
+  {"asin": "B00F6GYB8A", "product": "Baileigh RDB-050 manual rotary-draw bender", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"},
+  {"asin": "B07PRLN2PG", "product": "Eastwood High Capacity tube bender (#21115)", "evidence": "Pre-verified in WRITER-KIT.md ASIN table"}
+ ],
+ "sources": [
+  "https://www.roguefab.com/product/metal-tube-bender-m605-1-die/",
+  "https://www.roguefab.com/product/metal-tube-bender-m625-1-die/",
+  "https://www.roguefab.com/product-category/tubing-benders/",
+  "https://www.roguefab.com/faqs/",
+  "https://www.roguefab.com/tube-capacity-chart/",
+  "https://www.roguefab.com/best-tube-benders-compared/",
+  "https://www.roguefab.com/product/tubing-bender-tradesman-set/",
+  "https://www.roguefab.com/product/air-hydraulic-ram-for-m600-series-benders/",
+  "https://www.roguefab.com/product/1-5hp-power-system/",
+  "https://www.roguefab.com/product/m600-elechydro/",
+  "https://www.roguefab.com/product/twr-assembly/",
+  "https://www.roguefab.com/product/metal-tube-bender-m601/",
+  "https://www.roguefab.com/wp-content/uploads/2025/04/2025-Product-Catalog.pdf",
+  "https://www.roguefab.com/aluminum-pipe-benders/",
+  "https://www.roguefab.com/bending-101/",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://www.amazon.com/eOUTIL-Digital-Waterproof-Protractor-Backlight/dp/B085C8PSKB"
+ ],
+ "notes": "roguefab.com fails DNS for direct WebFetch here, and the shared WebSearch budget ran out before an M625-specific search could run. ALL Rogue facts come from WebSearch result summaries of roguefab.com pages (run while researching jd2-model-32-vs-rogue-fab-m605), plus the WRITER-KIT fact table and docs/research/competitors-keywords-factcheck.md section 3.6 (also search-summary based). Please re-verify on the live pages. Items from a single search summary that most need checking: (1) 'M625 ships standard with 2.0 HP electric hydraulic power'; (2) 'you cannot convert an M605 to an M625 later without replacing the frame' (from a Rogue article); (3) M601/M605 3/16\" vs M625 5/16\" uprights; (4) M625 1-3/4\" solid bar; (5) M625 with mandrel attachment down to about .065\" wall on 1.75\" OD (fact-check notes); (6) electric systems rated 3,000 psi. Conflicts flagged in the article: M605 wall .188\" (product page/catalogue) vs .250\" DOM (FAQ); M605 solid bar 1-1/2\" vs 2\" (Tradesman page); per-stroke 94 vs 90 deg; max bend 194 vs 195 deg; 1.50\" x 3.5\" CLR min wall .156\" (web chart) vs about .120\" (2025 catalogue). Power options other than 2.0 HP electric on the M625 are marked 'Ask Rogue' in the table because they were not verified. Left out (unverified): M601 wall/OD capacity, the 'M600 HD Kit' (title seen only; unclear what it converts), 'Duraplates' option, weights, the Rogue claim that the M605 suits NHRA 1-5/8\" 4130 main hoops (rule claim not checked against the rulebook). No prices used."
+}

@@ -1,0 +1,53 @@
+{
+ "slug": "stainless-bending",
+ "title": "Bending Stainless Exhaust Tubing: Mandrels, Springback & Test Bends",
+ "excerpt": "Bending stainless exhaust tubing without wrinkles: when you need a mandrel, how to measure springback with a test bend, and how to back purge welds.",
+ "category": "tutorials",
+ "featured_slot": "stainless",
+ "primary_keyword": "bending stainless exhaust tubing",
+ "asins": [
+  {
+   "asin": "B079P687YJ",
+   "product": "2.5\" Stainless 90° Mandrel Bend - 1.5D/3.75\" CLR Loose Radius - 16GA/.065\" Wall - 5\" Leg/8\" Leg - SS304",
+   "evidence": "https://www.amazon.com/clp/B079P687YJ"
+  },
+  {
+   "asin": "B004RUFBLW",
+   "product": "Vibrant Performance VIB13040 (13040) 90° T304 Stainless Steel Mandrel Bend Tube",
+   "evidence": "https://www.amazon.com/Vibrant-Performance-VIB13040-Stainless-Mandrel/dp/B004RUFBLW"
+  },
+  {
+   "asin": "B07VHF6KWN",
+   "product": "Silicone Back Purge Plugs (Exhaust Tubing Kit - 2.5\" to 4\") - Tig Aesthetics by Ticon Industries",
+   "evidence": "https://www.amazon.com/Silicone-Purge-Plugs-Exhaust-Tubing/dp/B07VHF6KWN"
+  },
+  {
+   "asin": "B003TT0RJI",
+   "product": "Harris S0FB01 Type B Solar Welding Flux, 1 lb. Can",
+   "evidence": "https://www.amazon.com/Harris-S0FB01Type-Solar-Welding-Flux/dp/B003TT0RJI"
+  }
+ ],
+ "sources": [
+  "https://www.roguefab.com/stainless-steel-tube-bender/",
+  "https://www.roguefab.com/exhaust-pipe-benders/",
+  "https://www.roguefab.com/mandrel-bending/",
+  "https://www.roguefab.com/product/bendall-lube/",
+  "https://www.roguefab.com/building-roll-cage/",
+  "https://www.roguefab.com/product/twr-assembly/",
+  "https://www.roguefab.com/bending-101/",
+  "https://www.smithmetal.com/pdf/stainless/304-304l-stainless.pdf",
+  "https://burnsstainless.com/blogs/articles-1/stainless-steels-for-exhaust-systems",
+  "https://pro-tools.com/blogs/protoolsusa/42288387-wall-factor-and-d-of-bend-getting-to-the-center-of-the-centerline-radius-debate",
+  "https://pro-tools.com/blogs/protoolsusa/19923715-springback-to-basics-defining-springback-and-how-to-compensate-for-it",
+  "https://www.thefabricator.com/tubepipejournal/article/tubepipefabrication/selecting-the-right-mandrel-and-wiper",
+  "https://www.thefabricator.com/thefabricator/article/tubepipefabrication/tube-bending-basics-how-to-bend-tubing-and-metal-pipe",
+  "https://www.baileigh.com/media/akeneo_connector/asset_files/R/D/RDB_175_08_2020_b9b5.pdf",
+  "https://www.stainlessheaders.com/p-35900-tube-cut-length.html",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://www.millerwelds.com/en-US/resources/knowledge-hub/tig-welding/how-to/common-tig-weld-problems",
+  "https://www.sakysteel.com/news/is-304-stainless-steel-magnetic/",
+  "https://www.amazon.com/Silicone-Purge-Plugs-Exhaust-Tubing/dp/B07VHF6KWN",
+  "https://www.amazon.com/Harris-S0FB01Type-Solar-Welding-Flux/dp/B003TT0RJI"
+ ],
+ "notes": "REWRITE of draft #39, written fresh; keep slug. All unsourced numbers from the old draft (tonnage, 60-80% springback, 93°/94°, ram speed %, cooling cycles, 200°F) were dropped; springback is taught via the test-bend method. Direct page fetches were blocked in this environment, so Rogue Fab, Burns, Miller, Harris and Ticon facts came from WebSearch result summaries; formula/ovality/Baileigh/Pro-Tools/Stainless Headers facts came from the fact-check notes (also search-summary based). Please spot-check: (1) Rogue Fab exhaust page: mandrel for 304 exhaust when wall ratio > 20 or 'D/R' < 3.0 (interpreted as D of bend). (2) Rogue Fab: 316 springs back slightly more than 304; bronze is the standard mandrel material; thin-wall roller advertised 10.0% -> 6.4% deformation with regular dies (fact-check notes say about 5-7% vs about 10%, consistent). (3) Fabricator ovality tolerance 1.5-8% depending on end use is from the fact-check notes, which cite The Fabricator without a single exact URL. (4) 'Many fabricators keep separate brushes/discs for stainless' is stated as common practice without a specific source; editor may cut it. (5) Harris Type B: mixed with alcohol, brushed on the back of the joint, for stainless except 309/310 (listing summary); 'chore to clean off' is from customer reviews and phrased as user reports. (6) Ticon kit contents (2 each 2.5/3/3.5/4 in, 8 mesh diffusers, 4 Ti inlet tubes) and the brand's 'weld seam 1 in away' heat claim are from the listing summary. (7) The 1.5D bend B079P687YJ: specs from the listing title only; seller/brand not confirmed in search results. Web search budget ran out during research, so nothing further could be verified. Formula, ovality, Baileigh RDB-175 and Pro-Tools facts were taken from /home/user/website/docs/research/competitors-keywords-factcheck.md Part 3."
+}

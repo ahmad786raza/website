@@ -5,7 +5,7 @@
   "45": 1,
   "46": 1,
   "54": 1,
-  "83": 1,
+  "83": 2,
   "87": 1,
   "114": 1,
   "51": 2,
@@ -15,7 +15,9 @@
   "63": 1,
   "57": 1,
   "70": 1,
-  "44": 1
+  "44": 1,
+  "81": 1,
+  "98": 1
  },
  "pipe-bender-vs-tube-bender": 45,
  "harbor-freight-12-ton-pipe-bender": 46,
@@ -32,5 +34,8 @@
  "cnc-tube-bending": 63,
  "tube-bender-comparison": 57,
  "tube-bender-capacity-chart": 70,
- "tube-bender-die-compatibility": 44
+ "tube-bender-die-compatibility": 44,
+ "baileigh-rdb-050-review": 81,
+ "woodward-fab-wfb2-review": 98,
+ "how-to-choose-a-tube-bender": 83
 }

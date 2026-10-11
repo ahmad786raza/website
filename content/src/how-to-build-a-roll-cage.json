@@ -1,0 +1,42 @@
+{
+ "slug": "how-to-build-a-roll-cage",
+ "title": "How to Build a Roll Cage: A Step-by-Step Garage Guide",
+ "excerpt": "How to build a roll cage step by step: rulebook first, then layout, templates, bending, notching, fit-up and an expert review before final welding.",
+ "category": "tutorials",
+ "featured_slot": "roll-cage",
+ "primary_keyword": "how to build a roll cage",
+ "asins": [
+  {
+   "asin": "B07PQJZJ37",
+   "product": "Eastwood tube & pipe notcher, 0-60 degrees, up to 2\" round",
+   "evidence": "Pre-verified in WRITER-KIT.md ASIN table (kit-verified)"
+  },
+  {
+   "asin": "B0CLT6ZC29",
+   "product": "Woodward Fab WWFSPPIPENOTCH 2\" hole-saw notcher, 60 degree adjustment",
+   "evidence": "Pre-verified in WRITER-KIT.md ASIN table (kit-verified)"
+  }
+ ],
+ "sources": [
+  "https://timetrials.scca.com/pages/full-safety-rules",
+  "http://promod.nhra.com/userfiles/file/Tech/2017_NHRA_Rulebook_Gen.%20Regs.pdf",
+  "http://promod.nhra.com/userfiles/file/Tech/2019%20General%20Regulations.pdf",
+  "https://www.nhraracer.com/rules",
+  "https://www.nhraracer.com/post/nhra-updates-the-digital-version-of-the-2026-nhra-rulebook-2",
+  "https://www.nhraracer.com/post/nhra-technical-department-releases-the-2026-2027-nhra-rulebook-amendments",
+  "https://sfifoundation.com/drag-racing-chassis/",
+  "https://www.sfifoundation.com/wp-content/pdfs/SFI25-1KNotice7-29-21.pdf",
+  "https://www.sfifoundation.com/wp-content/pdfs/SFI25-5ENotice7-29-21.pdf",
+  "https://www.fia.com/system/files/documents/253_2026_wmsc_2025.12.10_pj-mr.pdf",
+  "https://www.nasaproracing.com/rules/spec3_rules.pdf",
+  "https://members.drivenasa.com/rules",
+  "https://www.harborfreight.com/12-ton-hydraulic-pipe-bender-32888.html",
+  "https://manuals.harborfreight.com/manuals/32000-32999/32888-193175527103.pdf",
+  "https://blog.baileigh.com/bending-tube-for-off-road-vehicles-off-roading-and-tube-bending/",
+  "https://support.jd2.com/MiscDown/dl/TemplateBendingTutorial.pdf",
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.amazon.com/dp/B07PQJZJ37",
+  "https://www.amazon.com/dp/B0CLT6ZC29"
+ ],
+ "notes": "SAFETY-CRITICAL. Article strongly recommends inspector/pro review twice (plan before buying tube; tacked cage before final welding), never promises passing tech, and says the rulebook decides tube, wall, material, radius and welding. No ram/bottle-jack bender recommended (explicitly warned against). Direct page fetches were blocked (DNS), so all rule statements came from WebSearch result summaries of the official pages; please re-verify: (1) SCCA Time Trials full-safety-rules page (undated web page, seen Oct 2026): seamless or DOM mild steel (1020/1025 recommended), 4130 or T45, or Docol R8; no mixing; no ERW; centerline radius >= 3x tube diameter; size scales with weight; alloy welding per accepted industry practice; AWS D1.1 welder recommended not required. (2) NHRA TIG-for-4130 / MIG-or-TIG-mild-steel and the '360 degrees' design sentence are from the 2017/2019 General Regulations on promod.nhra.com; the 360-degree sentence was seen in a search summary covering those editions and may only appear in one of them. Current 2026 rulebook (digital, amendments through July 14, 2026; 2026-2027 amendments effective Jan 1, 2027) could not be opened. (3) SFI 25.1K and 25.5E effective July 2, 2021 (SFI notice PDFs, via search). (4) FIA Art. 253 2026 (dated 10 Dec 2025): cold-drawn seamless carbon steel, 350 N/mm2 min tensile; no FIA dimensions stated because the 2026 main table could not be confirmed. (5) NASA: only the CCR location and the 2026 Spec 3 statement that the CCR in effect on the competition date applies; NASA tube tables were forum-only, so left out. Also left out: SCCA padding thickness, mounting-plate sizes, number of mounting points, NHRA tube tables and ET brackets, HRHS three-year inspection rule (context unclear). Arc/tangent formulas and the 9.42 in example are from the kit fact table. No new ASINs verified (web-search budget exhausted)."
+}
