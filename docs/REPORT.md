@@ -204,3 +204,37 @@ No plugins were installed, removed or required. The theme does not depend on any
 4. Safety-checked roll-cage reference pages (rulebook pointers with edition dates), a springback guide using the test-bend method, and a wrinkle/kink/flattening troubleshooting guide.
 
 Keep each guide honest about research vs testing, add your own workshop photos where you can, and link to the matching tool.
+
+## 15. Live installation (11 October 2026)
+
+After `bendershub.com` was added to this environment's allowed domains, the live site was inspected and the theme installed.
+
+**What the live site contained before installation:**
+- A fresh WordPress 7.1.3 install with Twenty Twenty-Five active (Twenty Twenty-Four and Twenty Twenty-Three also installed).
+- One post ("Hello world!"), no pages and no media.
+- Site title "My Blog" and permalinks `/%year%/%monthnum%/%day%/%postname%/`.
+- Plugins: Classic Editor, W3 Total Cache, Loginizer (+Pro) and FileOrganizer (+Pro) active; Akismet and Hello Dolly inactive.
+- Cloudflare in front, not caching HTML. `wp-login.php` has a JavaScript "Checking your browser" gate.
+- The v1 Benders Hub content described in sections 2 and `CONTENT-REVIEW.md` is **not** on the live site, so that list only applies if v1 content is installed later.
+
+**Done:**
+- Uploaded `benders-hub-pro-2.0.0.zip`, activated "Benders Hub Pro" and purged the W3 Total Cache.
+- No content, settings, menus, users or plugins were changed.
+
+**Verified on the live site:**
+- Homepage at desktop and mobile: no PHP errors and no horizontal overflow.
+- Calculator: 9.425" arc and 39.675" cut for the default inputs.
+- Visualizer and quiz work; quiz Amazon links carry `rcblogs-20`.
+- JSON-LD parses; the existing post, search and 404 pages render.
+- Theme admin pages (dashboard, Upgrade, Image Library, Audit, Customizer) load.
+- The only browser error was Cloudflare's Web Analytics beacon, which this test environment blocks; real visitors are unaffected.
+
+**Rollback:** Appearance → Themes → activate Twenty Twenty-Five.
+
+**Still needed before launch** (with the owner's go-ahead):
+- Site title and tagline.
+- A public display name: the admin username currently shows as the author name.
+- Remove "Hello world!".
+- Trust pages, tool pages and menu: Repair Setup, then Upgrade to v2.
+- Photos: Image Library.
+- Real articles: none exist yet. Content Library starter articles are created as drafts for review.
