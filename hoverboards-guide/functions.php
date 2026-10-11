@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'HBG_VERSION', '3.1.0' );
+define( 'HBG_VERSION', '4.0.0' );
 define( 'HBG_DIR', get_template_directory() );
 define( 'HBG_URI', get_template_directory_uri() );
 
@@ -171,11 +171,14 @@ function hbg_head_inline() {
 	echo '<meta name="theme-color" content="#14213d">' . "\n";
 	echo '<style id="hbg-accent">:root{--accent:' . esc_attr( $accent ) . ';}</style>' . "\n";
 	echo '<script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>' . "\n";
-	if ( is_front_page() ) {
-		$hero = (int) get_theme_mod( 'hbg_hero_image', 0 );
-		$url  = $hero ? wp_get_attachment_image_url( $hero, 'large' ) : hbg_image_url( 'cat-hoverboards', 800 );
-		if ( $url ) {
-			echo '<link rel="preload" as="image" href="' . esc_url( $url ) . '" fetchpriority="high">' . "\n";
+	if ( is_front_page() && get_theme_mod( 'hbg_show_mosaic', true ) ) {
+		$lead = hbg_get_featured_posts( 7 );
+		$lead = $lead ? $lead[0] : null;
+		if ( $lead && has_post_thumbnail( $lead ) && ! hbg_is_title_card( $lead->ID ) ) {
+			$url = get_the_post_thumbnail_url( $lead, 'large' );
+			if ( $url ) {
+				echo '<link rel="preload" as="image" href="' . esc_url( $url ) . '" fetchpriority="high">' . "\n";
+			}
 		}
 	}
 }

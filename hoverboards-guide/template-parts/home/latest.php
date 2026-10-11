@@ -1,29 +1,50 @@
 <?php
 /**
- * E. Reviews & comparisons: curated evergreen cards first, then the newest hoverboard posts via "load more".
+ * Latest: one feature, three standard cards (plus "load more"), and two side modules —
+ * more recent headlines and either genuinely most-read articles or the editor's picks.
  */
-$count = max( 3, (int) get_theme_mod( 'hbg_featured_count', 6 ) );
-$posts = hbg_get_featured_posts( $count );
-if ( ! $posts ) {
+$posts = hbg_latest_posts( 10 );
+if ( count( $posts ) < 4 ) {
 	return;
 }
-$term    = get_term_by( 'slug', 'hoverboards', 'category' );
-$exclude = wp_list_pluck( $posts, 'ID' );
+$feature = array_shift( $posts );
+$cards   = array_splice( $posts, 0, 3 );
+$more    = array_slice( $posts, 0, 6 );
+$popular = hbg_popular_module( 5 );
 $all_url = hbg_all_articles_url();
 ?>
-<section class="section section--neutral reviews" id="reviews" aria-labelledby="reviews-title">
+<section class="zone latest" id="latest" aria-labelledby="latest-title">
 	<div class="container">
-		<?php hbg_section_heading( array( 'id' => 'reviews-title', 'kicker' => __( 'Reviews & comparisons', 'hoverboards-guide' ), 'title' => __( 'The hoverboard reviews and comparisons readers use most', 'hoverboards-guide' ), 'link' => $all_url, 'link_label' => __( 'All hoverboard articles', 'hoverboards-guide' ) ) ); ?>
-		<div class="grid grid--3 grid--feature" id="latest-grid" data-load-more-grid>
-			<?php foreach ( $posts as $i => $p ) : ?>
-				<?php $GLOBALS['post'] = $p; setup_postdata( $p ); // phpcs:ignore ?>
-				<?php get_template_part( 'template-parts/content', 'card', array( 'heading' => 'h3', 'feature' => 0 === $i ) ); ?>
-			<?php endforeach; wp_reset_postdata(); ?>
+		<?php hbg_zone_heading( array( 'title' => __( 'Latest', 'hoverboards-guide' ), 'kicker' => __( 'New reviews, guides and fixes', 'hoverboards-guide' ), 'url' => $all_url, 'more' => __( 'All articles', 'hoverboards-guide' ), 'id' => 'latest-title' ) ); ?>
+		<div class="latest__grid">
+			<div class="latest__main">
+				<?php $GLOBALS['post'] = $feature; setup_postdata( $feature ); // phpcs:ignore ?>
+				<?php get_template_part( 'template-parts/content', 'card', array( 'heading' => 'h3', 'variant' => 'feature' ) ); ?>
+				<?php wp_reset_postdata(); ?>
+				<div class="grid grid--3 latest__cards" id="latest-grid" data-load-more-grid>
+					<?php foreach ( $cards as $p ) : ?>
+						<?php $GLOBALS['post'] = $p; setup_postdata( $p ); // phpcs:ignore ?>
+						<?php get_template_part( 'template-parts/content', 'card', array( 'heading' => 'h3' ) ); ?>
+					<?php endforeach; wp_reset_postdata(); ?>
+				</div>
+				<div class="load-more-wrap">
+					<button type="button" class="btn btn--ghost load-more" data-load-more data-page="0" data-per-page="6" data-cat="0" data-exclude="<?php echo esc_attr( implode( ',', hbg_shown_ids() ) ); ?>"><?php esc_html_e( 'Load more articles', 'hoverboards-guide' ); ?></button>
+				</div>
+			</div>
+			<aside class="latest__side">
+				<?php if ( $more ) : ?>
+				<div class="side-module">
+					<h3 class="side-module__title"><?php esc_html_e( 'More recent', 'hoverboards-guide' ); ?></h3>
+					<div class="side-module__list"><?php foreach ( $more as $p ) { hbg_row( $p, array( 'label' => false ) ); } ?></div>
+				</div>
+				<?php endif; ?>
+				<?php if ( ! empty( $popular['posts'] ) ) : ?>
+				<div class="side-module">
+					<h3 class="side-module__title"><?php echo esc_html( $popular['title'] ); ?></h3>
+					<div class="side-module__list"><?php foreach ( $popular['posts'] as $i => $p ) { hbg_row( $p, array( 'thumb' => false, 'number' => $i + 1, 'label' => false ) ); } ?></div>
+				</div>
+				<?php endif; ?>
+			</aside>
 		</div>
-		<?php if ( $term && $term->count > count( $posts ) ) : ?>
-		<div class="load-more-wrap">
-			<button type="button" class="btn btn--ghost load-more" data-load-more data-page="0" data-per-page="6" data-cat="<?php echo esc_attr( $term->term_id ); ?>" data-exclude="<?php echo esc_attr( implode( ',', $exclude ) ); ?>"><?php esc_html_e( 'Load more hoverboard articles', 'hoverboards-guide' ); ?></button>
-		</div>
-		<?php endif; ?>
 	</div>
 </section>

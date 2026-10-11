@@ -1,0 +1,257 @@
+[
+ {
+  "name": "home: exactly one H1",
+  "ok": true,
+  "info": "count=1"
+ },
+ {
+  "name": "home: meta description present",
+  "ok": true,
+  "info": "Hoverboard buying guides, reviews and safety advice: compare boards for kids, te"
+ },
+ {
+  "name": "home: one canonical",
+  "ok": true,
+  "info": "count=1"
+ },
+ {
+  "name": "home: JSON-LD parses",
+  "ok": true,
+  "info": "Organization,ImageObject,WebSite,SearchAction,EntryPoint,FAQPage,Question,Answer"
+ },
+ {
+  "name": "home: has FAQPage + WebSite + Organization",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: affiliate links tagged",
+  "ok": true,
+  "info": "11 links"
+ },
+ {
+  "name": "home: affiliate links rel sponsored nofollow",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: affiliate links open new tab",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: no img without alt attribute",
+  "ok": true,
+  "info": "missing=0"
+ },
+ {
+  "name": "home: lead story image not lazy",
+  "ok": true,
+  "info": "loading=eager"
+ },
+ {
+  "name": "home: no unsupported trust claims",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: no star ratings or editor scores",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: no horizontal overflow",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: nav does not overlap brand",
+  "ok": true,
+  "info": "brandRight=324 navLeft=325"
+ },
+ {
+  "name": "home: ≤ 4 external scripts",
+  "ok": true,
+  "info": "scripts=1 styles=2"
+ },
+ {
+  "name": "home: editorial sections present",
+  "ok": true,
+  "info": "mosaic,picks,latest,zone-hoverboards,topics,zone-reviews,compare,finder,zone-buying-guides,zone-safety,zone-scooters,zone-rideables,about"
+ },
+ {
+  "name": "home: search overlay opens and focuses input",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: Escape closes search",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: compare filter kids shows kid boards only",
+  "ok": true,
+  "info": "hover1-helix,gyroor-g13,gotrax-edge"
+ },
+ {
+  "name": "home: compare sort by weight descending",
+  "ok": true,
+  "info": "420>265>265>220>220>176>176"
+ },
+ {
+  "name": "home: finder child/rough → Gyroor G13 with guides",
+  "ok": true,
+  "info": "Gyroor G13 | 3 guides | Specs as advertised by the manufacturer."
+ },
+ {
+  "name": "home: finder adult/rough/high → Swagtron T6",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: finder teen/smooth/low → Hover-1 Helix",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: load more appends without duplicates",
+  "ok": true,
+  "info": "3→9"
+ },
+ {
+  "name": "article: exactly one H1 (duplicate in-body H1 removed)",
+  "ok": true,
+  "info": "count=1"
+ },
+ {
+  "name": "article: one canonical",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "article: JSON-LD parses with one Article and one BreadcrumbList",
+  "ok": true,
+  "info": "Organization,ImageObject,WebSite,SearchAction,EntryPoint,BlogPosting,WebPage,BreadcrumbList,ListItem,ListItem,ListItem,ListItem"
+ },
+ {
+  "name": "article: breadcrumbs Home › Category [› Child] › Title",
+  "ok": true,
+  "info": "items=4"
+ },
+ {
+  "name": "article: disclosure box shown, inline #ad strip removed",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "article: purple gradient hero removed, lede kept",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "article: table of contents links resolve",
+  "ok": true,
+  "info": "unresolved=0"
+ },
+ {
+  "name": "article: related guides + read next",
+  "ok": true,
+  "info": "3/3"
+ },
+ {
+  "name": "article: content affiliate links tagged + sponsored",
+  "ok": true,
+  "info": "1 links"
+ },
+ {
+  "name": "article: tables wrapped for scrolling",
+  "ok": true,
+  "info": "tables=6"
+ },
+ {
+  "name": "article: no horizontal overflow",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "article: author box present",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "category: one H1, cards, canonical, description, pagination",
+  "ok": true,
+  "info": "{\"h1\":1,\"cards\":10,\"canonical\":1,\"desc\":\"Reviews, buying advice and safety guides for every age and terrain.\",\"pag\":true,\"overflow\":false}"
+ },
+ {
+  "name": "search: noindex + results",
+  "ok": true,
+  "info": "noindex, nofollow, follow cards=10"
+ },
+ {
+  "name": "404: status 404 with search and topic links",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "mobile: drawer opens with menu items and focus on close",
+  "ok": true,
+  "info": "{\"open\":true,\"items\":8,\"focus\":true}"
+ },
+ {
+  "name": "mobile: no horizontal overflow",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "mobile: no tiny text (<11px) in content",
+  "ok": true,
+  "info": "min=10.5"
+ },
+ {
+  "name": "mobile article: no overflow, tables scroll inside, body ≥16px",
+  "ok": true,
+  "info": "{\"overflow\":false,\"tableScroll\":true,\"contentFont\":19}"
+ },
+ {
+  "name": "keyboard: first Tab lands on skip link",
+  "ok": true,
+  "info": "skip-link"
+ },
+ {
+  "name": "perf /: LCP ≤ 2500ms and CLS ≤ 0.1 (mobile, 4x CPU, ~1.6 Mbps)",
+  "ok": true,
+  "info": "{\"lcp\":1948,\"cls\":0,\"req\":13,\"dom\":1500}"
+ },
+ {
+  "name": "perf /hover-1-titan-hoverboard/: LCP ≤ 2500ms and CLS ≤ 0.1 (mobile, 4x CPU, ~1.6 Mbps)",
+  "ok": true,
+  "info": "{\"lcp\":1612,\"cls\":0,\"req\":8,\"dom\":877}"
+ },
+ {
+  "name": "no JS errors across pages",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "no missing resources (404) on tested pages",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "axe /: 0 WCAG A/AA violations",
+  "ok": false,
+  "info": "[{\"id\":\"color-contrast\",\"impact\":\"serious\",\"nodes\":2,\"html\":\"<span class=\\\"zone__kicker\\\">Buying guide</span>\"}]"
+ },
+ {
+  "name": "axe /hover-1-titan-hoverboard/: 0 WCAG A/AA violations",
+  "ok": true,
+  "info": "[]"
+ },
+ {
+  "name": "axe /category/hoverboards/: 0 WCAG A/AA violations",
+  "ok": true,
+  "info": "[]"
+ }
+]

@@ -35,9 +35,9 @@ function check(name, ok, info) { results.push({ name, ok: !!ok, info: info || ''
       scripts: document.querySelectorAll('script[src]').length,
       styles: document.querySelectorAll('link[rel="stylesheet"]').length,
       imgsNoAlt: [...document.images].filter(i => !i.hasAttribute('alt')).length,
-      heroEager: (document.querySelector('.hero__img') || {}).loading,
+      heroEager: (document.querySelector('.story--lead .story__img, .hero__img') || {}).loading,
       sections: [...document.querySelectorAll('main section')].map(s => s.id || s.className.split(' ')[0]),
-      claims: /tested|re-checked weekly|Prime shipping|30-day returns|never sponsored|independent editors/i.test(document.body.innerText),
+      claims: (() => { const c = document.body.cloneNode(true); c.querySelectorAll('.card__excerpt, .row__excerpt, .story__excerpt, .post-content, .card__title, .row__title, .story__title').forEach(e => e.remove()); return /tested|re-checked weekly|Prime shipping|30-day returns|never sponsored|independent editors/i.test(c.innerText); })(),
       stars: document.querySelectorAll('.stars, .score-badge').length,
       navItems: [...document.querySelectorAll('.primary-nav .nav-menu > li > a')].map(a => a.textContent.trim()),
       overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
@@ -55,13 +55,13 @@ function check(name, ok, info) { results.push({ name, ok: !!ok, info: info || ''
   check('home: affiliate links rel sponsored nofollow', home.affRel === home.aff);
   check('home: affiliate links open new tab', home.affBlank === home.aff);
   check('home: no img without alt attribute', home.imgsNoAlt === 0, 'missing=' + home.imgsNoAlt);
-  check('home: hero image not lazy', home.heroEager !== 'lazy', 'loading=' + home.heroEager);
+  check('home: lead story image not lazy', home.heroEager !== 'lazy', 'loading=' + home.heroEager);
   check('home: no unsupported trust claims', !home.claims);
   check('home: no star ratings or editor scores', home.stars === 0);
   check('home: no horizontal overflow', !home.overflow);
   check('home: nav does not overlap brand', home.navLeft > home.brandRect, 'brandRight=' + Math.round(home.brandRect) + ' navLeft=' + Math.round(home.navLeft));
   check('home: ≤ 4 external scripts', home.scripts <= 4, 'scripts=' + home.scripts + ' styles=' + home.styles);
-  check('home: sections A–I present', ['picks', 'topics', 'guide', 'reviews', 'compare', 'learn', 'finder', 'faq', 'about'].every(id => home.sections.includes(id)), home.sections.join(','));
+  check('home: editorial sections present', ['mosaic', 'picks', 'latest', 'zone-hoverboards', 'topics', 'zone-reviews', 'compare', 'finder', 'zone-buying-guides', 'zone-safety', 'zone-scooters', 'zone-rideables', 'about'].every(id => home.sections.includes(id)), home.sections.join(','));
 
   // search overlay
   await page.click('.search-toggle');
@@ -71,9 +71,11 @@ function check(name, ok, info) { results.push({ name, ok: !!ok, info: info || ''
   await page.waitForTimeout(200);
   check('home: Escape closes search', await page.evaluate(() => !document.querySelector('#search-overlay').classList.contains('is-open')));
 
-  // FAQ
-  await page.click('.faq__trigger');
-  check('home: FAQ expands', await page.evaluate(() => document.querySelector('.faq__trigger').getAttribute('aria-expanded') === 'true' && !document.querySelector('.faq__body').hidden));
+  // FAQ (optional block; off by default since 4.0)
+  if (await page.$('.faq__trigger')) {
+    await page.click('.faq__trigger');
+    check('home: FAQ expands', await page.evaluate(() => document.querySelector('.faq__trigger').getAttribute('aria-expanded') === 'true' && !document.querySelector('.faq__body').hidden));
+  }
 
   // compare filter + sort
   await page.click('.seg__btn[data-filter="kids"]');

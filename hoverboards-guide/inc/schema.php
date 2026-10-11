@@ -158,8 +158,10 @@ function hbg_head_meta() {
 		$url = get_term_link( get_queried_object() );
 	} elseif ( is_front_page() ) {
 		$url   = home_url( '/' );
-		$hero  = get_theme_mod( 'hbg_hero_image', '' );
-		$image = $hero ? wp_get_attachment_image_url( (int) $hero, 'large' ) : $image;
+		$leads = hbg_get_featured_posts( 1 );
+		if ( $leads && has_post_thumbnail( $leads[0] ) && ! hbg_is_title_card( $leads[0]->ID ) ) {
+			$image = get_the_post_thumbnail_url( $leads[0], 'large' );
+		}
 	}
 	if ( ( is_front_page() || is_category() || is_tag() ) && ! is_paged() ) {
 		echo '<link rel="canonical" href="' . esc_url( $url ) . '">' . "\n";
