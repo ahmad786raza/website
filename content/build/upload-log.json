@@ -318,5 +318,95 @@
    8
   ],
   "at": "2026-10-11T15:22:26.798Z"
+ },
+ "tube-wrinkling-prevention": {
+  "id": 38,
+  "status": "draft",
+  "identical": true,
+  "featured": 102,
+  "categories": [
+   8
+  ],
+  "at": "2026-10-11T15:23:34.570Z"
+ },
+ "bending-aluminum-tube-6061": {
+  "id": 154,
+  "status": "draft",
+  "identical": true,
+  "featured": 74,
+  "categories": [
+   18
+  ],
+  "at": "2026-10-11T15:23:36.266Z"
+ },
+ "mandrel-tube-bender-for-home-shop": {
+  "id": 155,
+  "status": "draft",
+  "identical": true,
+  "featured": 47,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:23:37.699Z"
+ },
+ "aluminized-vs-stainless-exhaust-tubing": {
+  "id": 156,
+  "status": "draft",
+  "identical": true,
+  "featured": 56,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:23:39.466Z"
+ },
+ "stainless-bending": {
+  "id": 39,
+  "status": "draft",
+  "identical": true,
+  "featured": 48,
+  "categories": [
+   18
+  ],
+  "at": "2026-10-11T15:23:41.104Z"
+ },
+ "bending-titanium-exhaust-tubing": {
+  "id": 158,
+  "status": "draft",
+  "identical": true,
+  "featured": 104,
+  "categories": [
+   18
+  ],
+  "at": "2026-10-11T15:23:42.655Z"
+ },
+ "tube-notching-guide": {
+  "id": 41,
+  "status": "draft",
+  "identical": true,
+  "featured": 72,
+  "categories": [
+   3
+  ],
+  "at": "2026-10-11T15:23:44.228Z"
+ },
+ "how-to-lay-out-tube-bends": {
+  "id": 160,
+  "status": "draft",
+  "identical": true,
+  "featured": 87,
+  "categories": [
+   18
+  ],
+  "at": "2026-10-11T15:23:45.815Z"
+ },
+ "tube-bend-rotation-twist": {
+  "id": 161,
+  "status": "draft",
+  "identical": true,
+  "featured": 114,
+  "categories": [
+   18
+  ],
+  "at": "2026-10-11T15:23:47.422Z"
  }
 }

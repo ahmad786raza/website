@@ -1,0 +1,37 @@
+{
+ "slug": "exhaust-tube-cut-length",
+ "title": "Exhaust Tube Cut Length: Step-by-Step Maths for J-Bends and U-Bends",
+ "excerpt": "Work out exhaust tube cut length the easy way: arc and tangent formulas, plus three worked J-bend and U-bend examples with every step shown.",
+ "category": "tutorials",
+ "featured_slot": "cutting",
+ "primary_keyword": "exhaust tube cut length",
+ "asins": [
+  {
+   "asin": "B079P687YJ",
+   "product": "2.5\" Stainless 90° Mandrel Bend - 1.5D/3.75\" CLR Loose Radius - 16GA/.065\" Wall - 5\" Leg/8\" Leg - SS304",
+   "evidence": "https://www.amazon.com/clp/B079P687YJ"
+  },
+  {
+   "asin": "B079QD58WT",
+   "product": "2.5\" Stainless 180° Mandrel Bend - 1.5D/3.75\" Radius - 16GA/.065\" Wall - 6\" Leg/6\" Leg - SS304 - Exhaust Fabrication",
+   "evidence": "https://www.amazon.com/2-5-Stainless-180%C2%B0-Mandrel-Bend/dp/B079QD58WT"
+  },
+  {
+   "asin": "B0778RQTGW",
+   "product": "2.5\" Stainless 90° Mandrel Bend Elbow - 1.5D/3.75\" CLR Loose Radius - 16GA/.065\" Wall - 2\" Leg - SS304 - Exhaust Fabrication (Stainless Bros)",
+   "evidence": "https://www.amazon.com/2-5-Stainless-Mandrel-Bend-Elbow/dp/B0778RQTGW"
+  }
+ ],
+ "sources": [
+  "https://support.jd2.com/MiscDown/dl/M32BDirections.pdf",
+  "https://www.stainlessheaders.com/p-35900-tube-cut-length.html",
+  "https://www.stainlessheaders.com/p-35901-j-bend-optimizer.html",
+  "https://kamispeed.com/products/vibrant-3in-o-d-t304-ss-90-deg-mandrel-bend-4in-x-12in-leg-lengths-3in-centerline-radius",
+  "https://modbargains.com/vibrant-90-degree-mandrel-bend-for-1-625-inch-od-304-stainless-steel-tubing/",
+  "https://www.thefabricator.com/glossary/centerline-radius",
+  "https://www.amazon.com/clp/B079P687YJ",
+  "https://www.amazon.com/2-5-Stainless-180%C2%B0-Mandrel-Bend/dp/B079QD58WT",
+  "https://www.amazon.com/2-5-Stainless-Mandrel-Bend-Elbow/dp/B0778RQTGW"
+ ],
+ "notes": "All three worked examples (2.5in OD, 3.75in CLR) were computed and cross-checked in Python: Ex1 18in/12in legs to corner -> straights 14.25/8.25, arc 5.890, total 28.39 (1.61 shorter than 30), fillers 6.25/3.25 with 8in/5in J-bend legs; Ex2 6in offset with two 45s, 20in/12in to corners -> diagonal 8.485, tangent 1.553, arc 2.945, middle straight 5.379, total 40.16 vs 40.49, fillers 10.447/5.379/5.447, cut marks 3.927 heel and 1.963 throat; Ex3 180 U-bend with 6in legs -> spacing 7.5, width 10, gap 5, arc 11.781, fillers 8/24, total 55.78, apex marks 7.854/3.927. Fractions are to the nearest 1/16. Example scenarios (leg-to-corner distances, offset) are invented layout numbers for teaching, not measurements of any car. Assumption flagged in text: listed leg lengths are measured from the tangent point (Vibrant listings say 'from tangent', seen only on retailer pages via search summary). Direct page fetches were blocked (DNS) in this environment; Stainless Headers facts (0.01745 constant, centerline measuring convention, ~1/4in trim allowance from the J-bend optimizer page) come from web-search result summaries, not pages read directly; please re-verify. B079P687YJ evidence is an amazon.com/clp/ page; specs (OD, CLR, wall, legs, SS304) are from the listing title."
+}
