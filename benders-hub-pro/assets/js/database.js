@@ -29,9 +29,9 @@
 
 	cats.forEach(btn => {
 		btn.addEventListener("click", () => {
-			cats.forEach(c => { c.classList.remove("is-active"); c.setAttribute("aria-selected", "false"); });
+			cats.forEach(c => { c.classList.remove("is-active"); c.setAttribute("aria-pressed", "false"); });
 			btn.classList.add("is-active");
-			btn.setAttribute("aria-selected", "true");
+			btn.setAttribute("aria-pressed", "true");
 			activeCat = btn.getAttribute("data-bdh-db-cat");
 			filter();
 		});

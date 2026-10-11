@@ -5,13 +5,13 @@
  * @package BendersHub
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
+$in_console = isset( $args['context'] ) && 'console' === $args['context'];
 ?>
 <section class="bdh-section bdh-tool bdh-tracker-section" id="bdh-tracker" data-bdh-section="route_planner">
-	<div class="bdh-container">
-		<header class="bdh-section-head bdh-section-head-center">
-			<span class="bdh-section-tag"><?php esc_html_e( 'Tool 8 of 8', 'benders-hub' ); ?></span>
-			<h2 class="bdh-section-title"><?php esc_html_e( 'Fabrication Project Tracker', 'benders-hub' ); ?></h2>
-			<p class="bdh-section-sub"><?php esc_html_e( 'Track active builds. Monitor material usage, save bend settings, and follow project progress — all in your browser.', 'benders-hub' ); ?></p>
+	<div class="<?php echo $in_console ? 'bdh-tool-inner' : 'bdh-container'; ?>">
+		<header class="bdh-tool-head">
+			<h2 class="bdh-tool-title"><?php esc_html_e( 'Project tracker', 'benders-hub' ); ?></h2>
+			<p class="bdh-tool-sub"><?php esc_html_e( 'Keep a simple list of builds, tube used and progress. Stored only in this browser.', 'benders-hub' ); ?></p>
 		</header>
 
 		<div class="bdh-tool-shell bdh-tracker-shell" data-bdh-tracker>

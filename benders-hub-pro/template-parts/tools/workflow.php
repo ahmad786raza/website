@@ -5,13 +5,13 @@
  * @package BendersHub
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
+$in_console = isset( $args['context'] ) && 'console' === $args['context'];
 ?>
 <section class="bdh-section bdh-tool bdh-workflow-section" id="bdh-workflow" data-bdh-section="workflow_planner">
-	<div class="bdh-container">
-		<header class="bdh-section-head bdh-section-head-center">
-			<span class="bdh-section-tag"><?php esc_html_e( 'Tool 5 of 8', 'benders-hub' ); ?></span>
-			<h2 class="bdh-section-title"><?php esc_html_e( 'Fabrication Workflow Planner', 'benders-hub' ); ?></h2>
-			<p class="bdh-section-sub"><?php esc_html_e( 'Plan, sequence, and save every step of your bend project. Safety + tooling + material reminders, all in your browser.', 'benders-hub' ); ?></p>
+	<div class="<?php echo $in_console ? 'bdh-tool-inner' : 'bdh-container'; ?>">
+		<header class="bdh-tool-head">
+			<h2 class="bdh-tool-title"><?php esc_html_e( 'Bend sequence planner', 'benders-hub' ); ?></h2>
+			<p class="bdh-tool-sub"><?php esc_html_e( 'Write down each bend in order with its angle, die and notes. Saved in your browser; export or print it for the shop floor.', 'benders-hub' ); ?></p>
 		</header>
 
 		<div class="bdh-tool-shell bdh-workflow-shell" data-bdh-workflow>
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 							<span class="bdh-field-label"><?php esc_html_e( 'Safety note', 'benders-hub' ); ?></span>
 							<input type="text" name="safety" placeholder="<?php esc_attr_e( 'Verify clamp before bend', 'benders-hub' ); ?>">
 						</label>
-						<button class="bdh-btn bdh-btn-primary bdh-btn-block" type="submit"><?php esc_html_e( 'Add Step', 'benders-hub' ); ?></button>
+						<button class="bdh-btn bdh-btn-primary bdh-btn-block" type="submit"><?php esc_html_e( 'Add step', 'benders-hub' ); ?></button>
 					</form>
 				</aside>
 

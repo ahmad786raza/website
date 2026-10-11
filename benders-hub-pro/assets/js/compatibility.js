@@ -1,10 +1,11 @@
 /*
- * Compatibility Generator — produces tooling list.
+ * Tooling checklist — lists tooling to confirm with the bender manufacturer
+ * for a tube size, material and job. Guidance only; no invented tonnages.
  */
 (function () {
 	"use strict";
 	const root = document.querySelector("[data-bdh-compat]");
-	if (!root) return;
+	if (!root || !window.BDH) return;
 
 	const form     = root.querySelector("[data-bdh-compat-form]");
 	const resultEl = root.querySelector("[data-bdh-compat-result]");
@@ -12,52 +13,43 @@
 	const warnEl   = root.querySelector("[data-bdh-compat-warnings]");
 	const amazonEl = root.querySelector("[data-bdh-compat-amazon]");
 
-	BDH.on(form, "submit", e => {
+	form.addEventListener("submit", (e) => {
 		e.preventDefault();
-		const data = Object.fromEntries(new FormData(form).entries());
-		const size = parseFloat(data.size);
+		const d = Object.fromEntries(new FormData(form).entries());
+		const size = parseFloat(d.size);
 		const items = [];
-		const warnings = [];
+		const notes = [];
+		const thinJob = d.type === "exhaust" || d.goal === "finish";
 
-		items.push({ title: 'Die set', body: size + '" OD CLR ' + (size * 2.5).toFixed(2) + '" rotary draw die' });
-		items.push({ title: 'Counter die', body: 'Matched profile for ' + data.material });
-		items.push({ title: 'Pressure die / wiper', body: 'Hardened tool steel, ' + (size).toFixed(2) + '" cavity' });
+		if (d.material === "copper") {
+			items.push(["Lever-type hand bender", "Forms sized for " + size + "\" soft tube or line."]);
+		} else if (d.type === "exhaust") {
+			items.push(["Mandrel tooling or pre-bent mandrel sections", "Exhaust bends are commonly about 1–1.5× OD CLR — " + (size * 1).toFixed(2) + "\"–" + (size * 1.5).toFixed(2) + "\" for " + size + "\" tube — which needs mandrel support in thin wall."]);
+			items.push(["Wiper die", "Supports the inside of the bend against wrinkling on mandrel benders."]);
+		} else {
+			items.push(["Bend die: " + size + "\" OD round tube", "Pick a CLR your bender's maker offers for this OD. Without a mandrel, about 3× OD or more is the usual range (" + (size * 3).toFixed(2) + "\"+). Pipe dies are sized differently."]);
+			items.push(["Clamp block and pressure die", "Matched to the same OD — normally part of the die set."]);
+		}
+		if (d.type === "rollcage") {
+			items.push(["Tube notcher + hole saws", "Sized to the receiving tube OD, with saws suited to " + (d.material === "chromoly" ? "4130" : "your material") + "."]);
+			items.push(["Rulebook check", "Tube size, wall, material and minimum bend radius from your sanctioning body's current rules (SCCA Time Trials, for example, requires ≥ 3× tube diameter at the centreline)."]);
+		}
+		if (d.goal === "precision") items.push(["Angle measurement", "A digital angle finder or degree ring to measure springback on a test piece."]);
+		if (d.goal === "speed") items.push(["Degree stops / hydraulic drive", "Repeat angles without re-measuring every bend."]);
+		if (d.goal === "cost") items.push(["Buy dies as you need them", "Start with the one OD/CLR you will use most; dies are usually brand-specific."]);
+		if (thinJob || d.material === "stainless") items.push(["Bending lubricant", "Use the type your die or mandrel maker recommends."]);
 
-		if (data.material === "chromoly" || data.material === "stainless") {
-			items.push({ title: 'Mandrel ball + link', body: '3-link plug mandrel for thin wall' });
-			warnings.push({ cls: "warn", msg: "Use molybdenum disulfide lubricant for hard alloys." });
-		}
-		if (data.type === "exhaust") {
-			items.push({ title: 'TIG-ready accessories', body: 'V-band flange, exhaust hanger set' });
-		}
-		if (data.type === "rollcage") {
-			items.push({ title: 'Tube notcher + fishmouth saw', body: 'Adjustable 0–60° with chromoly bi-metal hole saws' });
-			items.push({ title: 'Chassis layout tape', body: 'High-temp marking + bend layout system' });
-		}
-		if (data.goal === "speed") {
-			items.push({ title: 'Quick-change tool head', body: 'Tool-less die changeover' });
-		}
-		if (data.goal === "precision") {
-			items.push({ title: 'Digital angle finder', body: '±0.1° readout, magnetic base' });
-		}
-		if (size >= 3) {
-			warnings.push({ cls: "warn", msg: "Sizes 3\"+ require 50T+ tonnage and floor-mount stability." });
-		}
-		if (data.material === "aluminum") {
-			warnings.push({ cls: "warn", msg: "Aluminum work-hardens — anneal between sharp bends." });
-		}
+		if (d.material === "chromoly") notes.push(["warn", "JD2 notes that 4130 springs back about twice as much as welded mild steel of the same size — confirm the bender is rated for 4130 at your wall thickness."]);
+		if (d.material === "stainless") notes.push(["warn", "Stainless needs more force than mild steel and springs back more. Check the capacity chart for stainless specifically."]);
+		if (d.material === "aluminum") notes.push(["warn", "Temper matters: annealed tube bends most easily, while 6061-T6 can crack at tight radii (Rogue Fabrication recommends about 3.5–4× OD)."]);
+		if (size >= 2.5) notes.push(["warn", "2.5\" OD and larger is beyond many home-shop manual benders — check the capacity chart; hydraulic or industrial machines are typical."]);
+		notes.push(["info", "Always confirm compatibility in your bender manufacturer's die catalogue — dies rarely interchange between brands."]);
 
-		listEl.innerHTML = items.map(i => `
-			<div class="bdh-compat-item">
-				<strong>${BDH.escapeHtml(i.title)}</strong>
-				<small>${BDH.escapeHtml(i.body)}</small>
-			</div>`).join("");
-
-		warnEl.innerHTML = warnings.map(w => `<div class="bdh-vz-warning ${w.cls}">${BDH.escapeHtml(w.msg)}</div>`).join("");
-
-		amazonEl.href = BDH.amazonUrl(size.toFixed(2) + " inch tube bender die set " + data.material);
+		listEl.innerHTML = items.map((i) => '<div class="bdh-compat-item"><strong>' + BDH.escapeHtml(i[0]) + "</strong><small>" + BDH.escapeHtml(i[1]) + "</small></div>").join("");
+		warnEl.innerHTML = notes.map((n) => '<p class="bdh-note bdh-note--' + n[0] + '">' + BDH.escapeHtml(n[1]) + "</p>").join("");
+		amazonEl.href = BDH.amazonUrl(size + " inch tube bender die");
 		resultEl.hidden = false;
-		BDH.storage.set(BDH.storage_keys.compatibility, { data, ts: Date.now() });
-		resultEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+		BDH.storage.set(BDH.storage_keys.compatibility, { data: d, ts: Date.now() });
+		resultEl.scrollIntoView({ behavior: BDH.reducedMotion ? "auto" : "smooth", block: "nearest" });
 	});
 })();

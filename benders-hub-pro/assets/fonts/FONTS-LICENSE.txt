@@ -1,0 +1,8 @@
+Bundled web fonts (latin subsets, variable weight), downloaded from Google Fonts:
+
+- Archivo        — Copyright The Archivo Project Authors. SIL Open Font License 1.1.
+- Inter          — Copyright The Inter Project Authors. SIL Open Font License 1.1.
+- JetBrains Mono — Copyright The JetBrains Mono Project Authors. SIL Open Font License 1.1.
+
+Licence text: https://openfontlicense.org/open-font-license-official-text/
+The fonts are self-hosted so pages make no requests to Google's servers.

@@ -3,16 +3,16 @@ Theme Name: Benders Hub Pro
 Theme URI: https://bendershub.com
 Author: Benders Hub
 Author URI: https://bendershub.com
-Description: Premium fabrication engineering ecosystem theme for tube benders, pipe benders, hydraulic benders, exhaust benders, CNC bending equipment, and metalworking systems. Built for Amazon affiliate authority sites with interactive bending planners, workshop optimization tools, advanced fabrication calculators, and immersive industrial design.
-Version: 1.0.0
-Requires at least: 6.0
-Tested up to: 6.5
+Description: Editorial magazine theme for tube bending and metal fabrication publishers. Lead-story homepage, buying-guide and knowledge sections, an engineering tools console (bender-matching quiz, bend calculator, to-scale geometry visualizer, comparisons), article template with table of contents and disclosures, honest product cards, licence-checked image importer, and Amazon Associates link hygiene.
+Version: 2.0.0
+Requires at least: 6.3
+Tested up to: 7.1
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: benders-hub
-Tags: affiliate, industrial, fabrication, dark, custom-colors, custom-logo, custom-menu, featured-images, full-width-template, theme-options, block-styles, wide-blocks
+Tags: blog, news, two-columns, right-sidebar, custom-logo, custom-menu, featured-images, editor-style, accessibility-ready, translation-ready, wide-blocks
 */
 
-/* CSS lives in /assets/css/ files for performance.
-   This style.css exists only for WordPress theme registration. */
+/* Styles live in /assets/css/magazine.css. This file registers the theme.
+   Bundled fonts (Archivo, Inter, JetBrains Mono) are licensed under the SIL Open Font License 1.1 — see assets/fonts/FONTS-LICENSE.txt. */

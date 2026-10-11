@@ -1,173 +1,141 @@
 /*
- * Tube Geometry Visualizer — live SVG of bend.
+ * Tube geometry visualizer — single bend drawn to true scale (SVG user units = inches).
  */
 (function () {
 	"use strict";
 	const root = document.querySelector("[data-bdh-visualizer]");
 	if (!root) return;
 
-	const inputs = {
-		od:       root.querySelector('[data-bdh-vz="od"]'),
-		wall:     root.querySelector('[data-bdh-vz="wall"]'),
-		clr:      root.querySelector('[data-bdh-vz="clr"]'),
-		angle:    root.querySelector('[data-bdh-vz="angle"]'),
-		material: root.querySelector('[data-bdh-vz="material"]'),
-	};
-	const outs = {
-		od:    root.querySelector('[data-bdh-vz-out="od"]'),
-		wall:  root.querySelector('[data-bdh-vz-out="wall"]'),
-		clr:   root.querySelector('[data-bdh-vz-out="clr"]'),
-		angle: root.querySelector('[data-bdh-vz-out="angle"]'),
-	};
-	const svg        = root.querySelector("[data-bdh-vz-svg]");
-	const pathTube   = root.querySelector("[data-bdh-vz-tubepath]");
-	const pathCL     = root.querySelector("[data-bdh-vz-centerline]");
-	const radiusLine = root.querySelector("[data-bdh-vz-radiusline]");
-	const centerDot  = root.querySelector("[data-bdh-vz-centerdot]");
-	const angleLabel = root.querySelector("[data-bdh-vz-anglelabel]");
-	const clrLabel   = root.querySelector("[data-bdh-vz-clrlabel]");
-	const grid       = root.querySelector("[data-bdh-vz-grid]");
-	const stressEl   = root.querySelector("[data-bdh-vz-stress]");
-	const sbEl       = root.querySelector("[data-bdh-vz-sb]");
-	const idEl       = root.querySelector("[data-bdh-vz-id]");
-	const wrEl       = root.querySelector("[data-bdh-vz-wr]");
-	const warnings   = root.querySelector("[data-bdh-vz-warnings]");
-
-	const mats = {
-		mild:      { sb: 1.0, stress: 1.0 },
-		chromoly:  { sb: 1.4, stress: 1.5 },
-		stainless: { sb: 1.6, stress: 1.8 },
-		aluminum:  { sb: 0.7, stress: 0.6 },
-	};
-
-	// Draw blueprint grid once
-	function drawGrid() {
-		grid.innerHTML = "";
-		for (let x = 0; x <= 600; x += 30) {
-			const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-			line.setAttribute("x1", x); line.setAttribute("x2", x);
-			line.setAttribute("y1", 0); line.setAttribute("y2", 400);
-			line.setAttribute("stroke", "rgba(245, 158, 11, 0.06)"); line.setAttribute("stroke-width", "0.5");
-			grid.appendChild(line);
-		}
-		for (let y = 0; y <= 400; y += 30) {
-			const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-			line.setAttribute("y1", y); line.setAttribute("y2", y);
-			line.setAttribute("x1", 0); line.setAttribute("x2", 600);
-			line.setAttribute("stroke", "rgba(245, 158, 11, 0.06)"); line.setAttribute("stroke-width", "0.5");
-			grid.appendChild(line);
-		}
-	}
-	drawGrid();
-
-	function arcPath(cx, cy, r, startA, endA) {
-		const sa = startA * Math.PI / 180, ea = endA * Math.PI / 180;
-		const x1 = cx + r * Math.cos(sa), y1 = cy + r * Math.sin(sa);
-		const x2 = cx + r * Math.cos(ea), y2 = cy + r * Math.sin(ea);
-		const large = Math.abs(endA - startA) > 180 ? 1 : 0;
-		const sweep = endA > startA ? 1 : 0;
-		return `M ${x1} ${y1} A ${r} ${r} 0 ${large} ${sweep} ${x2} ${y2}`;
-	}
-
-	function update() {
-		const od    = parseFloat(inputs.od.value);
-		const wall  = parseFloat(inputs.wall.value);
-		const clr   = parseFloat(inputs.clr.value);
-		const angle = parseFloat(inputs.angle.value);
-		const mat   = mats[inputs.material.value] || mats.mild;
-
-		outs.od.textContent    = od.toFixed(2);
-		outs.wall.textContent  = wall.toFixed(3);
-		outs.clr.textContent   = clr.toFixed(2);
-		outs.angle.textContent = angle;
-
-		// Scale: 1" = 28px (illustrative)
-		const scale  = 28;
-		const tubeR  = clr * scale;
-		const tubeW  = Math.max(6, Math.min(40, od * 8));
-		const cx = 200, cy = 200; // center of bend
-
-		// Straight segments emanate from cx,cy in two directions defined by angle
-		// We draw: incoming straight, then arc, then outgoing straight
-		const half = angle / 2;
-		const start = 180 + half;     // incoming tangent direction
-		const end   = 180 - half;     // outgoing tangent direction
-		const straightLen = 130;
-
-		const sx1 = cx + tubeR * Math.cos(start * Math.PI / 180);
-		const sy1 = cy + tubeR * Math.sin(start * Math.PI / 180);
-		const sx2 = cx + tubeR * Math.cos(end   * Math.PI / 180);
-		const sy2 = cy + tubeR * Math.sin(end   * Math.PI / 180);
-
-		// Tangent perpendicular vectors (extending straight legs)
-		const tanA = (start + 90) * Math.PI / 180;
-		const tanB = (end   - 90) * Math.PI / 180;
-		const lx1 = sx1 + straightLen * Math.cos(tanA);
-		const ly1 = sy1 + straightLen * Math.sin(tanA);
-		const lx2 = sx2 + straightLen * Math.cos(tanB);
-		const ly2 = sy2 + straightLen * Math.sin(tanB);
-
-		const arc = arcPath(cx, cy, tubeR, start, end);
-		const path = `M ${lx1} ${ly1} L ${sx1} ${sy1} ${arc} L ${lx2} ${ly2}`;
-		pathTube.setAttribute("d", path);
-		pathTube.setAttribute("stroke-width", tubeW);
-		pathCL.setAttribute("d", path);
-		radiusLine.setAttribute("d", `M ${cx} ${cy} L ${sx1} ${sy1}`);
-		centerDot.setAttribute("cx", cx);
-		centerDot.setAttribute("cy", cy);
-
-		angleLabel.setAttribute("x", cx - 14);
-		angleLabel.setAttribute("y", cy + 5);
-		angleLabel.textContent = angle + "°";
-
-		clrLabel.setAttribute("x", (cx + sx1) / 2 + 6);
-		clrLabel.setAttribute("y", (cy + sy1) / 2 - 6);
-		clrLabel.textContent = "CLR " + clr.toFixed(1) + '"';
-
-		// Readouts
-		const dt        = od / wall;
-		const clrToOd   = clr / od;
-		const sbDeg     = +(angle * 0.018 * mat.sb).toFixed(2);
-		const wrinkle   = clrToOd < 1.5 ? "HIGH" : clrToOd < 2 ? "MED" : "LOW";
-		const stressLevel = (dt > 50 ? "HIGH" : dt > 30 ? "MED" : "LOW") + " · " + mat.stress.toFixed(1) + "×";
-		const idRestrict = clrToOd < 1.5 ? "10-18%" : clrToOd < 2 ? "5-10%" : "<5%";
-
-		stressEl.textContent = stressLevel;
-		sbEl.textContent     = "+" + sbDeg + "°";
-		idEl.textContent     = idRestrict;
-		wrEl.textContent     = wrinkle;
-
-		// Warnings
-		warnings.innerHTML = "";
-		const addWarn = (cls, msg) => {
-			const d = document.createElement("div");
-			d.className = "bdh-vz-warning " + cls;
-			d.textContent = msg;
-			warnings.appendChild(d);
-		};
-		if (clrToOd < 1.5)  addWarn("bad",  "CLR below 1.5× OD — wrinkle risk severe. Use mandrel.");
-		else if (clrToOd < 2) addWarn("warn", "CLR below 2× OD — consider mandrel for thin wall.");
-		if (dt > 50)         addWarn("warn", "D/T ratio > 50 — wall is thin; lubricate die and slow feed.");
-		if (mat.stress > 1.4) addWarn("warn", "High-strength material — expect " + Math.round((mat.sb - 1) * 100 + 0.5) + "% more springback than mild steel.");
-		if (clrToOd >= 2 && dt <= 50 && mat.stress <= 1.4) addWarn("ok", "Setup is in the comfort zone — clean bend expected.");
-
-		// Mirror to Hero Live Spec Console
-		BDH.storage.set("bdh_spec_snapshot", {
-			od:        od.toFixed(3),
-			wall:      wall.toFixed(3),
-			clr:       clr.toFixed(2),
-			angle:     angle,
-			material:  inputs.material.value,
-			springback: sbDeg,
-			wrinkle:   wrinkle,
-			process:   "rotary",
-			ts:        Date.now(),
-		});
-		window.dispatchEvent(new CustomEvent("bdh:spec:update"));
-	}
-
-	["input", "change"].forEach(evt => {
-		Object.values(inputs).forEach(el => el && el.addEventListener(evt, update));
+	const NS = "http://www.w3.org/2000/svg";
+	const keys = ["od", "wall", "clr", "angle"];
+	const range = {}, numIn = {};
+	keys.forEach((k) => {
+		range[k] = root.querySelector('[data-bdh-vz="' + k + '"]');
+		numIn[k] = root.querySelector('[data-bdh-vz-num="' + k + '"]');
 	});
-	update();
+	const svg = root.querySelector("[data-bdh-vz-svg]");
+	const layer = root.querySelector("[data-bdh-vz-layer]");
+	const desc = root.querySelector("[data-bdh-vz-desc]");
+	const warnings = root.querySelector("[data-bdh-vz-warnings]");
+	const out = (k) => root.querySelector('[data-vz-out="' + k + '"]');
+
+	const inch = (v) => v.toFixed(3) + '" (' + (v * 25.4).toFixed(1) + " mm)";
+
+	function el(tag, attrs, text) {
+		const n = document.createElementNS(NS, tag);
+		Object.keys(attrs).forEach((a) => n.setAttribute(a, attrs[a]));
+		if (text) n.textContent = text;
+		layer.appendChild(n);
+		return n;
+	}
+
+	function read() {
+		const v = {};
+		keys.forEach((k) => {
+			let n = parseFloat(numIn[k].value);
+			const min = parseFloat(range[k].min), max = parseFloat(range[k].max);
+			if (!isFinite(n)) n = parseFloat(range[k].value);
+			v[k] = Math.min(max, Math.max(min, n));
+		});
+		return v;
+	}
+
+	function draw() {
+		const v = read();
+		const msgs = [];
+		// Physical limits: wall < OD/2, CLR > OD/2.
+		if (v.wall >= v.od / 2) { v.wall = +(v.od / 2 - 0.005).toFixed(3); msgs.push(["warn", "Wall was more than half the OD — limited for the drawing."]); }
+		if (v.clr <= v.od / 2) { v.clr = +(v.od / 2 + 0.05).toFixed(3); msgs.push(["bad", "CLR must exceed half the OD; the drawing uses the smallest possible radius."]); }
+
+		const th = v.angle * Math.PI / 180;
+		const R = v.clr, r = v.od / 2;
+		const S = Math.max(R * 0.9, v.od * 3);           // straight leg length drawn
+		// Math coords: centre (0,0); leg A along y = -R heading +x; arc CCW by θ.
+		const P1 = [0, -R];
+		const phi2 = -Math.PI / 2 + th;
+		const P2 = [R * Math.cos(phi2), R * Math.sin(phi2)];
+		const dir2 = [-Math.sin(phi2), Math.cos(phi2)];
+		const A0 = [-S, -R];
+		const B1 = [P2[0] + dir2[0] * S, P2[1] + dir2[1] * S];
+		const T = v.angle < 179.9 ? R * Math.tan(th / 2) : Infinity;
+		const I = isFinite(T) ? [T, -R] : null;
+
+		// Bounding box (include tube half-width and the bend centre).
+		const pts = [A0, P1, P2, B1, [0, 0]];
+		for (let i = 0; i <= 24; i++) { const a = -Math.PI / 2 + th * i / 24; pts.push([R * Math.cos(a), R * Math.sin(a)]); }
+		if (I) pts.push(I);
+		let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+		pts.forEach((p) => { minX = Math.min(minX, p[0]); maxX = Math.max(maxX, p[0]); minY = Math.min(minY, p[1]); maxY = Math.max(maxY, p[1]); });
+		const pad = r + Math.max(maxX - minX, maxY - minY) * 0.08;
+		minX -= pad; maxX += pad; minY -= pad; maxY += pad;
+		const w = maxX - minX, h = maxY - minY;
+		svg.setAttribute("viewBox", [minX, -maxY, w, h].join(" ")); // flip y via negation below
+		const fy = (p) => [p[0], -p[1]];
+		const fs = Math.max(w, h) * 0.035;
+
+		layer.innerHTML = "";
+		const large = th > Math.PI ? 1 : 0;
+		const a = fy(A0), p1 = fy(P1), p2 = fy(P2), b = fy(B1), c = fy([0, 0]);
+		const d = "M " + a + " L " + p1 + " A " + R + " " + R + " 0 " + large + " 0 " + p2 + " L " + b;
+
+		el("path", { d, fill: "none", stroke: "#4b5259", "stroke-width": v.od, "stroke-linecap": "butt", "stroke-linejoin": "round" });
+		el("path", { d, fill: "none", stroke: "#e7e4de", "stroke-width": Math.max(v.od - 2 * v.wall, 0.001), "stroke-linecap": "butt" });
+		el("path", { d, fill: "none", stroke: "#c2410c", "stroke-width": fs * 0.08, "stroke-dasharray": fs * 0.5 + " " + fs * 0.35 });
+
+		// Radius lines and centre.
+		el("line", { x1: c[0], y1: c[1], x2: p1[0], y2: p1[1], stroke: "#2f5d8a", "stroke-width": fs * 0.07 });
+		el("line", { x1: c[0], y1: c[1], x2: p2[0], y2: p2[1], stroke: "#2f5d8a", "stroke-width": fs * 0.07 });
+		el("circle", { cx: c[0], cy: c[1], r: fs * 0.18, fill: "#2f5d8a" });
+		el("text", { x: c[0] + fs * 0.4, y: c[1] + (p1[1] - c[1]) / 2, fill: "#2f5d8a", "font-size": fs, "font-family": "JetBrains Mono, monospace" }, "CLR " + R.toFixed(2) + '"');
+
+		// Tangent points and the intersection of the straight centrelines.
+		[p1, p2].forEach((p) => el("circle", { cx: p[0], cy: p[1], r: fs * 0.16, fill: "#16191d" }));
+		if (I) {
+			const ii = fy(I);
+			el("line", { x1: p1[0], y1: p1[1], x2: ii[0], y2: ii[1], stroke: "#5c636b", "stroke-width": fs * 0.05, "stroke-dasharray": fs * 0.25 + " " + fs * 0.2 });
+			el("line", { x1: p2[0], y1: p2[1], x2: ii[0], y2: ii[1], stroke: "#5c636b", "stroke-width": fs * 0.05, "stroke-dasharray": fs * 0.25 + " " + fs * 0.2 });
+			el("circle", { cx: ii[0], cy: ii[1], r: fs * 0.14, fill: "none", stroke: "#5c636b", "stroke-width": fs * 0.05 });
+			el("text", { x: (p1[0] + ii[0]) / 2, y: p1[1] + fs * 1.3 + r, fill: "#3b4148", "font-size": fs * 0.9, "font-family": "JetBrains Mono, monospace", "text-anchor": "middle" }, "T " + T.toFixed(2) + '"');
+		}
+		el("text", { x: a[0], y: a[1] - r - fs * 0.5, fill: "#16191d", "font-size": fs, "font-family": "Inter, sans-serif", "font-weight": "600" }, v.angle + "° bend · OD " + v.od.toFixed(2) + '"');
+
+		// Numbers.
+		const D = R / v.od, WF = v.od / v.wall, arc = R * th, stretch = v.od / (2 * R) * 100;
+		out("d").textContent = D.toFixed(2) + "D";
+		out("wf").textContent = WF.toFixed(1);
+		out("arc").textContent = inch(arc);
+		out("t").textContent = isFinite(T) ? inch(T) : "— (legs parallel)";
+		out("ri").textContent = inch(R - r);
+		out("stretch").textContent = "≈ " + stretch.toFixed(1) + "%";
+		root.querySelector('[data-tile="d"]').setAttribute("data-state", D < 2 ? "bad" : D < 3 ? "warn" : "ok");
+		desc.textContent = "Diagram of a " + v.angle + " degree bend in " + v.od + " inch tube on a " + R + " inch centerline radius.";
+
+		if (D < 2) msgs.push(["bad", "D of bend below 2: expect to need mandrel and wiper-die support."]);
+		else if (D < 3) msgs.push(["warn", "D of bend below 3: tighter than the usual non-mandrel range — test on scrap."]);
+		if (WF >= 30 && D < 3) msgs.push(["warn", "Thin wall (wall factor " + WF.toFixed(0) + ") at a tight radius increases wrinkling risk."]);
+		if (!msgs.length) msgs.push(["ok", "Within the usual non-mandrel range for this wall."]);
+		warnings.innerHTML = "";
+		msgs.forEach((m) => { const p = document.createElement("p"); p.className = "bdh-note bdh-note--" + m[0]; p.textContent = m[1]; warnings.appendChild(p); });
+	}
+
+	keys.forEach((k) => {
+		range[k].addEventListener("input", () => { numIn[k].value = range[k].value; draw(); });
+		numIn[k].addEventListener("input", () => { const n = parseFloat(numIn[k].value); if (isFinite(n)) range[k].value = n; draw(); });
+	});
+
+	function prefill(snap) {
+		if (!snap) return;
+		const f = snap.units === "mm" ? 1 / 25.4 : 1;
+		const map = { od: snap.od * f, wall: snap.wall * f, clr: snap.clr * f, angle: snap.angle };
+		keys.forEach((k) => { if (isFinite(map[k])) { numIn[k].value = +map[k].toFixed(3); range[k].value = map[k]; } });
+		draw();
+	}
+	window.addEventListener("bdh:spec:update", (e) => {
+		let flag = null;
+		try { flag = sessionStorage.getItem("bdh_viz_prefill"); } catch (err) {}
+		if (flag) prefill(e.detail);
+	});
+	let start = null;
+	try { if (sessionStorage.getItem("bdh_viz_prefill")) { start = BDH.storage.get("bdh_spec_snapshot"); sessionStorage.removeItem("bdh_viz_prefill"); } } catch (err) {}
+	if (start) prefill(start); else draw();
 })();

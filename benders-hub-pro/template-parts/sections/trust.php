@@ -1,58 +1,46 @@
 <?php
 /**
- * Editorial Trust Section.
+ * Editorial policy block. Describes how the site works without claiming
+ * testing facilities, staff or credentials it cannot evidence.
  *
  * @package BendersHub
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-$title = bdh_option( 'trust_title', __( 'How we test and review fabrication equipment', 'benders-hub' ) );
-$sub   = bdh_option( 'trust_sub',   __( 'Every bender, die, and accessory is reviewed by working fabricators against documented standards. No paid placements.', 'benders-hub' ) );
+$title = bdh_option( 'trust_title', __( 'How Benders Hub works', 'benders-hub' ) );
+$sub   = bdh_option( 'trust_sub', __( 'What you can expect from every guide and recommendation on this site.', 'benders-hub' ) );
 
 $pillars = array(
-	array(
-		'icon'  => 'shield',
-		'title' => __( 'Reviewed by Fabricators', 'benders-hub' ),
-		'body'  => __( 'Every recommendation is reviewed by working fabricators — exhaust, chassis, and industrial pipe specialists.', 'benders-hub' ),
-	),
-	array(
-		'icon'  => 'gear',
-		'title' => __( 'Workshop-Tested Methodology', 'benders-hub' ),
-		'body'  => __( 'We bend test coupons, measure springback, and document precision before publishing any review.', 'benders-hub' ),
-	),
-	array(
-		'icon'  => 'flame',
-		'title' => __( 'Safety-First Standards', 'benders-hub' ),
-		'body'  => __( 'Our recommendations follow OSHA-aligned safety practices for fabrication and welding integration.', 'benders-hub' ),
-	),
-	array(
-		'icon'  => 'check',
-		'title' => __( 'Transparent Affiliate Policy', 'benders-hub' ),
-		'body'  => __( 'We disclose every affiliate relationship. Editorial decisions are independent of commissions.', 'benders-hub' ),
-	),
+	array( 'icon' => 'book',    'title' => __( 'Sourced specifications', 'benders-hub' ),       'body' => __( 'Capacities and specs come from manufacturers\' own documentation, linked where we use them. When sources disagree, we say so.', 'benders-hub' ) ),
+	array( 'icon' => 'check',   'title' => __( 'Research vs hands-on, labelled', 'benders-hub' ), 'body' => __( 'Most recommendations are research-based. A product is only described as tested when we have bent tube with it ourselves, and we show how.', 'benders-hub' ) ),
+	array( 'icon' => 'shield',  'title' => __( 'Safety first', 'benders-hub' ),                  'body' => __( 'For roll cages and other safety structures we point you to the current rulebook rather than paraphrasing it.', 'benders-hub' ) ),
+	array( 'icon' => 'info',    'title' => __( 'Clear affiliate disclosure', 'benders-hub' ),    'body' => __( 'We earn a commission from some Amazon links. Commission rates never decide what we recommend.', 'benders-hub' ) ),
+);
+$links = array(
+	'editorial-standards'  => __( 'Editorial standards', 'benders-hub' ),
+	'methodology'          => __( 'How we evaluate equipment', 'benders-hub' ),
+	'affiliate-disclosure' => __( 'Affiliate disclosure', 'benders-hub' ),
 );
 ?>
-<section class="bdh-section bdh-trust" id="bdh-trust" data-bdh-section="trust">
+<section class="bdh-section bdh-trust" id="bdh-trust" aria-labelledby="bdh-trust-title">
 	<div class="bdh-container">
 		<header class="bdh-section-head">
-			<span class="bdh-section-tag"><?php esc_html_e( 'EEAT & methodology', 'benders-hub' ); ?></span>
-			<h2 class="bdh-section-title"><?php echo esc_html( $title ); ?></h2>
+			<p class="bdh-eyebrow"><?php esc_html_e( 'Editorial policy', 'benders-hub' ); ?></p>
+			<h2 class="bdh-section-title" id="bdh-trust-title"><?php echo esc_html( $title ); ?></h2>
 			<p class="bdh-section-sub"><?php echo esc_html( $sub ); ?></p>
 		</header>
-
 		<div class="bdh-trust-grid">
 		<?php foreach ( $pillars as $p ) : ?>
-			<article class="bdh-trust-card">
+			<div class="bdh-trust-item">
 				<span class="bdh-trust-icon"><?php echo bdh_icon( $p['icon'] ); ?></span>
-				<h3 class="bdh-trust-title"><?php echo esc_html( $p['title'] ); ?></h3>
-				<p class="bdh-trust-body"><?php echo esc_html( $p['body'] ); ?></p>
-			</article>
+				<h3><?php echo esc_html( $p['title'] ); ?></h3>
+				<p><?php echo esc_html( $p['body'] ); ?></p>
+			</div>
 		<?php endforeach; ?>
 		</div>
-
-		<div class="bdh-trust-links">
-			<a href="<?php echo esc_url( home_url( '/methodology/' ) ); ?>" class="bdh-btn bdh-btn-ghost"><?php esc_html_e( 'Read Our Testing Methodology', 'benders-hub' ); ?></a>
-			<a href="<?php echo esc_url( home_url( '/editorial-standards/' ) ); ?>" class="bdh-btn bdh-btn-ghost"><?php esc_html_e( 'Editorial Standards', 'benders-hub' ); ?></a>
-			<a href="<?php echo esc_url( home_url( '/affiliate-disclosure/' ) ); ?>" class="bdh-btn bdh-btn-ghost"><?php esc_html_e( 'Affiliate Disclosure', 'benders-hub' ); ?></a>
-		</div>
+		<p class="bdh-trust-links">
+			<?php foreach ( $links as $slug => $label ) : $u = bdh_page_url( $slug ); if ( ! $u ) { continue; } ?>
+				<a class="bdh-link-arrow" href="<?php echo esc_url( $u ); ?>"><?php echo esc_html( $label ); ?><?php echo bdh_icon( 'arrow' ); ?></a>
+			<?php endforeach; ?>
+		</p>
 	</div>
 </section>

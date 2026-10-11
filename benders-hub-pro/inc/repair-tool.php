@@ -27,17 +27,24 @@ add_action( 'admin_menu', 'bdh_admin_menu' );
 /**
  * Dashboard view.
  */
-function bdh_dashboard_render() { ?>
+function bdh_dashboard_render() {
+	$cards = array(
+		array( __( 'Upgrade to v2', 'benders-hub' ), __( 'Replace placeholder trust pages, retire fictional equipment entries, build the magazine menu.', 'benders-hub' ), admin_url( 'admin.php?page=bdh-upgrade' ), true ),
+		array( __( 'Image Library', 'benders-hub' ), __( 'Check licences, review and import photographs with credits and alt text.', 'benders-hub' ), admin_url( 'admin.php?page=bdh-image-library' ), true ),
+		array( __( 'Customize homepage', 'benders-hub' ), __( 'Lead story, buying-guides category, essential reads, section order.', 'benders-hub' ), admin_url( 'customize.php?autofocus[panel]=bdh_panel' ), false ),
+		array( __( 'Subscribers', 'benders-hub' ), __( 'Newsletter sign-ups stored on this site. Export as CSV.', 'benders-hub' ), admin_url( 'edit.php?post_type=bdh_subscriber' ), false ),
+		array( __( 'Content Library', 'benders-hub' ), __( 'Starter articles. Review every claim before publishing.', 'benders-hub' ), admin_url( 'admin.php?page=bdh-content-library' ), false ),
+		array( __( 'System Audit', 'benders-hub' ), __( 'Check templates, pages and settings.', 'benders-hub' ), admin_url( 'admin.php?page=bdh-audit' ), false ),
+	);
+	?>
 	<div class="wrap">
-		<h1><?php esc_html_e( 'Benders Hub Pro', 'benders-hub' ); ?></h1>
-		<p><?php esc_html_e( 'Premium fabrication engineering theme. Manage your site from these tools:', 'benders-hub' ); ?></p>
-		<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:20px;margin-top:24px;">
-			<div class="card" style="padding:20px;"><h2><?php esc_html_e( 'Customize Homepage', 'benders-hub' ); ?></h2><p><?php esc_html_e( 'Hero, archetypes, FAQ, newsletter, trust, footer.', 'benders-hub' ); ?></p><a class="button button-primary" href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"><?php esc_html_e( 'Open Customizer', 'benders-hub' ); ?></a></div>
-			<div class="card" style="padding:20px;"><h2><?php esc_html_e( 'Repair Site Setup', 'benders-hub' ); ?></h2><p><?php esc_html_e( 'Recreate homepage, tools, menus, legal pages, schema, archetypes.', 'benders-hub' ); ?></p><a class="button button-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=bdh-repair' ) ); ?>"><?php esc_html_e( 'Open Repair', 'benders-hub' ); ?></a></div>
-			<div class="card" style="padding:20px;"><h2><?php esc_html_e( 'Content Library', 'benders-hub' ); ?></h2><p><?php esc_html_e( '12 ready-to-publish fabrication articles. Install with one click.', 'benders-hub' ); ?></p><a class="button button-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=bdh-content-library' ) ); ?>"><?php esc_html_e( 'Open Library', 'benders-hub' ); ?></a></div>
-			<div class="card" style="padding:20px;"><h2><?php esc_html_e( 'System Audit', 'benders-hub' ); ?></h2><p><?php esc_html_e( 'Verify every component is wired correctly.', 'benders-hub' ); ?></p><a class="button button-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=bdh-audit' ) ); ?>"><?php esc_html_e( 'Run Audit', 'benders-hub' ); ?></a></div>
-			<div class="card" style="padding:20px;"><h2><?php esc_html_e( 'Add Equipment', 'benders-hub' ); ?></h2><p><?php esc_html_e( 'Bending equipment custom post type with specs.', 'benders-hub' ); ?></p><a class="button" href="<?php echo esc_url( admin_url( 'post-new.php?post_type=bdh_product' ) ); ?>"><?php esc_html_e( 'Add Equipment', 'benders-hub' ); ?></a></div>
+		<h1><?php esc_html_e( 'Benders Hub', 'benders-hub' ); ?> <small style="font-size:13px;color:#646970">v<?php echo esc_html( BDH_VERSION ); ?></small></h1>
+		<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:20px;margin-top:24px;max-width:1100px">
+			<?php foreach ( $cards as $c ) : ?>
+				<div class="card" style="padding:20px;margin:0"><h2><?php echo esc_html( $c[0] ); ?></h2><p><?php echo esc_html( $c[1] ); ?></p><a class="button <?php echo $c[3] ? 'button-primary' : ''; ?>" href="<?php echo esc_url( $c[2] ); ?>"><?php esc_html_e( 'Open', 'benders-hub' ); ?></a></div>
+			<?php endforeach; ?>
 		</div>
+		<p style="margin-top:24px"><a class="button" href="<?php echo esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=bdh_export_subscribers' ), 'bdh_export_subscribers' ) ); ?>"><?php esc_html_e( 'Export subscribers (CSV)', 'benders-hub' ); ?></a></p>
 	</div>
 	<?php
 }
@@ -233,17 +240,22 @@ function bdh_repair_legal_pages() {
 		'contact'              => array( 'Contact',               'Get in touch with Benders Hub.' ),
 		'safety'               => array( 'Fabrication Safety',    'Workshop safety, welding integration, and OSHA-aligned guidance for bending.' ),
 		'glossary'             => array( 'Tubing & Bending Glossary', 'Definitions of bending terminology — CLR, K-factor, springback, mandrel, and more.' ),
-		'compare'              => array( 'Compare Tube Benders',  "<p>Side-by-side comparison of every bender in our database — capacity, precision, durability, automation, and editor score.</p>\n[bdh_database]" ),
+		'compare'              => array( 'Compare Tube Benders',  "[bdh_comparison]" ),
 	);
 	foreach ( $pages as $slug => $info ) {
 		$existing = get_page_by_path( $slug );
 		if ( $existing ) { $out[] = $info[0] . ' — exists.'; continue; }
+		$draft = function_exists( 'bdh_trust_page_content' ) ? bdh_trust_page_content( $slug ) : '';
+		if ( in_array( $slug, array( 'privacy-policy', 'terms', 'cookie-policy', 'contact' ), true ) ) {
+			$out[] = $info[0] . ' — not generated (needs your own legal text / contact details).';
+			continue;
+		}
 		$id = wp_insert_post( array(
-			'post_title'   => $info[0],
+			'post_title'   => 'methodology' === $slug ? __( 'How we evaluate equipment', 'benders-hub' ) : $info[0],
 			'post_name'    => $slug,
 			'post_status'  => 'publish',
 			'post_type'    => 'page',
-			'post_content' => $info[1],
+			'post_content' => $draft ? $draft : $info[1],
 		) );
 		$out[] = $id ? $info[0] . ' created.' : $info[0] . ' failed.';
 	}
@@ -256,13 +268,15 @@ function bdh_repair_permalinks() {
 }
 
 function bdh_repair_sections() {
-	remove_theme_mod( 'bdh_homepage_sections' );
+	remove_theme_mod( 'bdh_home_layout_v2' );
 	return array( 'Homepage section order and visibility reset to defaults.' );
 }
 
 function bdh_repair_schema() {
-	$out = array( 'Organization schema: OK', 'WebSite + SearchAction schema: OK', 'FAQPage schema: OK', 'ItemList schema: OK', 'SoftwareApplication (tools) schema: OK', 'BreadcrumbList: OK' );
-	return $out;
+	if ( bdh_seo_plugin_active() ) {
+		return array( 'An SEO plugin is active, so the theme leaves structured data to it.' );
+	}
+	return array( 'Theme outputs: Organization, WebSite + SearchAction, BlogPosting (articles), BreadcrumbList, FAQPage (homepage, when the FAQ is shown), Product + Review only for hands-on-tested equipment. Validate with Google\'s Rich Results Test.' );
 }
 
 function bdh_repair_verify_tools() {
@@ -279,71 +293,16 @@ function bdh_repair_verify_tools() {
 }
 
 function bdh_repair_seed_equipment() {
-	$out = array();
-	if ( ! function_exists( 'bdh_default_equipment' ) ) { return array( 'bdh_default_equipment() not available' ); }
-
-	foreach ( bdh_default_equipment() as $eq ) {
-		$slug = sanitize_title( 'eq-' . $eq['id'] );
-		$existing = get_page_by_path( $slug, OBJECT, 'bdh_product' );
-		if ( $existing ) {
-			$out[] = $eq['name'] . ' — already present.';
-			continue;
-		}
-		$pros_text = isset( $eq['pros'] ) ? implode( "\n", $eq['pros'] ) : '';
-		$cons_text = isset( $eq['cons'] ) ? implode( "\n", $eq['cons'] ) : '';
-
-		$body  = "<p><strong>" . esc_html( $eq['use_case'] ) . "</strong></p>\n";
-		$body .= "<p>" . esc_html( $eq['name'] ) . " is a " . esc_html( strtolower( $eq['type'] ) ) . " rated for " . esc_html( $eq['capacity'] ) . " tubing with " . esc_html( strtolower( $eq['workshop'] ) ) . "-grade suitability. Editor score: " . esc_html( $eq['score'] ) . "/10.</p>\n";
-		$body .= "<h2>Where it fits</h2>\n<p>" . esc_html( $eq['tubing'] ) . ". Power class: " . esc_html( $eq['tonnage'] ) . ".</p>\n";
-
-		$post_id = wp_insert_post( array(
-			'post_title'   => $eq['name'],
-			'post_name'    => $slug,
-			'post_status'  => 'publish',
-			'post_type'    => 'bdh_product',
-			'post_content' => $body,
-			'post_excerpt' => $eq['use_case'],
-			'meta_input'   => array(
-				'_bdh_amazon_keyword' => $eq['keyword'],
-				'_bdh_editor_score'   => $eq['score'],
-				'_bdh_capacity'       => $eq['capacity'],
-				'_bdh_tonnage'        => $eq['tonnage'],
-				'_bdh_precision'      => $eq['precision'],
-				'_bdh_durability'     => $eq['durability'],
-				'_bdh_workshop_fit'   => $eq['workshop'],
-				'_bdh_beginner'       => $eq['beginner'],
-				'_bdh_tubing_compat'  => $eq['tubing'],
-				'_bdh_price_range'    => $eq['price'],
-				'_bdh_use_case'       => $eq['use_case'],
-				'_bdh_pros'           => $pros_text,
-				'_bdh_cons'           => $cons_text,
-				'_bdh_seed'           => 1,
-			),
-		), true );
-
-		if ( ! is_wp_error( $post_id ) && $post_id ) {
-			$term = term_exists( $eq['category'], 'bdh_equipment_type' );
-			if ( ! $term ) {
-				$term = wp_insert_term( ucfirst( $eq['category'] ), 'bdh_equipment_type', array( 'slug' => $eq['category'] ) );
-			}
-			if ( ! is_wp_error( $term ) ) {
-				$term_id = is_array( $term ) ? (int) $term['term_id'] : (int) $term;
-				wp_set_post_terms( $post_id, array( $term_id ), 'bdh_equipment_type', false );
-			}
-			$out[] = $eq['name'] . ' — created (post #' . $post_id . ').';
-		} else {
-			$out[] = $eq['name'] . ' — failed.';
-		}
-	}
-	return $out;
+	// v1 created ten fictional products with invented scores here. v2 no longer does.
+	return array( __( 'Equipment seeding is disabled in v2 (it created fictional products). Add real equipment under Equipment → Add Equipment.', 'benders-hub' ) );
 }
 
 function bdh_repair_product_categories() {
 	$out = array();
 	$cats = array(
-		'hydraulic-benders' => array( 'Hydraulic Benders',        'Hydraulic tube and pipe benders — 12-ton through 100-ton, manual and powered.' ),
+		'hydraulic-benders' => array( 'Hydraulic Benders',        'Hydraulic rotary-draw and ram-style tube and pipe benders.' ),
 		'manual-benders'    => array( 'Manual Benders',           'Hand-leverage tube benders for light tubing and field work.' ),
-		'cnc-benders'       => array( 'CNC Benders',              'Servo-hydraulic CNC tube benders — programmable, repeatable, production-grade.' ),
+		'cnc-benders'       => array( 'CNC Benders',              'Programmable CNC and electric tube benders for production work.' ),
 		'exhaust-bending'   => array( 'Exhaust Fabrication',      'Mandrel benders, exhaust dies, and headers fabrication tooling.' ),
 		'roll-cage'         => array( 'Roll Cage & Chassis',      'Roll cage tubing, chromoly fabrication, chassis dies, and tube notchers.' ),
 		'mandrel'           => array( 'Mandrel Benders',          'Mandrel bending systems for thin-wall tubing and ID-critical bends.' ),

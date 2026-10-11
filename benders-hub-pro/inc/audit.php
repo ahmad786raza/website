@@ -48,9 +48,13 @@ function bdh_run_audit() {
 		'inc/helpers.php'                           => 'Helpers (icons, badges, options)',
 		'inc/enqueue.php'                           => 'Asset enqueue',
 		'inc/cpt.php'                               => 'Custom post types',
-		'inc/archetypes.php'                        => '12 fabrication archetypes',
-		'inc/bundles.php'                           => '8 kit bundles',
-		'inc/product-database.php'                  => 'Equipment seed database',
+		'inc/archetypes.php'                        => 'Fabrication pathways',
+		'inc/template-tags.php'                     => 'Template tags',
+		'inc/content-filters.php'                   => 'Content filters',
+		'inc/image-library.php'                     => 'Image Library',
+		'inc/trust-pages.php'                       => 'v2 upgrade tasks',
+		'inc/bundles.php'                           => 'Kit bundle checklists',
+		'inc/product-database.php'                  => 'Equipment knowledge base',
 		'inc/amazon.php'                            => 'Amazon keyword bank',
 		'inc/customizer.php'                        => 'Customizer panel',
 		'inc/schema.php'                            => 'Schema (JSON-LD)',
@@ -60,40 +64,40 @@ function bdh_run_audit() {
 		'inc/seed-content.php'                      => 'Content Library admin',
 		'inc/audit.php'                             => 'This audit module',
 		// sections
-		'template-parts/sections/hero.php'          => 'Hero section',
-		'template-parts/sections/quick-start.php'   => 'Quick Start section',
-		'template-parts/sections/archetypes.php'    => 'Archetype Explorer',
-		'template-parts/sections/editors-best.php'  => 'Editor\'s Best',
+		'template-parts/home/hero.php'              => 'Homepage: lead story',
+		'template-parts/home/tools.php'             => 'Homepage: tools console',
+		'template-parts/home/guides.php'            => 'Homepage: buying guides',
+		'template-parts/home/equipment.php'         => 'Homepage: equipment by need',
+		'template-parts/home/latest.php'            => 'Homepage: latest feed',
+		'template-parts/home/pathways.php'          => 'Homepage: learn by project',
+		'template-parts/home/knowledge.php'         => 'Homepage: knowledge hub',
+		'template-parts/home/curated.php'           => 'Homepage: essential reads',
 		'template-parts/sections/kit-bundles.php'   => 'Kit Bundles',
-		'template-parts/sections/comparison.php'    => 'Comparison Table',
-		'template-parts/sections/faq.php'           => 'FAQ Accordion',
-		'template-parts/sections/newsletter.php'    => 'Newsletter CTA',
-		'template-parts/sections/trust.php'         => 'Trust Section',
-		// tools
-		'template-parts/tools/quiz.php'             => 'Tool 1: Quiz',
-		'template-parts/tools/calculator.php'       => 'Tool 2: Calculator',
-		'template-parts/tools/visualizer.php'       => 'Tool 3: Visualizer',
-		'template-parts/tools/database.php'         => 'Tool 4: Equipment Database',
-		'template-parts/tools/workflow.php'         => 'Tool 5: Workflow',
-		'template-parts/tools/compatibility.php'    => 'Tool 6: Compatibility',
-		'template-parts/tools/prioritizer.php'      => 'Tool 7: Prioritizer',
-		'template-parts/tools/tracker.php'          => 'Tool 8: Tracker',
-		// parts
-		'template-parts/equipment-card.php'         => 'Equipment card',
-		'template-parts/product-box.php'            => 'Product box (shortcode)',
+		'template-parts/sections/comparison.php'    => 'Comparison tables',
+		'template-parts/sections/faq.php'           => 'FAQ',
+		'template-parts/sections/newsletter.php'    => 'Newsletter',
+		'template-parts/sections/trust.php'         => 'Editorial policy',
+		// Tools
+		'template-parts/tools/quiz.php'             => 'Tool: quiz',
+		'template-parts/tools/calculator.php'       => 'Tool: bend calculator',
+		'template-parts/tools/visualizer.php'       => 'Tool: visualizer',
+		'template-parts/tools/database.php'         => 'Tool: equipment types',
+		'template-parts/tools/workflow.php'         => 'Tool: sequence planner',
+		'template-parts/tools/compatibility.php'    => 'Tool: tooling checklist',
+		'template-parts/tools/prioritizer.php'      => 'Tool: prioritizer',
+		'template-parts/tools/tracker.php'          => 'Tool: tracker',
+		// Partials
+		'template-parts/equipment-card.php'         => 'Equipment type card',
+		'template-parts/product-card.php'           => 'Product card (shortcode)',
 		// CSS
-		'assets/css/base.css'                       => 'CSS: base',
-		'assets/css/layout.css'                     => 'CSS: layout',
-		'assets/css/components.css'                 => 'CSS: components',
-		'assets/css/hero.css'                       => 'CSS: hero',
-		'assets/css/tools.css'                      => 'CSS: tools',
-		'assets/css/product.css'                    => 'CSS: product',
-		'assets/css/mobile.css'                     => 'CSS: mobile',
+		'assets/css/magazine.css'                   => 'CSS: magazine',
 		'assets/css/editor.css'                     => 'CSS: editor',
+		'assets/fonts/archivo-latin.woff2'          => 'Font: Archivo',
+		'assets/fonts/inter-latin.woff2'            => 'Font: Inter',
 		// JS
 		'assets/js/main.js'                         => 'JS: main',
 		'assets/js/personalization.js'              => 'JS: personalization',
-		'assets/js/animations.js'                   => 'JS: animations',
+		'assets/js/magazine.js'                     => 'JS: magazine',
 		'assets/js/quiz.js'                         => 'JS: quiz',
 		'assets/js/calculator.js'                   => 'JS: calculator',
 		'assets/js/visualizer.js'                   => 'JS: visualizer',
@@ -137,7 +141,7 @@ function bdh_run_audit() {
 		'bdh_fallback_footer_column'      => 'Footer column fallback',
 		'bdh_enqueue_assets'              => 'Asset enqueue',
 		'bdh_register_cpts'               => 'CPT registration',
-		'bdh_archetypes'                  => '12 archetypes data',
+		'bdh_archetypes'                  => 'Pathway data',
 		'bdh_bundles'                     => '8 bundles data',
 		'bdh_default_equipment'           => 'Equipment seed data',
 		'bdh_equipment_categories'        => 'Equipment categories',
@@ -180,6 +184,10 @@ function bdh_run_audit() {
 		array( 'wp_ajax_bdh_live_search', 'bdh_ajax_live_search', 'Live search AJAX' ),
 		array( 'wp_ajax_bdh_newsletter',  'bdh_ajax_newsletter',  'Newsletter AJAX' ),
 		array( 'wp_ajax_bdh_database',    'bdh_ajax_database',    'Database AJAX' ),
+		array( 'wp_ajax_nopriv_bdh_load_more', 'bdh_ajax_load_more', 'Load-more AJAX' ),
+		array( 'admin_menu',         'bdh_image_library_menu',    'Image Library menu' ),
+		array( 'admin_menu',         'bdh_upgrade_menu',          'Upgrade menu' ),
+		array( 'wp_robots',          'bdh_robots',                'Robots rules' ),
 	);
 	$rows = array();
 	foreach ( $hook_checks as $h ) {
@@ -229,7 +237,7 @@ function bdh_run_audit() {
 		$registered = isset( $shortcode_tags[ $sc ] );
 		$rows[] = array(
 			'name'   => '[' . $sc . ']',
-			'detail' => $registered ? $shortcode_tags[ $sc ] : 'NOT REGISTERED',
+			'detail' => $registered ? ( is_string( $shortcode_tags[ $sc ] ) ? $shortcode_tags[ $sc ] : 'registered' ) : 'NOT REGISTERED',
 			'status' => $registered ? 'pass' : 'fail',
 		);
 	}
@@ -317,8 +325,7 @@ function bdh_run_audit() {
 		'bdh_hero_eyebrow', 'bdh_hero_headline', 'bdh_hero_sub',
 		'bdh_hero_cta_primary', 'bdh_hero_cta_primary_url',
 		'bdh_hero_cta_secondary', 'bdh_hero_cta_secondary_url',
-		'bdh_hero_image', 'bdh_hero_video',
-		'bdh_quickstart_title', 'bdh_quickstart_sub',
+		'bdh_hero_image', 'bdh_featured_post', 'bdh_guides_category', 'bdh_curated_posts',
 		'bdh_archetypes_title', 'bdh_archetypes_sub',
 		'bdh_faq_title', 'bdh_faq_sub', 'bdh_faqs_json',
 		'bdh_newsletter_title', 'bdh_newsletter_sub', 'bdh_newsletter_cta',
@@ -367,18 +374,18 @@ function bdh_run_audit() {
 	);
 	$rows[] = array(
 		'name'   => 'Equipment data available',
-		'detail' => count( bdh_default_equipment() ) . ' seed entries',
+		'detail' => count( bdh_default_equipment() ) . ' equipment type profiles',
 		'status' => count( bdh_default_equipment() ) > 0 ? 'pass' : 'fail',
 	);
 	$rows[] = array(
 		'name'   => 'Archetypes data available',
-		'detail' => count( bdh_archetypes() ) . ' fabrication archetypes',
-		'status' => count( bdh_archetypes() ) >= 12 ? 'pass' : 'fail',
+		'detail' => count( bdh_archetypes() ) . ' fabrication pathways',
+		'status' => count( bdh_archetypes() ) > 0 ? 'pass' : 'fail',
 	);
 	$rows[] = array(
 		'name'   => 'Bundles data available',
 		'detail' => count( bdh_bundles() ) . ' kit bundles',
-		'status' => count( bdh_bundles() ) >= 8 ? 'pass' : 'fail',
+		'status' => count( bdh_bundles() ) > 0 ? 'pass' : 'warn',
 	);
 	$results['Data & Schema'] = $rows;
 
@@ -417,7 +424,7 @@ function bdh_run_audit() {
 	$rows[] = array(
 		'name'   => 'Homepage section count',
 		'detail' => count( bdh_get_homepage_sections() ) . ' sections configured',
-		'status' => count( bdh_get_homepage_sections() ) >= 15 ? 'pass' : 'fail',
+		'status' => count( bdh_get_homepage_sections() ) >= 8 ? 'pass' : 'fail',
 	);
 	$enabled_sections = array_filter( bdh_get_homepage_sections(), function( $s ) { return ! empty( $s['enabled'] ); } );
 	$rows[] = array(

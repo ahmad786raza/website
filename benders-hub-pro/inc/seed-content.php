@@ -86,28 +86,22 @@ HTML
 <p>Every fabricator eventually meets the moment when a bend comes out 4° short, the tube wrinkles on the inside of the curve, or the cut length is two inches off the drawing. The cause is almost never the bender — it's the math nobody taught you. Here's the engineering theory behind every bend, in the language of a working shop.</p>
 
 <h2>Centerline Radius (CLR): The Number That Defines Your Bend</h2>
-<p>CLR is the distance from the center of the bend to the centerline of the tube. It is NOT the outside or inside radius. Every die in your shop is specified by CLR. If you don't match CLR to your tubing wall thickness, you'll wrinkle. The rule of thumb every chassis fabricator follows: <strong>CLR should be at least 2× the outside diameter</strong> of the tube for clean rotary draw bends. Drop below 1.5× and you need a mandrel or you'll collapse the inside wall.</p>
+<p>CLR is the distance from the center of the bend to the centerline of the tube. It is NOT the outside or inside radius. Every die in your shop is specified by CLR. If you don't match CLR to your tubing wall thickness, you'll wrinkle. A useful reference point: tube-bending manufacturers such as Pro-Tools give roughly <strong>3× the outside diameter</strong> as a practical minimum CLR without a mandrel, and common roll-cage dies for 1.75" tube work out to about 3.1–3.7× OD. Tighter radii — especially in thin wall — usually need mandrel and wiper-die support.</p>
 
-<h2>K-Factor: Where the Neutral Axis Actually Lives</h2>
-<p>When a tube bends, the outside stretches and the inside compresses. Somewhere between them is the neutral axis — the imaginary line that neither stretches nor compresses. K-factor expresses where that neutral axis sits as a ratio of wall thickness. Mild steel sits around K=0.41. Stainless is around K=0.40. Aluminum is K=0.33. The exact number determines your cut length:</p>
-<p><strong>Bend Allowance = θ × (R + K·t)</strong></p>
-<p>Where θ is the bend angle in radians, R is your CLR, t is wall thickness, and K is the K-factor. The bend allowance is how much tube material is consumed by the bend — subtract it from your part length to get the right cut length.</p>
+<h2>Arc Length: How Much Tube the Bend Uses</h2>
+<p>When a tube bends, the outside stretches and the inside compresses. Because CLR is already measured to the tube's centreline, the length of tube inside a bend is simple geometry — the K-factor used for sheet metal is not needed:</p>
+<p><strong>Arc length L = CLR × θ</strong> (θ in radians; θ° × π ÷ 180)</p>
+<p>A 90° bend on a 6" CLR uses 6 × 1.5708 = 9.42" of tube. To turn drawing dimensions into a cut length, subtract the tangent length <strong>T = CLR × tan(θ ÷ 2)</strong> from each leg measured to the intersection point, then add the arc length. Real machines stretch tube slightly, so calibrate with a test piece.</p>
 
 <h2>Springback: The Tube Always Wants to Be Straight</h2>
-<p>Metal is elastic. When you release a bent tube from the die, it springs back toward straight. The amount depends on the material:</p>
-<ul>
-<li>Mild steel: ~1.5% of bend angle</li>
-<li>Chromoly 4130: ~2.5% — significantly more</li>
-<li>T304 stainless: ~3% — the worst offender</li>
-<li>Aluminum 6061: ~1.3% — easiest</li>
-</ul>
-<p>To compensate, over-bend by the springback amount. For a 90° bend in stainless, you bend to about 92.7° and let it spring back to 90°. Every shop that's any good keeps a springback chart on the wall next to the bender for each material they run.</p>
+<p>Metal is elastic. When you release a bent tube from the die, it springs back toward straight. How much depends on the material batch, wall, radius and the machine itself, so there is no reliable universal table. As one manufacturer reference point, JD2 notes that 4130 springs back about twice as much as welded mild steel of the same size.</p>
+<p>The dependable method: bend a scrap piece, measure the angle after release, and over-bend by the difference. Keep a log of springback for each material, die and batch you run — our springback helper in the calculator does the arithmetic.</p>
 
-<h2>D/T Ratio: The Predictor Nobody Mentions</h2>
-<p>Diameter-to-thickness ratio (D/T) tells you whether your tube can handle a bend without collapsing. Below 30, you have plenty of margin. Above 50, you're in mandrel-only territory. Above 70, even mandrels struggle. This is why thin-wall exhaust tubing — say 2.5\" × .049\" — has a D/T of 51 and absolutely requires a mandrel to bend cleanly.</p>
+<h2>Wall Factor and D of Bend</h2>
+<p>Two ratios predict how hard a bend will be: <strong>wall factor</strong> (OD ÷ wall) and <strong>D of bend</strong> (CLR ÷ OD). Thin wall (high wall factor) combined with a tight radius (low D) is where wrinkling starts. Die makers publish charts that use these two numbers to say when a mandrel and wiper die are needed — thin-wall exhaust tubing such as 2.5\" × .049\" (wall factor ≈ 51) is bent on mandrel benders for that reason.</p>
 
 <h2>Run the Numbers Before You Cut</h2>
-<p>Our <a href="/#bdh-calculator">bend radius calculator</a> takes OD, wall, material, and bend angle and spits back wrinkle risk, springback compensation, bend allowance, and cutting length in one shot. Use it before every new tubing job — it has saved more sticks of chromoly than any other tool in this site.</p>
+<p>Our <a href="/#bdh-calculator">bend calculator</a> takes OD, wall, CLR, angle and leg lengths and returns arc length, tangent length, cut length, D-of-bend and wall factor, plus a springback helper based on your own test bend. Use it to plan, then confirm with a test piece.</p>
 HTML
 		),
 
@@ -159,21 +153,21 @@ HTML
 <p>4130 is a chromium-molybdenum alloy steel. Most racing tubing is sold as 4130N (normalized), which means it's been heat-treated to a uniform grain structure after rolling. Normalized 4130 has a tensile strength of around 97,000 psi versus DOM mild steel's 70,000 psi — that's why you can use thinner walls (typically 0.083\" or 0.095\") for the same strength.</p>
 
 <h2>Bending: CLR, Springback, and the Tonnage Trap</h2>
-<p>Chromoly demands a CLR of at least 5× OD and ideally 6× OD for chassis-grade bends. The material has roughly 40% more springback than mild steel — a 90° target requires over-bending to about 92.5°. Don't try to use a 12-ton bender on 1.75\" × .095\" chromoly — you need at least 20 tons of capacity, and 25 is more comfortable. Lubricate every die surface with high-pressure assembly lube.</p>
+<p>Use a CLR your rulebook allows (SCCA Time Trials, for example, requires at least 3× the tube diameter at the centreline) and that your die maker offers — common cage dies for 1.75\" tube are around 5.5\"–6.5\" CLR. JD2 notes that 4130 springs back about twice as much as welded mild steel of the same size, so measure springback on a test piece. Check that your bender's capacity chart lists 4130 at your wall thickness, and follow the die maker's lubrication advice.</p>
 
 <h2>Notching: The Fishmouth Determines the Weld</h2>
-<p>Every tube-to-tube joint in a chassis needs a fishmouth notch. The notch must follow the OD of the receiving tube exactly. Use bi-metal hole saws sized to the receiving tube's OD — a 1.75\" receiving tube wants a 1.75\" hole saw. Set the notcher's pivot angle to match the joint angle. Anything more than 1/16\" gap between joined tubes is an automatic reject under SFI inspection.</p>
+<p>Every tube-to-tube joint in a chassis needs a fishmouth notch. The notch must follow the OD of the receiving tube exactly. Use bi-metal hole saws sized to the receiving tube's OD — a 1.75\" receiving tube wants a 1.75\" hole saw. Set the notcher's pivot angle to match the joint angle. Aim for a tight, even fit-up; inspectors and rulebooks set their own acceptance criteria.</p>
 
 <h2>Welding: TIG Only, With Documented Procedure</h2>
-<p>Chromoly chassis welding must be TIG with ER70S-2 or ER80S-D2 filler rod. MIG-welded chromoly chassis fail SFI inspection. The base material is preheated to 300°F before welding, the weld is run continuously around the joint, and the joint is allowed to cool slowly. Quenching a chromoly weld causes brittleness and hairline cracks.</p>
+<p>Many rulebooks specify how 4130 must be welded — NHRA, for example, has required 4130 to be TIG welded. Follow your sanctioning body's rules and a qualified welding procedure for filler metal, preheat and cooling. Never quench a 4130 weld.</p>
 
 <h2>Heat Treatment After Welding (Or Not)</h2>
 <p>Contrary to old shop folklore, post-weld stress-relieving is NOT required for properly preheated chromoly joints on standard chassis applications. Top builders rely on preheat + slow cool. For aerospace or extreme racing applications, stress relief at 1100°F for one hour does measurably improve fatigue life.</p>
 
 <h2>The Tooling Stack</h2>
 <ul>
-<li>20-ton hydraulic rotary draw bender (minimum)</li>
-<li>Chromoly-rated dies — bend radius 6× OD</li>
+<li>Rotary-draw bender rated for 4130 at your wall thickness (manual or hydraulic)</li>
+<li>Dies in your tube OD with a rule-compliant CLR</li>
 <li>Tube notcher with chromoly-rated bi-metal hole saws</li>
 <li>TIG welder, 200+ amp, foot pedal control</li>
 <li>Pyrometer or infrared thermometer for preheat verification</li>
@@ -318,16 +312,14 @@ HTML
 <h2>The D/T Ratio Predictor</h2>
 <p>Diameter-to-thickness ratio (outside diameter divided by wall thickness) predicts wrinkle risk:</p>
 <ul>
-<li>D/T below 20: bullet-proof, never wrinkles in mild steel</li>
-<li>D/T 20-30: clean bends with standard rotary draw</li>
-<li>D/T 30-50: needs careful die selection and CLR ≥ 3×OD</li>
-<li>D/T 50-70: mandrel territory — wrinkles without one</li>
-<li>D/T above 70: mandrel required, slow feed rate</li>
+<li>Low ratio (thick wall for the diameter): the most forgiving to bend</li>
+<li>Higher ratio (thin wall): increasingly prone to wrinkling, especially at tight radii</li>
+<li>Thin wall at a tight radius: the territory where die makers' charts call for mandrel and wiper-die support</li>
 </ul>
 <p>For 2.5\" × 0.049\" exhaust tubing, D/T is 51 — squarely in mandrel territory. That's why mandrel benders dominate exhaust work.</p>
 
 <h2>The CLR Trap</h2>
-<p>The other variable is CLR/OD ratio. A common rookie mistake: buying a die that's too tight for the tubing. CLR/OD below 1.5 wrinkles almost any tubing without a mandrel. CLR/OD of 2 is the standard "tight" bend. CLR/OD of 3+ is conservative. When in doubt, go larger.</p>
+<p>The other variable is CLR/OD ratio. A common rookie mistake: buying a die that's too tight for the tubing. Pro-Tools gives about 3× OD as a practical minimum CLR without a mandrel; much tighter than that (2× OD and below) generally needs mandrel support unless the wall is heavy. When in doubt, go larger.</p>
 
 <h2>Material Matters More Than People Realize</h2>
 <p>Chromoly and stainless are stronger than mild steel — and that strength works against you in bending. Stronger material resists compression but the resistance comes out as buckling instead of smooth flow. That's why chromoly chassis builders insist on 5×OD or 6×OD CLRs even when the geometry could accept tighter bends.</p>
@@ -352,7 +344,7 @@ HTML
 <tr><td>Random wrinkles</td><td>Tube spinning in clamp</td><td>Increase clamp pressure</td></tr>
 </table>
 
-<p>Run our <a href="/#bdh-calculator">bend radius calculator</a> with your specs — it predicts wrinkle risk in real time before you bend.</p>
+<p>Run our <a href="/#bdh-calculator">bend calculator</a> with your specs — it reports D-of-bend and wall factor so you can compare against your die maker's charts before you bend.</p>
 HTML
 		),
 
@@ -375,10 +367,10 @@ HTML
 </ul>
 
 <h2>Tonnage: Add 30%</h2>
-<p>Where mild steel needs 12 tons to bend 1.75\" × 0.095\", T304 stainless needs roughly 15-16 tons to bend the same wall. T321 needs 18+. Don't try to bend stainless on a bender at its mild-steel capacity limit — you'll stall the ram and produce inconsistent bends. Up-rate your bender capacity by 30% when planning stainless work.</p>
+<p>Stainless needs noticeably more force than mild steel of the same size, and manufacturers rate their benders separately for it. Check the capacity chart for stainless specifically. Don't try to bend stainless on a bender at its mild-steel capacity limit — you'll stall the ram and produce inconsistent bends. Up-rate your bender capacity by 30% when planning stainless work.</p>
 
 <h2>Springback: Plan to Over-Bend</h2>
-<p>T304 stainless springs back 60-80% more than mild steel. A 90° bend target needs to be bent to about 93°. T321 is even worse — about 94°. Keep a springback chart on the wall for every material and angle combination you commonly run.</p>
+<p>Stainless springs back more than mild steel, and the amount varies with the batch, wall and radius. Bend a test piece, measure it after release and over-bend by the difference. Keep a log for every material and die combination you commonly run.</p>
 
 <h2>Dies: Hardened Tool Steel, Polished</h2>
 <p>Standard rotary draw dies for mild steel will bend stainless, but they wear fast. The stainless work-hardens against the die surface. Use hardened tool steel dies (D2 or A2) for any stainless production. Polish the die contact surface to a near-mirror finish — surface imperfections transfer to the tubing.</p>
@@ -387,10 +379,10 @@ HTML
 <p>Standard assembly lube does not work for stainless bending. Use a high-pressure molybdenum disulfide grease (Bostick Never-Seez Nickel grade or equivalent) on every die surface and on the OD of the tube at the bend point. Without proper lubrication, stainless galls against the die and produces visible drag marks on the tube finish.</p>
 
 <h2>Feed Rate</h2>
-<p>Slow down. Mild steel bends fine at full ram speed. Stainless wants 60-70% of full ram speed to allow the material to flow without buckling. CNC operators reduce the feed rate parameter accordingly. Manual hydraulic operators just don't pump the handle as fast.</p>
+<p>Slow down. Stainless generally bends more cleanly at a steady, slower speed than mild steel; follow your machine and die maker's guidance. Manual hydraulic operators just don't pump the handle as fast.</p>
 
 <h2>Heat Considerations</h2>
-<p>Heavy-section stainless bending generates significant heat at the die contact point. For production runs, schedule cooling cycles every 8-10 bends to keep the die under 200°F. Hot dies accelerate wear and degrade dimensional accuracy.</p>
+<p>Heavy-section stainless bending generates heat at the die contact point. On long production runs, watch die temperature and wear — hot, worn dies degrade finish and dimensional accuracy.</p>
 
 <h2>Welding Integration</h2>
 <p>Almost every stainless bending job is followed by welding. TIG with ER308L or ER309L filler (for dissimilar joints). Backpurge with argon for exhaust applications — sugaring on the ID destroys flow performance. Allow stainless to cool slowly after welding to prevent carbide precipitation in the heat-affected zone.</p>
@@ -400,58 +392,31 @@ HTML
 		),
 
 		'roll-cage-specifications' => array(
-			'title'    => 'Roll Cage Tubing Specifications: NHRA, SCCA, FIA Comparison',
+			'title'    => 'Roll Cage Tubing Requirements: Where to Find the NHRA, SCCA and FIA Rules',
 			'cat'      => 'safety',
 			'tags'     => array( 'roll cage', 'NHRA', 'SCCA', 'FIA', 'specifications', 'safety' ),
-			'excerpt'  => 'Three sanctioning bodies, three different rulebooks. Building to the wrong spec fails tech. Here\'s exactly what each requires.',
+			'excerpt'  => 'Cage tube size, wall, material and bend radius are set by your sanctioning body and change between editions. Here is where to find the current rules and the build errors that commonly fail tech.',
 			'kw'       => 'roll cage tubing',
 			'content'  => <<<HTML
 <p>Building a competition roll cage requires hitting the exact tubing specification mandated by the sanctioning body. The three big ones — NHRA, SCCA, and FIA — each have their own rulebook with non-overlapping requirements. Building to the wrong spec means failing inspection.</p>
 
-<h2>NHRA: Drag Racing Standard</h2>
-<p>NHRA splits cage requirements by elapsed time bracket:</p>
+<h2>Why This Guide Doesn't List Tube Sizes</h2>
+<p>Each sanctioning body publishes cage requirements — tube outside diameter, minimum wall thickness, permitted materials, minimum bend radius, welding method and inspection or certification — and they change between rulebook editions and between classes. We deliberately do not reproduce those tables here: an out-of-date number is worse than none.</p>
+<h2>Where to find the current requirements</h2>
 <ul>
-<li><strong>11.00-9.99 ET</strong> — 1-5/8\" × 0.118\" mild steel OR 1-5/8\" × 0.083\" chromoly</li>
-<li><strong>9.99-8.50 ET</strong> — 1-5/8\" × 0.134\" mild steel OR 1-3/4\" × 0.083\" chromoly</li>
-<li><strong>8.50 and quicker</strong> — 1-3/4\" × 0.118\" mild steel OR 1-3/4\" × 0.083\" chromoly. SFI 25.5 chassis cert required.</li>
+<li><strong>NHRA</strong> — the current NHRA Rulebook (General Regulations and your class section). Chassis certification follows the SFI specification referenced for your class.</li>
+<li><strong>SCCA</strong> — the current General Competition Rules (club racing) or the Time Trials rules. The Time Trials rules, for example, require cage bends of at least 3× the tube diameter measured at the centreline.</li>
+<li><strong>FIA</strong> — Appendix J (Article 253 for safety equipment) for international events, plus any homologation requirements.</li>
 </ul>
-<p>NHRA chromoly requires SFI 25.5 inspection and certification, renewed every 3 years.</p>
-
-<h2>SCCA: Road Racing Standard</h2>
-<p>SCCA's general competition rules (GCR) require:</p>
-<ul>
-<li>Closed cars (production class): 1-1/2\" × 0.120\" DOM or 1-3/4\" × 0.083\" chromoly</li>
-<li>Open cars: 1-3/4\" × 0.095\" DOM minimum</li>
-<li>Spec Miata: tubing must follow Spec Miata Rules Section 5</li>
-</ul>
-<p>SCCA emphasizes joint quality and triangulation more than NHRA. All main hoop bends must be CLR ≥ 3× OD.</p>
-
-<h2>FIA: International Standard (Article 253)</h2>
-<p>FIA Appendix J Article 253 is the standard for international competition. Requirements include:</p>
-<ul>
-<li>Main rollbar: 50 × 2.5 mm (1.97\" × 0.098\") cold-drawn seamless mild steel OR 45 × 2.5 mm (1.77\" × 0.098\") chromoly 25CrMo4 (4130)</li>
-<li>FIA homologation tag on the cage</li>
-<li>Welding documentation by certified welder</li>
-<li>Diagonal brace mandatory in main hoop plane</li>
-</ul>
-
-<h2>The Practical Comparison</h2>
-<table>
-<tr><th>Body</th><th>Mild Steel</th><th>Chromoly</th><th>Cert Required</th></tr>
-<tr><td>NHRA 11s</td><td>1-5/8 × 0.118</td><td>1-5/8 × 0.083</td><td>SFI 25.1</td></tr>
-<tr><td>NHRA 8s</td><td>1-3/4 × 0.118</td><td>1-3/4 × 0.083</td><td>SFI 25.5</td></tr>
-<tr><td>SCCA Closed</td><td>1-1/2 × 0.120</td><td>1-3/4 × 0.083</td><td>SCCA tech</td></tr>
-<tr><td>FIA</td><td>50 × 2.5 mm</td><td>45 × 2.5 mm</td><td>FIA homologation</td></tr>
-</table>
-
+<p>Before buying tube, write down the exact OD, wall, material and bend-radius limits for your class from the current document, and confirm with your tech inspector if anything is unclear.</p>
 <h2>Common Build Errors That Fail Tech</h2>
 <ul>
 <li>Using DOM (not "seamless cold-drawn") where the rulebook specifies seamless</li>
-<li>Welding chromoly with MIG instead of TIG</li>
-<li>Notch gaps exceeding 1/16\"</li>
+<li>Welding 4130 with a process the rulebook does not allow</li>
+<li>Poor notch fit-up leaving gaps the welder has to bridge</li>
 <li>Main hoop bends with CLR below specified minimum</li>
 <li>Missing diagonal brace</li>
-<li>Mounting plates thinner than rule book requirement (typically 3/16\" minimum)</li>
+<li>Mounting plates thinner or smaller than the rulebook requires</li>
 </ul>
 
 <h2>Material Sourcing</h2>
@@ -617,7 +582,7 @@ function bdh_install_seed_article( $slug ) {
 	$post_id = wp_insert_post( array(
 		'post_title'   => $a['title'],
 		'post_name'    => $slug,
-		'post_status'  => 'publish',
+		'post_status'  => 'draft', // v2: starter articles are created as drafts so a person reviews every claim before publishing.
 		'post_type'    => 'post',
 		'post_content' => $a['content'],
 		'post_excerpt' => $a['excerpt'],
@@ -706,7 +671,8 @@ function bdh_content_library_render() {
 	?>
 	<div class="wrap">
 		<h1><?php esc_html_e( 'Benders Hub — Content Library', 'benders-hub' ); ?></h1>
-		<p><?php esc_html_e( '12 curated fabrication articles. Install individually or in bulk. Each article includes excerpt, body content, category, tags, and an Amazon keyword.', 'benders-hub' ); ?></p>
+		<p><?php esc_html_e( 'Starter articles. They are created as drafts: read every technical claim, add your own experience and sources, then publish.', 'benders-hub' ); ?></p>
+		<div class="notice notice-warning inline"><p><?php esc_html_e( 'v2 corrected the clearest errors in this library (the sheet-metal bend-allowance formula, invented springback percentages, roll-cage tube tables and chromoly radius/welding claims). If you installed these articles with v1, the published copies still contain the old text — see the v2 report for the list of passages to update. "Reinstall" deletes and recreates a post, losing edits, comments and its featured image.', 'benders-hub' ); ?></p></div>
 
 		<?php foreach ( $notices as $n ) : ?>
 			<div class="notice notice-success"><p><?php echo esc_html( $n ); ?></p></div>

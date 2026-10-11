@@ -121,21 +121,22 @@ function bdh_product_meta_callback( $post ) {
 
 function bdh_product_meta_fields() {
 	return array(
-		'_bdh_amazon_keyword' => array( 'label' => __( 'Amazon Keyword', 'benders-hub' ),       'type' => 'text', 'hint' => __( 'Used to build affiliate search link (rcblogs-20)', 'benders-hub' ) ),
-		'_bdh_amazon_url'     => array( 'label' => __( 'Amazon URL (optional override)', 'benders-hub' ), 'type' => 'text' ),
-		'_bdh_editor_score'   => array( 'label' => __( 'Editor Score (1-10)', 'benders-hub' ), 'type' => 'number' ),
-		'_bdh_capacity'       => array( 'label' => __( 'Bending Capacity', 'benders-hub' ),    'type' => 'text', 'hint' => __( 'e.g., 1/2" to 2" tubing', 'benders-hub' ) ),
-		'_bdh_tonnage'        => array( 'label' => __( 'Tonnage / Power', 'benders-hub' ),     'type' => 'text' ),
-		'_bdh_precision'      => array( 'label' => __( 'Precision Rating', 'benders-hub' ),    'type' => 'select', 'options' => array( '' => '—', 'entry' => __( 'Entry', 'benders-hub' ), 'mid' => __( 'Mid-grade', 'benders-hub' ), 'pro' => __( 'Professional', 'benders-hub' ), 'cnc' => __( 'CNC Grade', 'benders-hub' ) ) ),
-		'_bdh_durability'     => array( 'label' => __( 'Durability Rating (1-5)', 'benders-hub' ), 'type' => 'number' ),
-		'_bdh_workshop_fit'   => array( 'label' => __( 'Workshop Suitability', 'benders-hub' ),'type' => 'select', 'options' => array( '' => '—', 'garage' => __( 'Garage / Home Shop', 'benders-hub' ), 'small' => __( 'Small Production', 'benders-hub' ), 'pro' => __( 'Professional Shop', 'benders-hub' ), 'industrial' => __( 'Industrial / Volume', 'benders-hub' ) ) ),
-		'_bdh_beginner'       => array( 'label' => __( 'Beginner Friendly?', 'benders-hub' ),  'type' => 'select', 'options' => array( '' => '—', 'yes' => __( 'Yes', 'benders-hub' ), 'partial' => __( 'With training', 'benders-hub' ), 'no' => __( 'No — Pro only', 'benders-hub' ) ) ),
-		'_bdh_pros'           => array( 'label' => __( 'Pros (one per line)', 'benders-hub' ),'type' => 'textarea' ),
-		'_bdh_cons'           => array( 'label' => __( 'Cons (one per line)', 'benders-hub' ),'type' => 'textarea' ),
-		'_bdh_accessories'    => array( 'label' => __( 'Recommended Accessories (one per line)', 'benders-hub' ), 'type' => 'textarea' ),
-		'_bdh_use_case'       => array( 'label' => __( 'Primary Use Case', 'benders-hub' ),    'type' => 'text' ),
-		'_bdh_tubing_compat'  => array( 'label' => __( 'Tubing Compatibility', 'benders-hub' ),'type' => 'text', 'hint' => __( 'e.g., mild steel, stainless, aluminum', 'benders-hub' ) ),
-		'_bdh_price_range'    => array( 'label' => __( 'Price Range', 'benders-hub' ),         'type' => 'select', 'options' => array( '' => '—', '$' => '$ (Under $200)', '$$' => '$$ ($200-$500)', '$$$' => '$$$ ($500-$1,500)', '$$$$' => '$$$$ ($1,500-$5,000)', '$$$$$' => '$$$$$ ($5,000+)' ) ),
+		'_bdh_evaluation'     => array( 'label' => __( 'Evaluation type', 'benders-hub' ), 'type' => 'select', 'options' => array( 'research' => __( 'Research-based (specs, manuals, owner reports)', 'benders-hub' ), 'hands-on' => __( 'Hands-on tested by us — describe the test in the article', 'benders-hub' ) ), 'hint' => __( 'Only choose hands-on if you actually bent tube with this machine.', 'benders-hub' ) ),
+		'_bdh_amazon_url'     => array( 'label' => __( 'Amazon product URL', 'benders-hub' ), 'type' => 'text', 'hint' => __( 'Paste the product page link. Your tracking tag is added automatically if missing; an existing tag is never changed.', 'benders-hub' ) ),
+		'_bdh_amazon_keyword' => array( 'label' => __( 'Amazon search keyword (fallback)', 'benders-hub' ), 'type' => 'text', 'hint' => __( 'Used only when no product URL is set.', 'benders-hub' ) ),
+		'_bdh_spec_source'    => array( 'label' => __( 'Specification source URL', 'benders-hub' ), 'type' => 'text', 'hint' => __( 'Manufacturer page or manual the specs came from.', 'benders-hub' ) ),
+		'_bdh_capacity'       => array( 'label' => __( 'Bending capacity', 'benders-hub' ),    'type' => 'text', 'hint' => __( 'As published, e.g. 2" OD × .120" wall mild steel', 'benders-hub' ) ),
+		'_bdh_tonnage'        => array( 'label' => __( 'Drive / power', 'benders-hub' ),     'type' => 'text' ),
+		'_bdh_tubing_compat'  => array( 'label' => __( 'Materials', 'benders-hub' ),'type' => 'text', 'hint' => __( 'e.g. mild steel, 4130, stainless, aluminium', 'benders-hub' ) ),
+		'_bdh_use_case'       => array( 'label' => __( 'Main application', 'benders-hub' ),    'type' => 'text' ),
+		'_bdh_compat'         => array( 'label' => __( 'Compatibility notes', 'benders-hub' ), 'type' => 'textarea', 'hint' => __( 'Dies, mounts, hydraulic kits, power supply.', 'benders-hub' ) ),
+		'_bdh_best_for'       => array( 'label' => __( 'Who should consider it', 'benders-hub' ), 'type' => 'textarea' ),
+		'_bdh_alternative_if' => array( 'label' => __( 'Who should look at an alternative', 'benders-hub' ), 'type' => 'textarea' ),
+		'_bdh_pros'           => array( 'label' => __( 'Advantages (one per line)', 'benders-hub' ),'type' => 'textarea' ),
+		'_bdh_cons'           => array( 'label' => __( 'Limitations (one per line)', 'benders-hub' ),'type' => 'textarea' ),
+		'_bdh_workshop_fit'   => array( 'label' => __( 'Workshop suitability', 'benders-hub' ),'type' => 'select', 'options' => array( '' => '—', 'garage' => __( 'Garage / home shop', 'benders-hub' ), 'small' => __( 'Small production', 'benders-hub' ), 'pro' => __( 'Professional shop', 'benders-hub' ), 'industrial' => __( 'Industrial / volume', 'benders-hub' ) ) ),
+		'_bdh_beginner'       => array( 'label' => __( 'Beginner friendly?', 'benders-hub' ),  'type' => 'select', 'options' => array( '' => '—', 'yes' => __( 'Yes', 'benders-hub' ), 'partial' => __( 'With practice', 'benders-hub' ), 'no' => __( 'Experienced users', 'benders-hub' ) ) ),
+		'_bdh_accessories'    => array( 'label' => __( 'Related accessories (one per line)', 'benders-hub' ), 'type' => 'textarea' ),
 	);
 }
 
@@ -152,6 +153,8 @@ function bdh_save_product_meta( $post_id ) {
 				$value = sanitize_textarea_field( $value );
 			} elseif ( $field['type'] === 'number' ) {
 				$value = floatval( $value );
+			} elseif ( in_array( $key, array( '_bdh_amazon_url', '_bdh_spec_source' ), true ) ) {
+				$value = esc_url_raw( $value );
 			} else {
 				$value = sanitize_text_field( $value );
 			}

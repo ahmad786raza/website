@@ -44,15 +44,16 @@
 
 		let recs = [];
 		let kw = "tube bender";
-		if (top.includes("precision") && top.includes("automation")) { recs = ["Servo-hydraulic CNC bender", "Multi-radius stack dies", "Digital angle finder ±0.1°", "Programmable bend sequencer"]; kw = "CNC tube bender"; }
-		else if (top.includes("speed") && top.includes("output"))    { recs = ["High-throughput hydraulic bender", "Quick-change tooling", "Pneumatic clamp upgrade", "Tubing feed stand"]; kw = "high speed hydraulic tube bender"; }
-		else if (top.includes("portability"))                       { recs = ["Portable conduit bender", "Hand-pump hydraulic kit", "Field angle protractor", "Truck tubing rack"]; kw = "portable hydraulic tube bender"; }
-		else if (top.includes("safety"))                            { recs = ["Light curtain kit", "OSHA-compliant signage", "Lockout/tagout station", "Welding-rated PPE bundle"]; kw = "tube bender safety guard"; }
-		else if (top.includes("cost"))                              { recs = ["Manual hydraulic 20T bender", "Multi-die starter pack", "Bench-grade notcher", "Cordless angle finder"]; kw = "affordable hydraulic tube bender"; }
-		else if (top.includes("flexibility"))                       { recs = ["Modular die system", "Mandrel + non-mandrel capability", "Multi-process bender", "Universal counter dies"]; kw = "modular tube bender system"; }
-		else                                                         { recs = ["Pro workshop 20T bender", "Stack die set", "Tube notcher", "Mandrel option"]; }
+		if (top.includes("automation") || top.includes("output"))    { recs = ["CNC or electric rotary-draw bender (only with batch volume)", "Tube measuring and bending software", "Degree stops on any manual machines"]; kw = "CNC tube bender"; }
+		else if (top.includes("precision"))                          { recs = ["Rotary-draw bender with a degree ring or stops", "Digital angle finder for test-bend springback", "Dies in the exact OD/CLR you need"]; kw = "rotary draw tube bender"; }
+		else if (top.includes("speed"))                              { recs = ["Hydraulic rotary-draw bender (air or electric pump)", "Degree stops for repeat angles", "Tube rack and cut station beside the bender"]; kw = "hydraulic tube bender"; }
+		else if (top.includes("portability"))                        { recs = ["Lever hand benders for small tube", "Hand-pump hydraulic pipe bender for heavy pipe", "Portable notcher or saw"]; kw = "portable pipe bender"; }
+		else if (top.includes("safety"))                             { recs = ["Floor-anchored bender with guarded pinch points", "Eye, hand and hearing protection", "Written procedure from the bender's manual next to the machine"]; kw = "tube bender"; }
+		else if (top.includes("cost"))                               { recs = ["Manual rotary-draw bender", "One die in your most-used size", "Hydraulic upgrade later if the bender supports it"]; kw = "manual tube bender"; }
+		else if (top.includes("flexibility"))                        { recs = ["Rotary-draw bender with a broad die catalogue", "Tube notcher", "Section roller for large-radius work"]; kw = "rotary draw tube bender"; }
+		else                                                         { recs = ["Rotary-draw bender", "Tube notcher", "Angle finder"]; }
 
-		recEl.innerHTML = "<h4 style=\"margin-bottom:8px;\">Recommended setup</h4><ul>" + recs.map(r => `<li>${BDH.escapeHtml(r)}</li>`).join("") + "</ul>";
+		recEl.innerHTML = "<h4>Equipment to research first</h4><ul class=\"bdh-checklist\">" + recs.map(r => `<li>${BDH.escapeHtml(r)}</li>`).join("") + "</ul>";
 		amazonEl.href = BDH.amazonUrl(kw);
 		resultEl.hidden = false;
 		resultEl.scrollIntoView({ behavior: "smooth", block: "nearest" });

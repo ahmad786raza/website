@@ -1,16 +1,12 @@
-/* Block editor styles — keep editor visually aligned with frontend */
-body.block-editor-page {
-	background: #0b1220;
-	color: #e5e7eb;
-}
-.editor-styles-wrapper {
-	font-family: "Inter", system-ui, sans-serif;
-	color: #e5e7eb;
-}
-.editor-styles-wrapper h1,
-.editor-styles-wrapper h2,
-.editor-styles-wrapper h3,
-.editor-styles-wrapper h4 {
-	font-family: "Rajdhani", "Space Grotesk", system-ui, sans-serif;
-	color: #ffffff;
-}
+/* Block editor styles — mirror the article typography. */
+@font-face { font-family: "Archivo"; src: url("../fonts/archivo-latin.woff2") format("woff2"); font-weight: 600 800; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("../fonts/inter-latin.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+body { font: 400 1.0625rem/1.75 "Inter", system-ui, sans-serif; color: #22262b; }
+h1, h2, h3, h4 { font-family: "Archivo", Arial, sans-serif; color: #16191d; line-height: 1.15; }
+h2 { font-size: 1.8rem; } h3 { font-size: 1.25rem; }
+a { color: #9a3412; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+th, td { border-bottom: 1px solid #dedad3; padding: 10px 14px; text-align: left; }
+th { background: #f6f5f2; }
+blockquote { border-left: 3px solid #c2410c; padding-left: 1.2em; }
+code { background: #eeece7; padding: .1em .35em; border-radius: 4px; }
