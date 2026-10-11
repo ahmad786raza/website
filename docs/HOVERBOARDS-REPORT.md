@@ -2,7 +2,39 @@
 
 Date: 11 October 2026
 
-> **Status (12 October 2026, later): the live site runs theme 3.5.3 — the Amazon Associates tag is now `hoverboardsgu-20`.**
+> **Status (12 October 2026, night): first new article published — “Best Hoverboards for Teenagers (2026)”.**
+> Live at https://hoverboardsguide.com/best-hoverboards-for-teenagers/ (post 1538, categories Buying Guide,
+> Hoverboards, Hoverboards for Kids). How it was researched and built:
+>
+> - **Topic choice.** Ahrefs (“Insufficient plan”) and Semrush (no API units) could not supply volumes, so the
+>   choice rests on the site's own gap analysis plus live search results: the site had 144 hoverboard
+>   articles but none for teenagers (only electric scooters for teens), and the pages ranking for
+>   “best hoverboards for teens” are low-quality affiliate mirrors. Commercial intent, fits the gift season,
+>   and every pick is a board the site already reviews.
+> - **Content.** ~2,000 words: lede, quick picks, how we chose (desk research, no hands-on claims), seven
+>   picks each with a spec card image, pros/cons, a direct Amazon button and a link to the site's own
+>   review; the comparison table (`[hbg_compare]`) for the seven; a parent's five-point check; safety gear;
+>   where teens can ride; six FAQs; a closing note that specs are manufacturer figures. 17 internal links,
+>   all verified to exist. 16 Amazon links, all `hoverboardsgu-20`, all `rel="sponsored nofollow"`.
+>   ASIN links (Warrior G2 B07T63VSMC, Helix B0BXCVL6KD, T6 B01N6NQOA6) come from the product registry,
+>   which came from the site's own articles; Amazon could not be reached from this environment to
+>   re-check them, so click each once. The other four picks use Amazon search links.
+> - **Pictures (13, all cleared for use).** Three licensed photos already bundled with the theme (Pixabay
+>   and Pexels licences, credited in captions), and ten original graphics rendered from HTML: a wheel-size
+>   chart, the five-point check, the safety kit, and one spec card per pick built from the theme's own
+>   product tiles. Stock-photo sites and Amazon are unreachable from this environment, and the media library
+>   holds no product photos, so the spec cards are illustrations and say so. Sources are in
+>   `docs/articles/best-hoverboards-for-teenagers/` (article HTML, graphics HTML, image manifest).
+> - **Publishing.** Through the WordPress REST API from a logged-in browser session (`tools/publishing/`):
+>   images uploaded with titles, alt text and captions; post created as a draft, previewed at desktop and
+>   mobile, then published. Public checks: one H1, meta description, canonical, og:image, BlogPosting +
+>   BreadcrumbList schema, 12 body images all served, no leftover shortcodes, no overflow at 390px.
+> - **Not done / to know.** The home page's “Reviews & comparisons” grid is a curated list (Customizer →
+>   featured posts), so the article appears on its hub pages but not on the home page until it is added
+>   there. FAQPage schema is not emitted for posts; Google no longer shows FAQ rich results for sites like
+>   this one, so it was not added. Screenshots: `docs/screenshots/hbg-article-teens-*`.
+>
+> **Previous (12 October 2026, later): 3.5.3 — the Amazon Associates tag is now `hoverboardsgu-20`.**
 > The owner asked to replace `rcblogs-20` with `hoverboardsgu-20`. Done in three layers, none of which
 > edits stored post content:
 >
