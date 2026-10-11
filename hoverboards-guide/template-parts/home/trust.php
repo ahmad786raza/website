@@ -1,6 +1,6 @@
 <?php
 /**
- * Editorial transparency: what the publication covers, how advice is developed, links to policies.
+ * G. Editorial transparency: what the site covers, how advice is developed, links to policies.
  */
 $headline = get_theme_mod( 'hbg_trust_headline', __( 'How this guide is put together', 'hoverboards-guide' ) );
 $text     = get_theme_mod( 'hbg_trust_text', __( 'Hoverboards Guide covers hoverboards and self-balancing boards for kids, teens and adults, plus electric scooters and other small electric rides. Our recommendations are desk research: we compare manufacturer specifications, safety certification, published recalls and owner feedback, and we update guides when models change. We do not run a test lab, and we say so when we have not ridden a board. If you buy through a link marked as an Amazon link, we may earn a commission at no extra cost to you.', 'hoverboards-guide' ) );
@@ -13,10 +13,10 @@ $links    = array(
 	'terms'                => __( 'Terms', 'hoverboards-guide' ),
 );
 ?>
-<section class="trust" id="about" aria-labelledby="trust-title">
+<section class="section section--alt trust" id="about" aria-labelledby="trust-title">
 	<div class="container trust__inner">
 		<div class="trust__text">
-			<span class="zone__kicker"><?php esc_html_e( 'About this publication', 'hoverboards-guide' ); ?></span>
+			<div class="section-heading__kicker"><?php esc_html_e( 'Editorial transparency', 'hoverboards-guide' ); ?></div>
 			<h2 class="trust__title" id="trust-title"><?php echo esc_html( $headline ); ?></h2>
 			<p class="trust__p"><?php echo esc_html( $text ); ?></p>
 		</div>

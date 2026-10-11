@@ -247,7 +247,7 @@ function hbg_product_card( $p, $args = array() ) {
 	$h      = in_array( $a['heading'], array( 'h2', 'h3', 'h4' ), true ) ? $a['heading'] : 'h3';
 	$review = hbg_product_review_url( $p );
 	?>
-	<article class="pcard<?php echo $a['compact'] ? ' pcard--compact' : ''; ?><?php echo ! empty( $p['role'] ) ? ' pcard--role-' . sanitize_html_class( $p['role'] ) : ''; ?>" data-product="<?php echo esc_attr( $p['id'] ); ?>">
+	<article class="pcard<?php echo $a['compact'] ? ' pcard--compact' : ''; ?>" data-product="<?php echo esc_attr( $p['id'] ); ?>">
 		<div class="pcard__media">
 			<?php hbg_product_image( $p, array( 'class' => 'product-image pcard__img', 'ratio' => '4/3', 'sizes' => '(max-width: 640px) 100vw, 360px' ) ); ?>
 			<?php if ( ! empty( $p['badge'] ) ) : ?><span class="pcard__badge"><?php echo esc_html( $p['badge'] ); ?></span><?php endif; ?>
@@ -260,7 +260,7 @@ function hbg_product_card( $p, $args = array() ) {
 			<div class="pcard__actions">
 				<?php hbg_amazon_cta( $p, __( 'Check price on Amazon', 'hoverboards-guide' ), 'md', false, $a['placement'] ); ?>
 				<?php if ( $review ) : ?>
-					<a href="<?php echo esc_url( $review ); ?>" class="link-arrow pcard__review"><?php esc_html_e( 'View full review', 'hoverboards-guide' ); ?> <?php echo hbg_svg_icon( 'arrow-right', 14 ); // phpcs:ignore ?></a>
+					<a href="<?php echo esc_url( $review ); ?>" class="btn btn--ghost btn--md"><?php esc_html_e( 'View full review', 'hoverboards-guide' ); ?></a>
 				<?php endif; ?>
 			</div>
 			<p class="pcard__note"><?php echo esc_html( empty( $p['verified'] ) ? __( 'Specs as advertised by the manufacturer.', 'hoverboards-guide' ) : __( 'Specs checked against the manufacturer listing.', 'hoverboards-guide' ) ); ?></p>
@@ -333,7 +333,7 @@ function hbg_cat_badge( $post_id = null, $link = true, $class = '' ) {
 		return;
 	}
 	$preset = hbg_category_preset( $cat );
-	$style  = ' style="--cat:' . esc_attr( $preset['color'] ) . ';--cat-vivid:' . esc_attr( $preset['vivid'] ) . '"';
+	$style  = ' style="--cat:' . esc_attr( $preset['color'] ) . '"';
 	if ( $link ) {
 		echo '<a href="' . esc_url( get_category_link( $cat ) ) . '" class="cat-badge' . ( $class ? ' ' . esc_attr( $class ) : '' ) . '"' . $style . '>' . esc_html( $cat->name ) . '</a>'; // phpcs:ignore
 	} else {
@@ -361,18 +361,18 @@ function hbg_is_title_card( $post_id = null ) {
 
 /** Post thumbnail with a topic-image fallback so cards are never empty. */
 function hbg_post_thumbnail( $size = 'hbg-card', $args = array() ) {
-	$a    = wp_parse_args( $args, array( 'class' => '', 'loading' => 'lazy', 'fetchpriority' => '', 'sizes' => '(max-width: 640px) 100vw, 640px', 'echo' => true, 'prefer_photo' => false ) );
+	$a    = wp_parse_args( $args, array( 'class' => '', 'loading' => 'lazy', 'fetchpriority' => '', 'sizes' => '(max-width: 640px) 100vw, 640px', 'echo' => true ) );
 	$html = '';
-	// Generated title cards are fine as small thumbnails (they are the post's own image and distinct per post),
-	// but lead placements ask for a photograph instead ('prefer_photo') so the page stays image-led.
-	if ( has_post_thumbnail() && ( ! $a['prefer_photo'] || ! hbg_is_title_card() ) ) {
+	if ( has_post_thumbnail() && ! hbg_is_title_card() ) {
 		$attr = array( 'class' => $a['class'], 'loading' => $a['loading'], 'decoding' => 'async', 'sizes' => $a['sizes'] );
 		if ( $a['fetchpriority'] ) {
 			$attr['fetchpriority'] = $a['fetchpriority'];
 		}
 		$html = get_the_post_thumbnail( null, $size, $attr );
 	} else {
-		$html = hbg_topic_image( hbg_fallback_image_for_post( get_the_ID() ), array( 'alt' => '', 'class' => trim( $a['class'] . ' is-fallback' ), 'loading' => $a['loading'], 'sizes' => $a['sizes'], 'echo' => false ) );
+		$cat    = hbg_primary_category();
+		$preset = hbg_category_preset( $cat );
+		$html   = hbg_topic_image( $preset['image'], array( 'alt' => '', 'class' => trim( $a['class'] . ' is-fallback' ), 'loading' => $a['loading'], 'sizes' => $a['sizes'], 'echo' => false ) );
 	}
 	if ( $a['echo'] ) {
 		echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -419,34 +419,12 @@ function hbg_excerpt( $words = 24, $post = null ) {
 	if ( ! $post ) {
 		return '';
 	}
-	$title = get_the_title( $post );
-	$text  = '';
-	if ( $post->post_excerpt ) {
-		$text = $post->post_excerpt;
-	} else {
-		// No hand-written excerpt: use the first real paragraph of the body, skipping imported
-		// header blocks (date stamps, repeated titles, product-card rating snippets).
-		$content = strip_shortcodes( $post->post_content );
-		if ( preg_match_all( '/<p\b[^>]*>(.*?)<\/p>/is', $content, $m ) ) {
-			foreach ( $m[1] as $para ) {
-				$t = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( $para ) ) );
-				if ( mb_strlen( $t ) < 80 || false !== strpos( $t, '★' ) || preg_match( '/^(UPDATED|Updated)\b/', $t ) || ( $title && 0 === stripos( $t, $title ) ) || preg_match( '/\(\s*[\d,.]+\s*reviews?\s*\)/i', $t ) ) {
-					continue;
-				}
-				$text = $t;
-				break;
-			}
-		}
-		if ( ! $text ) {
-			$text = $post->post_content;
-		}
-	}
+	$text = $post->post_excerpt ? $post->post_excerpt : $post->post_content;
 	$text = wp_strip_all_tags( strip_shortcodes( $text ) );
-	$text = html_entity_decode( $text, ENT_QUOTES | ENT_HTML5, 'UTF-8' );
-	$text = preg_replace( '/\s+/u', ' ', $text );
-	// Imported previews often start with "UPDATED MONTH YEAR" or "Category · Updated Month Year", then the title.
-	$text = preg_replace( '/^\s*(?:[A-Za-z][A-Za-z0-9 &\-]{1,40}\s*[·•|]\s*)?UPDATED\s+[A-Za-z]+\s+\d{4}\s*/iu', '', $text );
-	$text = preg_replace( '/[★☆]{2,}\s*[\d.]*\s*(?:\([\d,.]+\s*reviews?\))?\s*/u', '', $text );
+	$text = preg_replace( '/\s+/', ' ', $text );
+	// Many imported posts start with "UPDATED MONTH YEAR <title>"; drop that prefix from previews.
+	$text = preg_replace( '/^\s*UPDATED\s+[A-Z]+\s+\d{4}\s*/i', '', $text );
+	$title = get_the_title( $post );
 	if ( $title && 0 === stripos( $text, $title ) ) {
 		$text = trim( substr( $text, strlen( $title ) ) );
 	}
@@ -912,9 +890,8 @@ function hbg_topic_tile( $slug, $hub ) {
 	}
 	$image = get_theme_mod( 'hbg_img_' . str_replace( '-', '_', $slug ), '' );
 	$image = $image ? $image : $hub['image'];
-	$color = hbg_hub_color( $slug );
 	?>
-	<a href="<?php echo esc_url( $link['url'] ); ?>" class="topic-tile" style="--cat:<?php echo esc_attr( $color['color'] ); ?>;--cat-vivid:<?php echo esc_attr( $color['vivid'] ); ?>">
+	<a href="<?php echo esc_url( $link['url'] ); ?>" class="topic-tile">
 		<span class="topic-tile__media"><?php hbg_topic_image( $image, array( 'alt' => '', 'class' => 'topic-tile__img', 'sizes' => '(max-width: 640px) 50vw, 300px' ) ); ?></span>
 		<span class="topic-tile__body">
 			<span class="topic-tile__name"><?php echo esc_html( $hub['name'] ); ?></span>
@@ -930,7 +907,7 @@ function hbg_topic_tile( $slug, $hub ) {
 function hbg_category_tile( $term ) {
 	$preset = hbg_category_preset( $term );
 	?>
-	<a href="<?php echo esc_url( get_category_link( $term ) ); ?>" class="topic-tile topic-tile--cat" style="--cat:<?php echo esc_attr( $preset['color'] ); ?>;--cat-vivid:<?php echo esc_attr( $preset['vivid'] ); ?>">
+	<a href="<?php echo esc_url( get_category_link( $term ) ); ?>" class="topic-tile topic-tile--cat" style="--cat:<?php echo esc_attr( $preset['color'] ); ?>">
 		<span class="topic-tile__media"><?php hbg_topic_image( $preset['image'], array( 'alt' => '', 'class' => 'topic-tile__img', 'sizes' => '(max-width: 640px) 50vw, 300px' ) ); ?></span>
 		<span class="topic-tile__body">
 			<span class="topic-tile__name"><?php echo esc_html( $term->name ); ?></span>
@@ -995,325 +972,4 @@ function hbg_meta_description() {
 		return $desc;
 	}
 	return '';
-}
-
-// =========================================================================
-// Editorial components (v4): overlay stories, compact rows, topic zones
-// =========================================================================
-/** IDs already rendered on this page, so later modules never repeat a story. */
-function hbg_shown_ids( $add = array() ) {
-	static $ids = array();
-	foreach ( (array) $add as $id ) {
-		$ids[ (int) $id ] = true;
-	}
-	return array_keys( $ids );
-}
-
-/** Newest posts from one or more categories (children included), skipping anything already shown. */
-function hbg_zone_posts( $slugs, $count, $args = array() ) {
-	$cat_ids = array();
-	foreach ( (array) $slugs as $slug ) {
-		$t = get_term_by( 'slug', $slug, 'category' );
-		if ( $t && $t->count > 0 ) {
-			$cat_ids[] = (int) $t->term_id;
-		}
-	}
-	if ( ! $cat_ids ) {
-		return array();
-	}
-	$q = new WP_Query( wp_parse_args( $args, array(
-		'cat'                 => implode( ',', $cat_ids ),
-		'posts_per_page'      => (int) $count,
-		'post__not_in'        => hbg_shown_ids(),
-		'ignore_sticky_posts' => true,
-		'no_found_rows'       => true,
-	) ) );
-	hbg_shown_ids( wp_list_pluck( $q->posts, 'ID' ) );
-	return $q->posts;
-}
-
-/** Newest posts site-wide, skipping anything already shown. */
-function hbg_latest_posts( $count ) {
-	$q = new WP_Query( array( 'posts_per_page' => (int) $count, 'post__not_in' => hbg_shown_ids(), 'ignore_sticky_posts' => true, 'no_found_rows' => true ) );
-	hbg_shown_ids( wp_list_pluck( $q->posts, 'ID' ) );
-	return $q->posts;
-}
-
-/** Stories for the homepage mosaic: the editorial featured list (Customizer), padded with the newest hoverboard posts. */
-function hbg_mosaic_posts( $count = 7 ) {
-	$posts = hbg_get_featured_posts( $count );
-	hbg_shown_ids( wp_list_pluck( $posts, 'ID' ) );
-	return $posts;
-}
-
-/**
- * "Most read" only when the view counter has real data; otherwise the curated hub lead articles
- * are shown under an honest "Editor's picks" title. Never fabricated popularity.
- */
-function hbg_popular_module( $count = 5 ) {
-	$exclude = hbg_shown_ids();
-	$q       = new WP_Query( array( 'posts_per_page' => $count, 'meta_key' => 'hbg_views', 'meta_value_num' => 50, 'meta_compare' => '>=', 'orderby' => 'meta_value_num', 'order' => 'DESC', 'ignore_sticky_posts' => true, 'no_found_rows' => true, 'post__not_in' => $exclude ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
-	if ( count( $q->posts ) >= 3 ) {
-		return array( 'title' => __( 'Most read', 'hoverboards-guide' ), 'posts' => $q->posts );
-	}
-	$posts = array();
-	foreach ( hbg_topic_hubs() as $hub ) {
-		$p = hbg_post_by_slug( $hub['lead'] );
-		if ( $p && ! in_array( $p->ID, $exclude, true ) && ! isset( $posts[ $p->ID ] ) ) {
-			$posts[ $p->ID ] = $p;
-		}
-		if ( count( $posts ) >= $count ) {
-			break;
-		}
-	}
-	return array( 'title' => __( 'Editor’s picks', 'hoverboards-guide' ), 'posts' => array_values( $posts ) );
-}
-
-/** Category label as plain text (for use inside a wrapping link). */
-function hbg_cat_label( $post_id = null, $class = 'label' ) {
-	$cat = hbg_primary_category( $post_id );
-	if ( ! $cat ) {
-		return;
-	}
-	$preset = hbg_category_preset( $cat );
-	echo '<span class="' . esc_attr( $class ) . '" style="--cat:' . esc_attr( $preset['color'] ) . '">' . esc_html( $cat->name ) . '</span>';
-}
-
-/** Overlay story card (hero mosaic): photo with a gradient scrim, label, headline, optional excerpt and date. */
-function hbg_story( $post, $args = array() ) {
-	$a = wp_parse_args( $args, array( 'variant' => 'lead', 'heading' => 'h2', 'size' => 'large', 'sizes' => '(max-width: 1024px) 100vw, 720px', 'excerpt' => true, 'eager' => false ) );
-	$h = in_array( $a['heading'], array( 'h2', 'h3' ), true ) ? $a['heading'] : 'h2';
-	$GLOBALS['post'] = $post; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-	setup_postdata( $post );
-	?>
-	<article class="story story--<?php echo esc_attr( $a['variant'] ); ?>">
-		<a class="story__link" href="<?php the_permalink(); ?>">
-			<span class="story__media"><?php hbg_post_thumbnail( $a['size'], array( 'class' => 'story__img', 'sizes' => $a['sizes'], 'loading' => $a['eager'] ? 'eager' : 'lazy', 'fetchpriority' => $a['eager'] ? 'high' : '', 'prefer_photo' => true ) ); ?></span>
-			<span class="story__body">
-				<?php hbg_cat_label( null, 'label label--light' ); ?>
-				<<?php echo $h; // phpcs:ignore ?> class="story__title"><?php the_title(); ?></<?php echo $h; // phpcs:ignore ?>>
-				<?php if ( $a['excerpt'] ) : ?><span class="story__excerpt"><?php echo esc_html( hbg_excerpt( 24 ) ); ?></span><?php endif; ?>
-				<span class="story__meta"><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time><span class="story__dot" aria-hidden="true"></span><?php printf( esc_html__( '%d min read', 'hoverboards-guide' ), (int) hbg_reading_time() ); ?></span>
-			</span>
-		</a>
-	</article>
-	<?php
-	wp_reset_postdata();
-}
-
-/** Compact row: small thumbnail (or a number), label, headline, date. The supporting level of the hierarchy. */
-function hbg_row( $post, $args = array() ) {
-	$a = wp_parse_args( $args, array( 'thumb' => true, 'heading' => 'h3', 'number' => 0, 'excerpt' => false, 'label' => true, 'class' => '' ) );
-	$h = in_array( $a['heading'], array( 'h2', 'h3', 'h4' ), true ) ? $a['heading'] : 'h3';
-	$GLOBALS['post'] = $post; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
-	setup_postdata( $post );
-	?>
-	<article class="row<?php echo $a['thumb'] ? '' : ' row--text'; ?><?php echo $a['number'] ? ' row--numbered' : ''; ?><?php echo $a['class'] ? ' ' . esc_attr( $a['class'] ) : ''; ?>">
-		<?php if ( $a['number'] ) : ?><span class="row__num" aria-hidden="true"><?php echo esc_html( str_pad( (string) (int) $a['number'], 2, '0', STR_PAD_LEFT ) ); ?></span><?php endif; ?>
-		<?php if ( $a['thumb'] ) : ?><a class="row__thumb" href="<?php the_permalink(); ?>" tabindex="-1" aria-hidden="true"><?php hbg_post_thumbnail( 'hbg-thumb', array( 'sizes' => '120px' ) ); ?></a><?php endif; ?>
-		<div class="row__body">
-			<?php if ( $a['label'] ) { hbg_cat_badge( null, false, 'label label--sm' ); } ?>
-			<<?php echo $h; // phpcs:ignore ?> class="row__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></<?php echo $h; // phpcs:ignore ?>>
-			<?php if ( $a['excerpt'] ) : ?><p class="row__excerpt"><?php echo esc_html( hbg_excerpt( 18 ) ); ?></p><?php endif; ?>
-			<span class="row__meta"><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time></span>
-		</div>
-	</article>
-	<?php
-	wp_reset_postdata();
-}
-
-/** Section heading with a rule: title, optional kicker, optional "View all". */
-function hbg_zone_heading( $args ) {
-	$a   = wp_parse_args( $args, array( 'title' => '', 'kicker' => '', 'url' => '', 'more' => __( 'View all', 'hoverboards-guide' ), 'id' => '', 'tag' => 'h2' ) );
-	$tag = in_array( $a['tag'], array( 'h1', 'h2', 'h3' ), true ) ? $a['tag'] : 'h2';
-	?>
-	<div class="zone__head">
-		<div class="zone__heading">
-			<?php if ( $a['kicker'] ) : ?><span class="zone__kicker"><?php echo esc_html( $a['kicker'] ); ?></span><?php endif; ?>
-			<<?php echo $tag; // phpcs:ignore ?> class="zone__title"<?php echo $a['id'] ? ' id="' . esc_attr( $a['id'] ) . '"' : ''; ?>><?php echo esc_html( $a['title'] ); ?></<?php echo $tag; // phpcs:ignore ?>>
-		</div>
-		<?php if ( $a['url'] ) : ?><a class="zone__more" href="<?php echo esc_url( $a['url'] ); ?>"><?php echo esc_html( $a['more'] ); ?> <?php echo hbg_svg_icon( 'arrow-right', 14 ); // phpcs:ignore ?></a><?php endif; ?>
-	</div>
-	<?php
-}
-
-/** Homepage topic zones. Each has its own composition so the page reads as a magazine, not a feed. */
-function hbg_home_zones() {
-	return apply_filters( 'hbg_home_zones', array(
-		'hoverboards'   => array( 'title' => __( 'Hoverboards', 'hoverboards-guide' ), 'kicker' => __( 'Reviews, picks and plain advice', 'hoverboards-guide' ), 'slugs' => array( 'hoverboards' ), 'layout' => 'lead-list', 'count' => 5 ),
-		'reviews'       => array( 'title' => __( 'Product reviews', 'hoverboards-guide' ), 'kicker' => __( 'Model by model', 'hoverboards-guide' ), 'slugs' => array( 'hoverboard-reviews', 'reviews' ), 'layout' => 'three-up', 'count' => 3 ),
-		'buying-guides' => array( 'title' => __( 'Buying guides', 'hoverboards-guide' ), 'kicker' => __( 'Decide before you spend', 'hoverboards-guide' ), 'slugs' => array( 'buying-guide', 'guide' ), 'layout' => 'numbered', 'count' => 6 ),
-		'safety'        => array( 'title' => __( 'Safety & maintenance', 'hoverboards-guide' ), 'kicker' => __( 'Ride safely, fix problems', 'hoverboards-guide' ), 'slugs' => array( 'hoverboard-safety', 'hoverboard-troubleshooting', 'how-to' ), 'layout' => 'list-lead', 'count' => 5 ),
-		'scooters'      => array( 'title' => __( 'Electric scooters', 'hoverboards-guide' ), 'kicker' => __( 'Commuting and weekend rides', 'hoverboards-guide' ), 'slugs' => array( 'e-scooters', 'scooters' ), 'layout' => 'four-up', 'count' => 4 ),
-		'rideables'     => array( 'title' => __( 'Skateboards & other rideables', 'hoverboards-guide' ), 'kicker' => __( 'E-skate, e-bikes, unicycles and karts', 'hoverboards-guide' ), 'slugs' => array( 'skateboards', 'longboards', 'ebikes', 'unicycles', 'bumper-cars' ), 'layout' => 'four-up', 'count' => 4, 'chips' => array( 'skateboards', 'ebikes', 'unicycles', 'bumper-cars' ) ),
-	) );
-}
-
-/** Render one homepage zone by key. */
-function hbg_render_zone( $key ) {
-	$zones = hbg_home_zones();
-	if ( ! isset( $zones[ $key ] ) ) {
-		return;
-	}
-	$z     = wp_parse_args( $zones[ $key ], array( 'title' => '', 'kicker' => '', 'slugs' => array(), 'layout' => 'four-up', 'count' => 4, 'chips' => array() ) );
-	$posts = hbg_zone_posts( $z['slugs'], $z['count'] );
-	if ( count( $posts ) < 2 ) {
-		return;
-	}
-	$url = '';
-	foreach ( $z['slugs'] as $slug ) {
-		$t = get_term_by( 'slug', $slug, 'category' );
-		if ( $t && $t->count > 0 ) {
-			$url = get_category_link( $t );
-			break;
-		}
-	}
-	?>
-	<section class="zone zone--<?php echo esc_attr( $key ); ?> zone--<?php echo esc_attr( $z['layout'] ); ?>" id="zone-<?php echo esc_attr( $key ); ?>" aria-labelledby="zone-<?php echo esc_attr( $key ); ?>-title">
-		<div class="container">
-			<?php hbg_zone_heading( array( 'title' => $z['title'], 'kicker' => $z['kicker'], 'url' => $url, 'id' => 'zone-' . $key . '-title' ) ); ?>
-			<?php
-			switch ( $z['layout'] ) {
-				case 'lead-list':
-				case 'list-lead':
-					$lead = array_shift( $posts );
-					?>
-					<div class="zone__grid zone__grid--<?php echo esc_attr( $z['layout'] ); ?>">
-						<div class="zone__lead">
-							<?php $GLOBALS['post'] = $lead; setup_postdata( $lead ); // phpcs:ignore ?>
-							<?php get_template_part( 'template-parts/content', 'card', array( 'heading' => 'h3', 'variant' => 'lead' ) ); ?>
-							<?php wp_reset_postdata(); ?>
-						</div>
-						<div class="zone__list">
-							<?php foreach ( $posts as $p ) { hbg_row( $p ); } ?>
-						</div>
-					</div>
-					<?php
-					break;
-				case 'numbered':
-					?>
-					<div class="zone__numbered">
-						<?php foreach ( $posts as $i => $p ) { hbg_row( $p, array( 'thumb' => false, 'number' => $i + 1, 'excerpt' => true, 'label' => false ) ); } ?>
-					</div>
-					<?php
-					break;
-				case 'three-up':
-				case 'four-up':
-				default:
-					?>
-					<div class="grid <?php echo 'three-up' === $z['layout'] ? 'grid--3' : 'grid--4'; ?>">
-						<?php foreach ( $posts as $p ) : ?>
-							<?php $GLOBALS['post'] = $p; setup_postdata( $p ); // phpcs:ignore ?>
-							<?php get_template_part( 'template-parts/content', 'card', array( 'heading' => 'h3', 'compact' => 'four-up' === $z['layout'] ) ); ?>
-						<?php endforeach; wp_reset_postdata(); ?>
-					</div>
-					<?php
-			}
-			if ( $z['chips'] ) :
-				$chips = array();
-				foreach ( $z['chips'] as $slug ) {
-					$t = get_term_by( 'slug', $slug, 'category' );
-					if ( $t && $t->count > 0 ) {
-						$chips[] = $t;
-					}
-				}
-				if ( $chips ) :
-			?>
-			<div class="zone__chips">
-				<span class="zone__chips-label"><?php esc_html_e( 'Browse:', 'hoverboards-guide' ); ?></span>
-				<?php foreach ( $chips as $t ) : ?><a class="chip" href="<?php echo esc_url( get_category_link( $t ) ); ?>"><?php echo esc_html( $t->name ); ?> <span class="count"><?php echo esc_html( number_format_i18n( $t->count ) ); ?></span></a><?php endforeach; ?>
-			</div>
-			<?php endif; endif; ?>
-		</div>
-	</section>
-	<?php
-}
-
-/**
- * Archive composition by category: guides read best as a list with excerpts, reviews as a uniform grid,
- * everything else as a lead story followed by a grid. Filterable.
- */
-function hbg_archive_layout( $term ) {
-	$layout = 'lead-grid';
-	if ( $term instanceof WP_Term && 'category' === $term->taxonomy ) {
-		if ( in_array( $term->slug, array( 'buying-guide', 'guide', 'how-to' ), true ) ) {
-			$layout = 'list';
-		} elseif ( in_array( $term->slug, array( 'hoverboard-reviews', 'reviews' ), true ) ) {
-			$layout = 'grid';
-		}
-	} elseif ( ! $term ) {
-		$layout = 'grid';
-	}
-	return apply_filters( 'hbg_archive_layout', $layout, $term );
-}
-
-/**
- * Photo for a post that has no usable featured image (none, or a generated title card).
- * Picks from the bundled photos that match the post's subject (slug keywords, then category),
- * rotating by post ID so neighbouring cards do not all show the same picture.
- */
-function hbg_fallback_image_for_post( $post_id ) {
-	$post = get_post( $post_id );
-	$slug = $post ? $post->post_name : '';
-	$cat  = hbg_primary_category( $post_id );
-	$pools = array(
-		'kids'      => array( 'cat-hoverboards-kids', 'product-hoverboard-kids', 'cat-kids' ),
-		'adult'     => array( 'cat-hoverboards', 'hero-hoverboard-shore', 'cat-self-balancing' ),
-		'off-road'  => array( 'hero-hoverboard-shore', 'cat-hoverboards' ),
-		'terrain'   => array( 'hero-hoverboard-shore', 'cat-hoverboards' ),
-		'safety'    => array( 'cat-safety', 'svg:safety' ),
-		'helmet'    => array( 'cat-safety' ),
-		'charg'     => array( 'svg:charging', 'cat-howto' ),
-		'batter'    => array( 'svg:charging', 'cat-howto' ),
-		'trouble'   => array( 'cat-howto', 'svg:maintenance' ),
-		'fix'       => array( 'cat-howto', 'svg:maintenance' ),
-		'calibrat'  => array( 'cat-howto', 'svg:maintenance' ),
-		'beep'      => array( 'cat-howto', 'svg:maintenance' ),
-		'bluetooth' => array( 'svg:bluetooth', 'cat-hoverboards' ),
-		'cheap'     => array( 'svg:budget', 'cat-hoverboards' ),
-		'under-'    => array( 'svg:budget', 'cat-hoverboards' ),
-		'budget'    => array( 'svg:budget', 'cat-hoverboards' ),
-		'kart'      => array( 'cat-hoverkart' ),
-		'seat'      => array( 'cat-hoverkart' ),
-		'scooter'   => array( 'cat-escooters', 'cat-escooters-commute', 'hero-escooter-city', 'product-escooter-city', 'product-escooter-road', 'product-hiboy-s2', 'product-varla-eagle' ),
-		'skateboard' => array( 'cat-skateboards' ),
-		'longboard' => array( 'cat-skateboards' ),
-		'unicycle'  => array( 'cat-unicycles' ),
-		'bike'      => array( 'cat-ebikes' ),
-		'ninebot'   => array( 'product-ninebot-s', 'cat-self-balancing' ),
-		'segway'    => array( 'product-ninebot-s', 'cat-self-balancing' ),
-		'self-balancing' => array( 'cat-self-balancing', 'product-ninebot-s' ),
-		'buying'    => array( 'cat-guides', 'cat-hoverboards', 'hero-hoverboard-shore' ),
-		'guide'     => array( 'cat-guides', 'cat-hoverboards' ),
-		'hoverboard' => array( 'cat-hoverboards', 'hero-hoverboard-shore', 'cat-self-balancing', 'cat-hoverboards-kids' ),
-	);
-	$pool = array();
-	foreach ( $pools as $needle => $names ) {
-		if ( $slug && false !== strpos( $slug, $needle ) ) {
-			$pool = $names;
-			break;
-		}
-	}
-	if ( ! $pool && $cat ) {
-		$preset = hbg_category_preset( $cat );
-		$pool   = array( $preset['image'] );
-		foreach ( $pools as $needle => $names ) {
-			if ( false !== strpos( $cat->slug, $needle ) ) {
-				$pool = array_values( array_unique( array_merge( $pool, $names ) ) );
-				break;
-			}
-		}
-	}
-	if ( ! $pool ) {
-		$pool = $pools['hoverboard'];
-	}
-	$pool = apply_filters( 'hbg_fallback_image_pool', $pool, $post_id );
-	static $cursor = array();
-	$key = md5( implode( '|', $pool ) );
-	if ( ! isset( $cursor[ $key ] ) ) {
-		$cursor[ $key ] = (int) $post_id % count( $pool );
-	} else {
-		$cursor[ $key ] = ( $cursor[ $key ] + 1 ) % count( $pool );
-	}
-	return $pool[ $cursor[ $key ] ];
 }

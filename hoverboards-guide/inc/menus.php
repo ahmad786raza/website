@@ -119,39 +119,3 @@ function hbg_primary_menu( $location = 'primary', $class = 'nav-menu' ) {
 		'fallback_cb'    => 'hbg_fallback_menu',
 	) );
 }
-
-/**
- * WordPress marks menu items that link to a homepage anchor (…/#finder, …/#compare) as "current" on the
- * front page, which then lights up their parent (e.g. "Buying Guides") next to "Home". Only a real page
- * match should be highlighted, so anchor items and the ancestors they alone made current are reset.
- */
-function hbg_fix_anchor_current_items( $items ) {
-	if ( ! is_front_page() || ! is_array( $items ) ) {
-		return $items;
-	}
-	$current_classes  = array( 'current-menu-item', 'current_page_item' );
-	$ancestor_classes = array( 'current-menu-ancestor', 'current-menu-parent', 'current_page_parent', 'current_page_ancestor' );
-	$real_current     = array();
-	foreach ( $items as $item ) {
-		$is_anchor = false !== strpos( (string) $item->url, '#' );
-		$classes   = is_array( $item->classes ) ? $item->classes : array();
-		if ( $is_anchor && array_intersect( $current_classes, $classes ) ) {
-			$item->classes = array_values( array_diff( $classes, $current_classes ) );
-			$item->current = false;
-			continue;
-		}
-		if ( array_intersect( $current_classes, $classes ) ) {
-			$real_current[] = (int) $item->menu_item_parent;
-		}
-	}
-	foreach ( $items as $item ) {
-		$classes = is_array( $item->classes ) ? $item->classes : array();
-		if ( array_intersect( $ancestor_classes, $classes ) && ! in_array( (int) $item->ID, $real_current, true ) ) {
-			$item->classes                = array_values( array_diff( $classes, $ancestor_classes ) );
-			$item->current_item_ancestor  = false;
-			$item->current_item_parent    = false;
-		}
-	}
-	return $items;
-}
-add_filter( 'wp_nav_menu_objects', 'hbg_fix_anchor_current_items', 20 );

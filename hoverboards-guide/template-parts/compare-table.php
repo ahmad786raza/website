@@ -62,7 +62,7 @@ if ( ! $products ) {
 					}
 					$review = hbg_product_review_url( $p );
 				?>
-					<tr class="<?php echo 'overall' === $p['role'] ? 'is-pick' : ''; ?>" data-role="<?php echo esc_attr( $p['role'] ); ?>" data-id="<?php echo esc_attr( $p['id'] ); ?>" data-order="<?php echo (int) $i; ?>" data-tags="<?php echo esc_attr( implode( ' ', $tags ) ); ?>" data-weight="<?php echo esc_attr( $weight ); ?>" data-wheel="<?php echo esc_attr( $wheel ); ?>" data-speed="<?php echo esc_attr( hbg_num( $p['speed'] ) ); ?>" data-range="<?php echo esc_attr( hbg_num( $p['range'] ) ); ?>">
+					<tr data-id="<?php echo esc_attr( $p['id'] ); ?>" data-order="<?php echo (int) $i; ?>" data-tags="<?php echo esc_attr( implode( ' ', $tags ) ); ?>" data-weight="<?php echo esc_attr( $weight ); ?>" data-wheel="<?php echo esc_attr( $wheel ); ?>" data-speed="<?php echo esc_attr( hbg_num( $p['speed'] ) ); ?>" data-range="<?php echo esc_attr( hbg_num( $p['range'] ) ); ?>">
 						<th scope="row">
 							<span class="compare-table__name"><?php if ( $review ) : ?><a href="<?php echo esc_url( $review ); ?>"><?php echo esc_html( $p['name'] ); ?></a><?php else : ?><?php echo esc_html( $p['name'] ); ?><?php endif; ?></span>
 							<?php if ( ! empty( $p['badge'] ) ) : ?><span class="compare-table__badge"><?php echo esc_html( $p['badge'] ); ?></span><?php endif; ?>
@@ -73,8 +73,8 @@ if ( ! $products ) {
 						<td><?php echo esc_html( $p['weight_cap'] ); ?></td>
 						<td><?php echo esc_html( $p['speed'] ); ?></td>
 						<td><?php echo esc_html( $p['range'] ); ?></td>
-						<td><?php if ( $p['certification'] ) : ?><span class="compare-table__cert"><?php echo hbg_svg_icon( 'shield', 14 ); // phpcs:ignore ?> <?php echo esc_html( $p['certification'] ); ?></span><?php else : ?><span class="compare-table__nocert"><?php esc_html_e( 'Not verified', 'hoverboards-guide' ); ?></span><?php endif; ?></td>
-						<td><?php if ( ! empty( $p['bluetooth'] ) ) : ?><span class="compare-table__yes"><?php echo hbg_svg_icon( 'check', 14 ); // phpcs:ignore ?> <?php esc_html_e( 'Yes', 'hoverboards-guide' ); ?></span><?php else : ?><span class="compare-table__no"><?php esc_html_e( 'No', 'hoverboards-guide' ); ?></span><?php endif; ?></td>
+						<td><?php echo esc_html( $p['certification'] ? $p['certification'] : __( 'Not verified', 'hoverboards-guide' ) ); ?></td>
+						<td><?php echo ! empty( $p['bluetooth'] ) ? esc_html__( 'Yes', 'hoverboards-guide' ) : esc_html__( 'No', 'hoverboards-guide' ); ?></td>
 						<td class="compare-table__links">
 							<?php if ( $review ) : ?><a href="<?php echo esc_url( $review ); ?>" class="btn btn--ghost btn--sm"><?php esc_html_e( 'Review', 'hoverboards-guide' ); ?></a><?php endif; ?>
 							<?php hbg_amazon_cta( $p, __( 'Check price', 'hoverboards-guide' ), 'sm', false, 'compare' ); ?>

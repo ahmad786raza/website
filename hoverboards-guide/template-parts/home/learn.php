@@ -15,7 +15,7 @@ if ( ! $items ) {
 }
 $safety = hbg_hub_link( 'hoverboard-safety' );
 ?>
-<section class="section section--tint-green learn" id="learn" aria-labelledby="learn-title">
+<section class="section learn" id="learn" aria-labelledby="learn-title">
 	<div class="container">
 		<?php hbg_section_heading( array( 'id' => 'learn-title', 'kicker' => __( 'Learn before you buy', 'hoverboards-guide' ), 'title' => __( 'Practical answers before you spend', 'hoverboards-guide' ), 'link' => $safety['url'], 'link_label' => __( 'All safety & how-to guides', 'hoverboards-guide' ) ) ); ?>
 		<ul class="learn__grid">

@@ -55,7 +55,7 @@ function hbg_sc_product( $atts ) {
 	$review = hbg_product_review_url( $p );
 	ob_start();
 	?>
-	<div class="product-box<?php echo ! empty( $p['role'] ) ? ' product-box--role-' . sanitize_html_class( $p['role'] ) : ''; ?>" data-product="<?php echo esc_attr( $p['id'] ); ?>">
+	<div class="product-box" data-product="<?php echo esc_attr( $p['id'] ); ?>">
 		<div class="product-box__media">
 			<?php hbg_product_image( $p, array( 'class' => 'product-image', 'ratio' => '4/3', 'sizes' => '(max-width: 640px) 100vw, 260px' ) ); ?>
 			<?php if ( ! empty( $p['badge'] ) ) : ?><span class="product-box__badge"><?php echo esc_html( $p['badge'] ); ?></span><?php endif; ?>
@@ -140,11 +140,8 @@ add_shortcode( 'hbg_pros_cons', 'hbg_sc_pros_cons' );
 
 function hbg_sc_box( $atts, $content = '' ) {
 	$a    = shortcode_atts( array( 'type' => 'note', 'title' => '' ), $atts, 'hbg_box' );
-	$type = in_array( $a['type'], array( 'tip', 'warning', 'note', 'success', 'safety', 'answer' ), true ) ? $a['type'] : 'note';
-	$icon = array( 'tip' => 'bolt', 'warning' => 'alert', 'note' => 'info', 'success' => 'check', 'safety' => 'shield', 'answer' => 'check-circle' );
-	if ( 'answer' === $type && '' === $a['title'] ) {
-		$a['title'] = __( 'Quick answer', 'hoverboards-guide' );
-	}
+	$type = in_array( $a['type'], array( 'tip', 'warning', 'note', 'success', 'safety' ), true ) ? $a['type'] : 'note';
+	$icon = array( 'tip' => 'bolt', 'warning' => 'alert', 'note' => 'info', 'success' => 'check', 'safety' => 'shield' );
 	return '<div class="callout callout--' . esc_attr( $type ) . '">' . hbg_svg_icon( $icon[ $type ], 18 ) . '<div class="callout__body">' . ( $a['title'] ? '<strong class="callout__title">' . esc_html( $a['title'] ) . '</strong>' : '' ) . wpautop( do_shortcode( $content ) ) . '</div></div>';
 }
 add_shortcode( 'hbg_box', 'hbg_sc_box' );

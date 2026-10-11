@@ -12,25 +12,17 @@
 
 <div class="site" id="top">
 
-<header class="site-header<?php echo get_theme_mod( 'hbg_sticky_header', true ) ? ' site-header--sticky' : ''; ?><?php echo 'navy' === get_theme_mod( 'hbg_header_style', 'white' ) ? ' site-header--navy' : ''; ?>" id="site-header">
+<header class="site-header<?php echo get_theme_mod( 'hbg_sticky_header', true ) ? ' site-header--sticky' : ''; ?>" id="site-header">
 	<div class="container header__inner">
-
-		<button type="button" class="icon-btn nav-toggle" aria-controls="mobile-drawer" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open menu', 'hoverboards-guide' ); ?>">
-			<?php echo hbg_svg_icon( 'menu', 22 ); // phpcs:ignore ?>
-		</button>
 
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand" rel="home">
 			<?php if ( has_custom_logo() ) : ?>
 				<?php the_custom_logo(); ?>
 			<?php else : ?>
-				<?php
-				$hbg_words = explode( ' ', trim( get_bloginfo( 'name' ) ) );
-				$hbg_last  = array_pop( $hbg_words );
-				?>
 				<span class="brand__mark" aria-hidden="true">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="16" r="3"/><circle cx="18" cy="16" r="3"/><path d="M6 13h12l-2-5H8z"/></svg>
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="16" r="3"/><circle cx="18" cy="16" r="3"/><path d="M6 13h12l-2-5H8z"/></svg>
 				</span>
-				<span class="brand__name"><?php echo esc_html( implode( ' ', $hbg_words ) ); ?><?php echo $hbg_words ? ' ' : ''; ?><span class="brand__accent"><?php echo esc_html( $hbg_last ); ?></span></span>
+				<span class="brand__name"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span>
 			<?php endif; ?>
 		</a>
 
@@ -39,16 +31,19 @@
 		</nav>
 
 		<div class="header__actions">
+			<button type="button" class="icon-btn search-toggle" aria-controls="search-overlay" aria-expanded="false" aria-label="<?php esc_attr_e( 'Search', 'hoverboards-guide' ); ?>">
+				<?php echo hbg_svg_icon( 'search', 20 ); // phpcs:ignore ?>
+			</button>
 			<?php
-			$cta_text = get_theme_mod( 'hbg_header_cta_text', '' );
+			$cta_text = get_theme_mod( 'hbg_header_cta_text', __( 'Best hoverboards', 'hoverboards-guide' ) );
 			$cta_url  = get_theme_mod( 'hbg_header_cta_url', '' );
 			$cta_url  = $cta_url ? $cta_url : hbg_key_url( 'best' );
 			if ( $cta_text && $cta_url ) :
 			?>
-			<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--dark btn--sm header__cta"><?php echo esc_html( $cta_text ); ?></a>
+			<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--primary btn--sm header__cta"><?php echo esc_html( $cta_text ); ?></a>
 			<?php endif; ?>
-			<button type="button" class="icon-btn search-toggle" aria-controls="search-overlay" aria-expanded="false" aria-label="<?php esc_attr_e( 'Search', 'hoverboards-guide' ); ?>">
-				<?php echo hbg_svg_icon( 'search', 20 ); // phpcs:ignore ?>
+			<button type="button" class="icon-btn nav-toggle" aria-controls="mobile-drawer" aria-expanded="false" aria-label="<?php esc_attr_e( 'Open menu', 'hoverboards-guide' ); ?>">
+				<?php echo hbg_svg_icon( 'menu', 22 ); // phpcs:ignore ?>
 			</button>
 		</div>
 	</div>
@@ -80,7 +75,7 @@
 	<div class="drawer__backdrop" data-drawer-close></div>
 	<div class="drawer__panel" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e( 'Menu', 'hoverboards-guide' ); ?>">
 		<div class="drawer__head">
-			<a class="drawer__brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
+			<span class="drawer__brand"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span>
 			<button type="button" class="icon-btn drawer__close" data-drawer-close aria-label="<?php esc_attr_e( 'Close menu', 'hoverboards-guide' ); ?>"><?php echo hbg_svg_icon( 'close', 22 ); // phpcs:ignore ?></button>
 		</div>
 		<div class="drawer__search"><?php get_search_form(); ?></div>
@@ -88,7 +83,7 @@
 			<?php hbg_primary_menu( 'primary', 'nav-menu nav-menu--mobile' ); ?>
 		</nav>
 		<?php if ( $cta_text && $cta_url ) : ?>
-			<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--dark btn--full drawer__cta"><?php echo esc_html( $cta_text ); ?></a>
+			<a href="<?php echo esc_url( $cta_url ); ?>" class="btn btn--primary btn--full drawer__cta"><?php echo esc_html( $cta_text ); ?></a>
 		<?php endif; ?>
 		<?php hbg_social_icons( 'social social--drawer' ); ?>
 	</div>

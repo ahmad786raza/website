@@ -307,8 +307,6 @@ function hbg_normalise_imported_markup( $content ) {
 		$style = $keep ? ' style="' . esc_attr( implode( '; ', $keep ) ) . '"' : '';
 		return '<' . $m[1] . rtrim( $m[2] ) . $style . $m[4] . '>';
 	}, $content );
-	// 5. Light-grey inline text colours (price notes, footers) fail WCAG AA on white; remap to the theme's muted slate.
-	$content = preg_replace( '/color:\s*#(94a3b8|9ca3af|a1a1aa|a3a3a3|aaa|bbb|cbd5e1|d1d5db)\b/i', 'color:#5b6b7f', $content );
 	return $content;
 }
 add_filter( 'the_content', 'hbg_normalise_imported_markup', 8 );

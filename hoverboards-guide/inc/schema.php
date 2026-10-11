@@ -8,37 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/**
- * Should the theme leave meta tags, canonical and schema to an SEO plugin?
- *
- * Customizer "SEO output" setting: auto (default), always, never.
- * In auto mode a plugin only counts when it is really working on the front end:
- * Rank Math, for example, can be "active" but print nothing (missing capabilities,
- * disabled front end), and a site with no description tags is worse than a site
- * with the theme's own. Yoast, AIOSEO, SEOPress and The SEO Framework are trusted
- * from their constants; Rank Math is checked by the hooks its front-end registers.
- */
 function hbg_seo_plugin_active() {
-	$mode = get_theme_mod( 'hbg_seo_output', 'auto' );
-	if ( 'always' === $mode ) {
-		return false;
-	}
-	if ( 'never' === $mode ) {
-		return true;
-	}
-	if ( defined( 'WPSEO_VERSION' ) || defined( 'AIOSEO_VERSION' ) || defined( 'SEOPRESS_VERSION' ) || class_exists( 'The_SEO_Framework\\Load' ) ) {
-		return true;
-	}
-	if ( defined( 'RANK_MATH_VERSION' ) ) {
-		if ( did_action( 'rank_math/head' ) ) {
-			return true;
-		}
-		if ( apply_filters( 'rank_math/frontend/disable', false ) ) {
-			return false;
-		}
-		return (bool) has_action( 'rank_math/head' );
-	}
-	return false;
+	return defined( 'WPSEO_VERSION' ) || defined( 'RANK_MATH_VERSION' ) || defined( 'AIOSEO_VERSION' ) || defined( 'SEOPRESS_VERSION' ) || class_exists( 'The_SEO_Framework\\Load' );
 }
 
 /** True when the post body carries its own JSON-LD of the given type. */
@@ -158,10 +129,8 @@ function hbg_head_meta() {
 		$url = get_term_link( get_queried_object() );
 	} elseif ( is_front_page() ) {
 		$url   = home_url( '/' );
-		$leads = hbg_get_featured_posts( 1 );
-		if ( $leads && has_post_thumbnail( $leads[0] ) && ! hbg_is_title_card( $leads[0]->ID ) ) {
-			$image = get_the_post_thumbnail_url( $leads[0], 'large' );
-		}
+		$hero  = get_theme_mod( 'hbg_hero_image', '' );
+		$image = $hero ? wp_get_attachment_image_url( (int) $hero, 'large' ) : $image;
 	}
 	if ( ( is_front_page() || is_category() || is_tag() ) && ! is_paged() ) {
 		echo '<link rel="canonical" href="' . esc_url( $url ) . '">' . "\n";

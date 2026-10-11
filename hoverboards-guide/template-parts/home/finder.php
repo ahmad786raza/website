@@ -15,7 +15,7 @@ $fallback  = array(
 	array( __( 'A beginner who wants the most stability', 'hoverboards-guide' ), 'how_to_ride', 'ninebot-s' ),
 );
 ?>
-<section class="section<?php echo $embedded ? ' finder--embedded' : ' section--dark'; ?> finder" id="finder" aria-labelledby="finder-title">
+<section class="section section--alt finder<?php echo $embedded ? ' finder--embedded' : ''; ?>" id="finder" aria-labelledby="finder-title">
 	<div class="<?php echo $embedded ? '' : 'container'; ?>">
 		<div class="finder__card">
 			<div class="finder__intro">
