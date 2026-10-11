@@ -71,20 +71,32 @@ function bdh_image_slot_aliases() {
  * Attachment ID for a slot. $seed (e.g. a post ID) rotates between several
  * images in the same slot so neighbouring cards don't all show one photo.
  */
-function bdh_library_attachment( $slot, $seed = 0 ) {
+function bdh_library_attachment( $slot, $seed = 0, $unique = true ) {
 	$override = get_option( 'bdh_img_slot_override', array() );
 	if ( ! empty( $override[ $slot ] ) && wp_attachment_is_image( (int) $override[ $slot ] ) ) {
 		return (int) $override[ $slot ];
 	}
 	$map = bdh_image_slot_map();
 	if ( ! empty( $map[ $slot ] ) ) {
-		$ids = array_values( $map[ $slot ] );
-		return (int) $ids[ absint( $seed ) % count( $ids ) ];
+		// Rotate by seed, but skip photos already shown on this page so
+		// neighbouring cards in the same slot do not repeat an image.
+		static $used = array();
+		$ids   = array_values( $map[ $slot ] );
+		$n     = count( $ids );
+		$start = absint( $seed ) % $n;
+		for ( $i = 0; $i < $n; $i++ ) {
+			$id = (int) $ids[ ( $start + $i ) % $n ];
+			if ( ! $unique || empty( $used[ $id ] ) ) {
+				if ( $unique ) { $used[ $id ] = true; }
+				return $id;
+			}
+		}
+		return (int) $ids[ $start ];
 	}
 	$aliases = bdh_image_slot_aliases();
 	if ( isset( $aliases[ $slot ] ) ) {
 		foreach ( $aliases[ $slot ] as $alt ) {
-			if ( ! empty( $map[ $alt ] ) || ! empty( $override[ $alt ] ) ) { return bdh_library_attachment( $alt, $seed ); }
+			if ( ! empty( $map[ $alt ] ) || ! empty( $override[ $alt ] ) ) { return bdh_library_attachment( $alt, $seed, $unique ); }
 		}
 	}
 	return 0;
@@ -429,7 +441,7 @@ function bdh_image_library_render() {
 			<table class="widefat striped" style="max-width:900px">
 				<thead><tr><th><?php esc_html_e( 'Topic', 'benders-hub' ); ?></th><th><?php esc_html_e( 'Current image', 'benders-hub' ); ?></th><th><?php esc_html_e( 'Use attachment ID', 'benders-hub' ); ?></th></tr></thead>
 				<tbody>
-				<?php $override = get_option( 'bdh_img_slot_override', array() ); foreach ( $slots as $slot => $label ) : $att = bdh_library_attachment( $slot ); ?>
+				<?php $override = get_option( 'bdh_img_slot_override', array() ); foreach ( $slots as $slot => $label ) : $att = bdh_library_attachment( $slot, 0, false ); ?>
 					<tr>
 						<td><?php echo esc_html( $label ); ?></td>
 						<td><?php echo $att ? wp_get_attachment_image( $att, array( 120, 80 ) ) : '<em>' . esc_html__( 'None — a drawn diagram is shown', 'benders-hub' ) . '</em>'; ?></td>

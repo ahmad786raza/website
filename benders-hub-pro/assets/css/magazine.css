@@ -264,7 +264,7 @@ a.bdh-kicker:hover { text-decoration: underline; }
 .bdh-lead .bdh-kicker { position: relative; z-index: 1; }
 .bdh-lead-excerpt { color: var(--bdh-ink-2); font-size: 1.02rem; }
 .bdh-hero-secondary { padding: 20px; background: #fff; border: 1px solid var(--bdh-line); border-radius: var(--bdh-radius-lg); }
-.bdh-hero-lead--brand { border-radius: var(--bdh-radius-lg); overflow: hidden; aspect-ratio: 16 / 9; background: var(--bdh-dark); }
+.bdh-hero-lead--brand { width: 100%; min-width: 0; border-radius: var(--bdh-radius-lg); overflow: hidden; aspect-ratio: 16 / 9; background: var(--bdh-dark); }
 .bdh-hero-lead--brand img, .bdh-hero-lead--brand svg { width: 100%; height: 100%; object-fit: cover; }
 
 /* ---------- Tools console ---------- */

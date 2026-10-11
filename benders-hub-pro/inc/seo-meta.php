@@ -30,7 +30,7 @@ function bdh_seo_context() {
 	);
 	$default_img = bdh_option( 'og_default_image', '' );
 	if ( ! $default_img && function_exists( 'bdh_library_attachment' ) ) {
-		$att = bdh_library_attachment( 'hero' );
+		$att = bdh_library_attachment( 'hero', 0, false );
 		if ( $att ) { $default_img = wp_get_attachment_image_url( $att, 'bdh-lead' ); }
 	}
 

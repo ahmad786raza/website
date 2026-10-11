@@ -171,7 +171,7 @@ No plugins were installed, removed or required. The theme does not depend on any
 ## 11. Install, then finish on your site
 
 1. **Back up.** Take a host snapshot or a full backup (files + database) and confirm it can be restored. Keep your original `benders-hub-pro.zip`.
-2. **Install the theme.** Go to Appearance → Themes → Add New → Upload Theme → `dist/benders-hub-pro-2.0.0.zip` and choose **"Replace current with uploaded"**.
+2. **Install the theme.** Go to Appearance → Themes → Add New → Upload Theme → `dist/benders-hub-pro-2.0.1.zip` and choose **"Replace current with uploaded"**.
    - WordPress offers "Replace" only if your current theme folder is named `benders-hub-pro`.
    - If it installs as a separate theme instead, your Customizer settings (stored per theme folder) won't carry over. In that case, tell me the folder name and I'll rebuild the zip under it.
 3. **Benders Hub → Upgrade to v2:** replace the placeholder trust pages, optionally draft the fictional equipment, and create the Magazine Menu.
