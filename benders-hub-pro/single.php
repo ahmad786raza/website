@@ -40,6 +40,8 @@ while ( have_posts() ) :
 				<?php
 				$caption = wp_get_attachment_caption( $thumb_id );
 				$credit  = bdh_image_credit( $thumb_id );
+				// The Image Library stores the credit as the caption too; show it once (the linked version).
+				if ( $credit && $caption && 0 === strpos( trim( $caption ), 'Photo:' ) ) { $caption = ''; }
 				if ( $caption || $credit ) :
 				?>
 					<figcaption><?php echo esc_html( $caption ); ?> <?php echo $credit; // phpcs:ignore WordPress.Security.EscapeOutput ?></figcaption>
@@ -75,7 +77,10 @@ while ( have_posts() ) :
 					</aside>
 				<?php endif; ?>
 
-				<?php bdh_toc( 'inline' ); ?>
+				<?php
+				// Articles that carry their own in-content contents box skip the collapsible one.
+				if ( false === strpos( $content, 'bhg-toc' ) ) { bdh_toc( 'inline' ); }
+				?>
 
 				<div class="bdh-prose">
 					<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput -- filtered post content. ?>

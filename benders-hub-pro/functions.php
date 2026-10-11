@@ -6,12 +6,12 @@
  * fabrication, exhaust and roll cage work, and workshop equipment guidance.
  *
  * @package BendersHub
- * @version 2.0.1
+ * @version 2.0.3
  */
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'BDH_VERSION', '2.0.1' );
+define( 'BDH_VERSION', '2.0.3' );
 define( 'BDH_THEME_DIR', get_template_directory() );
 define( 'BDH_THEME_URI', get_template_directory_uri() );
 define( 'BDH_AMAZON_TAG', 'rcblogs-20' );

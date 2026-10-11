@@ -14,6 +14,9 @@ function bdh_enqueue_assets() {
 	$ver = BDH_VERSION;
 
 	wp_enqueue_style( 'bdh-magazine', BDH_THEME_URI . '/assets/css/magazine.css', array(), $ver );
+	if ( is_singular() ) {
+		wp_enqueue_style( 'bdh-article', BDH_THEME_URI . '/assets/css/article-components.css', array( 'bdh-magazine' ), $ver );
+	}
 
 	wp_enqueue_script( 'bdh-main',     BDH_THEME_URI . '/assets/js/main.js',     array(), $ver, array( 'strategy' => 'defer', 'in_footer' => true ) );
 	wp_enqueue_script( 'bdh-magazine', BDH_THEME_URI . '/assets/js/magazine.js', array( 'bdh-main' ), $ver, array( 'strategy' => 'defer', 'in_footer' => true ) );
@@ -73,6 +76,6 @@ function bdh_mark_tool_rendered() {
  * Editor styles
  */
 function bdh_editor_styles() {
-	add_editor_style( 'assets/css/editor.css' );
+	add_editor_style( array( 'assets/css/editor.css', 'assets/css/article-components.css' ) );
 }
 add_action( 'after_setup_theme', 'bdh_editor_styles' );

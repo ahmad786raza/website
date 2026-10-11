@@ -171,7 +171,7 @@ No plugins were installed, removed or required. The theme does not depend on any
 ## 11. Install, then finish on your site
 
 1. **Back up.** Take a host snapshot or a full backup (files + database) and confirm it can be restored. Keep your original `benders-hub-pro.zip`.
-2. **Install the theme.** Go to Appearance → Themes → Add New → Upload Theme → `dist/benders-hub-pro-2.0.1.zip` and choose **"Replace current with uploaded"**.
+2. **Install the theme.** Go to Appearance → Themes → Add New → Upload Theme → `dist/benders-hub-pro-2.0.3.zip` and choose **"Replace current with uploaded"**.
    - WordPress offers "Replace" only if your current theme folder is named `benders-hub-pro`.
    - If it installs as a separate theme instead, your Customizer settings (stored per theme folder) won't carry over. In that case, tell me the folder name and I'll rebuild the zip under it.
 3. **Benders Hub → Upgrade to v2:** replace the placeholder trust pages, optionally draft the fictional equipment, and create the Magazine Menu.
@@ -238,3 +238,18 @@ After `bendershub.com` was added to this environment's allowed domains, the live
 - Trust pages, tool pages and menu: Repair Setup, then Upgrade to v2.
 - Photos: Image Library.
 - Real articles: none exist yet. Content Library starter articles are created as drafts for review.
+
+## 16. Photos, theme 2.0.1–2.0.3 and first article (11 October 2026)
+
+**Photos (Image Library on the live site).** Your server checked each Commons licence through the Commons API (27 of 28 accepted). It then imported the files, and I viewed every photo on bendershub.com before keeping it. 28 photos are in the Media Library. Removed: three weak photos (#50 reflections and a person, #52 cage not visible, #67 barely shows conduit), the duplicates created by server timeouts, and one Pexels file that returned 404. Alt text was corrected on #72 and #82. An **Image credits** page (`/image-credits/`) now gives the attribution that CC BY and CC BY-SA require.
+
+**Theme fixes found with real photos:**
+- 2.0.1: the photo-only homepage lead panel covered the headline. It now has an explicit width. Library photos are no longer repeated on the same page.
+- 2.0.2: added `assets/css/article-components.css`, the `bhg-` component set: quick answer, contents box, callouts, quick picks, Amazon product box, steps, examples, mistakes, checklist, FAQ and CTA. It loads on single posts and pages and in the editor. Articles with their own `bhg-toc` box skip the theme's collapsible contents. Headers wrap in fixed-layout block tables. FAQ questions (`bhg-faq-q`) stay out of the side contents list.
+- 2.0.3: the featured-image credit is shown once, not twice.
+
+**Draft article** (post #95, *Buying Guides*, not published):
+- "Best Tube Bender for a Home Garage (2026 Guide): What to Buy, What to Skip". The source is in `content/best-tube-bender-for-home-garage.html`.
+- About 5,000 words in core Gutenberg blocks plus Custom HTML components: 3 comparison tables, 4 Amazon product boxes and 16 Amazon links tagged `polyfreeplanet-20`.
+- Specs come from manufacturer and retailer listings checked on 11 October 2026. The article says it is research-based, not hands-on tested.
+- Editor-only notes (HTML comments) mark where to link the starter drafts once they are published, and where your own photos would help.

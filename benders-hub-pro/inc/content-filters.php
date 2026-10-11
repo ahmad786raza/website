@@ -27,7 +27,7 @@ function bdh_heading_anchors( $content ) {
 			$text  = trim( wp_strip_all_tags( $m[3] ) );
 			if ( '' === $text ) { return $m[0]; }
 			// Skip headings that belong to embedded tools/components.
-			if ( preg_match( '/class=["\'][^"\']*\bbdh-(?!prose)[a-z-]*(title|head|q)\b/i', $attrs ) ) { return $m[0]; }
+			if ( preg_match( '/class=["\'][^"\']*\b(?:bdh-(?!prose)[a-z-]*(?:title|head|q)|bhg-faq-q)\b/i', $attrs ) ) { return $m[0]; }
 			if ( preg_match( '/\sid=["\']([^"\']+)["\']/i', $attrs, $idm ) ) {
 				$id = $idm[1];
 			} else {
