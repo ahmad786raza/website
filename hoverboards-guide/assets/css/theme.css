@@ -957,3 +957,7 @@ body:not(.single) .progress { display: none; }
 @media (max-width: 640px) {
 	.hero__title { font-size: 34px; }
 }
+/* Responsive guard for the reference-pass rules above (they must not outrank the stacked layouts) */
+@media (max-width: 1024px) {
+	.hero__inner { grid-template-columns: 1fr; }
+}
