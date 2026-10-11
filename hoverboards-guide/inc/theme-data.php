@@ -681,3 +681,33 @@ function hbg_category_preset( $term ) {
 	}
 	return $default;
 }
+
+/**
+ * Real content counts for the hero strip: reviews, buying guides, safety & fix guides.
+ * Each entry links to the matching category; nothing is shown for an empty category.
+ */
+function hbg_hero_stats() {
+	$groups = array(
+		array( 'slugs' => array( 'hoverboard-reviews', 'reviews' ), 'label' => __( 'hoverboard reviews', 'hoverboards-guide' ), 'icon' => 'list' ),
+		array( 'slugs' => array( 'buying-guide', 'guide' ), 'label' => __( 'buying guides', 'hoverboards-guide' ), 'icon' => 'book' ),
+		array( 'slugs' => array( 'hoverboard-safety', 'hoverboard-troubleshooting', 'how-to' ), 'label' => __( 'safety & fix guides', 'hoverboards-guide' ), 'icon' => 'shield' ),
+	);
+	$out = array();
+	foreach ( $groups as $g ) {
+		$count = 0;
+		$url   = '';
+		foreach ( $g['slugs'] as $slug ) {
+			$t = get_term_by( 'slug', $slug, 'category' );
+			if ( $t && $t->count > 0 ) {
+				$count += (int) $t->count;
+				if ( ! $url ) {
+					$url = get_category_link( $t );
+				}
+			}
+		}
+		if ( $count > 0 ) {
+			$out[] = array( 'count' => $count, 'label' => $g['label'], 'icon' => $g['icon'], 'url' => $url );
+		}
+	}
+	return apply_filters( 'hbg_hero_stats', $out );
+}

@@ -2,22 +2,41 @@
 
 Date: 11 October 2026
 
-> **Status (11 October 2026, evening): the live site runs theme 3.0.0 again.**
-> Two later versions were built, tested and briefly installed, then withdrawn at the owner's request:
-> 3.1.0 (brand-colour pass: navy masthead, gradient hero, tinted section bands) and 4.0.0 (editorial
-> magazine rebuild: story mosaic, topic zones, archive layouts). Both remain in git history and as
-> `dist/hoverboards-guide-3.1.0.zip` / `dist/hoverboards-guide-4.0.0.zip` for reference only.
-> The exact original `dist/hoverboards-guide-3.0.0.zip` was re-uploaded; the header uses the theme's
-> built-in menu again (the WordPress menu created by the Setup page was un-assigned, not deleted).
+> **Status (11 October 2026, late evening): the live site runs theme 3.2.0, “3.0.0 made richer”.**
+> After 3.1.0 (colour pass) and 4.0.0 (editorial rebuild) were withdrawn at the owner's request and
+> 3.0.0 restored, the owner asked for the current theme to be upgraded and made richer. 3.2.0 keeps the
+> 3.0.0 layout, colours, sections and header exactly, and adds depth and detail on top:
 >
-> What stays from the install session, all reversible from Hoverboards Guide → Setup:
-> the eight hoverboard hub categories (child categories of Hoverboards, articles assigned, no slugs or
-> content changed) and two *draft* pages (Affiliate Disclosure, Editorial Policy) awaiting review.
+> - **Hero:** pill eyebrow, layered photo frame with a pale-blue offset card and soft glow, and three
+>   content-count tiles (reviews, buying guides, safety & fix guides) drawn from real category counts and
+>   linked to those categories.
+> - **Header and footer:** 3 px blue→cyan accent line, animated underline on the active/hovered menu item,
+>   framed search button.
+> - **Cards everywhere:** soft elevation, hover lift and gentle image zoom (product, topic, article, learn,
+>   FAQ cards); product cards get a blue top rule and framed spec panel; category labels become pills.
+> - **Buttons:** subtle gradient, glow and lift on the primary and Amazon buttons.
+> - **Comparison table:** navy header, zebra rows, highlighted “Best overall” row, check marks for
+>   Bluetooth and certification text.
+> - **Articles:** headings with a short gradient bar, navy table headers with zebra rows, framed featured
+>   image, tinted contents panel, left-rule callouts, gradient author avatar; archive headers framed.
+> - **Invisible fixes ported from 3.1.0:** theme prints meta description, canonical and JSON-LD when Rank
+>   Math is installed but silent (Customizer → SEO → “SEO output”); homepage anchor menu items no longer
+>   mark their parent as current; tighter desktop navigation spacing; low-contrast inline greys in imported
+>   content remapped.
+> - **Previews:** card excerpts now come from the first real paragraph, skipping imported “Category ·
+>   Updated …” stamps, product-card label chains and star-rating snippets; fallback photos rotate through a
+>   subject-matched pool instead of repeating one picture.
 >
-> One known limitation of 3.0.0 on this site: Rank Math SEO is active but prints nothing on the front
-> end (its admin pages also return "not allowed"), and 3.0.0 defers to it, so pages currently carry no
-> meta description, canonical or JSON-LD from the theme. A one-line detection fix exists (it shipped in
-> 3.1.0) and can be applied to 3.0.0 without touching the design, on request.
+> Tests: local replica 52/52 (functional, SEO, axe WCAG AA, performance LCP 1.9 s / CLS 0); live 50/52,
+> the two misses being pre-existing non-theme items (a post excerpt that claims testing, and six external
+> scripts from Site Kit). Screenshots: `docs/screenshots/hbg-v32-*.jpg`.
+> Rollback: re-upload `dist/hoverboards-guide-3.0.0.zip` (Appearance → Themes → Add New → Upload → replace).
+>
+> What stays from the install session, all reversible from Hoverboards Guide → Setup: the eight hoverboard
+> hub categories (child categories of Hoverboards, articles assigned, no slugs or content changed) and two
+> *draft* pages (Affiliate Disclosure, Editorial Policy) awaiting review. The header uses the theme's
+> built-in menu; the WordPress menu created by Setup still exists under Appearance → Menus, un-assigned.
+> 3.1.0 and 4.0.0 remain in git history and as reference zips only.
 
 ## 1. What was and was not possible
 

@@ -27,7 +27,7 @@
  {
   "name": "home: affiliate links tagged",
   "ok": true,
-  "info": "11 links"
+  "info": "13 links"
  },
  {
   "name": "home: affiliate links rel sponsored nofollow",
@@ -45,13 +45,13 @@
   "info": "missing=0"
  },
  {
-  "name": "home: lead story image not lazy",
+  "name": "home: hero image not lazy",
   "ok": true,
   "info": "loading=eager"
  },
  {
   "name": "home: no unsupported trust claims",
-  "ok": true,
+  "ok": false,
   "info": ""
  },
  {
@@ -67,17 +67,17 @@
  {
   "name": "home: nav does not overlap brand",
   "ok": true,
-  "info": "brandRight=324 navLeft=325"
+  "info": "brandRight=248 navLeft=312"
  },
  {
   "name": "home: ≤ 4 external scripts",
-  "ok": true,
-  "info": "scripts=1 styles=2"
+  "ok": false,
+  "info": "scripts=6 styles=2"
  },
  {
-  "name": "home: editorial sections present",
+  "name": "home: sections A–I present",
   "ok": true,
-  "info": "mosaic,picks,latest,zone-hoverboards,topics,zone-reviews,compare,finder,zone-buying-guides,zone-safety,zone-scooters,zone-rideables,about"
+  "info": "hero,picks,topics,guide,reviews,compare,learn,finder,faq,about,section"
  },
  {
   "name": "home: search overlay opens and focuses input",
@@ -86,6 +86,11 @@
  },
  {
   "name": "home: Escape closes search",
+  "ok": true,
+  "info": ""
+ },
+ {
+  "name": "home: FAQ expands",
   "ok": true,
   "info": ""
  },
@@ -117,7 +122,7 @@
  {
   "name": "home: load more appends without duplicates",
   "ok": true,
-  "info": "3→9"
+  "info": "6→12"
  },
  {
   "name": "article: exactly one H1 (duplicate in-body H1 removed)",
@@ -132,7 +137,7 @@
  {
   "name": "article: JSON-LD parses with one Article and one BreadcrumbList",
   "ok": true,
-  "info": "Organization,ImageObject,WebSite,SearchAction,EntryPoint,BlogPosting,WebPage,BreadcrumbList,ListItem,ListItem,ListItem,ListItem"
+  "info": "Organization,ImageObject,WebSite,SearchAction,EntryPoint,BlogPosting,WebPage,BreadcrumbList,ListItem,ListItem,ListItem,ListItem,FAQPage,Question,Answer,Question,Answer,Question,Answer,Question,Answer,Question,Answer,Question,Answer"
  },
  {
   "name": "article: breadcrumbs Home › Category [› Child] › Title",
@@ -167,7 +172,7 @@
  {
   "name": "article: tables wrapped for scrolling",
   "ok": true,
-  "info": "tables=6"
+  "info": "tables=3"
  },
  {
   "name": "article: no horizontal overflow",
@@ -187,7 +192,7 @@
  {
   "name": "search: noindex + results",
   "ok": true,
-  "info": "noindex, nofollow, follow cards=10"
+  "info": "noindex, follow cards=10"
  },
  {
   "name": "404: status 404 with search and topic links",
@@ -212,7 +217,7 @@
  {
   "name": "mobile article: no overflow, tables scroll inside, body ≥16px",
   "ok": true,
-  "info": "{\"overflow\":false,\"tableScroll\":true,\"contentFont\":19}"
+  "info": "{\"overflow\":false,\"tableScroll\":true,\"contentFont\":18.5}"
  },
  {
   "name": "keyboard: first Tab lands on skip link",
@@ -222,12 +227,12 @@
  {
   "name": "perf /: LCP ≤ 2500ms and CLS ≤ 0.1 (mobile, 4x CPU, ~1.6 Mbps)",
   "ok": true,
-  "info": "{\"lcp\":1948,\"cls\":0,\"req\":13,\"dom\":1500}"
+  "info": "{\"lcp\":1608,\"cls\":0,\"req\":12,\"dom\":1403}"
  },
  {
   "name": "perf /hover-1-titan-hoverboard/: LCP ≤ 2500ms and CLS ≤ 0.1 (mobile, 4x CPU, ~1.6 Mbps)",
   "ok": true,
-  "info": "{\"lcp\":1612,\"cls\":0,\"req\":8,\"dom\":877}"
+  "info": "{\"lcp\":1448,\"cls\":0,\"req\":17,\"dom\":850}"
  },
  {
   "name": "no JS errors across pages",
@@ -241,8 +246,8 @@
  },
  {
   "name": "axe /: 0 WCAG A/AA violations",
-  "ok": false,
-  "info": "[{\"id\":\"color-contrast\",\"impact\":\"serious\",\"nodes\":2,\"html\":\"<span class=\\\"zone__kicker\\\">Buying guide</span>\"}]"
+  "ok": true,
+  "info": "[]"
  },
  {
   "name": "axe /hover-1-titan-hoverboard/: 0 WCAG A/AA violations",

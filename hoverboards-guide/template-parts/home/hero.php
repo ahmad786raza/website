@@ -34,6 +34,13 @@ if ( ! $image_id ) {
 				<?php foreach ( $points as $pt ) : ?><li><?php echo hbg_svg_icon( 'check-circle', 18 ); // phpcs:ignore ?><span><?php echo esc_html( $pt ); ?></span></li><?php endforeach; ?>
 			</ul>
 			<?php endif; ?>
+			<?php $stats = hbg_hero_stats(); if ( $stats ) : ?>
+			<div class="hero__stats" aria-label="<?php esc_attr_e( 'What the site covers', 'hoverboards-guide' ); ?>">
+				<?php foreach ( $stats as $st ) : ?>
+				<a class="hero__stat" href="<?php echo esc_url( $st['url'] ); ?>"><?php echo hbg_svg_icon( $st['icon'], 20 ); // phpcs:ignore ?><span><strong><?php echo esc_html( number_format_i18n( $st['count'] ) ); ?></strong><?php echo esc_html( $st['label'] ); ?></span></a>
+				<?php endforeach; ?>
+			</div>
+			<?php endif; ?>
 		</div>
 		<figure class="hero__media">
 			<?php if ( $image_id ) : ?>

@@ -370,9 +370,7 @@ function hbg_post_thumbnail( $size = 'hbg-card', $args = array() ) {
 		}
 		$html = get_the_post_thumbnail( null, $size, $attr );
 	} else {
-		$cat    = hbg_primary_category();
-		$preset = hbg_category_preset( $cat );
-		$html   = hbg_topic_image( $preset['image'], array( 'alt' => '', 'class' => trim( $a['class'] . ' is-fallback' ), 'loading' => $a['loading'], 'sizes' => $a['sizes'], 'echo' => false ) );
+		$html = hbg_topic_image( hbg_fallback_image_for_post( get_the_ID() ), array( 'alt' => '', 'class' => trim( $a['class'] . ' is-fallback' ), 'loading' => $a['loading'], 'sizes' => $a['sizes'], 'echo' => false ) );
 	}
 	if ( $a['echo'] ) {
 		echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -419,12 +417,35 @@ function hbg_excerpt( $words = 24, $post = null ) {
 	if ( ! $post ) {
 		return '';
 	}
-	$text = $post->post_excerpt ? $post->post_excerpt : $post->post_content;
-	$text = wp_strip_all_tags( strip_shortcodes( $text ) );
-	$text = preg_replace( '/\s+/', ' ', $text );
-	// Many imported posts start with "UPDATED MONTH YEAR <title>"; drop that prefix from previews.
-	$text = preg_replace( '/^\s*UPDATED\s+[A-Z]+\s+\d{4}\s*/i', '', $text );
 	$title = get_the_title( $post );
+	$text  = '';
+	$junk = '/^.{1,40}[·‧•]/u'; // "Label‧Category · Label" chains copied from product cards
+	if ( $post->post_excerpt && ! preg_match( $junk, trim( wp_strip_all_tags( $post->post_excerpt ) ) ) ) {
+		$text = $post->post_excerpt;
+	} else {
+		// No hand-written excerpt: use the first real paragraph of the body, skipping imported
+		// header blocks (date stamps, repeated titles, product-card rating snippets).
+		$content = strip_shortcodes( $post->post_content );
+		if ( preg_match_all( '/<p\b[^>]*>(.*?)<\/p>/is', $content, $m ) ) {
+			foreach ( $m[1] as $para ) {
+				$t = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( $para ) ) );
+				if ( mb_strlen( $t ) < 80 || false !== strpos( $t, '★' ) || preg_match( '/^(UPDATED|Updated)\b/', $t ) || ( $title && 0 === stripos( $t, $title ) ) || preg_match( '/\(\s*[\d,.]+\s*reviews?\s*\)/i', $t ) || preg_match( $junk, $t ) ) {
+					continue;
+				}
+				$text = $t;
+				break;
+			}
+		}
+		if ( ! $text ) {
+			$text = $post->post_content;
+		}
+	}
+	$text = wp_strip_all_tags( strip_shortcodes( $text ) );
+	$text = html_entity_decode( $text, ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+	$text = preg_replace( '/\s+/u', ' ', $text );
+	// Imported previews often start with "UPDATED MONTH YEAR" or "Category · Updated Month Year", then the title.
+	$text = preg_replace( '/^\s*(?:[A-Za-z][A-Za-z0-9 &\-]{1,40}\s*[·‧•|]\s*)?UPDATED\s+[A-Za-z]+\s+\d{4}\s*/iu', '', $text );
+	$text = preg_replace( '/[★☆]{2,}\s*[\d.]*\s*(?:\([\d,.]+\s*reviews?\))?\s*/u', '', $text );
 	if ( $title && 0 === stripos( $text, $title ) ) {
 		$text = trim( substr( $text, strlen( $title ) ) );
 	}
@@ -972,4 +993,71 @@ function hbg_meta_description() {
 		return $desc;
 	}
 	return '';
+}
+
+/**
+ * Photo for a post that has no usable featured image (none, or a generated title card).
+ * Picks from the bundled photos that match the post's subject (slug keywords, then category) and
+ * cycles through that pool so neighbouring cards do not all show the same picture.
+ */
+function hbg_fallback_image_for_post( $post_id ) {
+	$post  = get_post( $post_id );
+	$slug  = $post ? $post->post_name : '';
+	$cat   = hbg_primary_category( $post_id );
+	$pools = array(
+		'kids'           => array( 'cat-hoverboards-kids', 'product-hoverboard-kids', 'cat-kids' ),
+		'adult'          => array( 'cat-hoverboards', 'hero-hoverboard-shore', 'cat-self-balancing' ),
+		'off-road'       => array( 'hero-hoverboard-shore', 'cat-hoverboards' ),
+		'terrain'        => array( 'hero-hoverboard-shore', 'cat-hoverboards' ),
+		'safety'         => array( 'cat-safety', 'svg:safety' ),
+		'helmet'         => array( 'cat-safety' ),
+		'charg'          => array( 'svg:charging', 'cat-howto' ),
+		'batter'         => array( 'svg:charging', 'cat-howto' ),
+		'trouble'        => array( 'cat-howto', 'svg:maintenance' ),
+		'fix'            => array( 'cat-howto', 'svg:maintenance' ),
+		'calibrat'       => array( 'cat-howto', 'svg:maintenance' ),
+		'beep'           => array( 'cat-howto', 'svg:maintenance' ),
+		'bluetooth'      => array( 'svg:bluetooth', 'cat-hoverboards' ),
+		'cheap'          => array( 'svg:budget', 'cat-hoverboards' ),
+		'under-'         => array( 'svg:budget', 'cat-hoverboards' ),
+		'budget'         => array( 'svg:budget', 'cat-hoverboards' ),
+		'kart'           => array( 'cat-hoverkart' ),
+		'seat'           => array( 'cat-hoverkart' ),
+		'scooter'        => array( 'cat-escooters', 'cat-escooters-commute', 'hero-escooter-city', 'product-escooter-city', 'product-escooter-road', 'product-hiboy-s2', 'product-varla-eagle' ),
+		'skateboard'     => array( 'cat-skateboards' ),
+		'longboard'      => array( 'cat-skateboards' ),
+		'unicycle'       => array( 'cat-unicycles' ),
+		'bike'           => array( 'cat-ebikes' ),
+		'ninebot'        => array( 'product-ninebot-s', 'cat-self-balancing' ),
+		'segway'         => array( 'product-ninebot-s', 'cat-self-balancing' ),
+		'self-balancing' => array( 'cat-self-balancing', 'product-ninebot-s' ),
+		'buying'         => array( 'cat-guides', 'cat-hoverboards', 'hero-hoverboard-shore' ),
+		'guide'          => array( 'cat-guides', 'cat-hoverboards' ),
+		'hoverboard'     => array( 'cat-hoverboards', 'hero-hoverboard-shore', 'cat-self-balancing', 'cat-hoverboards-kids' ),
+	);
+	$pool = array();
+	foreach ( $pools as $needle => $names ) {
+		if ( $slug && false !== strpos( $slug, $needle ) ) {
+			$pool = $names;
+			break;
+		}
+	}
+	if ( ! $pool && $cat ) {
+		$preset = hbg_category_preset( $cat );
+		$pool   = array( $preset['image'] );
+		foreach ( $pools as $needle => $names ) {
+			if ( false !== strpos( $cat->slug, $needle ) ) {
+				$pool = array_values( array_unique( array_merge( $pool, $names ) ) );
+				break;
+			}
+		}
+	}
+	if ( ! $pool ) {
+		$pool = $pools['hoverboard'];
+	}
+	$pool = apply_filters( 'hbg_fallback_image_pool', $pool, $post_id );
+	static $cursor = array();
+	$key = md5( implode( '|', $pool ) );
+	$cursor[ $key ] = isset( $cursor[ $key ] ) ? ( $cursor[ $key ] + 1 ) % count( $pool ) : (int) $post_id % count( $pool );
+	return $pool[ $cursor[ $key ] ];
 }
