@@ -1,6 +1,6 @@
 <?php
 // Local replica only: create the hoverboard hub categories and assign the curated posts (mirrors the Setup page action).
-$www = '/tmp/claude-0/-home-user-website/e26fdeb1-b3fe-508d-aa2a-8e8ebdf5d556/scratchpad/www';
+$www = isset( $argv[1] ) ? rtrim( $argv[1], '/' ) : getcwd() . '/www';
 $_SERVER['HTTP_HOST'] = '127.0.0.1:8080';
 require $www . '/wp-load.php';
 $parent = get_term_by( 'slug', 'hoverboards', 'category' );
